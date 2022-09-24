@@ -1,0 +1,16 @@
+{
+	"origins": [
+		"arachnidplus:arachnidplus",
+		"avianplus:avianplus",
+		"blazebornplus:blazebornplus",
+		"tinker_dryad:dryad",
+		"enderminus:enderminus",
+		"felineplus:felineplus",
+		"lepus:lepus",
+		"merplus:merplus",
+		"shulkplus:shulkplus",
+		"tinkervamp:vampire"
+	],
+	"enabled": true,
+	"allow_random": true
+}
