@@ -1,9 +1,9 @@
 # Origins Minus
 
 Simple origins with less to remember. Requires [Origins](https://modrinth.com/mod/origins/versions).      
-Replaces 
+Replaces all base origins.
 
-![originsminus](https://user-images.githubusercontent.com/55819817/192087501-c157859b-1307-4de4-a88d-f2c61391edf9.png)
+![originsminus](https://user-images.githubusercontent.com/55819817/192122640-8c7b9630-2ff3-4323-acf2-f6f1e006d7be.png)
 
 ---
 
