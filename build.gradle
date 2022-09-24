@@ -74,9 +74,29 @@ dependencies {
 	modLocalRuntime libs.darkness
 }
 
-// If you plan to use a different file for the license, don't forget to change the file name here!
+processResources {
+	inputs.property "version", version
+
+	filesMatching('quilt.mod.json') {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+	it.options.release = 17
+}
+
+java {
+	withSourcesJar()
+
+	// If this mod is going to be a library, then it should also generate Javadocs in order to aid with development.
+	// Uncomment this line to generate them.
+	// withJavadocJar()
+}
+
 jar {
-	from("LICENSE") {
+	from("LICENSE.txt") {
 		rename { "${it}_${archivesBaseName}" }
 	}
 }
@@ -91,9 +111,6 @@ publishing {
 
 	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
+
 	}
 }
