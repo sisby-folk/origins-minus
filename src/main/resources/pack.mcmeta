@@ -1,6 +1,12 @@
 {
   "pack": {
+    "name": "Origins Minus",
+    "id": "origins_minus",
     "pack_format": 9,
-    "description": "[Origins] Adds Pehkui Sizes to Origins"
+    "authors": [
+      "DansOtherClone",
+      "Sisby folk"
+    ],
+    "description": "A vanilla Origins replacer prioritizing Simplicity over Balance. Based on OriginsPlus"
   }
 }
