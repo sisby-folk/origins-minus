@@ -6,7 +6,15 @@ Simple origins with less to remember.
 
 ---
 
-This mod is adapted from Origins Plus by [Dan's Other Clone](https://www.youtube.com/c/DansOtherClone/videos). Some of the best powers were sourced this way.
+This mod is a datapack packaged into a quilt mod, but you can still download the datapack version [from the repo](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/main/src/main/resources) (Direct Download Link).
+
+This mod version includes a partial compatibility patch for origins night vision and [True Darkness](https://modrinth.com/mod/true-darkness)
+
+
+## Credits
+
+Many origins are adapted from Origins Plus by [Dan's Other Clone](https://www.youtube.com/c/DansOtherClone/videos).
+Most of these are simply cut down from their originals - check out the originals if you're interested!
 
 ## Further Info
 
