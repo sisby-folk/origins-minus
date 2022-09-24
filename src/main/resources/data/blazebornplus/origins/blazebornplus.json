@@ -2,9 +2,10 @@
 	"name": "Hellspawn",
 	"description": "Hailing from the throes of the nether, these demons can take the heat.",
 	"powers": [
-		"origins:fire_immunity",
+		"blazebornplus:fire_immunity",
+		"blazebornplus:lava_vision",
+		"blazebornplus:lava_swimming",
 		"origins:flame_particles",
-		"origins:damage_from_snowballs",
 		"blazebornplus:lavafall"
 	],
 	"icon": {

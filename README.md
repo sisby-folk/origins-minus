@@ -1,6 +1,7 @@
 # Origins Minus
 
-Simple origins with less to remember. Replaces the vanilla origins.
+Simple origins with less to remember. Requires [Origins](https://modrinth.com/mod/origins/versions).      
+Replaces 
 
 ![originsminus](https://user-images.githubusercontent.com/55819817/192087501-c157859b-1307-4de4-a88d-f2c61391edf9.png)
 

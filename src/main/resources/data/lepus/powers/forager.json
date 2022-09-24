@@ -55,7 +55,7 @@
 	},
 	"block_condition": {
 		"type": "origins:in_tag",
-		"tag": "minecraft:grass_types"
+		"tag": "lepus:grass_types"
 	},
 	"only_when_harvested": false
 }
