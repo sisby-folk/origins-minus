@@ -2,6 +2,8 @@
 
 Simple origins with less to remember.
 
+![originsminus](https://user-images.githubusercontent.com/55819817/192087501-c157859b-1307-4de4-a88d-f2c61391edf9.png)
+
 ---
 
 This mod is adapted from Origins Plus by [Dan's Other Clone](https://www.youtube.com/c/DansOtherClone/videos). Some of the best powers were sourced this way.
