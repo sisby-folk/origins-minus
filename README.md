@@ -7,9 +7,17 @@ Replaces all base origins.
 
 ---
 
+Origins Minus is a collection of 10 origins designed to replace the vanilla origins.      
+All origins descriptions fit within their cards as above.           
+Low-impact origins are provided with no drawbacks, mid-impact origins have some possible downside.
+
+The design is focused around encouraging players to lean into each origin due to its benefits, instead of forcing them into it with drawbacks. 
+
+This means there's less to remember when loading a save, or to fret about when picking an origin - just grab what sounds the most fun! This is especially true when swapping between multiple origins using [Switchy](https://modrinth.com/mod/switchy) 
+
 This mod is a datapack packaged into a quilt mod, but you can still download the datapack version [from the repo](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/main/src/main/resources) (Direct Download Link).
 
-This mod version includes a partial compatibility patch for origins night vision and [True Darkness](https://modrinth.com/mod/true-darkness)
+The mod version includes a partial compatibility patch for origins night vision and [True Darkness](https://modrinth.com/mod/true-darkness)
 
 
 ## Credits
