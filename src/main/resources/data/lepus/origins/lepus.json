@@ -8,7 +8,7 @@
 		"lepus:forager"
 	],
 	"icon": {
-		"item": "minecraft:rabbit_hide"
+		"item": "minecraft:rabbit_foot"
 	},
 	"unchoosable": false,
 	"order": 1,
