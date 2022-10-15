@@ -21,7 +21,7 @@ The mod version includes a partial compatibility patch for origins night vision 
 
 ### Temporary Quilt Version Warning
 
-Origins on Quilt currently has an issue in its library *Calio* where [origins will load before powers](https://github.com/apace100/calio/issues/3), causing Origins to have no powers. You can drop a Quilt version of *Calio* [1.18](https://github.com/sisby-folk/mc-packs/raw/quilt_1.18.2/mods/Calio-1.18.2-1.6.0.jar) [1.19](https://github.com/sisby-folk/mc-packs/raw/quilt_1.19.2/mods/Calio-1.19-1.7.0.jar) into your mods folder as a temporary fix.
+Origins on Quilt currently has an issue in its library *Calio* where [origins will load before powers](https://github.com/apace100/calio/issues/3), causing Origins to have no powers. You can drop a Quilt version of *Calio* ([1.18](https://github.com/sisby-folk/mc-packs/raw/quilt_1.18.2/mods/Calio-1.18.2-1.6.0.jar), [1.19](https://github.com/sisby-folk/mc-packs/raw/quilt_1.19.2/mods/Calio-1.19-1.7.0.jar)) into your mods folder as a temporary fix.
 
 ## Credits
 
