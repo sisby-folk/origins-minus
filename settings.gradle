@@ -16,21 +16,21 @@ pluginManagement {
 dependencyResolutionManagement {
 	versionCatalogs {
 		libs {
-			def mc_major = '1.18'
+			def mc_major = '1.19'
 			def mc = mc_major + '.2'
+			def mappings = 19
+
 			version('minecraft', mc)
-			version('ql', "0.17.3")
-			version('qsl', "1.1.0-beta.26+${mc}")
-			version('qfapi', "1.0.0-beta.24+0.58.0-${mc}")
+			version('ql', "0.17.6")
+			version('quiltMappings', "${mc}+build.${mappings}")
 
 			library('minecraft', 'mojang', 'minecraft').versionRef('minecraft')
 			library('ql', 'org.quiltmc', 'quilt-loader').versionRef('ql')
-			library('qsl', 'org.quiltmc', 'qsl').versionRef('qsl')
-			library('qfapi', 'org.quiltmc.quilted-fabric-api', 'quilted-fabric-api', ).versionRef('qfapi')
+			library('quiltMappings', 'org.quiltmc', 'quilt-mappings').versionRef('quiltMappings')
 
 			// Compat
-			version('origins', "v1.4.1")
-			version('darkness', "fabric-mc118-2.0.91")
+			version('origins', "v1.7.1")
+			version('darkness', "fabric-mc119-2.0.98")
 
 			library('origins', 'com.github.apace100', 'origins-fabric').versionRef('origins')
 			library('darkness', 'maven.modrinth', 'true-darkness').versionRef('darkness')

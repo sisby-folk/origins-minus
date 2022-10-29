@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "origins-minus",
+  "version": "${version}",
+
+  "name": "Origins Minus",
+  "description": "Simple origins with less to remember.",
+  "authors": [
+    "Sisby Folk"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/origins-minus",
+    "issues": "https://github.com/sisby-folk/origins-minus/issues",
+    "sources": "https://github.com/sisby-folk/origins-minus"
+  },
+
+  "license": "LGPL-3.0-only",
+  "icon": "assets/origins_minus/icon.png",
+
+  "environment": "*",
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "minecraft": ">=1.15",
+    "java": ">=17",
+    "origins": ">=1.4"
+  },
+  "suggests": {
+  }
+}

@@ -1,10 +1,33 @@
+buildscript {
+	repositories {
+		gradlePluginPortal()
+	}
+	dependencies {
+		classpath 'com.modrinth.minotaur:Minotaur:2.4.3'
+		classpath "com.github.breadmoirai:github-release:2.4.1"
+	}
+}
+
 plugins {
 	id 'maven-publish'
 	id 'org.quiltmc.loom' version '0.12.+'
 }
 
+if (System.getenv("MODRINTH_TOKEN")) {
+	apply plugin: "com.modrinth.minotaur"
+}
+if (System.getenv("GITHUB_TOKEN")) {
+	apply plugin: "com.github.breadmoirai.github-release"
+}
+
 archivesBaseName = project.archives_base_name
-version = project.version
+
+def mc_major = '1.19'
+def mc = mc_major + '.2'
+def default_branch = 'main'
+
+def origVersion = project.version
+project.version = project.version
 group = project.maven_group
 
 repositories {
@@ -50,34 +73,28 @@ repositories {
 dependencies {
 	// // Base // //
 	minecraft libs.minecraft
-	mappings loom.layered {
-		addLayer quiltMappings.mappings("org.quiltmc:quilt-mappings:${minecraft_version}+build.${quilt_mappings}:v2")
-	}
+	mappings variantOf(libs.quiltMappings) { classifier "intermediary-v2" }
 	modImplementation libs.ql
-	modImplementation libs.qsl
 
 	// // Compat // //
 
 	// Origins
-	modCompileOnly libs.qfapi
-	modLocalRuntime libs.qfapi
-	modCompileOnly files('/build/libs/Calio-1.18.2-1.6.0.jar') // Fix quilt incompatibility
-	modLocalRuntime files('/build/libs/Calio-1.18.2-1.6.0.jar') // Fix quilt incompatibility
-	modCompileOnly (libs.origins) {
-		exclude module: 'calio'
-	}
-	modLocalRuntime (libs.origins) {
-		exclude module: 'calio'
-	}
+	modCompileOnly (libs.origins)
+	modLocalRuntime (libs.origins)
 
 	modCompileOnly libs.darkness
 	modLocalRuntime libs.darkness
 }
 
+
 processResources {
 	inputs.property "version", version
 
 	filesMatching('quilt.mod.json') {
+		expand "version": version
+	}
+
+	filesMatching('fabric.mod.json') {
 		expand "version": version
 	}
 }
@@ -113,4 +130,40 @@ publishing {
 	repositories {
 
 	}
+}
+
+if (System.getenv("MODRINTH_TOKEN")) {
+	modrinth {
+		token = System.getenv("MODRINTH_TOKEN")
+		projectId = 'origins-minus'
+		versionNumber = project.version
+		versionName = origVersion
+		versionType = 'release'
+		uploadFile = remapJar
+		gameVersions = ['1.18.2', '1.19', '1.19.1', '1.19.2']
+		loaders = ['quilt', 'fabric']
+		detectLoaders = false
+		dependencies {
+			required.project "origins"
+			optional.project "true-darkness"
+		}
+		changelog = "Changelog: https://github.com/sisby-folk/tinkerers-smithing/releases/tag/v" + origVersion
+	}
+}
+
+if (System.getenv("GITHUB_TOKEN")) {
+	githubRelease {
+		token System.getenv("GITHUB_TOKEN")
+		owner "sisby-folk"
+		repo "origins-minus"
+		tagName 'v' + origVersion
+		releaseName origVersion
+		targetCommitish default_branch
+		draft false
+		prerelease false
+		releaseAssets remapJar.archiveFile
+		allowUploadToExisting true
+		generateReleaseNotes true
+	}
+	tasks.githubRelease.dependsOn remapJar
 }
