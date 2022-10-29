@@ -19,9 +19,10 @@ This mod is a datapack packaged into a quilt mod, but you can still download the
 
 The mod version includes a partial compatibility patch for origins night vision and [True Darkness](https://modrinth.com/mod/true-darkness)
 
-### Temporary Quilt Version Warning
+### Quilt 1.18.2
 
-Origins on Quilt currently has an issue in its library *Calio* where [origins will load before powers](https://github.com/apace100/calio/issues/3), causing Origins to have no powers. You can drop a Quilt version of *Calio* ([1.18](https://github.com/sisby-folk/mc-packs/raw/quilt_1.18.2/mods/Calio-1.18.2-1.6.0.jar), [1.19](https://github.com/sisby-folk/mc-packs/raw/quilt_1.19.2/mods/Calio-1.19-1.7.0.jar)) into your mods folder as a temporary fix.
+As of `v1.7.1` origins works out of the box with Quilt.           
+On 1.18.2, you'll have to add a [quilt version of calio](https://github.com/sisby-folk/mc-packs/raw/quilt_1.18.2/mods/Calio-1.18.2-1.6.0.jar) as a workaround.
 
 ## Credits
 
