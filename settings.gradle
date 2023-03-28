@@ -27,13 +27,6 @@ dependencyResolutionManagement {
 			library('minecraft', 'mojang', 'minecraft').versionRef('minecraft')
 			library('ql', 'org.quiltmc', 'quilt-loader').versionRef('ql')
 			library('quiltMappings', 'org.quiltmc', 'quilt-mappings').versionRef('quiltMappings')
-
-			// Compat
-			version('origins', "v1.7.1")
-			version('darkness', "fabric-mc119-2.0.98")
-
-			library('origins', 'com.github.apace100', 'origins-fabric').versionRef('origins')
-			library('darkness', 'maven.modrinth', 'true-darkness').versionRef('darkness')
 		}
 	}
 }

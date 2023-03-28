@@ -77,13 +77,6 @@ dependencies {
 	modImplementation libs.ql
 
 	// // Compat // //
-
-	// Origins
-	modCompileOnly (libs.origins)
-	modLocalRuntime (libs.origins)
-
-	modCompileOnly libs.darkness
-	modLocalRuntime libs.darkness
 }
 
 
