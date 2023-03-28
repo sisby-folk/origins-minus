@@ -7,14 +7,14 @@ Requires <a href="https://modrinth.com/mod/origins/versions">Origins</a>. Replac
 
 ---
 
-Origins Minus is a collection of origins designed to replace the original built-in set.
+Origins Minus is a collection of origins designed to replace the built-in set.
 
 Included origins are short and sweet - with each description fitting inside their card.           
 Low-impact origins have no drawbacks, while mid-impact origins may have minor constraints.
 
-Origins Minus lets players lean into their origin because it's fun! - not force them into it with limitations.
+The design is intended lets players lean into their origin because it's fun! - not force them into it with limitations.
 
-Less limitations means less to fret about selecting an origin, less to remember when loading a save, and less to remember when swapping origins with [Switchy](https://modrinth.com/mod/switchy)!
+Fewer drawbacks means less to fret about selecting an origin, less to remember when loading a save, and less to remember when swapping origins with [Switchy](https://modrinth.com/mod/switchy)!
 
 If you'd prefer the datapack version for any reason, you can [download it from the repo](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/main/src/main/resources) (Direct Download Link)
 
@@ -26,7 +26,7 @@ On 1.18.2, you'll have to add a [quilt version of calio](https://github.com/sisb
 ### Credits
 
 Many origins are adapted with permission from Origins Plus by [Dan's Other Clone](https://www.youtube.com/c/DansOtherClone/videos).
-Most are simply cut down from their originals - check out them if you're interested!
+Most are simply cut down from their originals - check them out if you're interested!
 
 ### Afterword
 
