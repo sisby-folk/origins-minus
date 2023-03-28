@@ -30,13 +30,7 @@
       {
         "id": "origins",
         "versions": ">=1.4"
-      },
-      {
-        "id": "darkness",
-        "versions": ">=2.0.91",
-        "optional": true
       }
     ]
-  },
-  "mixin": "origins_minus.mixins.json"
+  }
 }
