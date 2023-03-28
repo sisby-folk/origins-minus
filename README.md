@@ -14,11 +14,11 @@ Low-impact origins have no drawbacks, while mid-impact origins may have minor co
 
 The design is intended lets players lean into their origin because it's fun! - not force them into it with limitations.
 
-Fewer drawbacks means less to fret about selecting an origin, less to remember when loading a save, and less to remember when swapping origins with [Switchy](https://modrinth.com/mod/switchy)!
+There's less to fret over while picking an origin, and less to remember when loading a save - or switching with [Switchy](https://modrinth.com/mod/switchy)!
+
+### Versions
 
 If you'd prefer the datapack version for any reason, you can [download it from the repo](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/main/src/main/resources) (Direct Download Link)
-
-### Quilt 1.18.2
 
 As of `v1.7.1` origins works out of the box with Quilt.           
 On 1.18.2, you'll have to add a [quilt version of calio](https://github.com/sisby-folk/mc-packs/raw/quilt_1.18.2/mods/Calio-1.18.2-1.6.0.jar) as a workaround.
