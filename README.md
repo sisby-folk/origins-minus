@@ -17,7 +17,7 @@ This means there's less to fret about picking an origin - Just grab the origin t
 
 It's also less to remember when loading a save, or when swapping origins with [Switchy](https://modrinth.com/mod/switchy).
 
-If you'd prefer the datapack version for any reason, you can [download it from the repo]((https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/main/src/main/resources) (Direct Download Link)
+If you'd prefer the datapack version for any reason, you can [download it from the repo](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/main/src/main/resources) (Direct Download Link)
 
 ### Quilt 1.18.2
 
