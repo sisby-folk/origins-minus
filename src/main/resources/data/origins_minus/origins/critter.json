@@ -1,5 +1,5 @@
 {
-	"name": "Lepus",
+	"name": "Critter",
 	"description": "These nimble rabbit-like creatures love to explore.",
 	"powers": [
 		"origins_minus:leap",

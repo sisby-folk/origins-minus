@@ -1,15 +1,14 @@
 {
 	"origins": [
-		"origins_minus:arachnidplus",
-		"origins_minus:avianplus",
-		"origins_minus:blazebornplus",
+		"origins_minus:weaver",
+		"origins_minus:avian",
+		"origins_minus:hellspawn",
 		"origins_minus:dryad",
-		"origins_minus:enderminus",
-		"origins_minus:felineplus",
-		"origins_minus:lepus",
-		"origins_minus:merplus",
-		"origins_minus:shulkplus",
-		"origins_minus:vampire"
+		"origins_minus:voidthing",
+		"origins_minus:critter",
+		"origins_minus:mer",
+		"origins_minus:steadfast",
+		"origins_minus:bloodkind"
 	],
 	"enabled": true,
 	"allow_random": true
