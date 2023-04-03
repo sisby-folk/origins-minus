@@ -1,14 +1,13 @@
 {
 	"name": "Critter",
-	"description": "These nimble rabbit-like creatures love to explore.",
+	"description": "Light on their feet, critters are known travelers and explorers.",
 	"powers": [
-		"origins_minus:leap",
+		"origins_minus:jump",
 		"origins_minus:fall_immunity",
-		"origins_minus:energetic",
-		"origins_minus:forager"
+		"origins_minus:energetic"
 	],
 	"icon": {
-		"item": "minecraft:rabbit_foot"
+		"item": "minecraft:tall_grass"
 	},
 	"unchoosable": false,
 	"order": 1,
