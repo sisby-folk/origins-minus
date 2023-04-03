@@ -9,7 +9,7 @@
 				{
 					"type": "origins:resource",
 					"resource": "*:*_is_hooked",
-					"comparison": "=",
+					"comparison": "==",
 					"compare_to": 1
 				},
 				{
@@ -27,7 +27,7 @@
 				{
 					"type": "origins:resource",
 					"resource": "*:*_is_hooked",
-					"comparison": "=",
+					"comparison": "==",
 					"compare_to": 1
 				}
 			]
@@ -40,18 +40,19 @@
 		"condition": {
 			"type": "origins:resource",
 			"resource": "*:*_is_hooked",
-			"comparison": "=",
+			"comparison": "==",
 			"compare_to": 1
 		},
 		"modifier": {
 			"attribute": "minecraft:generic.movement_speed",
-			"operation": "set_total",
+			"operation": "multiply_total",
 			"value": 0
 		},
+		"type": "origins:attribute",
 		"tick_rate": 1
 	},
 	"hook": {
-		"type": "origins:self_action",
+		"type": "origins:active_self",
 		"entity_action": {
 			"type": "origins:change_resource",
 			"resource": "*:*_is_hooked",
@@ -63,7 +64,7 @@
 				{
 					"type": "origins:resource",
 					"resource": "*:*_is_hooked",
-					"comparison": "=",
+					"comparison": "==",
 					"compare_to": 0
 				},
 				{
@@ -75,7 +76,7 @@
 		"key": "key.sneak"
 	},
 	"jump": {
-		"type": "origins:self_action",
+		"type": "origins:active_self",
 		"entity_action": {
 			"type": "origins:change_resource",
 			"resource": "*:*_is_hooked",
@@ -87,7 +88,7 @@
 				{
 					"type": "origins:resource",
 					"resource": "*:*_is_hooked",
-					"comparison": "=",
+					"comparison": "==",
 					"compare_to": 1
 				}
 			]

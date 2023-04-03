@@ -6,7 +6,7 @@
 		"origins_minus:sunlight_hidden"
 	],
 	"icon": {
-		"item": "minecraft:vines"
+		"item": "minecraft:vine"
 	},
 	"impact": 2
 }
