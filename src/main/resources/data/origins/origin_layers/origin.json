@@ -5,10 +5,10 @@
 		"origins_minus:hellspawn",
 		"origins_minus:dryad",
 		"origins_minus:voidthing",
-		"origins_minus:critter",
+		"origins_minus:wildling",
 		"origins_minus:mer",
 		"origins_minus:steadfast",
-		"origins_minus:bloodkind"
+		"origins_minus:sanguine"
 	],
 	"enabled": true,
 	"allow_random": true

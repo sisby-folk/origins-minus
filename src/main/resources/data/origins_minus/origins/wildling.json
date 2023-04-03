@@ -1,6 +1,6 @@
 {
-	"name": "Critter",
-	"description": "Light on their feet, critters are known travelers and explorers.",
+	"name": "Wildling",
+	"description": "Light on their feet, wildlings are known travelers and explorers.",
 	"powers": [
 		"origins_minus:jump",
 		"origins_minus:fall_immunity",
