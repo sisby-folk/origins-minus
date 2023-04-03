@@ -1,6 +1,6 @@
 {
 	"name": "Sanguine",
-	"description": "Creatures of night that hunger only for blood",
+	"description": "Hunger for blood.",
 	"powers": [
 		"origins_minus:blood",
 		"origins_minus:blood_hidden",

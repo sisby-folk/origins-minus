@@ -1,6 +1,6 @@
 {
 	"name": "Hellspawn",
-	"description": "Hailing from the throes of the nether, these demons can take the heat.",
+	"description": "Take the heat.",
 	"powers": [
 		"origins_minus:fire_immunity",
 		"origins_minus:lava_vision",

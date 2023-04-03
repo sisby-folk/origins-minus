@@ -1,6 +1,6 @@
 {
 	"name": "Avian",
-	"description": "Flapping and gliding, Avians cut through the air with ease.",
+	"description": "Cut through the air with ease.",
 	"powers": [
 		"origins_minus:flap",
 		"origins_minus:active_slow_fall",
