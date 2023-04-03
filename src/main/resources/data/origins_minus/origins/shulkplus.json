@@ -2,9 +2,9 @@
 	"name": "Shulk",
 	"description": "Masses of material inset with ornate drawers, Shulks hit hard- not fast.",
 	"powers": [
-		"shulkplus:turtle",
-		"shulkplus:attack",
-		"shulkplus:hoarder"
+		"origins_minus:turtle",
+		"origins_minus:attack",
+		"origins_minus:hoarder"
 	],
 	"icon": {
 		"item": "minecraft:mossy_stone_bricks"

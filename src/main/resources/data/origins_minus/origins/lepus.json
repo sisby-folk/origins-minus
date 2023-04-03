@@ -2,10 +2,10 @@
 	"name": "Lepus",
 	"description": "These nimble rabbit-like creatures love to explore.",
 	"powers": [
-		"lepus:leap",
-		"lepus:fall_immunity",
-		"lepus:energetic",
-		"lepus:forager"
+		"origins_minus:leap",
+		"origins_minus:fall_immunity",
+		"origins_minus:energetic",
+		"origins_minus:forager"
 	],
 	"icon": {
 		"item": "minecraft:rabbit_foot"

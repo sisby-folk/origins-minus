@@ -55,7 +55,7 @@
 	},
 	"block_condition": {
 		"type": "origins:in_tag",
-		"tag": "lepus:grass_types"
+		"tag": "origins_minus:grass_types"
 	},
 	"only_when_harvested": false
 }

@@ -2,9 +2,9 @@
 	"name": "Dryad",
 	"description": "True folk of nature, the dryads are one with the trees.",
 	"powers": [
-		"tinker_dryad:photosynthesis",
-		"tinker_dryad:photosynthesis_hidden",
-		"tinker_dryad:root"
+		"origins_minus:photosynthesis",
+		"origins_minus:photosynthesis_hidden",
+		"origins_minus:root"
 	],
 	"icon": {
 		"item": "oak_sapling"

@@ -208,7 +208,7 @@
 									"actions": [
 										{
 											"type": "origins:change_resource",
-											"resource": "tinkervamp:blood_resource",
+											"resource": "origins_minus:blood_resource",
 											"change": 10
 										}
 									]
@@ -222,7 +222,7 @@
 									"actions": [
 										{
 											"type": "origins:change_resource",
-											"resource": "tinkervamp:blood_resource",
+											"resource": "origins_minus:blood_resource",
 											"change": 10
 										},
 										{
@@ -257,7 +257,7 @@
 									"actions": [
 										{
 											"type": "origins:change_resource",
-											"resource": "tinkervamp:blood_resource",
+											"resource": "origins_minus:blood_resource",
 											"change": 10
 										}
 									]
@@ -271,7 +271,7 @@
 									"actions": [
 										{
 											"type": "origins:change_resource",
-											"resource": "tinkervamp:blood_resource",
+											"resource": "origins_minus:blood_resource",
 											"change": 10
 										},
 										{
@@ -294,7 +294,7 @@
 									"actions": [
 										{
 											"type": "origins:change_resource",
-											"resource": "tinkervamp:blood_resource",
+											"resource": "origins_minus:blood_resource",
 											"change": 10
 										},
 										{
@@ -316,7 +316,7 @@
 				"conditions": [
 					{
 						"type": "origins:in_tag",
-						"tag": "tinkervamp:blooded"
+						"tag": "origins_minus:blooded"
 					},
 					{
 						"type": "origins:status_effect",
@@ -331,7 +331,7 @@
 			"conditions": [
 				{
 					"type": "origins:resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"comparison": "<",
 					"compare_to": 121
 				},
@@ -377,7 +377,7 @@
 				},
 				{
 					"type": "origins:change_resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"change": 5
 				},
 				{
@@ -385,7 +385,7 @@
 					"ticks": 20,
 					"action": {
 						"type": "origins:change_resource",
-						"resource": "tinkervamp:blood_resource",
+						"resource": "origins_minus:blood_resource",
 						"change": 5
 					}
 				}
@@ -404,7 +404,7 @@
 			"conditions": [
 				{
 					"type": "origins:resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"comparison": "<",
 					"compare_to": 41
 				},
@@ -440,7 +440,7 @@
 				},
 				{
 					"type": "origins:change_resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"change": 5
 				},
 				{
@@ -448,7 +448,7 @@
 					"ticks": 20,
 					"action": {
 						"type": "origins:change_resource",
-						"resource": "tinkervamp:blood_resource",
+						"resource": "origins_minus:blood_resource",
 						"change": 5
 					}
 				}
@@ -467,7 +467,7 @@
 			"conditions": [
 				{
 					"type": "origins:resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"comparison": "<",
 					"compare_to": 41
 				},
@@ -503,7 +503,7 @@
 				},
 				{
 					"type": "origins:change_resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"change": 5
 				},
 				{
@@ -511,7 +511,7 @@
 					"ticks": 20,
 					"action": {
 						"type": "origins:change_resource",
-						"resource": "tinkervamp:blood_resource",
+						"resource": "origins_minus:blood_resource",
 						"change": 5
 					}
 				}
@@ -530,7 +530,7 @@
 			"conditions": [
 				{
 					"type": "origins:resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"comparison": "<",
 					"compare_to": 41
 				},

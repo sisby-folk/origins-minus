@@ -6,7 +6,7 @@
 		"chance": 0.01,
 		"action": {
 			"type": "origins:change_resource",
-			"resource": "tinkervamp:blood_resource",
+			"resource": "origins_minus:blood_resource",
 			"change": -1
 		}
 	},
@@ -22,7 +22,7 @@
 			},
 			{
 				"type": "origins:resource",
-				"resource": "tinkervamp:blood_resource",
+				"resource": "origins_minus:blood_resource",
 				"comparison": ">",
 				"compare_to": 40
 			},

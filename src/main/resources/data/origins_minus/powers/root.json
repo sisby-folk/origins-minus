@@ -12,7 +12,7 @@
 		"type": "origins:action_on_block_use",
 		"entity_action": {
 			"type": "origins:change_resource",
-			"resource": "tinker_dryad:photosynthesis_resource",
+			"resource": "origins_minus:photosynthesis_resource",
 			"change": -1
 		},
 		"block_condition": {
@@ -27,7 +27,7 @@
 			"conditions": [
 				{
 					"type": "origins:resource",
-					"resource": "tinker_dryad:photosynthesis_resource",
+					"resource": "origins_minus:photosynthesis_resource",
 					"comparison": ">",
 					"compare_to": 0
 				},

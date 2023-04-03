@@ -2,14 +2,14 @@
 	"name": "Weaver",
 	"description": "These crafty climbers are at home in their webs",
 	"powers": [
-		"arachnidplus:climbing",
-		"arachnidplus:eyes",
-		"arachnidplus:master_of_webs",
-		"arachnidplus:no_suffocation",
+		"origins_minus:climbing",
+		"origins_minus:eyes",
+		"origins_minus:master_of_webs",
+		"origins_minus:no_suffocation",
 		"origins:arthropod",
-		"arachnidplus:break_speed",
+		"origins_minus:break_speed",
 		"origins:master_of_webs_no_slowdown",
-		"arachnidplus:pfall"
+		"origins_minus:pfall"
 	],
 	"icon": {
 		"item": "minecraft:cobweb"

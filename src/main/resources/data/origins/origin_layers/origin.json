@@ -1,15 +1,15 @@
 {
 	"origins": [
-		"arachnidplus:arachnidplus",
-		"avianplus:avianplus",
-		"blazebornplus:blazebornplus",
-		"tinker_dryad:dryad",
-		"enderminus:enderminus",
-		"felineplus:felineplus",
-		"lepus:lepus",
-		"merplus:merplus",
-		"shulkplus:shulkplus",
-		"tinkervamp:vampire"
+		"origins_minus:arachnidplus",
+		"origins_minus:avianplus",
+		"origins_minus:blazebornplus",
+		"origins_minus:dryad",
+		"origins_minus:enderminus",
+		"origins_minus:felineplus",
+		"origins_minus:lepus",
+		"origins_minus:merplus",
+		"origins_minus:shulkplus",
+		"origins_minus:vampire"
 	],
 	"enabled": true,
 	"allow_random": true

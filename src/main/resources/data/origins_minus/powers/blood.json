@@ -44,7 +44,7 @@
 			"actions": [
 				{
 					"type": "origins:change_resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"change": 140
 				}
 			]
@@ -86,7 +86,7 @@
 				},
 				{
 					"type": "origins:change_resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"change": -1
 				}
 			]
@@ -96,7 +96,7 @@
 			"conditions": [
 				{
 					"type": "origins:resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"comparison": ">",
 					"compare_to": 20
 				},
@@ -117,7 +117,7 @@
 		"interval": 140,
 		"entity_action": {
 			"type": "origins:change_resource",
-			"resource": "tinkervamp:blood_resource",
+			"resource": "origins_minus:blood_resource",
 			"change": -1
 		},
 		"condition": {
@@ -128,7 +128,7 @@
 				},
 				{
 					"type": "origins:resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"comparison": ">",
 					"compare_to": 40
 				},
@@ -156,7 +156,7 @@
 			"conditions": [
 				{
 					"type": "origins:resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"comparison": "<=",
 					"compare_to": 40
 				},
@@ -189,7 +189,7 @@
 				},
 				{
 					"type": "origins:resource",
-					"resource": "tinkervamp:blood_resource",
+					"resource": "origins_minus:blood_resource",
 					"comparison": "<=",
 					"compare_to": 0
 				},
