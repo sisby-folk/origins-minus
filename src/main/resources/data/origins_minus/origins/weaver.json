@@ -12,7 +12,7 @@
 		"origins_minus:pfall"
 	],
 	"icon": {
-		"item": "minecraft:cobweb"
+		"item": "minecraft:glow_lichen"
 	},
 	"order": 1,
 	"impact": 1

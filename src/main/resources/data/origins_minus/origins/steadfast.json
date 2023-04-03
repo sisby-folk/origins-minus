@@ -7,7 +7,7 @@
 		"origins_minus:hoarder"
 	],
 	"icon": {
-		"item": "minecraft:mossy_stone_bricks"
+		"item": "minecraft:shield"
 	},
 	"order": 4,
 	"impact": 2

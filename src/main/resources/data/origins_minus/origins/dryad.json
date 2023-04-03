@@ -7,7 +7,7 @@
 		"origins_minus:root"
 	],
 	"icon": {
-		"item": "oak_sapling"
+		"item": "minecraft:vines"
 	},
 	"order": 1,
 	"impact": 2
