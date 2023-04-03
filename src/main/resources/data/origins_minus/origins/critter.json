@@ -9,8 +9,5 @@
 	"icon": {
 		"item": "minecraft:tall_grass"
 	},
-	"unchoosable": false,
-	"order": 1,
-	"impact": 1,
-	"loading_priority": 0
+	"impact": 1
 }
