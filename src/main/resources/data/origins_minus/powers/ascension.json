@@ -1,6 +1,6 @@
 {
 	"name": "Ascension",
-	"description": "slowly descend if against wall.",
+	"description": "Climb vertically towards the ceiling.",
 	"type": "origins:multiple",
 	"ascend": {
 		"condition": {
