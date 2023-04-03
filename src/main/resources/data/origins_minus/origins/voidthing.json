@@ -1,13 +1,13 @@
 {
-    "name": "Voidthing",
-    "description": "These elusive beings slip between here and somewhere else.",
-    "powers": [
-        "origins_minus:blink",
-        "origins_minus:reach",
-        "origins:ender_particles"
-    ],
-    "icon": {
-        "item": "minecraft:music_disc_11"
-    },
-    "impact": 1
+	"name": "Voidthing",
+	"description": "These elusive beings slip between here and somewhere else.",
+	"powers": [
+		"origins_minus:blink",
+		"origins_minus:reach",
+		"origins:ender_particles"
+	],
+	"icon": {
+		"item": "minecraft:music_disc_11"
+	},
+	"impact": 1
 }

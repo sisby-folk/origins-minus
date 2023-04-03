@@ -1,9 +1,9 @@
 {
-  "name": "Molten Cruise",
-  "description": "Swim and see more in lava.",
-  "type": "origins:swimming",
-  "condition": {
-    "type": "origins:submerged_in",
-    "fluid": "minecraft:lava"
-  }
+	"name": "Molten Cruise",
+	"description": "Swim and see more in lava.",
+	"type": "origins:swimming",
+	"condition": {
+		"type": "origins:submerged_in",
+		"fluid": "minecraft:lava"
+	}
 }

@@ -1,17 +1,17 @@
 {
-    "name": "Mer",
-    "description": "Swift water creatures who call the depths home.",
-    "powers": [
-        "origins_minus:water_breathing",
-        "origins_minus:swim_speed",
-        "origins_minus:wet_eyes",
-        "origins:like_water",
-        "origins:conduit_power_on_land",
-        "origins:aquatic",
-        "origins_minus:aqua_affinity"
-    ],
-    "icon": {
-        "item": "minecraft:tube_coral"
-    },
-    "impact": 1
+	"name": "Mer",
+	"description": "Swift water creatures who call the depths home.",
+	"powers": [
+		"origins_minus:water_breathing",
+		"origins_minus:swim_speed",
+		"origins_minus:wet_eyes",
+		"origins:like_water",
+		"origins:conduit_power_on_land",
+		"origins:aquatic",
+		"origins_minus:aqua_affinity"
+	],
+	"icon": {
+		"item": "minecraft:tube_coral"
+	},
+	"impact": 1
 }

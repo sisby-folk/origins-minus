@@ -1,37 +1,37 @@
 {
-  "schema_version": 1,
-  "quilt_loader": {
-    "group": "folk.sisby",
-    "id": "origins-minus",
-    "version": "${version}",
-    "metadata": {
-      "name": "Origins Minus",
-      "description": "Simple origins with less to remember.",
-      "contributors": {
-        "Sisby folk": "Co-Authors",
-        "Garden System": "Contributor/s"
-      },
-      "contact": {
-        "homepage": "https://modrinth.com/mod/origins-minus",
-        "issues": "https://github.com/sisby-folk/origins-minus/issues",
-        "sources": "https://github.com/sisby-folk/origins-minus"
-      },
-      "icon": "assets/origins_minus/icon.png"
-    },
-    "intermediate_mappings": "net.fabricmc:intermediary",
-    "depends": [
-      {
-        "id": "quilt_loader",
-        "versions": ">=0.16.0-"
-      },
-      {
-        "id": "minecraft",
-        "versions": ">=1.15"
-      },
-      {
-        "id": "origins",
-        "versions": ">=1.4"
-      }
-    ]
-  }
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "folk.sisby",
+		"id": "origins-minus",
+		"version": "${version}",
+		"metadata": {
+			"name": "Origins Minus",
+			"description": "Simple origins with less to remember.",
+			"contributors": {
+				"Sisby folk": "Co-Authors",
+				"Garden System": "Contributor/s"
+			},
+			"contact": {
+				"homepage": "https://modrinth.com/mod/origins-minus",
+				"issues": "https://github.com/sisby-folk/origins-minus/issues",
+				"sources": "https://github.com/sisby-folk/origins-minus"
+			},
+			"icon": "assets/origins_minus/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.16.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.15"
+			},
+			{
+				"id": "origins",
+				"versions": ">=1.4"
+			}
+		]
+	}
 }
