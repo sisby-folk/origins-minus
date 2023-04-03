@@ -10,7 +10,7 @@ buildscript {
 
 plugins {
 	id 'maven-publish'
-	id 'org.quiltmc.loom' version '0.12.+'
+	alias libs.plugins.loom
 }
 
 if (System.getenv("MODRINTH_TOKEN")) {
@@ -73,10 +73,10 @@ repositories {
 dependencies {
 	// // Base // //
 	minecraft libs.minecraft
-	mappings variantOf(libs.quiltMappings) { classifier "intermediary-v2" }
+	mappings variantOf(libs.qm) { classifier "intermediary-v2" }
 	modImplementation libs.ql
-
-	// // Compat // //
+	modImplementation libs.qsl
+	modImplementation libs.qfapi
 }
 
 
