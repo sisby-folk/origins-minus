@@ -17,7 +17,7 @@
 					{
 						"type": "origins:play_sound",
 						"sound": "entity.enderman.teleport",
-						"volume": 4.0,
+						"volume": 8.0,
 						"pitch": 1.5
 					},
 					{

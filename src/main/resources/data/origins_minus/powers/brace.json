@@ -1,6 +1,7 @@
 {
-	"name": "Unflinching",
-	"description": "Brace, slowing down and resisting damage.",
+	"name": "Brace",
+	"description": "Slow down and resist attacks.",
+	"type": "origins:multiple",
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/active.png",
@@ -8,13 +9,10 @@
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Resisting damage incurs exhaustion, costing hunger."
+			"text": "Resisting damage incurs exhaustion."
 		}
 	],
-	"type": "origins:multiple",
-	"slowed": {
-		"name": "crouch walk = slow",
-		"description": "weh",
+	"slow": {
 		"condition": {
 			"type": "origins:sneaking"
 		},
@@ -34,8 +32,7 @@
 		"tick_rate": 1,
 		"update_health": false
 	},
-	"lessdamage": {
-		"name": "modify",
+	"resist": {
 		"condition": {
 			"type": "origins:sneaking"
 		},
@@ -48,8 +45,7 @@
 			"value": -0.5
 		}
 	},
-	"whenhurt": {
-		"name": "exhaust",
+	"exhaustion": {
 		"condition": {
 			"type": "origins:sneaking"
 		},
@@ -80,8 +76,7 @@
 			"should_render": false
 		}
 	},
-	"crouchshell": {
-		"name": "sound design",
+	"sound": {
 		"condition": {
 			"type": "origins:sneaking"
 		},

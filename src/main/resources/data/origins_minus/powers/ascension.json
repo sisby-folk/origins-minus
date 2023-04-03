@@ -1,0 +1,105 @@
+{
+	"name": "Ascension",
+	"description": "slowly descend if against wall.",
+	"type": "origins:multiple",
+	"ascend": {
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_is_hooked",
+					"comparison": "=",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"type": "origins:climbing",
+		"allow_holding": true
+	},
+	"descend": {
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_is_hooked",
+					"comparison": "=",
+					"compare_to": 1
+				}
+			]
+		},
+		"type": "origins:modify_falling",
+		"velocity": 0.01,
+		"take_fall_damage": false
+	},
+	"stop": {
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_is_hooked",
+			"comparison": "=",
+			"compare_to": 1
+		},
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "set_total",
+			"value": 0
+		},
+		"tick_rate": 1
+	},
+	"hook": {
+		"type": "origins:self_action",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_is_hooked",
+			"change": 1
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_is_hooked",
+					"comparison": "=",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:exposed_to_sky",
+					"inverted": "true"
+				}
+			]
+		},
+		"key": "key.sneak"
+	},
+	"jump": {
+		"type": "origins:self_action",
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_is_hooked",
+			"change": 0
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_is_hooked",
+					"comparison": "=",
+					"compare_to": 1
+				}
+			]
+		},
+		"key": "key.jump"
+	},
+	"is_hooked": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"hud_render": {
+			"should_render": false
+		}
+	}
+}

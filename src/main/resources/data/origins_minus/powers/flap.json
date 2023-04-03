@@ -1,6 +1,7 @@
 {
 	"name": "Flap",
 	"description": "Gain height while airborne",
+	"type": "origins:active_self",
 	"condition": {
 		"type": "origins:and",
 		"conditions": [
@@ -17,7 +18,6 @@
 			}
 		]
 	},
-	"type": "origins:active_self",
 	"entity_action": {
 		"type": "origins:add_velocity",
 		"y": 0.5,

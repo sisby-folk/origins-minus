@@ -1,6 +1,4 @@
 {
-	"name": "lava fall",
-	"description": "no fall damage landing in lava (may glitch out).",
 	"hidden": true,
 	"loading_priority": 0,
 	"condition": {

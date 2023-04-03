@@ -4,11 +4,9 @@
 	"powers": [
 		"origins_minus:water_breathing",
 		"origins_minus:swim_speed",
-		"origins_minus:wet_eyes",
-		"origins:like_water",
-		"origins:conduit_power_on_land",
-		"origins:aquatic",
-		"origins_minus:aqua_affinity"
+		"origins_minus:water_vision",
+		"origins_minus:aqua_affinity",
+		"origins:like_water"
 	],
 	"icon": {
 		"item": "minecraft:tube_coral"

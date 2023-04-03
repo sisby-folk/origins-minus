@@ -1,0 +1,27 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"punch_through": {
+		"condition": {
+			"inverted": true,
+			"type": "origins:sneaking"
+		},
+		"type": "origins:prevent_block_selection",
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "origins:cobwebs"
+		}
+	},
+	"cobweb_climber": {
+		"hidden": true,
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:in_tag",
+				"tag": "origins:cobwebs"
+			}
+		},
+		"type": "origins:climbing",
+		"allow_holding": true
+	}
+}

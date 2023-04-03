@@ -1,6 +1,6 @@
 {
 	"name": "Feed",
-	"description": "Feed on a target to replenish blood.",
+	"description": "Replenish blood from a target.",
 	"type": "origins:multiple",
 	"badges": [
 		{

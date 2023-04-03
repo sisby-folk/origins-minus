@@ -2,7 +2,7 @@
 	"name": "Wildling",
 	"description": "Travellers, Explorers, Foragers.",
 	"powers": [
-		"origins_minus:jump",
+		"origins_minus:bound",
 		"origins_minus:fall_immunity",
 		"origins_minus:energetic"
 	],

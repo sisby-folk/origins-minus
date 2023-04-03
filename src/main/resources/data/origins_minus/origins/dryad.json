@@ -2,9 +2,8 @@
 	"name": "Dryad",
 	"description": "One with the trees.",
 	"powers": [
-		"origins_minus:photosynthesis",
-		"origins_minus:photosynthesis_hidden",
-		"origins_minus:root"
+		"origins_minus:sunlight",
+		"origins_minus:sunlight_hidden"
 	],
 	"icon": {
 		"item": "minecraft:vines"

@@ -1,0 +1,18 @@
+{
+	"name": "Bound",
+	"description": "Charge a high jump by sneaking.",
+	"type": "origins:modify_jump",
+	"condition": {
+		"inverted": false,
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:sneaking"
+			}
+		]
+	},
+	"modifier": {
+		"operation": "multiply_base",
+		"value": 0.4
+	}
+}

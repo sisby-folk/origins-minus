@@ -6,7 +6,7 @@
 		"chance": 0.01,
 		"action": {
 			"type": "origins:change_resource",
-			"resource": "origins_minus:photosynthesis_resource",
+			"resource": "origins_minus:sunlight_resource",
 			"change": -1
 		}
 	},
@@ -22,7 +22,7 @@
 			},
 			{
 				"type": "origins:resource",
-				"resource": "origins_minus:photosynthesis_resource",
+				"resource": "origins_minus:sunlight_resource",
 				"comparison": ">",
 				"compare_to": 40
 			},

@@ -1,11 +1,15 @@
 {
 	"name": "Lucky Old Sun",
-	"description": "Nutrient level replaces hunger.\nRefills in sunlight.",
+	"description": "Sunlight replaces hunger.",
 	"type": "origins:multiple",
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "You can still eat any food. However,\nonly apples and honey give nutrients."
+			"text": "Refills under the sun."
+		},
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "Food is edible, but only apples and honey refill sunlight."
 		}
 	],
 	"resource": {
@@ -40,7 +44,7 @@
 			"actions": [
 				{
 					"type": "origins:change_resource",
-					"resource": "origins_minus:photosynthesis_resource",
+					"resource": "origins_minus:sunlight_resource",
 					"change": 140
 				}
 			]
@@ -82,7 +86,7 @@
 				},
 				{
 					"type": "origins:change_resource",
-					"resource": "origins_minus:photosynthesis_resource",
+					"resource": "origins_minus:sunlight_resource",
 					"change": -1
 				}
 			]
@@ -92,7 +96,7 @@
 			"conditions": [
 				{
 					"type": "origins:resource",
-					"resource": "origins_minus:photosynthesis_resource",
+					"resource": "origins_minus:sunlight_resource",
 					"comparison": ">",
 					"compare_to": 20
 				},
@@ -109,7 +113,7 @@
 		"interval": 140,
 		"entity_action": {
 			"type": "origins:change_resource",
-			"resource": "origins_minus:photosynthesis_resource",
+			"resource": "origins_minus:sunlight_resource",
 			"change": -1
 		},
 		"condition": {
@@ -120,7 +124,7 @@
 				},
 				{
 					"type": "origins:resource",
-					"resource": "origins_minus:photosynthesis_resource",
+					"resource": "origins_minus:sunlight_resource",
 					"comparison": ">",
 					"compare_to": 40
 				},
@@ -141,105 +145,12 @@
 			]
 		}
 	},
-	"no_sprinting": {
-		"type": "origins:prevent_sprinting",
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "origins_minus:photosynthesis_resource",
-					"comparison": "<=",
-					"compare_to": 40
-				},
-				{
-					"type": "origins:or",
-					"inverted": true,
-					"conditions": [
-						{
-							"type": "origins:gamemode",
-							"gamemode": "creative"
-						},
-						{
-							"type": "origins:gamemode",
-							"gamemode": "spectator"
-						}
-					]
-				}
-			]
-		}
-	},
-	"starve": {
-		"type": "origins:damage_over_time",
-		"interval": 80,
-		"onset_delay": 160,
-		"damage": 1,
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "origins_minus:photosynthesis_resource",
-					"comparison": "<=",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:or",
-					"conditions": [
-						{
-							"type": "origins:and",
-							"conditions": [
-								{
-									"type": "origins:command",
-									"command": "difficulty",
-									"comparison": ">=",
-									"compare_to": 3
-								}
-							]
-						},
-						{
-							"type": "origins:and",
-							"conditions": [
-								{
-									"type": "origins:health",
-									"comparison": ">",
-									"compare_to": 1
-								},
-								{
-									"type": "origins:command",
-									"command": "difficulty",
-									"comparison": ">=",
-									"compare_to": 2
-								}
-							]
-						},
-						{
-							"type": "origins:and",
-							"conditions": [
-								{
-									"type": "origins:health",
-									"comparison": ">",
-									"compare_to": 10
-								},
-								{
-									"type": "origins:command",
-									"command": "difficulty",
-									"comparison": ">=",
-									"compare_to": 1
-								}
-							]
-						}
-					]
-				}
-			]
-		}
-	},
 	"photosynthesise": {
 		"type": "origins:action_over_time",
 		"interval": 30,
 		"entity_action": {
 			"type": "origins:change_resource",
-			"resource": "origins_minus:photosynthesis_resource",
+			"resource": "origins_minus:sunlight_resource",
 			"change": 1
 		},
 		"condition": {
@@ -250,7 +161,7 @@
 		"type": "origins:action_on_item_use",
 		"entity_action": {
 			"type": "origins:change_resource",
-			"resource": "origins_minus:photosynthesis_resource",
+			"resource": "origins_minus:sunlight_resource",
 			"change": 40
 		},
 		"item_condition": {

@@ -1,11 +1,18 @@
 {
-	"name": "Featherweight",
-	"description": "Hold to slow descent, sneak to land safely.\nReduced air drag.",
-	"hidden": false,
-	"loading_priority": 1,
+	"name": "Air Control",
+	"description": "Slow your descent to glide or prevent falls.",
 	"type": "origins:multiple",
-	"jeump": {
-		"name": "jump slowfall",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "Sneak to fall safely at speed."
+		},
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "Air manoeuvrability is increased."
+		}
+	],
+	"jump": {
 		"hidden": true,
 		"type": "origins:active_self",
 		"entity_action": {
@@ -31,8 +38,6 @@
 		}
 	},
 	"sneak": {
-		"name": "sneakfall",
-		"description": "no fall damage when sneaking",
 		"hidden": true,
 		"condition": {
 			"inverted": false,

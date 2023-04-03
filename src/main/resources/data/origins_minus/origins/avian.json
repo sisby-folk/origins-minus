@@ -3,7 +3,7 @@
 	"description": "Cut through the air with ease.",
 	"powers": [
 		"origins_minus:flap",
-		"origins_minus:active_slow_fall",
+		"origins_minus:glide",
 		"origins_minus:like_air"
 	],
 	"icon": {
