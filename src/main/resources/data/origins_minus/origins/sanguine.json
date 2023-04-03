@@ -1,6 +1,6 @@
 {
 	"name": "Sanguine",
-	"description": "Hunger for blood.",
+	"description": "Bloodthirsty rampage conductor.",
 	"powers": [
 		"origins_minus:blood",
 		"origins_minus:blood_hidden",
