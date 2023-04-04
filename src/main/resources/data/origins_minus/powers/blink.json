@@ -23,6 +23,10 @@
 					{
 						"type": "origins:trigger_cooldown",
 						"power": "*:*_hit_cooldown"
+					},
+					{
+						"type": "origins:set_fall_distance",
+						"fall_distance": 0
 					}
 				]
 			},
