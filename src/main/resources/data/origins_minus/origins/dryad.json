@@ -3,7 +3,8 @@
 	"description": "One with the trees.",
 	"powers": [
 		"origins_minus:sunlight",
-		"origins_minus:sunlight_hidden"
+		"origins_minus:sunlight_hidden",
+		"origins_minus:vine_whip"
 	],
 	"icon": {
 		"item": "minecraft:vine"
