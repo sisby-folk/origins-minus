@@ -1,5 +1,6 @@
 {
-	"hidden": true,
+	"name": "Carefree",
+	"description": "High falls are harmless.",
 	"type": "origins:invulnerability",
 	"damage_condition": {
 		"type": "origins:name",

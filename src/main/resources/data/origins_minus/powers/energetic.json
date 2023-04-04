@@ -2,6 +2,12 @@
 	"name": "Energetic",
 	"description": "You move faster on land.",
 	"type": "origins:attribute",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "You can sprint in any direction."
+		}
+	],
 	"modifier": {
 		"attribute": "minecraft:generic.movement_speed",
 		"operation": "multiply_base",
