@@ -4,6 +4,7 @@
 	"powers": [
 		"origins_minus:blink",
 		"origins_minus:reach",
+		"origins_minus:wraparound",
 		"origins:ender_particles"
 	],
 	"icon": {

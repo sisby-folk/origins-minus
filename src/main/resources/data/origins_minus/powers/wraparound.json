@@ -1,0 +1,50 @@
+{
+	"name": "Wraparound",
+	"description": "Let void become sky.",
+	"type": "origins:action_when_damage_taken",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:execute_command",
+				"command": "teleport @s ~ 500 ~"
+			},
+			{
+				"type": "origins:spawn_particles",
+				"particle": {
+					"type": "minecraft:portal"
+				},
+				"count": 24,
+				"speed": 0.0,
+				"force": true,
+				"spread": {
+					"x": 3.0,
+					"y": 12.0,
+					"z": 3.0
+				}
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "entity.enderman.teleport",
+				"volume": 6.0,
+				"pitch": 1.4
+			},
+			{
+				"type": "origins:add_velocity",
+				"set": true
+			},
+			{
+				"type": "origins:set_fall_distance",
+				"fall_distance": 0
+			},
+			{
+				"type": "origins:heal",
+				"amount": 3
+			}
+		]
+	},
+	"damage_condition": {
+		"type": "origins:out_of_world"
+	},
+	"cooldown": 1
+}
