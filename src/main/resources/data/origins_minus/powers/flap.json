@@ -19,11 +19,22 @@
 		]
 	},
 	"entity_action": {
-		"type": "origins:add_velocity",
-		"y": 0.5,
-		"space": "world",
-		"client": true,
-		"server": false
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:add_velocity",
+				"y": 0.5,
+				"space": "world",
+				"client": true,
+				"server": false
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "entity.phantom.flap",
+				"volume": 0.5,
+				"pitch": 1.4
+			}
+		]
 	},
 	"cooldown": 30,
 	"hud_render": {
