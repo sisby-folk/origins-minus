@@ -1,96 +1,90 @@
 {
 	"name": "Vine Whip",
 	"description": "Slingshot toward nearby plant life.",
-	"type": "origins:multiple",
-	"slingshot": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:raycast",
-			"distance": 16,
-			"block": true,
-			"entity": false,
-			"shape_type": "outline",
-			"fluid_handling": "none",
-			"block_condition": {
-				"type": "origins:in_tag",
-				"tag": "origins_minus:vine_whip_targetable"
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:raycast",
+				"distance": 16,
+				"block": true,
+				"entity": false,
+				"shape_type": "outline",
+				"fluid_handling": "none",
+				"command_along_ray": "particle block minecraft:vine",
+				"command_along_ray_only_on_hit": false
 			},
-			"hit_action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:play_sound",
-						"sound": "block.bamboo.fall",
-						"volume": 1.0,
-						"pitch": 1.0
-					},
-					{
-						"type": "origins:trigger_cooldown",
-						"power": "*:*_hit_cooldown"
-					},
-					{
-						"type": "origins:set_fall_distance",
-						"fall_distance": 0
-					},
-					{
-						"type": "origins:set_fall_distance",
-						"fall_distance": 0
-					},
-					{
-						"type": "origins:add_velocity",
-						"y": 0.1,
-						"space": "world",
-						"client": true,
-						"server": false
-					},
-					{
-						"type": "origins:add_velocity",
-						"z": 3,
-						"space": "local",
-						"client": true,
-						"server": false
-					},
-					{
-						"type": "origins:add_velocity",
-						"z": 0.1,
-						"space": "local",
-						"client": true,
-						"server": false
-					},
-					{
-						"type": "origins:heal",
-						"amount": -1
-					}
-				]
+			{
+				"type": "origins:play_sound",
+				"sound": "block.bamboo_sapling.place",
+				"volume": 2.0,
+				"pitch": 0.5
 			},
-			"command_along_ray": "particle minecraft:item_slime",
-			"command_along_ray_only_on_hit": true
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_hit_cooldown",
-					"comparison": "<=",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:health",
-					"comparison": ">",
-					"compare_to": 1
-				}
-			]
-		}
+			{
+				"type": "origins:play_sound",
+				"sound": "block.slime_block.place",
+				"volume": 1.0,
+				"pitch": 2
+			},
+			{
+				"type": "origins:set_fall_distance",
+				"fall_distance": 0
+			},
+			{
+				"type": "origins:add_velocity",
+				"y": 0.1,
+				"space": "world",
+				"client": true,
+				"server": false
+			},
+			{
+				"type": "origins:add_velocity",
+				"z": 3,
+				"space": "local",
+				"client": true,
+				"server": false
+			},
+			{
+				"type": "origins:add_velocity",
+				"z": 0.1,
+				"space": "local",
+				"client": true,
+				"server": false
+			},
+			{
+				"type": "origins:heal",
+				"amount": -1
+			}
+		]
 	},
-	"hit_cooldown": {
-		"type": "origins:cooldown",
-		"cooldown": 40,
-		"hud_render": {
-			"should_render": true,
-			"inverted": true,
-			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
-			"bar_index": 22
-		}
+	"cooldown": 40,
+	"hud_render": {
+		"should_render": true,
+		"inverted": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+		"bar_index": 22
+	},
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:health",
+				"comparison": ">",
+				"compare_to": 1
+			},
+			{
+				"type": "origins:raycast",
+				"distance": 16,
+				"block": true,
+				"entity": false,
+				"shape_type": "outline",
+				"fluid_handling": "none",
+				"block_condition": {
+					"type": "origins:in_tag",
+					"tag": "origins_minus:vine_whip_targetable"
+				}
+			}
+		]
 	}
 }
