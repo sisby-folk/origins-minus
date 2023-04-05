@@ -3,7 +3,7 @@
 	"type": "origins:action_on_land",
 	"entity_action": {
 		"type": "origins:add_velocity",
-		"y": 0.3,
+		"y": 0.5,
 		"space": "world",
 		"client": true,
 		"server": true,
