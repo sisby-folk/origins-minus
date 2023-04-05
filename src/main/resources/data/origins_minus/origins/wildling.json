@@ -2,9 +2,10 @@
 	"name": "Wildling",
 	"description": "Travellers, Explorers, Foragers.",
 	"powers": [
+		"origins_minus:energetic",
 		"origins_minus:bound",
 		"origins_minus:fall_immunity",
-		"origins_minus:energetic"
+		"origins_minus:like_air"
 	],
 	"icon": {
 		"item": "minecraft:tall_grass"
