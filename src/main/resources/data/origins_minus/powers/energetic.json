@@ -1,17 +1,27 @@
 {
 	"name": "Energetic",
 	"description": "You move faster on land.",
-	"type": "origins:attribute",
+	"type": "origins:multiple",
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Your speed carries easily into the air."
+			"text": "Your speed carries in the air."
 		}
 	],
-	"modifier": {
-		"attribute": "minecraft:generic.movement_speed",
-		"operation": "multiply_base",
-		"value": 0.1
+	"speed": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_base",
+			"value": 0.1
+		},
+		"update_health": false
 	},
-	"update_health": false
+	"like_air": {
+		"type": "origins:attribute_modify_transfer",
+		"hidden": true,
+		"class": "modify_air_speed",
+		"attribute": "minecraft:generic.movement_speed",
+		"multiplier": 0.5
+	}
 }

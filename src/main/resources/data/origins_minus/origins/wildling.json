@@ -5,7 +5,7 @@
 		"origins_minus:energetic",
 		"origins_minus:bound",
 		"origins_minus:fall_immunity",
-		"origins_minus:like_air"
+		"origins_minus:bounce"
 	],
 	"icon": {
 		"item": "minecraft:tall_grass"
