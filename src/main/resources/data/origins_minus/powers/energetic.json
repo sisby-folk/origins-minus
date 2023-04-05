@@ -1,18 +1,160 @@
 {
 	"name": "Energetic",
 	"description": "You move faster on land.",
-	"type": "origins:attribute",
+	"type": "origins:multiple",
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
 			"text": "You can sprint in any direction."
 		}
 	],
-	"modifier": {
-		"attribute": "minecraft:generic.movement_speed",
-		"operation": "multiply_base",
-		"value": 0.1
+	"speed": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_base",
+			"value": 0.1
+		},
+		"update_health": false
 	},
-	"tick_rate": 1,
-	"update_health": false
+	"no_sprinting": {
+		"type": "origins:prevent_sprinting"
+	},
+	"is_sprinting": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"is_moving": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"key_sprint": {
+		"type": "origins:active_self",
+		"key": {
+			"key": "key.sprint",
+			"continuous": true
+		},
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_is_sprinting",
+			"change": 1
+		}
+	},
+	"key_forward": {
+		"type": "origins:active_self",
+		"key": {
+			"key": "key.forward",
+			"continuous": true
+		},
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_is_moving",
+			"change": 2
+		}
+	},
+	"key_back": {
+		"type": "origins:active_self",
+		"key": {
+			"key": "key.back",
+			"continuous": true
+		},
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_is_moving",
+			"change": 2
+		}
+	},
+	"key_left": {
+		"type": "origins:active_self",
+		"key": {
+			"key": "key.left",
+			"continuous": true
+		},
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_is_moving",
+			"change": 2
+		}
+	},
+	"key_right": {
+		"type": "origins:active_self",
+		"key": {
+			"key": "key.right",
+			"continuous": true
+		},
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_is_moving",
+			"change": 2
+		}
+	},
+	"sprint_speed": {
+		"type": "origins:conditioned_attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_base",
+			"value": 0.3
+		},
+		"tick_rate": 1,
+		"update_health": false,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_is_sprinting",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_is_moving",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"move_stop": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_is_moving",
+					"change": -1
+				}
+			]
+		},
+		"interval": 1
+	},
+	"sprint_stop": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_is_sprinting",
+					"change": -1
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_is_moving",
+			"comparison": "==",
+			"compare_to": 0
+		},
+		"interval": 1
+	}
 }
