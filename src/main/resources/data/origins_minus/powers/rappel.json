@@ -48,7 +48,7 @@
 			"operation": "multiply_total",
 			"value": 0
 		},
-		"type": "origins:attribute",
+		"type": "origins:conditioned_attribute",
 		"tick_rate": 1
 	},
 	"hook": {
@@ -56,7 +56,8 @@
 		"entity_action": {
 			"type": "origins:change_resource",
 			"resource": "*:*_is_hooked",
-			"change": 1
+			"change": 1,
+			"operation": "set"
 		},
 		"condition": {
 			"type": "origins:and",
@@ -80,7 +81,8 @@
 		"entity_action": {
 			"type": "origins:change_resource",
 			"resource": "*:*_is_hooked",
-			"change": 0
+			"change": 0,
+			"operation": "set"
 		},
 		"condition": {
 			"type": "origins:and",
