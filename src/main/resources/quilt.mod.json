@@ -31,6 +31,9 @@
 			{
 				"id": "origins",
 				"versions": ">=1.4"
+			},
+			{
+				"id": "pehkui"
 			}
 		]
 	}
