@@ -3,6 +3,7 @@
 	"description": "Climb vertically towards the ceiling.",
 	"type": "origins:multiple",
 	"ascend": {
+		"type": "origins:modify_velocity",
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -11,11 +12,42 @@
 					"inverted": true
 				},
 				{
+					"type": "origins:on_block",
+					"inverted": true
+				},
+				{
 					"type": "origins:sneaking"
 				}
 			]
 		},
-		"type": "origins:climbing"
+		"modifier": {
+			"value": 0.08,
+			"operation": "set_total"
+		},
+		"axes": [
+			"y"
+		]
+	},
+	"drop": {
+		"type": "origins:modify_falling",
+		"velocity": 0,
+		"take_fall_damage": false,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:exposed_to_sky",
+					"inverted": true
+				},
+				{
+					"type": "origins:on_block",
+					"inverted": true
+				},
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		}
 	},
 	"stop": {
 		"type": "origins:modify_velocity",
@@ -24,6 +56,10 @@
 			"conditions": [
 				{
 					"type": "origins:exposed_to_sky",
+					"inverted": true
+				},
+				{
+					"type": "origins:on_block",
 					"inverted": true
 				},
 				{
