@@ -1,28 +1,37 @@
 {
 	"name": "Brace",
-	"description": "Slow down and resist attacks.",
+	"description": "Slow down and parry attacks.",
 	"type": "origins:multiple",
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "Active ability, Sneak to use."
+			"text": "Active ability, use with Sneak."
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
 			"text": "Resisting damage incurs exhaustion."
+		},
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "Bracing into falls is faster, but safer."
 		}
 	],
-	"slow": {
+	"sound": {
+		"type": "origins:active_self",
+		"key": "key.sneak",
+		"entity_action": {
+			"type": "origins:play_sound",
+			"sound": "entity.shulker.close",
+			"volume": 0.5,
+			"pitch": 0.8
+		}
+	},
+	"knockback_resist": {
 		"condition": {
 			"type": "origins:sneaking"
 		},
 		"type": "origins:conditioned_attribute",
 		"modifiers": [
-			{
-				"attribute": "minecraft:generic.movement_speed",
-				"operation": "multiply_total",
-				"value": -0.5
-			},
 			{
 				"attribute": "minecraft:generic.knockback_resistance",
 				"operation": "addition",
@@ -31,6 +40,166 @@
 		],
 		"tick_rate": 1,
 		"update_health": false
+	},
+	"slow": {
+		"condition": {
+			"type": "origins:sneaking"
+		},
+		"type": "origins:action_over_time",
+		"interval": 1,
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale delay set pehkui:motion 0 @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale persist set pehkui:motion false @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:motion 0.5 @s"
+				}
+			]
+		},
+		"falling_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale reset pehkui:motion @s"
+				}
+			]
+		}
+	},
+	"drop": {
+		"type": "origins:modify_falling",
+		"velocity": 0.32,
+		"take_fall_damage": true,
+		"condition": {
+			"type": "origins:sneaking"
+		}
+	},
+	"bury": {
+		"type": "origins:phasing",
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking"
+				},
+				{
+					"type": "origins:fall_distance",
+					"comparison": ">=",
+					"compare_to": 8
+				}
+			]
+		},
+		"block_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:movement_blocking",
+						"inverted": true
+					},
+					"y": 1
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:movement_blocking"
+					},
+					"y": -1
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:movement_blocking"
+					},
+					"x": 1
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:movement_blocking"
+					},
+					"x": -1
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:movement_blocking"
+					},
+					"z": 1
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:movement_blocking"
+					},
+					"z": -1
+				}
+			]
+		}
+	},
+	"fall_resist": {
+		"condition": {
+			"type": "origins:sneaking"
+		},
+		"type": "origins:modify_damage_taken",
+		"self_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "block.lantern.break",
+					"volume": 1.1,
+					"pitch": 0.3
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "block.soul_soil.break",
+					"volume": 0.8,
+					"pitch": 1.2
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "block.wool.place",
+					"volume": 2,
+					"pitch": 0.9
+				}
+			]
+		},
+		"damage_condition": {
+			"type": "origins:from_falling"
+		},
+		"modifiers": [
+			{
+				"operation": "add_base_early",
+				"value": -1
+			},
+			{
+				"operation": "multiply_total_multiplicative",
+				"value": -0.75
+			},
+			{
+				"operation": "max_total",
+				"value": 8
+			}
+		]
+	},
+	"fall_safety": {
+		"type": "origins:prevent_death",
+		"damage_condition": {
+			"type": "origins:from_falling"
+		},
+		"condition": {
+			"type": "origins:sneaking"
+		}
 	},
 	"resist": {
 		"condition": {
@@ -45,28 +214,47 @@
 			"value": -0.5
 		}
 	},
-	"exhaustion": {
+	"thorns": {
 		"condition": {
 			"type": "origins:sneaking"
 		},
 		"type": "origins:action_when_hit",
 		"bientity_action": {
-			"type": "origins:target_action",
-			"action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:exhaust",
-						"amount": 0.4
-					},
-					{
-						"type": "origins:play_sound",
-						"sound": "entity.shulker.hurt_closed",
-						"volume": 1,
-						"pitch": 0.8
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:invert",
+					"action": {
+						"type": "origins:add_velocity",
+						"z": 1
 					}
-				]
-			}
+				},
+				{
+					"type": "origins:actor_action",
+					"action": {
+						"type": "origins:add_velocity",
+						"y": 0.1
+					}
+				},
+				{
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:exhaust",
+								"amount": 0.4
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "entity.shulker.hurt_closed",
+								"volume": 0.5,
+								"pitch": 0.8
+							}
+						]
+					}
+				}
+			]
 		},
 		"damage_condition": {
 			"type": "origins:attacker"
@@ -74,19 +262,6 @@
 		"cooldown": 1,
 		"hud_render": {
 			"should_render": false
-		}
-	},
-	"sound": {
-		"condition": {
-			"type": "origins:sneaking"
-		},
-		"type": "origins:action_over_time",
-		"interval": 4,
-		"rising_action": {
-			"type": "origins:play_sound",
-			"sound": "entity.shulker.close",
-			"volume": 1,
-			"pitch": 0.8
 		}
 	}
 }

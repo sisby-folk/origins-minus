@@ -2,7 +2,8 @@
 	"name": "Steadfast",
 	"description": "Show me an unstoppable force, then.",
 	"powers": [
-		"origins_minus:brace"
+		"origins_minus:brace",
+		"origins_minus:rescue"
 	],
 	"icon": {
 		"item": "minecraft:shield"

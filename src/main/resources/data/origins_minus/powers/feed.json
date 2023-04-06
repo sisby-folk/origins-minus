@@ -5,7 +5,7 @@
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "Active ability, Sneak+Use a valid target with an empty hand."
+			"text": "Active ability, Sneak+Use with an empty hand."
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
