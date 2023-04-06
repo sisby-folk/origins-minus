@@ -3,51 +3,16 @@
 	"description": "Climb vertically towards the ceiling.",
 	"type": "origins:multiple",
 	"ascend": {
-		"type": "origins:modify_velocity",
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
 				{
 					"type": "origins:exposed_to_sky",
 					"inverted": true
-				},
-				{
-					"type": "origins:on_block",
-					"inverted": true
-				},
-				{
-					"type": "origins:sneaking"
 				}
 			]
 		},
-		"modifier": {
-			"value": 0.08,
-			"operation": "set_total"
-		},
-		"axes": [
-			"y"
-		]
-	},
-	"drop": {
-		"type": "origins:modify_falling",
-		"velocity": 0,
-		"take_fall_damage": false,
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:exposed_to_sky",
-					"inverted": true
-				},
-				{
-					"type": "origins:on_block",
-					"inverted": true
-				},
-				{
-					"type": "origins:sneaking"
-				}
-			]
-		}
+		"type": "origins:creative_flight"
 	},
 	"stop": {
 		"type": "origins:modify_velocity",
@@ -55,15 +20,12 @@
 			"type": "origins:and",
 			"conditions": [
 				{
-					"type": "origins:exposed_to_sky",
+					"type": "origins:gamemode",
+					"gamemode": "creative",
 					"inverted": true
 				},
 				{
-					"type": "origins:on_block",
-					"inverted": true
-				},
-				{
-					"type": "origins:sneaking"
+					"type": "origins:creative_flying"
 				}
 			]
 		},
@@ -74,6 +36,35 @@
 		"axes": [
 			"x",
 			"z"
+		]
+	},
+	"slow": {
+		"type": "origins:modify_velocity",
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:gamemode",
+					"gamemode": "creative",
+					"inverted": true
+				},
+				{
+					"type": "origins:creative_flying"
+				}
+			]
+		},
+		"modifiers":[
+			{
+				"value": 0.1,
+				"operation": "max_total"
+			},
+			{
+				"value": -0.1,
+				"operation": "min_total"
+			}
+		],
+		"axes": [
+			"y"
 		]
 	}
 }
