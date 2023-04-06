@@ -12,12 +12,27 @@
 			"type": "origins:and",
 			"conditions": [
 				{
-					"type": "origins:can_see"
+					"type": "origins:can_see",
+					"inverted": true
 				},
 				{
 					"type": "origins:distance",
 					"comparison": "<=",
 					"compare_to": 16
+				},
+				{
+					"type": "origins:actor_condition",
+					"condition": {
+						"type": "origins:exposed_to_sky",
+						"inverted": true
+					}
+				},
+				{
+					"type": "origins:target_condition",
+					"condition": {
+						"type": "origins:exposed_to_sky",
+						"inverted": true
+					}
 				}
 			]
 		}
