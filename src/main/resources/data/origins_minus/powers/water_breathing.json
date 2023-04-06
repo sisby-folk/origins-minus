@@ -1,6 +1,6 @@
 {
 	"name": "Countercurrent",
-	"description": "You can breathe underwater.",
+	"description": "Water is breathable.",
 	"type": "origins:action_over_time",
 	"falling_action": {
 		"type": "origins:revoke_power",
