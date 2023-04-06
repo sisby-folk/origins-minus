@@ -17,25 +17,8 @@
 		},
 		"type": "origins:climbing"
 	},
-	"slow_descend": {
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:exposed_to_sky",
-					"inverted": true
-				},
-				{
-					"type": "origins:sneaking"
-				}
-			]
-		},
-		"type": "origins:modify_falling",
-		"velocity": 0.01,
-		"take_fall_damage": false
-	},
 	"stop": {
-		"type": "origins:active_self",
+		"type": "origins:modify_velocity",
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -48,18 +31,13 @@
 				}
 			]
 		},
-		"entity_action": {
-			"type": "origins:add_velocity",
-			"z": 0,
-			"x": 0,
-			"space": "local_horizontal",
-			"client": true,
-			"server": true,
-			"set": true
+		"modifier": {
+			"value": -1,
+			"operation": "multiply_total"
 		},
-		"key": {
-			"key": "key.sneak",
-			"continuous": true
-		}
+		"axes": [
+			"x",
+			"z"
+		]
 	}
 }

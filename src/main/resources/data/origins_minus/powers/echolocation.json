@@ -23,14 +23,14 @@
 				{
 					"type": "origins:actor_condition",
 					"condition": {
-						"type": "origins:exposed_to_sky",
+						"type": "origins:exposed_to_sun",
 						"inverted": true
 					}
 				},
 				{
 					"type": "origins:target_condition",
 					"condition": {
-						"type": "origins:exposed_to_sky",
+						"type": "origins:exposed_to_sun",
 						"inverted": true
 					}
 				}
