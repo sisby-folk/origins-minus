@@ -55,11 +55,11 @@
 		},
 		"modifiers":[
 			{
-				"value": 0.1,
+				"value": 0.2,
 				"operation": "max_total"
 			},
 			{
-				"value": -0.1,
+				"value": -0.2,
 				"operation": "min_total"
 			}
 		],
