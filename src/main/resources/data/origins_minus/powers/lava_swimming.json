@@ -1,6 +1,6 @@
 {
 	"name": "Molten Cruise",
-	"description": "Swim and see more in lava.",
+	"description": "Swim and see in lava.",
 	"type": "origins:swimming",
 	"condition": {
 		"type": "origins:submerged_in",

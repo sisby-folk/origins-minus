@@ -1,0 +1,36 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"hunger": {
+		"type": "origins:modify_exhaustion",
+		"modifier": {
+			"operation": "multiply_base",
+			"value": -1
+		}
+	},
+	"starve": {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "starve"
+		}
+	},
+	"immunity": {
+		"type": "origins:effect_immunity",
+		"effect": "minecraft:hunger"
+	},
+	"no_regen": {
+		"type": "origins:disable_regen"
+	},
+	"snacking": {
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:food"
+		},
+		"always_edible": true
+	},
+	"no_bar": {
+		"type": "origins:status_bar_texture",
+		"texture": "origins_minus:textures/gui/no_hunger.png"
+	}
+}

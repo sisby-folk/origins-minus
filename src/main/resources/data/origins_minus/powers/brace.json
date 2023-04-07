@@ -4,8 +4,9 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
+			"type": "origins:keybind",
 			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "Active ability, use with Sneak."
+			"text": "Active ability, use by holding %s."
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",

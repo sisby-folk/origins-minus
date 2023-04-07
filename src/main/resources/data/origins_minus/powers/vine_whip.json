@@ -1,7 +1,19 @@
 {
 	"name": "Vine Whip",
-	"description": "Slingshot toward nearby plant life.",
+	"description": "Slingshot towards plants.",
 	"type": "origins:active_self",
+	"badges": [
+		{
+			"type": "origins:keybind",
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "Active ability, use with %s."
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins_minus:textures/gui/badge/half_heart.png",
+			"text": "This ability costs health."
+		}
+	],
 	"entity_action": {
 		"type": "origins:and",
 		"actions": [

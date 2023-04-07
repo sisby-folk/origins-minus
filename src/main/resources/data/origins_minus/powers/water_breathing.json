@@ -1,20 +1,27 @@
 {
 	"name": "Countercurrent",
 	"description": "Water is breathable.",
-	"type": "origins:action_over_time",
-	"falling_action": {
-		"type": "origins:revoke_power",
-		"power": "origins:water_breathing",
-		"source": "*:*"
+	"type": "origins:multiple",
+	"water_breathing": {
+		"type": "origins:action_over_time",
+		"falling_action": {
+			"type": "origins:revoke_power",
+			"power": "origins:water_breathing",
+			"source": "*:*"
+		},
+		"rising_action": {
+			"type": "origins:grant_power",
+			"power": "origins:water_breathing",
+			"source": "*:*"
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "minecraft:water"
+		}
 	},
-	"rising_action": {
-		"type": "origins:grant_power",
-		"power": "origins:water_breathing",
-		"source": "*:*"
-	},
-	"interval": 20,
-	"condition": {
-		"type": "origins:submerged_in",
-		"fluid": "minecraft:water"
+	"no_bar": {
+		"type": "origins:status_bar_texture",
+		"texture": "origins_minus:textures/gui/no_air.png"
 	}
 }

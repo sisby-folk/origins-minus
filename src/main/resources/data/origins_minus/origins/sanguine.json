@@ -1,9 +1,9 @@
 {
 	"name": "Sanguine",
-	"description": "Bloodthirsty rampage conductor.",
+	"description": "Bloodthirsty rampage conductors.",
 	"powers": [
 		"origins_minus:blood",
-		"origins_minus:blood_hidden",
+		"origins_minus:no_hunger",
 		"origins_minus:feed",
 		"origins_minus:nightstalker"
 	],

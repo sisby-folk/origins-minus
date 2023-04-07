@@ -1,18 +1,35 @@
 {
 	"name": "Bound",
-	"description": "Charge a high jump by sneaking.",
-	"type": "origins:modify_jump",
-	"condition": {
-		"inverted": false,
-		"type": "origins:and",
-		"conditions": [
-			{
-				"type": "origins:sneaking"
-			}
-		]
+	"description": "Charge a high jump.",
+	"type": "origins:multiple",
+	"badges": [
+		{
+			"type": "origins:keybind",
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "Active ability, use by holding %s."
+		}
+	],
+	"key": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:add_xp"
+		},
+		"key": "key.sneak"
 	},
-	"modifier": {
-		"operation": "multiply_base",
-		"value": 1.1
+	"power": {
+		"type": "origins:modify_jump",
+		"condition": {
+			"inverted": false,
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:sneaking"
+				}
+			]
+		},
+		"modifier": {
+			"operation": "multiply_base",
+			"value": 1.1
+		}
 	}
 }

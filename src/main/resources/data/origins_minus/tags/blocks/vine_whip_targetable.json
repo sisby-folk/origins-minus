@@ -4,6 +4,9 @@
 		"#leaves",
 		"#flowers",
 		"#replaceable_plants",
-		"#saplings"
+		"#saplings",
+		"#bee_growables",
+		"minecraft:sugar_cane",
+		"minecraft:cactus"
 	]
 }
