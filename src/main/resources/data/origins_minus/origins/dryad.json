@@ -4,7 +4,8 @@
 	"powers": [
 		"origins_minus:sunlight",
 		"origins_minus:sunlight_hidden",
-		"origins_minus:vine_whip"
+		"origins_minus:vine_whip",
+		"origins_minus:wild_growth"
 	],
 	"icon": {
 		"item": "minecraft:vine"
