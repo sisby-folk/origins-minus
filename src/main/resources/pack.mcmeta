@@ -4,9 +4,10 @@
 		"id": "origins_minus",
 		"pack_format": 9,
 		"authors": [
-			"DansOtherClone",
-			"Sisby folk"
+			"Sisby folk",
+			"Garden System",
+			"DansOtherClone"
 		],
-		"description": "An Origins replacer prioritising Simplicity over Balance. Adapted from OriginsPlus"
+		"description": "An Origins replacer prioritising simplicity over balance."
 	}
 }
