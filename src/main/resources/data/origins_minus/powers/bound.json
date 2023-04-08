@@ -12,7 +12,7 @@
 	"key": {
 		"type": "origins:active_self",
 		"entity_action": {
-			"type": "origins:add_xp"
+			"type": "origins:nothing"
 		},
 		"key": "key.sneak"
 	},

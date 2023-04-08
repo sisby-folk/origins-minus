@@ -7,6 +7,7 @@
 	},
 	"render_type": "none",
 	"phase_down_condition": {
-		"type": "origins:tamed"
+		"type": "origins:constant",
+		"value": false
 	}
 }
