@@ -6,15 +6,33 @@
 		"type": "origins:and",
 		"actions": [
 			{
-				"type": "origins:raycast",
-				"distance": 32,
-				"block": true,
-				"entity": true,
-				"shape_type": "outline",
-				"fluid_handling": "none",
-				"command_at_hit": "tp @s ~ ~ ~",
-				"command_along_ray": "particle minecraft:portal",
-				"command_along_ray_only_on_hit": true
+				"type": "origins:if_else",
+				"condition": {
+					"type": "origins:submerged_in",
+					"fluid": "minecraft:water"
+				},
+				"if_action": {
+					"type": "origins:raycast",
+					"distance": 32,
+					"block": true,
+					"entity": true,
+					"shape_type": "outline",
+					"fluid_handling": "none",
+					"command_at_hit": "tp @s ~ ~ ~",
+					"command_along_ray": "particle minecraft:portal",
+					"command_along_ray_only_on_hit": true
+				},
+				"else_action": {
+					"type": "origins:raycast",
+					"distance": 32,
+					"block": true,
+					"entity": true,
+					"shape_type": "outline",
+					"fluid_handling": "any",
+					"command_at_hit": "tp @s ~ ~ ~",
+					"command_along_ray": "particle minecraft:portal",
+					"command_along_ray_only_on_hit": true
+				}
 			},
 			{
 				"type": "origins:play_sound",
@@ -36,15 +54,42 @@
 		"bar_index": 6
 	},
 	"condition": {
-		"type": "origins:and",
+		"type": "origins:or",
 		"conditions": [
 			{
-				"type": "origins:raycast",
-				"distance": 32,
-				"block": true,
-				"entity": true,
-				"shape_type": "outline",
-				"fluid_handling": "none"
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "origins:submerged_in",
+						"fluid": "minecraft:water"
+					},
+					{
+						"type": "origins:raycast",
+						"distance": 32,
+						"block": true,
+						"entity": true,
+						"shape_type": "outline",
+						"fluid_handling": "none"
+					}
+				]
+			},
+			{
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "origins:submerged_in",
+						"fluid": "minecraft:water",
+						"inverted": true
+					},
+					{
+						"type": "origins:raycast",
+						"distance": 32,
+						"block": true,
+						"entity": true,
+						"shape_type": "outline",
+						"fluid_handling": "any"
+					}
+				]
 			}
 		]
 	}
