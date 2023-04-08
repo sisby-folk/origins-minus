@@ -67,7 +67,7 @@
 				}
 			]
 		},
-		"modifiers":[
+		"modifiers": [
 			{
 				"value": 0.2,
 				"operation": "max_total"
@@ -80,5 +80,92 @@
 		"axes": [
 			"y"
 		]
+	},
+	"animate": {
+		"type": "origins:action_over_time",
+		"rising_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "summon minecraft:snowball ~ ~1 ~ {Item: {id: 'minecraft:string', Count: 1b}, NoGravity:1b, Tags:['rappel'], Motion:[0d,3d,0d]}"
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "item.crossbow.shoot",
+					"volume": 0.75,
+					"pitch": 0.75
+				}
+			]
+		},
+		"falling_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.item.break",
+					"volume": 0.75,
+					"pitch": 1.22
+				}
+			]
+		},
+		"interval": 1,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:gamemode",
+					"gamemode": "creative",
+					"inverted": true
+				},
+				{
+					"type": "origins:creative_flying"
+				}
+			]
+		}
+	},
+	"affinity": {
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:gamemode",
+					"gamemode": "creative",
+					"inverted": true
+				},
+				{
+					"type": "origins:creative_flying"
+				}
+			]
+		},
+		"type": "origins:modify_break_speed",
+		"modifier": {
+			"operation": "multiply_base",
+			"value": 4
+		}
+	},
+	"res": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 1,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/resource_bar.png",
+			"bar_index": 5,
+			"condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "origins:gamemode",
+						"gamemode": "creative",
+						"inverted": true
+					},
+					{
+						"type": "origins:creative_flying"
+					}
+				]
+			}
+		}
 	}
 }

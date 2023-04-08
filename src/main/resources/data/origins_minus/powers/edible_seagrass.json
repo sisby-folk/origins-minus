@@ -223,7 +223,7 @@
 			"type": "origins:and",
 			"actions": [{
 				"type": "origins:execute_command",
-				"command": "execute positioned ~ ~0.2 ~ rotated as @s run particle minecraft:item minecraft:seagrass ^ ^ ^0.1 0.1 0.1 0.1 0.055 4"
+				"command": "execute positioned ~ ~0.2 ~ rotated as @s run particle minecraft:item minecraft:seagrass ~ ~ ~0.1 0.1 0.1 0.1 0.055 4"
 			},
 				{
 					"type": "origins:execute_command",
