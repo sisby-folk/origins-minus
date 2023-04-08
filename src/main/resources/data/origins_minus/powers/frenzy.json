@@ -14,7 +14,11 @@
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Sneak again to cancel."
+			"text": "Interrupted by getting hurt or sneaking again."
+		},
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "Enemies killed during frenzy extend it, restoring blood."
 		}
 	],
 	"key": {
