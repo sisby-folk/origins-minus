@@ -1,4 +1,4 @@
-<center><img style="max-width:1056px" alt="origins minus banner" src="https://user-images.githubusercontent.com/55819817/230727147-938beb45-c87d-4152-81ed-bb9bc1e5bc9d.png" /></center>
+<center><img style="max-width:1056px" alt="origins minus banner" src="https://user-images.githubusercontent.com/55819817/230728016-e8cecf3e-b3d4-485f-9275-43fd7b9a228e.png" /></center>
 
 <center>
 Simple origins with less to remember.<br/>
@@ -6,7 +6,6 @@ Requires <a href="https://modrinth.com/mod/origins/versions">Origins</a>. Replac
 </center>
 
 ---
-
 
 Origins Minus is a collection of origins designed to replace the built-in set.
 
