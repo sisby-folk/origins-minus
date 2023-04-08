@@ -1,35 +1,58 @@
 {
 	"hidden": true,
 	"type": "origins:multiple",
+	"res": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 3,
+		"start_value": 3,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+			"bar_index": 5
+		}
+	},
 	"no_ai": {
 		"type": "origins:action_on_callback",
 		"entity_action_gained": {
 			"type": "origins:execute_command",
-			"command": "data merge @s {NoAI:1b}"
+			"command": "data merge entity @s {NoAI:1b}"
 		},
 		"entity_action_lost": {
 			"type": "origins:execute_command",
-			"command": "data merge @s {NoAI:0b}"
+			"command": "data remove entity @s NoAI"
 		}
 	},
-	"hurt": {
+	"fed_on": {
 		"type": "origins:action_over_time",
 		"entity_action": {
-			"type": "origins:damage",
-			"amount": 1,
-			"source": {
-				"name": "magic.player"
-			}
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_res",
+					"change": -1
+				},
+				{
+					"type": "origins:damage",
+					"amount": 1,
+					"source": {
+						"name": "magic.player"
+					}
+				}
+			]
 		},
 		"falling_action": {
 			"type": "origins:revoke_power",
-			"power": "*:*",
-			"source": "*:*"
+			"power": "*:fed_on",
+			"source": "*:frenzy"
 		},
 		"interval": 20,
 		"condition": {
-			"type": "origins:submerged_in",
-			"fluid": "minecraft:water"
+			"type": "origins:resource",
+			"resource": "*:*_res",
+			"comparison": ">",
+			"compare_to": 0
 		}
 	},
 	"stop": {
@@ -50,6 +73,9 @@
 			"value": -1
 		}
 	},
+	"no_selection": {
+		"type": "origins:prevent_block_selection"
+	},
 	"status_initial": {
 		"type": "origins:action_on_callback",
 		"entity_action_gained": {
@@ -63,9 +89,9 @@
 	},
 	"status": {
 		"type": "origins:stacking_status_effect",
-		"min_stacks": 0,
+		"min_stacks": 1,
 		"max_stacks": 2,
-		"duration_per_stack": 20,
+		"duration_per_stack": 1,
 		"effects": [
 			{
 				"effect": "minecraft:weakness",

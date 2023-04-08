@@ -26,7 +26,7 @@
 		"max": 1,
 		"start_value": 0,
 		"hud_render": {
-			"should_render": false
+			"should_render": true
 		}
 	},
 	"res": {
@@ -143,7 +143,7 @@
 					},
 					{
 						"type": "apoli:power",
-						"power": "origins:fed_on",
+						"power": "*:fed_on",
 						"inverted": true
 					}
 				]
@@ -193,31 +193,8 @@
 						{
 							"type": "origins:change_resource",
 							"resource": "*:*_feeding",
-							"change": 0
-						},
-						{
-							"type": "origins:area_of_effect",
-							"radius": 16,
-							"bientity_action": {
-								"type": "origins:target_action",
-								"action": {
-									"type": "origins:and",
-									"actions": [
-										{
-											"type": "origins:revoke_power",
-											"power": "origins:fed_on",
-											"source": "*:*"
-										}
-									]
-								}
-							},
-							"bientity_condition": {
-								"type": "origins:target_condition",
-								"condition": {
-									"type": "apoli:power",
-									"power": "origins:fed_on"
-								}
-							}
+							"change": 0,
+							"operation": "set"
 						}
 					]
 				}
@@ -235,6 +212,38 @@
 					"type": "origins:change_resource",
 					"resource": "*:blood_res",
 					"change": 10
+				},
+				{
+					"type": "origins:area_of_effect",
+					"radius": 8,
+					"bientity_action": {
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:change_resource",
+									"resource": "*:fed_on_res",
+									"change": 2
+								}
+							]
+						}
+					},
+					"bientity_condition": {
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:and",
+							"conditions": [
+								{
+									"type": "origins:living"
+								},
+								{
+									"type": "apoli:power",
+									"power": "*:fed_on"
+								}
+							]
+						}
+					}
 				}
 			]
 		},
@@ -288,9 +297,9 @@
 	},
 	"feed_status": {
 		"type": "origins:stacking_status_effect",
-		"min_stacks": 0,
-		"max_stacks": 1,
-		"duration_per_stack": 20,
+		"min_stacks": 1,
+		"max_stacks": 2,
+		"duration_per_stack": 1,
 		"effects": [
 			{
 				"effect": "minecraft:blindness",
@@ -323,13 +332,23 @@
 			"compare_to": 1
 		}
 	},
+	"feed_no_selection": {
+		"type": "origins:prevent_block_selection",
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:*_feeding",
+			"comparison": "==",
+			"compare_to": 1
+		}
+	},
 	"feed_manual_cancel": {
 		"type": "origins:active_self",
 		"key": "key.sneak",
 		"entity_action": {
 			"type": "origins:change_resource",
 			"resource": "*:*_feeding",
-			"change": 0
+			"change": 0,
+			"operation": "set"
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -343,7 +362,13 @@
 		"entity_action": {
 			"type": "origins:change_resource",
 			"resource": "*:*_feeding",
-			"change": 0
+			"change": 0,
+			"operation": "set"
+		},
+		"damage_condition": {
+			"type": "origins:amount",
+			"comparison": ">",
+			"compare_to": 0.0
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -365,7 +390,7 @@
 			"compare_to": 1
 		}
 	},
-	"buff": {
+	"buff_size": {
 		"type": "origins:action_over_time",
 		"falling_action": {
 			"type": "origins:and",
@@ -385,6 +410,21 @@
 				}
 			]
 		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
+	},
+	"buff_drain": {
+		"type": "origins:action_over_time",
 		"entity_action": {
 			"type": "origins:change_resource",
 			"resource": "*:*_res",
