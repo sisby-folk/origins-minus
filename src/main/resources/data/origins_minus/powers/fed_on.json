@@ -1,0 +1,85 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"hurt": {
+		"type": "origins:action_over_time",
+		"entity_action": {
+			"type": "origins:damage",
+			"amount": 1,
+			"source": {
+				"name": "magic.player"
+			}
+		},
+		"falling_action": {
+			"type": "origins:revoke_power",
+			"power": "*:*",
+			"source": "*:*"
+		},
+		"interval": 20,
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "minecraft:water"
+		}
+	},
+	"stop": {
+		"type": "origins:modify_velocity",
+		"modifier": {
+			"value": -1,
+			"operation": "multiply_total"
+		},
+		"axes": [
+			"x",
+			"z"
+		]
+	},
+	"no_jumping": {
+		"type": "origins:modify_jump",
+		"modifier": {
+			"operation": "multiply_total_multiplicative",
+			"value": -1
+		}
+	},
+	"status_initial": {
+		"type": "origins:action_on_callback",
+		"entity_action_gained": {
+			"type": "origins:apply_effect",
+			"effect": {
+				"effect": "minecraft:levitation",
+				"duration": 25,
+				"amplifier": 0
+			}
+		}
+	},
+	"status": {
+		"type": "origins:stacking_status_effect",
+		"min_stacks": 0,
+		"max_stacks": 2,
+		"duration_per_stack": 20,
+		"effects": [
+			{
+				"effect": "minecraft:weakness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false
+			},
+			{
+				"effect": "minecraft:blindness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false
+			},
+			{
+				"effect": "minecraft:nausea",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false
+			},
+			{
+				"effect": "minecraft:slow_falling",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false
+			}
+		]
+	}
+}
