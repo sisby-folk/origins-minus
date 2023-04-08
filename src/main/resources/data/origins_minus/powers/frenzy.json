@@ -1,5 +1,5 @@
 {
-	"name": "Bloodrage",
+	"name": "Frenzy",
 	"description": "Become empowered by feeding from a target.",
 	"type": "origins:multiple",
 	"badges": [
@@ -19,6 +19,26 @@
 			"type": "origins:add_xp"
 		},
 		"key": "key.use"
+	},
+	"feeding": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": false
+		}
+	},
+	"res": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 28,
+		"start_value": 0,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+			"bar_index": 22
+		}
 	},
 	"reset_size": {
 		"type": "origins:action_on_callback",
@@ -212,7 +232,7 @@
 									"actions": [
 										{
 											"type": "origins:change_resource",
-											"resource": "origins_minus:blood_resource",
+											"resource": "*:blood_resource",
 											"change": 10
 										}
 									]
@@ -226,7 +246,7 @@
 									"actions": [
 										{
 											"type": "origins:change_resource",
-											"resource": "origins_minus:blood_resource",
+											"resource": "*:blood_resource",
 											"change": 10
 										},
 										{
@@ -261,7 +281,7 @@
 									"actions": [
 										{
 											"type": "origins:change_resource",
-											"resource": "origins_minus:blood_resource",
+											"resource": "*:blood_resource",
 											"change": 10
 										}
 									]
@@ -275,7 +295,7 @@
 									"actions": [
 										{
 											"type": "origins:change_resource",
-											"resource": "origins_minus:blood_resource",
+											"resource": "*:blood_resource",
 											"change": 10
 										},
 										{
@@ -298,7 +318,7 @@
 									"actions": [
 										{
 											"type": "origins:change_resource",
-											"resource": "origins_minus:blood_resource",
+											"resource": "*:blood_resource",
 											"change": 10
 										},
 										{
@@ -335,7 +355,7 @@
 			"conditions": [
 				{
 					"type": "origins:resource",
-					"resource": "origins_minus:blood_resource",
+					"resource": "*:blood_resource",
 					"comparison": "<",
 					"compare_to": 121
 				},
@@ -351,195 +371,6 @@
 					"type": "origins:status_effect",
 					"inverted": true,
 					"effect": "minecraft:blindness"
-				}
-			]
-		},
-		"item_condition": {
-			"type": "origins:empty"
-		},
-		"hands": [
-			"main_hand"
-		]
-	},
-	"drink_red_wool": {
-		"type": "origins:action_on_block_use",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:apply_effect",
-					"effects": [
-						{
-							"effect": "minecraft:blindness",
-							"duration": 30,
-							"amplifier": 0,
-							"is_ambient": false,
-							"show_particles": false,
-							"show_icon": false
-						}
-					]
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "origins_minus:blood_resource",
-					"change": 5
-				},
-				{
-					"type": "origins:delay",
-					"ticks": 20,
-					"action": {
-						"type": "origins:change_resource",
-						"resource": "origins_minus:blood_resource",
-						"change": 5
-					}
-				}
-			]
-		},
-		"block_condition": {
-			"type": "origins:block",
-			"block": "minecraft:red_wool"
-		},
-		"block_action": {
-			"type": "origins:set_block",
-			"block": "minecraft:white_wool"
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "origins_minus:blood_resource",
-					"comparison": "<",
-					"compare_to": 41
-				},
-				{
-					"type": "origins:sneaking"
-				}
-			]
-		},
-		"item_condition": {
-			"type": "origins:empty"
-		},
-		"hands": [
-			"main_hand"
-		]
-	},
-	"drink_red_terracotta": {
-		"type": "origins:action_on_block_use",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:apply_effect",
-					"effects": [
-						{
-							"effect": "minecraft:blindness",
-							"duration": 30,
-							"amplifier": 0,
-							"is_ambient": false,
-							"show_particles": false,
-							"show_icon": false
-						}
-					]
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "origins_minus:blood_resource",
-					"change": 5
-				},
-				{
-					"type": "origins:delay",
-					"ticks": 20,
-					"action": {
-						"type": "origins:change_resource",
-						"resource": "origins_minus:blood_resource",
-						"change": 5
-					}
-				}
-			]
-		},
-		"block_condition": {
-			"type": "origins:block",
-			"block": "minecraft:red_terracotta"
-		},
-		"block_action": {
-			"type": "origins:set_block",
-			"block": "minecraft:terracotta"
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "origins_minus:blood_resource",
-					"comparison": "<",
-					"compare_to": 41
-				},
-				{
-					"type": "origins:sneaking"
-				}
-			]
-		},
-		"item_condition": {
-			"type": "origins:empty"
-		},
-		"hands": [
-			"main_hand"
-		]
-	},
-	"drink_red_bed": {
-		"type": "origins:action_on_block_use",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:apply_effect",
-					"effects": [
-						{
-							"effect": "minecraft:blindness",
-							"duration": 30,
-							"amplifier": 0,
-							"is_ambient": false,
-							"show_particles": false,
-							"show_icon": false
-						}
-					]
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "origins_minus:blood_resource",
-					"change": 5
-				},
-				{
-					"type": "origins:delay",
-					"ticks": 20,
-					"action": {
-						"type": "origins:change_resource",
-						"resource": "origins_minus:blood_resource",
-						"change": 5
-					}
-				}
-			]
-		},
-		"block_condition": {
-			"type": "origins:block",
-			"block": "minecraft:red_bed"
-		},
-		"block_action": {
-			"type": "origins:set_block",
-			"block": "minecraft:white_bed"
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "origins_minus:blood_resource",
-					"comparison": "<",
-					"compare_to": 41
-				},
-				{
-					"type": "origins:sneaking"
 				}
 			]
 		},

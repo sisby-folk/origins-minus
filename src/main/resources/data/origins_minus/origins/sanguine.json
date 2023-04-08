@@ -4,7 +4,7 @@
 	"powers": [
 		"origins_minus:blood",
 		"origins_minus:no_hunger",
-		"origins_minus:feed",
+		"origins_minus:frenzy",
 		"origins_minus:nightstalker"
 	],
 	"icon": {
