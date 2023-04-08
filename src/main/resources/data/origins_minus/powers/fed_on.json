@@ -47,7 +47,7 @@
 			"power": "*:fed_on",
 			"source": "*:frenzy"
 		},
-		"interval": 20,
+		"interval": 10,
 		"condition": {
 			"type": "origins:resource",
 			"resource": "*:*_res",
@@ -65,6 +65,14 @@
 			"x",
 			"z"
 		]
+	},
+	"no_follow": {
+		"type": "origins:attribute",
+		"modifier": {
+			"attribute": "minecraft:generic.follow_range",
+			"operation": "multiply_total",
+			"value": -1
+		}
 	},
 	"no_jumping": {
 		"type": "origins:modify_jump",
@@ -90,8 +98,8 @@
 	"status": {
 		"type": "origins:stacking_status_effect",
 		"min_stacks": 1,
-		"max_stacks": 2,
-		"duration_per_stack": 1,
+		"max_stacks": 1,
+		"duration_per_stack": 5,
 		"effects": [
 			{
 				"effect": "minecraft:weakness",

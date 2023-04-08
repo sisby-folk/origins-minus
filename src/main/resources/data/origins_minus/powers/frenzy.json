@@ -11,6 +11,10 @@
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
 			"text": "Works on players and blooded monsters."
+		},
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "Sneak again to cancel."
 		}
 	],
 	"key": {
@@ -195,6 +199,10 @@
 							"resource": "*:*_feeding",
 							"change": 0,
 							"operation": "set"
+						},
+						{
+							"type": "origins:clear_effect",
+							"effect": "minecraft:blindness"
 						}
 					]
 				}
@@ -211,7 +219,7 @@
 				{
 					"type": "origins:change_resource",
 					"resource": "*:blood_res",
-					"change": 10
+					"change": 4
 				},
 				{
 					"type": "origins:area_of_effect",
@@ -247,7 +255,7 @@
 				}
 			]
 		},
-		"interval": 20,
+		"interval": 10,
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -298,8 +306,8 @@
 	"feed_status": {
 		"type": "origins:stacking_status_effect",
 		"min_stacks": 1,
-		"max_stacks": 2,
-		"duration_per_stack": 1,
+		"max_stacks": 1,
+		"duration_per_stack": 60,
 		"effects": [
 			{
 				"effect": "minecraft:blindness",
@@ -507,7 +515,12 @@
 				{
 					"type": "origins:change_resource",
 					"resource": "*:*_res",
-					"change": 2
+					"change": 6
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:blood_res",
+					"change": 5
 				},
 				{
 					"type": "origins:spawn_particles",
