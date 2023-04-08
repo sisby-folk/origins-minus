@@ -1,4 +1,4 @@
-<center><img alt="origins minus banner" src="https://user-images.githubusercontent.com/55819817/192122640-8c7b9630-2ff3-4323-acf2-f6f1e006d7be.png" /></center>
+<center><img style="max-width:1056px" alt="origins minus banner" src="https://user-images.githubusercontent.com/55819817/230727147-938beb45-c87d-4152-81ed-bb9bc1e5bc9d.png" /></center>
 
 <center>
 Simple origins with less to remember.<br/>
@@ -6,6 +6,7 @@ Requires <a href="https://modrinth.com/mod/origins/versions">Origins</a>. Replac
 </center>
 
 ---
+
 
 Origins Minus is a collection of origins designed to replace the built-in set.
 
@@ -38,7 +39,9 @@ We tweak and rebalance origins when they fully disengage an unintended part of t
 
 ## Origins
 
+![Sanguine Preview](https://user-images.githubusercontent.com/55819817/230727301-bfef3146-7e36-49ac-97f3-e36367ea9b0f.png)
 
+![Dryad Preview](https://user-images.githubusercontent.com/55819817/230727303-110e5c34-f26e-474a-987c-bbb05d55d423.png)
 
 ## Further Info
 
