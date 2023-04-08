@@ -1,0 +1,32 @@
+{
+	"name": "Temper Temper",
+	"description": "Unarmed attacks burn.",
+	"type": "origins:action_on_hit",
+	"bientity_action": {
+		"type": "origins:and",
+		"actions": [
+			{
+				"type": "origins:damage",
+				"amount": 1,
+				"source": {
+					"name": "inFire.player",
+					"fire": true
+				}
+			},
+			{
+				"type": "origins:target_action",
+				"action": {
+					"type": "origins:set_on_fire",
+					"duration": 2
+				}
+			}
+		]
+	},
+	"condition": {
+		"type": "origins:equipped_item",
+		"equipment_slot": "mainhand",
+		"item_condition": {
+			"type": "origins:empty"
+		}
+	}
+}
