@@ -48,8 +48,8 @@
 		},
 		"type": "origins:modify_velocity",
 		"modifier": {
-			"value": -0.5,
-			"operation": "multiply_total"
+			"operation": "multiply_total",
+			"value": -0.5
 		},
 		"axes": [
 			"x",

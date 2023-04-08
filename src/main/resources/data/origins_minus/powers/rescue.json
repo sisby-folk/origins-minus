@@ -177,54 +177,5 @@
 			"comparison": ">",
 			"compare_to": 0
 		}
-	},
-	"stop_attacker": {
-		"type": "origins:action_over_time",
-		"entity_action": {
-			"type": "origins:area_of_effect",
-			"radius": 2,
-			"bientity_action": {
-				"type": "origins:target_action",
-				"action": {
-					"type": "origins:and",
-					"actions": [
-						{
-							"type": "origins:add_velocity",
-							"x": 0,
-							"y": 0,
-							"z": 0,
-							"space": "world",
-							"client": true,
-							"server": true,
-							"set": true
-						},
-						{
-							"type": "origins:play_sound",
-							"sound": "block.anvil.place",
-							"volume": 0.1,
-							"pitch": 1.1
-						},
-						{
-							"type": "origins:clear_effect",
-							"effect": "minecraft:slowness"
-						}
-					]
-				}
-			},
-			"bientity_condition": {
-				"type": "origins:target_condition",
-				"condition": {
-					"type": "origins:status_effect",
-					"effect": "minecraft:slowness"
-				}
-			}
-		},
-		"interval": 1,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_pull",
-			"comparison": ">",
-			"compare_to": 0
-		}
 	}
 }

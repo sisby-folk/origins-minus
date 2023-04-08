@@ -1,6 +1,17 @@
 {
 	"hidden": true,
 	"type": "origins:multiple",
+	"no_ai": {
+		"type": "origins:action_on_callback",
+		"entity_action_gained": {
+			"type": "origins:execute_command",
+			"command": "data merge @s {NoAI:1b}"
+		},
+		"entity_action_lost": {
+			"type": "origins:execute_command",
+			"command": "data merge @s {NoAI:0b}"
+		}
+	},
 	"hurt": {
 		"type": "origins:action_over_time",
 		"entity_action": {
@@ -24,8 +35,8 @@
 	"stop": {
 		"type": "origins:modify_velocity",
 		"modifier": {
-			"value": -1,
-			"operation": "multiply_total"
+			"operation": "multiply_total",
+			"value": -1
 		},
 		"axes": [
 			"x",
