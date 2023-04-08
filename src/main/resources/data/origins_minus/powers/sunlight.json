@@ -131,9 +131,83 @@
 			]
 		}
 	},
+	"heal_from_resource_high": {
+		"type": "origins:action_over_time",
+		"interval": 15,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:heal",
+					"amount": 1
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_res",
+					"change": -3
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": ">",
+					"compare_to": 100
+				},
+				{
+					"type": "origins:relative_health",
+					"comparison": "<",
+					"compare_to": 1
+				}
+			]
+		}
+	},
 	"heal_from_resource": {
 		"type": "origins:action_over_time",
 		"interval": 30,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:heal",
+					"amount": 1
+				},
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_res",
+					"change": -2
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": ">",
+					"compare_to": 40
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": "<=",
+					"compare_to": 100
+				},
+				{
+					"type": "origins:relative_health",
+					"comparison": "<",
+					"compare_to": 1
+				}
+			]
+		}
+	},
+	"heal_from_resource_low": {
+		"type": "origins:action_over_time",
+		"interval": 60,
 		"entity_action": {
 			"type": "origins:and",
 			"actions": [
@@ -155,7 +229,13 @@
 					"type": "origins:resource",
 					"resource": "*:*_res",
 					"comparison": ">",
-					"compare_to": 20
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": "<=",
+					"compare_to": 40
 				},
 				{
 					"type": "origins:relative_health",
@@ -187,7 +267,7 @@
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {
-				"tag": "origins_minus:nutritious"
+				"tag": "origins_minus:restores_sunlight"
 			}
 		}
 	}
