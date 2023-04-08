@@ -16,7 +16,7 @@
 		{
 			"type": "origins:tooltip",
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Falls onto plant blocks are less harmful."
+			"text": "Falls onto plants are less harmful."
 		},
 		{
 			"type": "origins:tooltip",
