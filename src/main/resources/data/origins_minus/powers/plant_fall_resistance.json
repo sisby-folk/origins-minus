@@ -1,0 +1,56 @@
+{
+  "hidden": true,
+  "type": "origins:multiple",
+  "immunity": {
+    "type": "origins:invulnerability",
+    "damage_condition": {
+      "type": "origins:from_falling"
+    },
+    "condition": {
+      "type": "origins:block_collision",
+      "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "minecraft:leaves"
+      },
+      "offset_x": 0,
+      "offset_y": -0.5,
+      "offset_z": 0
+    }
+  },
+  "resistance": {
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+      "type": "origins:from_falling"
+    },
+    "condition": {
+      "type": "origins:block_collision",
+      "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "origins_minus:plant_fall"
+      },
+      "offset_x": 0,
+      "offset_y": -0.5,
+      "offset_z": 0
+    },
+    "modifier": {
+      "operation": "multiply_total_multiplicative",
+      "value": -0.8
+    }
+  },
+  "protection": {
+    "type": "origins:prevent_death",
+    "damage_condition": {
+      "type": "origins:from_falling"
+    },
+    "condition": {
+      "type": "origins:block_collision",
+      "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "origins_minus:plant_fall"
+      },
+      "offset_x": 0,
+      "offset_y": -0.5,
+      "offset_z": 0
+    }
+  }
+}

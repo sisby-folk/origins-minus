@@ -10,6 +10,16 @@
 		},
 		{
 			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "You can pass through leaves."
+		},
+		{
+			"type": "origins:tooltip",
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "Falls onto plant blocks are less harmful."
+		},
+		{
+			"type": "origins:tooltip",
 			"sprite": "origins_minus:textures/gui/badge/half_heart.png",
 			"text": "This ability costs health."
 		}
