@@ -9,12 +9,38 @@ Requires <a href="https://modrinth.com/mod/origins/versions">Origins</a>. Replac
 
 Origins Minus is a collection of origins designed to replace the built-in set.
 
-Included origins are short and sweet - with each description fitting inside their card.           
-Low-impact origins have no drawbacks, while mid-impact origins may have minor constraints.
-
-The design is intended lets players lean into their origin because it's fun! - not force them into it with limitations.
+Included origins are short and sweet, with no scrolling.           
+Low-impact origins have no drawbacks, while mid-impact origins have some limitations.
 
 There's less to fret over while picking an origin, and less to remember when loading a save - or switching with [Switchy](https://modrinth.com/mod/switchy)!
+
+## Design
+
+### Optionality
+
+Origin powers are all designed to be opt-in. Whenever you remember what origin you're playing, you get to press a few buttons and do a few cool things. 
+
+If you forget for hours on end - it's no big deal! If you can forget something and be screwed over by it - we call that a bug.
+
+### Ambiguity
+
+All origins are intended to be ambiguous as to what creature, species, profession, or character they might be referring to. We want you to fill in the gaps yourself - with what you want to be playing!
+
+Keep this in mind when picking an origin - just because the Avian's icon is a feather, doesn't mean it's not a mech suit!
+
+We've provided a list of examples for themes for each origin to help with this.
+
+### Balance
+
+These origins aren't designed to be balanced compared to the vanilla game, nor to the built-in origins, and not even compared to eachother. They're only designed to be balanced to themselves - as being fun to play.
+
+We tweak and rebalance origins when they fully disengage an unintended part of the game - like being unable to die in combat on normal difficulty - not for power comparisons.
+
+## Origins
+
+
+
+## Further Info
 
 ### Versions
 
@@ -23,10 +49,11 @@ If you'd prefer the datapack version for any reason, you can [download it from t
 As of `v1.7.1` origins works out of the box with Quilt.           
 On 1.18.2, you'll have to add a [quilt version of calio](https://github.com/sisby-folk/mc-packs/raw/quilt_1.18.2/mods/Calio-1.18.2-1.6.0.jar) as a workaround.
 
+Not tested with older versions of origins.
+
 ### Credits
 
-Many origins are adapted with permission from Origins Plus by [Dan's Other Clone](https://www.youtube.com/c/DansOtherClone/videos).
-Most are simply cut down from their originals - check them out if you're interested!
+Many origins are adapted with permission from Origins Plus by [Dan's Other Clone](https://www.youtube.com/c/DansOtherClone/videos) - Hence the name!
 
 ### Afterword
 
