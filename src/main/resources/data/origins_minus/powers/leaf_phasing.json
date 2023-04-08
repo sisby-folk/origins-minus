@@ -1,0 +1,12 @@
+{
+	"hidden": true,
+	"type": "origins:phasing",
+	"block_condition": {
+		"type": "origins:in_tag",
+		"tag": "leaves"
+	},
+	"render_type": "none",
+	"phase_down_condition": {
+		"type": "origins:tamed"
+	}
+}

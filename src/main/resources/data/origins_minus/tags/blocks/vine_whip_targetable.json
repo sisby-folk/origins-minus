@@ -7,6 +7,16 @@
 		"#saplings",
 		"#bee_growables",
 		"minecraft:sugar_cane",
-		"minecraft:cactus"
+		"minecraft:cactus",
+		"minecraft:chorus_plant",
+		"minecraft:chorus_flower",
+		"minecraft:bamboo",
+		"minecraft:melon",
+		"minecraft:pumpkin",
+		"minecraft:carved_pumpkin",
+		"minecraft:cocoa",
+		"minecraft:azalea",
+		"minecraft:flowering_azalea",
+		"minecraft:big_dripleaf"
 	]
 }

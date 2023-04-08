@@ -1,0 +1,18 @@
+{
+  "values": [
+    "#minecraft:dirt",
+    "minecraft:cactus",
+    "minecraft:mangrove_roots",
+    "#mineable/hoe",
+    "minecraft:chorus_plant",
+    "minecraft:chorus_flower",
+    "minecraft:bamboo",
+    "minecraft:melon",
+    "minecraft:pumpkin",
+    "minecraft:carved_pumpkin",
+    "minecraft:cocoa",
+    "minecraft:azalea",
+    "minecraft:flowering_azalea",
+    "minecraft:big_dripleaf"
+  ]
+}
