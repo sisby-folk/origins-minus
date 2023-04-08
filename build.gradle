@@ -138,9 +138,9 @@ if (System.getenv("MODRINTH_TOKEN")) {
 		detectLoaders = false
 		dependencies {
 			required.project "origins"
-			optional.project "true-darkness"
+			required.project "pehkui"
 		}
-		changelog = "Changelog: https://github.com/sisby-folk/tinkerers-smithing/releases/tag/v" + origVersion
+		changelog = "Changelog: https://github.com/sisby-folk/origins-minus/releases/tag/v" + origVersion
 	}
 }
 
