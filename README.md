@@ -2,7 +2,7 @@
 
 <center>
 Simple origins with less to remember.<br/>
-Requires <a href="https://modrinth.com/mod/origins/versions">Origins</a>. Replaces all base origins.
+Requires <a href="https://modrinth.com/mod/origins/versions">Origins</a> and <a href="https://modrinth.com/mod/pehkui">Pehkui</a>. Replaces all base origins.
 </center>
 
 ---
