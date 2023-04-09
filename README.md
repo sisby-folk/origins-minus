@@ -1,4 +1,4 @@
-<center><img style="max-width:1056px" alt="origins minus banner" src="https://user-images.githubusercontent.com/55819817/230728016-e8cecf3e-b3d4-485f-9275-43fd7b9a228e.png" /></center>
+<center><img style="max-width:1056px" alt="origins minus banner" src="https://user-images.githubusercontent.com/55819817/230751145-56d0c976-9167-44fb-a94a-e3d036095dc2.png" /></center>
 
 <center>
 Simple origins with less to remember.<br/>
@@ -6,6 +6,7 @@ Requires <a href="https://modrinth.com/mod/origins/versions">Origins</a>. Replac
 </center>
 
 ---
+
 
 Origins Minus is a collection of origins designed to replace the built-in set.
 
@@ -38,9 +39,23 @@ We tweak and rebalance origins when they fully disengage an unintended part of t
 
 ## Origins
 
-![Sanguine Preview](https://user-images.githubusercontent.com/55819817/230727301-bfef3146-7e36-49ac-97f3-e36367ea9b0f.png)
+![Avian Preview](https://user-images.githubusercontent.com/55819817/230751155-d54af385-9c51-451c-a716-11ef4f344306.png)
 
-![Dryad Preview](https://user-images.githubusercontent.com/55819817/230727303-110e5c34-f26e-474a-987c-bbb05d55d423.png)
+![Wildling Preview](https://user-images.githubusercontent.com/55819817/230751158-e29cf313-d20c-4a78-8ebc-98e90032f816.png)
+
+![Weaver Preview](https://user-images.githubusercontent.com/55819817/230751159-7f1d0112-f7ed-4bfc-b43a-9eeb4a0e1875.png)
+
+![Mer Preview](https://user-images.githubusercontent.com/55819817/230751161-d962465c-7b04-4a76-98fd-7b314087f630.png)
+
+![Hellspawn Preview](https://user-images.githubusercontent.com/55819817/230751162-0d9ba93c-ff7e-41ea-8a79-b680bd97934f.png)
+
+![Voidthing Preview](https://user-images.githubusercontent.com/55819817/230751163-9880b672-7610-4f36-bff1-8fe9bb9c8390.png)
+
+![Steadfast Preview](https://user-images.githubusercontent.com/55819817/230751171-3e93f675-5b98-4a86-b4c3-825a2d28f3e7.png)
+
+![Sanguine Preview](https://user-images.githubusercontent.com/55819817/230751174-9eef1c47-6173-4dcd-a462-e3d526e4fc5f.png)
+
+![Dryad Preview](https://user-images.githubusercontent.com/55819817/230751176-d086a14c-0f91-47b9-b778-e57861a17e62.png)
 
 ## Further Info
 
