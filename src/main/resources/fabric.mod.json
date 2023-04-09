@@ -22,7 +22,7 @@
 		"minecraft": ">=1.15",
 		"java": ">=17",
 		"origins": ">=1.4",
-		"pekhui": "*"
+		"pehkui": "*"
 	},
 	"suggests": {
 	}
