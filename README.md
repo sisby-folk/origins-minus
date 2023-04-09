@@ -17,6 +17,9 @@ There's less to fret over while picking an origin, and less to remember when loa
 
 ## Design
 
+<details>
+<summary>Click to show Design Notes</summary>
+
 ### Optionality
 
 Origin powers are all designed to be opt-in. Whenever you remember what origin you're playing, you get to press a few buttons and do a few cool things. 
@@ -29,13 +32,25 @@ All origins are intended to be ambiguous as to what creature, species, professio
 
 Keep this in mind when picking an origin - just because the Avian's icon is a feather, doesn't mean it's not a mech suit!
 
-We've provided a list of examples for themes for each origin to help with this.
+[Tinkerer's Statures](https://modrinth.com/mod/tinkerers-statures) can expand this further by adding size variation!
+
+We've provided a list of examples for themes for each origin to help players choose.
+
+### Building and Multiplayer
+
+Minus is built with multiplayer in mind - origins move through and interact with the world in visually distinct ways, and (if you like) build visually distinct homes and functional structures to match!
+
+Blink points, water/lava lifts, gliding and vine whip pads, rappel points, rescue moats, and blood farms are all encouraged emergent gameplay. 
+
+Have fun making your builds origin (and [Stature](https://modrinth.com/mod/tinkerers-statures)) accessible!
 
 ### Balance
 
 These origins aren't designed to be balanced compared to the vanilla game, nor to the built-in origins, and not even compared to eachother. They're only designed to be balanced to themselves - as being fun to play.
 
 We tweak and rebalance origins when they fully disengage an unintended part of the game - like being unable to die in combat on normal difficulty - not for power comparisons.
+
+</details>
 
 ## Origins
 
