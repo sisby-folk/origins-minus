@@ -8,6 +8,10 @@
 	},
 	"mob_sense": {
 		"type": "origins:entity_glow",
+		"use_teams": false,
+		"red": 0.8,
+		"green": 0.8,
+		"blue": 0.8,
 		"bientity_condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -23,14 +27,22 @@
 				{
 					"type": "origins:actor_condition",
 					"condition": {
-						"type": "origins:exposed_to_sun",
-						"inverted": true
+						"type": "origins:and",
+						"conditions": [
+							{
+								"type": "origins:living"
+							},
+							{
+								"type": "origins:exposed_to_sky",
+								"inverted": true
+							}
+						]
 					}
 				},
 				{
 					"type": "origins:target_condition",
 					"condition": {
-						"type": "origins:exposed_to_sun",
+						"type": "origins:exposed_to_sky",
 						"inverted": true
 					}
 				}

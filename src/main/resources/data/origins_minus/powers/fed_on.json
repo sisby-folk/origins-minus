@@ -4,8 +4,8 @@
 	"res": {
 		"type": "origins:resource",
 		"min": 0,
-		"max": 3,
-		"start_value": 3,
+		"max": 1,
+		"start_value": 1,
 		"hud_render": {
 			"should_render": true,
 			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
@@ -126,5 +126,65 @@
 				"show_icon": false
 			}
 		]
+	},
+	"prevent_death": {
+		"type": "origins:prevent_death",
+		"entity_action": {
+			"type": "origins:area_of_effect",
+			"radius": 8,
+			"bientity_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:target_action",
+						"action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:change_resource",
+									"resource": "*:frenzy_feeding",
+									"change": 0,
+									"operation": "set"
+								}
+							]
+						}
+					},
+					{
+						"type": "origins:actor_action",
+						"action": {
+							"type": "origins:and",
+							"actions": [
+								{
+									"type": "origins:play_sound",
+									"sound": "entity.player.attack.sweep",
+									"volume": 0.75,
+									"pitch": 0.65
+								},
+								{
+									"type": "origins:revoke_power",
+									"power": "*:fed_on",
+									"source": "*:frenzy"
+								}
+							]
+						}
+					}
+				]
+			},
+			"bientity_condition": {
+				"type": "origins:target_condition",
+				"condition": {
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:living"
+						},
+						{
+							"type": "apoli:power",
+							"power": "*:frenzy"
+						}
+					]
+				}
+			}
+		}
 	}
 }

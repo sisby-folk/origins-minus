@@ -40,7 +40,7 @@
 	"res": {
 		"type": "origins:resource",
 		"min": 0,
-		"max": 28,
+		"max": 70,
 		"start_value": 0,
 		"hud_render": {
 			"should_render": true,
@@ -112,6 +112,24 @@
 								"type": "origins:grant_power",
 								"power": "*:fed_on",
 								"source": "*:*"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "entity.player.attack.crit",
+								"volume": 0.75,
+								"pitch": 0.7
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "entity.magma_cube.squish",
+								"volume": 0.5,
+								"pitch": 0.8
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "entity.bee.sting",
+								"volume": 1,
+								"pitch": 0.65
 							}
 						]
 					}
@@ -218,12 +236,18 @@
 				{
 					"type": "origins:change_resource",
 					"resource": "*:*_res",
-					"change": 2
+					"change": 3
 				},
 				{
 					"type": "origins:change_resource",
 					"resource": "*:blood_res",
 					"change": 4
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "block.beehive.drip",
+					"volume": 0.5,
+					"pitch": 0.6
 				},
 				{
 					"type": "origins:area_of_effect",
@@ -236,7 +260,7 @@
 								{
 									"type": "origins:change_resource",
 									"resource": "*:fed_on_res",
-									"change": 2
+									"change": 1
 								}
 							]
 						}
@@ -273,7 +297,7 @@
 					"type": "origins:resource",
 					"resource": "*:*_res",
 					"comparison": "<",
-					"compare_to": 28
+					"compare_to": 70
 				},
 				{
 					"type": "origins:resource",
@@ -312,9 +336,16 @@
 		"min_stacks": 1,
 		"max_stacks": 1,
 		"duration_per_stack": 60,
+		"tick_rate": 5,
 		"effects": [
 			{
 				"effect": "minecraft:blindness",
+				"is_ambient": true,
+				"show_particles": false,
+				"show_icon": false
+			},
+			{
+				"effect": "minecraft:regeneration",
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": false
@@ -442,7 +473,7 @@
 			"resource": "*:*_res",
 			"change": -1
 		},
-		"interval": 20,
+		"interval": 5,
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -462,36 +493,47 @@
 		}
 	},
 	"buff_on_hit": {
-		"type": "origins:action_on_hit",
+		"type": "origins:modify_damage_dealt",
 		"bientity_action": {
 			"type": "origins:and",
 			"actions": [
 				{
-					"type": "origins:damage",
-					"amount": 1,
-					"source": {
-						"name": "player",
-						"fire": true
-					}
-				},
-				{
 					"type": "origins:target_action",
 					"action": {
-						"type": "origins:spawn_particles",
-						"particle": {
-							"type": "minecraft:dust",
-							"params": "0.922 0.314 0.314 2"
-						},
-						"count": 1,
-						"speed": 1.0,
-						"spread": {
-							"x": 1.0,
-							"y": 1.0,
-							"z": 1.0
-						}
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:*_res",
+								"change": 2
+							},
+							{
+								"type": "origins:change_resource",
+								"resource": "*:blood_res",
+								"change": 1
+							},
+							{
+								"type": "origins:spawn_particles",
+								"particle": {
+									"type": "minecraft:dust",
+									"params": "0.8 0.25 0.25 2"
+								},
+								"count": 2,
+								"speed": 1.0,
+								"spread": {
+									"x": 1.0,
+									"y": 1.0,
+									"z": 1.0
+								}
+							}
+						]
 					}
 				}
 			]
+		},
+		"modifier": {
+			"operation": "add_base_late",
+			"value": 2
 		},
 		"condition": {
 			"type": "origins:and",
@@ -511,6 +553,67 @@
 			]
 		}
 	},
+	"blood_sense": {
+		"type": "origins:entity_glow",
+		"use_teams": false,
+		"red": 0.6,
+		"green": 0.0,
+		"blue": 0.0,
+		"bientity_condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:distance",
+					"comparison": "<=",
+					"compare_to": 48
+				},
+				{
+					"type": "origins:target_condition",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "origins_minus:feed_targetable"
+					}
+				}
+			]
+		},
+		"condition": {
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:and",
+					"conditions": [
+						{
+							"type": "origins:resource",
+							"resource": "*:blood_res",
+							"comparison": "<",
+							"compare_to": 100
+						},
+						{
+							"type": "origins:or",
+							"conditions": [
+								{
+									"type": "origins:time_of_day",
+									"comparison": ">=",
+									"compare_to": 12000
+								},
+								{
+									"type": "origins:brightness",
+									"comparison": "<=",
+									"compare_to": 0.1
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	},
 	"buff_on_kill": {
 		"type": "origins:self_action_on_kill",
 		"entity_action": {
@@ -519,7 +622,7 @@
 				{
 					"type": "origins:change_resource",
 					"resource": "*:*_res",
-					"change": 6
+					"change": 30
 				},
 				{
 					"type": "origins:change_resource",
@@ -530,14 +633,14 @@
 					"type": "origins:spawn_particles",
 					"particle": {
 						"type": "minecraft:dust",
-						"params": "0.922 0.314 0.314 2"
+						"params": "0.8 0.25 0.25 2"
 					},
-					"count": 5,
+					"count": 10,
 					"speed": 1.0,
 					"spread": {
-						"x": 1.0,
-						"y": 1.0,
-						"z": 1.0
+						"x": 1.5,
+						"y": 1.5,
+						"z": 1.5
 					}
 				},
 				{
