@@ -225,6 +225,12 @@
 						{
 							"type": "origins:clear_effect",
 							"effect": "minecraft:blindness"
+						},
+						{
+							"type": "origins:play_sound",
+							"sound": "entity.player.attack.sweep",
+							"volume": 0.4,
+							"pitch": 0.50
 						}
 					]
 				}
