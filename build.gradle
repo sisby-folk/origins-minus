@@ -141,6 +141,7 @@ if (System.getenv("MODRINTH_TOKEN")) {
 			required.project "pehkui"
 		}
 		changelog = "Changelog: https://github.com/sisby-folk/origins-minus/releases/tag/v" + origVersion
+		syncBodyFrom = rootProject.file("README.md").text
 	}
 }
 
