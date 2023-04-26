@@ -7,8 +7,8 @@ Requires <a href="https://modrinth.com/mod/origins/versions">Origins</a> and <a 
 
 ---
 
-<center><span style="font-weight: bold">Packs:</span> <a href="https://modrinth.com/modpack/tinkerers-quilt">Tinkerer's Quilt</a> (<a href="https://modrinth.com/modpack/tinkerers-silk">Silk</a>) - <a href="https://modrinth.com/modpack/switchy-pack">Switchy Pack</a></center>
-<center><span style="font-weight: bold">Mods:</span> <a href="https://modrinth.com/mod/switchy">Switchy</a> - Origins Minus (<a href="https://modrinth.com/mod/tinkerers-statures">Statures</a>) - <a href="https://modrinth.com/mod/tinkerers-smithing">Tinkerer's Smithing</a></center>
+<center><b>Packs:</b> <a href="https://modrinth.com/modpack/tinkerers-quilt">Tinkerer's Quilt</a> (<a href="https://modrinth.com/modpack/tinkerers-silk">Silk</a>) - <a href="https://modrinth.com/modpack/switchy-pack">Switchy Pack</a></center>
+<center><b>Mods:</b> <a href="https://modrinth.com/mod/switchy">Switchy</a> - <i>Origins Minus</i> (<a href="https://modrinth.com/mod/tinkerers-statures">Statures</a>) - <a href="https://modrinth.com/mod/tinkerers-smithing">Tinkerer's Smithing</a></center>
 
 ---
 
