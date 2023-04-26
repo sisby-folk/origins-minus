@@ -1,4 +1,4 @@
-<center><img style="max-width:1056px" alt="origins minus banner" src="https://user-images.githubusercontent.com/55819817/230751145-56d0c976-9167-44fb-a94a-e3d036095dc2.png" /></center>
+<center><img alt="origins minus banner" src="https://user-images.githubusercontent.com/55819817/230751145-56d0c976-9167-44fb-a94a-e3d036095dc2.png" /></center>
 
 <center>
 Simple origins with less to remember.<br/>
