@@ -79,17 +79,14 @@ dependencies {
 	modImplementation libs.qfapi
 }
 
-
 processResources {
-	inputs.property "version", version
+	final Map<String, String> map = [
+			"version"        : version.toString(),
+	]
 
-	filesMatching('quilt.mod.json') {
-		expand "version": version
-	}
-
-	filesMatching('fabric.mod.json') {
-		expand "version": version
-	}
+	inputs.properties(map)
+	filesMatching('quilt.mod.json') { expand(map) }
+	filesMatching('fabric.mod.json') { expand(map) }
 }
 
 tasks.withType(JavaCompile).configureEach {
