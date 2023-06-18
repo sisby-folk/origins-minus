@@ -23,15 +23,14 @@
 		"depends": [
 			{
 				"id": "quilt_loader",
-				"versions": ">=0.16.0-"
+				"versions": ">=${ql}"
 			},
 			{
 				"id": "minecraft",
-				"versions": ">=1.15"
+				"versions": ">=${mc}"
 			},
 			{
-				"id": "origins",
-				"versions": ">=1.4"
+				"id": "origins"
 			},
 			{
 				"id": "pehkui"

@@ -81,7 +81,8 @@ dependencies {
 
 processResources {
 	final Map<String, String> map = [
-			"version"        : version.toString(),
+			"version": version.toString(),
+			"mc": mc_major
 	]
 
 	inputs.properties(map)

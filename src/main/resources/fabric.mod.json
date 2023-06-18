@@ -18,10 +18,9 @@
 	"icon": "assets/origins_minus/icon.png",
 	"environment": "*",
 	"depends": {
-		"fabricloader": ">=0.14.9",
-		"minecraft": ">=1.15",
-		"java": ">=17",
-		"origins": ">=1.4",
+		"fabricloader": "*",
+		"minecraft": ">=${mc}",
+		"origins": "*",
 		"pehkui": "*"
 	},
 	"suggests": {
