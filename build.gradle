@@ -23,11 +23,11 @@ if (System.getenv("GITHUB_TOKEN")) {
 archivesBaseName = project.archives_base_name
 
 def mc_major = '1.19'
-def mc = mc_major + '.2'
-def default_branch = 'main'
+def mc = mc_major + '.3'
+def default_branch = '1.19'
 
 def origVersion = project.version
-project.version = project.version
+project.version = "${project.version}+${mc}"
 group = project.maven_group
 
 repositories {
@@ -82,7 +82,8 @@ dependencies {
 processResources {
 	final Map<String, String> map = [
 			"version": version.toString(),
-			"mc": mc_major
+			"mc": mc_major,
+			"ql": libs.versions.ql
 	]
 
 	inputs.properties(map)
@@ -131,7 +132,7 @@ if (System.getenv("MODRINTH_TOKEN")) {
 		versionName = origVersion
 		versionType = 'release'
 		uploadFile = remapJar
-		gameVersions = ['1.19', '1.19.1', '1.19.2']
+		gameVersions = [mc, '1.19.4']
 		loaders = ['quilt', 'fabric']
 		detectLoaders = false
 		dependencies {
