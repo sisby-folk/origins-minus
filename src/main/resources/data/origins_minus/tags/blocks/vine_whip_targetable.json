@@ -3,7 +3,14 @@
 		"#mineable/hoe",
 		"#leaves",
 		"#flowers",
-		"#replaceable_plants",
+		{
+			"id": "#replaceable_plants",
+			"required": false
+		},
+		{
+			"id": "#replaceable_by_trees",
+			"required": false
+		},
 		"#saplings",
 		"#bee_growables",
 		"minecraft:sugar_cane",
