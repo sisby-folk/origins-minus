@@ -83,7 +83,7 @@ processResources {
 	final Map<String, String> map = [
 			"version": version.toString(),
 			"mc": mc_major,
-			"ql": libs.versions.ql
+			"ql": libs.versions.ql.get()
 	]
 
 	inputs.properties(map)
