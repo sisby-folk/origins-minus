@@ -20,6 +20,13 @@
 			"fluid": "minecraft:water"
 		}
 	},
+	"water_breathing_fallback": {
+		"entity_action_lost": {
+			"type": "origins:revoke_power",
+			"power": "origins:water_breathing",
+			"source": "*:*"
+		}
+	},
 	"no_bar": {
 		"type": "origins:status_bar_texture",
 		"texture": "origins_minus:textures/gui/no_air.png"
