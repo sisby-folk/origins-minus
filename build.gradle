@@ -160,3 +160,11 @@ if (System.getenv("GITHUB_TOKEN")) {
 	}
 	tasks.githubRelease.dependsOn remapJar
 }
+
+if (System.getenv("MODRINTH_TOKEN") && System.getenv("GITHUB_TOKEN")) {
+	tasks.register("fullRelease") {
+		group "publishing"
+		dependsOn "githubRelease"
+		dependsOn "modrinth"
+	}
+}
