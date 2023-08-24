@@ -36,9 +36,19 @@
 			"bar_index": 7
 		},
 		"condition": {
-			"type": "origins:health",
-			"comparison": ">",
-			"compare_to": 10
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:health",
+					"comparison": ">",
+					"compare_to": 10
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "adventure",
+					"inverted": true
+				}
+			]
 		},
 		"key": "key.origins.secondary_active"
 	},
@@ -50,9 +60,19 @@
 		"tag": "{Tags:['wild_growth'],damage:0,pickup:0b,PierceLevel:50,Silent:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}",
 		"key": "key.origins.secondary_active",
 		"condition": {
-			"type": "origins:health",
-			"comparison": ">",
-			"compare_to": 10
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:health",
+					"comparison": ">",
+					"compare_to": 10
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "adventure",
+					"inverted": true
+				}
+			]
 		},
 		"cooldown": 100
 	},
