@@ -27,7 +27,7 @@ def mc = mc_major + '.2'
 def default_branch = '1.19'
 
 def origVersion = project.version
-project.version = project.version
+project.version = "${project.version}+${mc}"
 group = project.maven_group
 
 repositories {
