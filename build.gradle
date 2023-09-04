@@ -137,13 +137,15 @@ if (System.getenv("MODRINTH_TOKEN")) {
 		versionType = 'release'
 		uploadFile = remapJar
 		gameVersions = ['1.19', '1.19.1', mc]
-		loaders = ['quilt', 'fabric']
+		loaders = ['quilt', 'fabric', 'forge']
 		detectLoaders = false
 		dependencies {
 			required.project "origins"
 			required.project "pehkui"
 		}
-		changelog = "[Direct Datapack Download](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/${default_branch}/src/main/resources)\nChangelog: https://github.com/sisby-folk/origins-minus/releases/tag/v${origVersion}"
+		changelog =
+"""[Direct Datapack Download](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/${default_branch}/src/main/resources)
+Changelog: https://github.com/sisby-folk/origins-minus/releases/tag/v${origVersion}"""
 		syncBodyFrom = rootProject.file("README.md").text
 	}
 }

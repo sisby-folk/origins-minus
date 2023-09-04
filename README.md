@@ -81,7 +81,7 @@ We tweak and rebalance origins when they fully disengage an unintended part of t
 
 ### Versions
 
-Origins forge and versions before 1.19.2 may be unstable and contain powers that don't function correctly.
+2.0 on origins forge (and minecraft versions before 1.19.2) may be unstable and contain powers that don't function correctly.
 
 The datapack version is available in the changelog of each version, or you can manually download it from source.
 
