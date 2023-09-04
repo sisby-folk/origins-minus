@@ -87,8 +87,12 @@ processResources {
 	]
 
 	inputs.properties(map)
-	filesMatching('quilt.mod.json') { expand(map) }
-	filesMatching('fabric.mod.json') { expand(map) }
+	filesMatching('*.mod.json') { expand(map) }
+	filesMatching('mods.toml') { expand(map) }
+
+	from("src/main/resources/mods.toml") {
+		rename { "META-INF/mods.toml" }
+	}
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -133,13 +137,13 @@ if (System.getenv("MODRINTH_TOKEN")) {
 		versionType = 'release'
 		uploadFile = remapJar
 		gameVersions = [mc, '1.19.4']
-		loaders = ['quilt', 'fabric']
+		loaders = ['quilt', 'fabric', 'forge']
 		detectLoaders = false
 		dependencies {
 			required.project "origins"
 			required.project "pehkui"
 		}
-		changelog = "Changelog: https://github.com/sisby-folk/origins-minus/releases/tag/v" + origVersion
+		changelog = "[Direct Datapack Download](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/v${origVersion}/src/main/resources) - [v${origVersion} on Github](https://github.com/sisby-folk/origins-minus/releases/tag/v${origVersion})"
 		syncBodyFrom = rootProject.file("README.md").text
 	}
 }

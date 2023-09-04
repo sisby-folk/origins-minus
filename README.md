@@ -81,12 +81,12 @@ We tweak and rebalance origins when they fully disengage an unintended part of t
 
 ### Versions
 
-If you'd prefer the datapack version for any reason, you can [download it from the repo](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/main/src/main/resources) (Direct Download Link)
+2.0 on origins forge (and minecraft versions before 1.19.2) may be unstable and contain powers that don't function correctly.
+
+The datapack version is available in the changelog of each version, or you can manually download it from source.
 
 As of `v1.7.1` origins works out of the box with Quilt.           
-On 1.18.2, you'll have to add a [quilt version of calio](https://github.com/sisby-folk/mc-packs/raw/quilt_1.18.2/mods/Calio-1.18.2-1.6.0.jar) as a workaround.
-
-Not tested with older versions of origins.
+On 1.18.2, you'll have to add a [quilt version of calio](https://github.com/sisby-folk/tinkerers-quilt/raw/quilt_1.18.2/mods/Calio-1.18.2-1.6.0.jar) as a workaround.
 
 ### Credits
 

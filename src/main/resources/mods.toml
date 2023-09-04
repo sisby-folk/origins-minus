@@ -1,0 +1,31 @@
+modLoader = 'lowcodefml'
+loaderVersion = '[40,)'
+license = 'LGPL-3.0-only'
+showAsResourcePack = false
+issueTrackerURL = 'https://github.com/sisby-folk/origins-minus/issues'
+
+[[mods]]
+modId = 'origins_minus'
+version = '${version}'
+displayName = 'Origins Minus'
+description = 'Simple origins with less to remember.'
+logoFile = 'assets/origins_minus/icon.png'
+authors = 'Sisby folk'
+displayURL = 'https://modrinth.com/mod/origins-minus'
+
+[[dependencies.origins_minus]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[${mc},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.origins_minus]]
+modId = "origins"
+mandatory = true
+versionRange = "*"
+
+[[dependencies.origins_minus]]
+modId = "pehkui"
+mandatory = true
+versionRange = "*"
