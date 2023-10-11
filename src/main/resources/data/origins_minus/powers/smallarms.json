@@ -1,0 +1,23 @@
+{
+	"name": "Tiny Paws",
+	"description": "Your reach is slightly less, but you can attack faster.",
+	"type": "origins:attribute",
+	"modifiers": [
+		{
+			"attribute": "reach-entity-attributes:reach",
+			"value": -0.5,
+			"operation": "addition"
+		},
+		{
+			"attribute": "reach-entity-attributes:attack_range",
+			"value": -0.5,
+			"operation": "addition"
+		},
+		{
+			"attribute": "generic.attack_speed",
+			"value": 1.5,
+			"operation": "addition"
+
+		}
+	]
+}

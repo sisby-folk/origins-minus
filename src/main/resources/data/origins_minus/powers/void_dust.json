@@ -1,0 +1,7 @@
+{
+    "name": "Void Dust",
+    "description": "You are covered in void-like dusts...",
+    "type": "origins:particle",
+    "particle": "minecraft:smoke",
+    "frequency": 7
+}

@@ -1,0 +1,16 @@
+{
+	"name": "Kitten",
+	"description": "Cute, Cuddly, Energetic, and surprisingly strong.",
+	"powers": [
+		"origins_minus:cute",
+		"origins_minus:bound",
+		"origins_minus:energetic",
+		"origins_minus:fall_immunity",
+		"origins_minus:nightstalker",
+		"origins_minus:smallarms"
+	],
+	"icon": {
+		"item": "minecraft:string"
+	},
+	"impact": 2
+}
