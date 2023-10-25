@@ -6,30 +6,25 @@
 		{
 			"type": "origins:keybind",
 			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "tooltip.origins_minus.generic.health_cost"
+			"text": "tooltip.origins_minus.generic.active"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
 			"text": "tooltip.origins_minus.generic.health_cost"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
 			"text": "tooltip.origins_minus.generic.health_cost"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
 			"text": "tooltip.origins_minus.generic.health_cost"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
 			"text": "tooltip.origins_minus.generic.health_cost"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
 			"text": "tooltip.origins_minus.generic.health_cost"
 		}
