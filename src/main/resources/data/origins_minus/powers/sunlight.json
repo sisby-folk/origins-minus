@@ -1,15 +1,15 @@
 {
-	"name": "Sunlight",
-	"description": "Replaces hunger.\nRefills in the sun.",
+	"name": "power.origins_minus.sunlight.name",
+	"description": "power.origins_minus.sunlight.description",
 	"type": "origins:multiple",
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Honey and apples replenish sunlight."
+			"text": "tooltip.origins_minus.sunlight.food"
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Burns more sunlight to heal faster when full."
+			"text": "tooltip.origins_minus.sunlight.healing"
 		}
 	],
 	"res": {

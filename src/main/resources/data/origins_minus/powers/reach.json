@@ -1,6 +1,6 @@
 {
-	"name": "Here Enough",
-	"description": "Reach farther.",
+	"name": "power.origins_minus.reach.name",
+	"description": "power.origins_minus.reach.description",
 	"type": "origins:attribute",
 	"modifiers": [
 		{

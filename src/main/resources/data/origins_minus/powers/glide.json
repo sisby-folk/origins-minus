@@ -1,20 +1,20 @@
 {
-	"name": "Air Control",
-	"description": "Slow your descent to glide or prevent falls.",
+	"name": "power.origins_minus.glide.name",
+	"description": "power.origins_minus.glide.description",
 	"type": "origins:multiple",
 	"badges": [
 		{
 			"type": "origins:keybind",
 			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "Active ability, use by holding %s."
+			"text": "tooltip.origins_minus.generic.held_active"
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Sneak to fall safely at speed."
+			"text": "tooltip.origins_minus.glide.safe_fall"
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Air manoeuvrability is increased."
+			"text": "tooltip.origins_minus.glide.air_speed"
 		}
 	],
 	"jump": {

@@ -1,6 +1,6 @@
 {
-	"name": "Rescue",
-	"description": "Pull your friends close (and enemies closer).",
+	"name": "power.origins_minus.rescue.name",
+	"description": "power.origins_minus.rescue.description",
 	"type": "origins:multiple",
 	"pull": {
 		"type": "origins:active_self",

@@ -1,6 +1,6 @@
 {
-	"name": "Ocean Free",
-	"description": "You move, see, and mine with ease underwater.",
+	"name": "power.origins_minus.swim_speed.name",
+	"description": "power.origins_minus.swim_speed.description",
 	"type": "origins:attribute",
 	"modifier": {
 		"attribute": "additionalentityattributes:water_speed",

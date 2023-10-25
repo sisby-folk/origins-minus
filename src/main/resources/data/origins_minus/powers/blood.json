@@ -1,15 +1,15 @@
 {
-	"name": "Blood",
-	"description": "Replaces hunger.",
+	"name": "power.origins_minus.blood.name",
+	"description": "power.origins_minus.blood.description",
 	"type": "origins:multiple",
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Without blood, you burn in the sun."
+			"text": "tooltip.origins_minus.blood.starve."
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Food is edible, but won't replenish blood."
+			"text": "tooltip.origins_minus.blood.snacking"
 		}
 	],
 	"res": {
