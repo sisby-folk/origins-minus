@@ -85,7 +85,7 @@ if (System.getenv("MODRINTH_TOKEN")) {
 			required.project "origins"
 			required.project "pehkui"
 		}
-		changelog = "[Direct Datapack Download](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/v${baseVersion}/src/main/resources) - [v${baseVersion} on Github](https://github.com/sisby-folk/origins-minus/releases/tag/v${baseVersion})"
+		changelog = "[Latest ${branch} Datapack Download](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/${branch}/src/main/resources) - [v${baseVersion} on Github](https://github.com/sisby-folk/origins-minus/releases/tag/v${baseVersion})"
 		syncBodyFrom = rootProject.file("README.md").text
 	}
 }
