@@ -1,6 +1,6 @@
 {
-	"name": "Flamehardy",
-	"description": "Immune to fire and lava.",
+	"name": "power.origins_minus.fire_immunity.name",
+	"description": "power.origins_minus.fire_immunity.description",
 	"type": "origins:invulnerability",
 	"damage_condition": {
 		"type": "origins:fire"

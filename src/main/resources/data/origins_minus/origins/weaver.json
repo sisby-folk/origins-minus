@@ -1,6 +1,6 @@
 {
-	"name": "Weaver",
-	"description": "Unafraid of the dark.",
+	"name": "origin.origins_minus.weaver.name",
+	"description": "origin.origins_minus.weaver.description",
 	"powers": [
 		"origins_minus:echolocation",
 		"origins_minus:rappel",

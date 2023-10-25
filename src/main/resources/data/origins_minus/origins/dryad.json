@@ -1,6 +1,6 @@
 {
-	"name": "Dryad",
-	"description": "One with the trees.",
+	"name": "origin.origins_minus.dryad.name",
+	"description": "origin.origins_minus.dryad.description",
 	"powers": [
 		"origins_minus:sunlight",
 		"origins_minus:no_hunger",

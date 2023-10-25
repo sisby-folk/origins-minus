@@ -1,6 +1,6 @@
 {
-	"name": "Temper Temper",
-	"description": "Unarmed attacks burn.",
+	"name": "power.origins_minus.fire_punch.name",
+	"description": "power.origins_minus.fire_punch.description",
 	"type": "origins:action_on_hit",
 	"bientity_action": {
 		"type": "origins:and",

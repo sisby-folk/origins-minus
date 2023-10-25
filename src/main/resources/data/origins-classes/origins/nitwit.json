@@ -1,11 +1,11 @@
 {
-	"name": "Unspecialized",
+	"name": "origin.origins_minus.unspecialized.name",
 	"powers": [
 	],
 	"icon": {
 		"item": "minecraft:stone"
 	},
-	"description": "No specific advantages.\n\n§oJack of all trades, master of none.§r",
+	"description": "origin.origins_minus.unspecialized.description",
 	"order": 0,
 	"impact": 0,
 	"loading_priority": 100,

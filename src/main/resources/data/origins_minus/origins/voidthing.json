@@ -1,6 +1,6 @@
 {
-	"name": "Voidthing",
-	"description": "Elusive and illogical.",
+	"name": "origin.origins_minus.voidthing.name",
+	"description": "origin.origins_minus.voidthing.description",
 	"powers": [
 		"origins_minus:blink",
 		"origins_minus:reach",

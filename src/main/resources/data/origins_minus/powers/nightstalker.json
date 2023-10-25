@@ -1,6 +1,6 @@
 {
-	"name": "Nightstalker",
-	"description": "You can see in the dark.",
+	"name": "power.origins_minus.nightstalker.name",
+	"description": "power.origins_minus.nightstalker.description",
 	"type": "origins:night_vision",
 	"strength": 0.1
 }
