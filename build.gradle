@@ -1,89 +1,38 @@
+//file:noinspection GroovyAssignabilityCheck
+//file:noinspection GroovyAccessibility
 buildscript {
-	repositories {
-		gradlePluginPortal()
-	}
 	dependencies {
-		classpath 'com.modrinth.minotaur:Minotaur:2.4.3'
-		classpath "com.github.breadmoirai:github-release:2.4.1"
+		classpath "com.modrinth.minotaur:Minotaur:${libs.versions.minotaur.get()}"
+		classpath "com.github.breadmoirai:github-release:${libs.versions.githubRelease.get()}"
 	}
 }
+
 
 plugins {
 	id 'maven-publish'
 	alias libs.plugins.loom
 }
 
-if (System.getenv("MODRINTH_TOKEN")) {
-	apply plugin: "com.modrinth.minotaur"
-}
-if (System.getenv("GITHUB_TOKEN")) {
-	apply plugin: "com.github.breadmoirai.github-release"
-}
-
-archivesBaseName = project.archives_base_name
-
-def mc_major = '1.19'
-def mc = mc_major + '.3'
-def default_branch = '1.19'
-
-def origVersion = project.version
-project.version = "${project.version}+${mc}"
-group = project.maven_group
+version = "$project.baseVersion+$project.branch"
+archivesBaseName = project.name
+group = 'folk.sisby'
 
 repositories {
-	// Jitpack
-	maven { url 'https://jitpack.io' }
-
-	// Origins
-	maven {
-		name = 'Ladysnake Mods'
-		url = 'https://ladysnake.jfrog.io/artifactory/mods'
-	}
-	maven {
-		url = 'https://maven.cafeteria.dev'
-		content {
-			includeGroup 'net.adriantodt.fabricmc'
-		}
-	}
-	maven {
-		url "https://maven.jamieswhiteshirt.com/libs-release"
-		content {
-			includeGroup "com.jamieswhiteshirt"
-		}
-	}
-	maven {
-		url "https://maven.shedaniel.me/"
-	}
-	maven {
-		url "https://maven.terraformersmc.com/"
-	}
-
-	// Modrinth
-	repositories {
-		maven {
-			name = "Modrinth"
-			url = "https://api.modrinth.com/maven"
-			content {
-				includeGroup "maven.modrinth"
-			}
-		}
-	}
+	mavenLocal()
 }
 
 dependencies {
-	// // Base // //
-	minecraft libs.minecraft
+	minecraft libs.mc
 	mappings variantOf(libs.qm) { classifier "intermediary-v2" }
 	modImplementation libs.ql
-	modImplementation libs.qsl
-	modImplementation libs.qfapi
 }
+
 
 processResources {
 	final Map<String, String> map = [
-			"version": version.toString(),
-			"mc": mc_major,
-			"ql": libs.versions.ql.get()
+			"version"      : version.toString(),
+			"mc"           : libs.versions.mc.get(),
+			"ql"           : libs.versions.ql.get(),
 	]
 
 	inputs.properties(map)
@@ -102,10 +51,6 @@ tasks.withType(JavaCompile).configureEach {
 
 java {
 	withSourcesJar()
-
-	// If this mod is going to be a library, then it should also generate Javadocs in order to aid with development.
-	// Uncomment this line to generate them.
-	// withJavadocJar()
 }
 
 jar {
@@ -114,48 +59,46 @@ jar {
 	}
 }
 
-// Configure the maven publication
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
 			from components.java
 		}
 	}
-
-	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
-
 	}
 }
 
 if (System.getenv("MODRINTH_TOKEN")) {
+	apply plugin: "com.modrinth.minotaur"
 	modrinth {
 		token = System.getenv("MODRINTH_TOKEN")
 		projectId = 'origins-minus'
 		versionNumber = project.version
-		versionName = origVersion
+		versionName = baseVersion
 		versionType = 'release'
 		uploadFile = remapJar
-		gameVersions = [mc, '1.19.4']
+		gameVersions = ['1.19', '1.19.1', libs.versions.mc.get()]
 		loaders = ['quilt', 'fabric', 'forge']
 		detectLoaders = false
 		dependencies {
 			required.project "origins"
 			required.project "pehkui"
 		}
-		changelog = "[Direct Datapack Download](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/v${origVersion}/src/main/resources) - [v${origVersion} on Github](https://github.com/sisby-folk/origins-minus/releases/tag/v${origVersion})"
+		changelog = "[Direct Datapack Download](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/v${baseVersion}/src/main/resources) - [v${baseVersion} on Github](https://github.com/sisby-folk/origins-minus/releases/tag/v${baseVersion})"
 		syncBodyFrom = rootProject.file("README.md").text
 	}
 }
 
 if (System.getenv("GITHUB_TOKEN")) {
+	apply plugin: "com.github.breadmoirai.github-release"
 	githubRelease {
 		token System.getenv("GITHUB_TOKEN")
 		owner "sisby-folk"
 		repo "origins-minus"
-		tagName 'v' + origVersion
-		releaseName origVersion
-		targetCommitish default_branch
+		tagName 'v' + baseVersion
+		releaseName baseVersion
+		targetCommitish defaultBranch
 		draft false
 		prerelease false
 		releaseAssets remapJar.archiveFile
