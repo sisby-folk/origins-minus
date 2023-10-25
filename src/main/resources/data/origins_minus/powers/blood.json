@@ -5,7 +5,7 @@
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.blood.starve."
+			"text": "tooltip.origins_minus.blood.starve"
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",

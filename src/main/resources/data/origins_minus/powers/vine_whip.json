@@ -9,17 +9,14 @@
 			"text": "tooltip.origins_minus.generic.active"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins:textures/gui/badge/info.png",
 			"text": "tooltip.origins_minus.vine_whip.phasing"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins:textures/gui/badge/info.png",
 			"text": "tooltip.origins_minus.vine_whip.plant_fall"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins_minus:textures/gui/badge/half_heart.png",
 			"text": "tooltip.origins_minus.generic.health_cost"
 		}
