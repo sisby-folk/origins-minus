@@ -4,7 +4,7 @@
 		{
 			"type": "origins:keybind",
 			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "tooltip.origins_minus.generic.active"
+			"text": "origins.gui.badge.active"
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",

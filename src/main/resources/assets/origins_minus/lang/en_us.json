@@ -125,6 +125,5 @@
 
 
   "tooltip.origins_minus.generic.health_cost": "This ability costs health.",
-  "tooltip.origins_minus.generic.active": "Active ability, use with %s.",
   "tooltip.origins_minus.generic.held_active": "Active ability, use by holding %s."
 }
