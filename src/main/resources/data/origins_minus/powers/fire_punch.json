@@ -1,6 +1,4 @@
 {
-	"name": "power.origins_minus.fire_punch.name",
-	"description": "power.origins_minus.fire_punch.description",
 	"type": "origins:action_on_hit",
 	"bientity_action": {
 		"type": "origins:and",
@@ -9,8 +7,7 @@
 				"type": "origins:damage",
 				"amount": 1,
 				"source": {
-					"name": "inFire.player",
-					"fire": true
+									"fire": true
 				}
 			},
 			{

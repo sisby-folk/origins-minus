@@ -1,6 +1,4 @@
 {
-	"name": "power.origins_minus.vine_whip.name",
-	"description": "power.origins_minus.vine_whip.description",
 	"type": "origins:active_self",
 	"badges": [
 		{

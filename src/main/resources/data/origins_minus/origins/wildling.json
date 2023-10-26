@@ -1,6 +1,4 @@
 {
-	"name": "origin.origins_minus.wildling.name",
-	"description": "origin.origins_minus.wildling.description",
 	"powers": [
 		"origins_minus:energetic",
 		"origins_minus:bound",

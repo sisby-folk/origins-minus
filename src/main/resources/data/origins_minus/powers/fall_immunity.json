@@ -1,6 +1,4 @@
 {
-	"name": "power.origins_minus.fall_immunity.name",
-	"description": "power.origins_minus.fall_immunity.description",
 	"type": "origins:invulnerability",
 	"badges": [
 		{

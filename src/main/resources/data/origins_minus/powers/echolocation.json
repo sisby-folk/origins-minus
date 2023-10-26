@@ -1,6 +1,4 @@
 {
-	"name": "power.origins_minus.echolocation.name",
-	"description": "power.origins_minus.echolocation.description",
 	"type": "origins:multiple",
 	"night_vision": {
 		"type": "origins:night_vision",

@@ -1,6 +1,4 @@
 {
-	"name": "power.origins_minus.lava_swimming.name",
-	"description": "power.origins_minus.lava_swimming.description",
 	"type": "origins:swimming",
 	"condition": {
 		"type": "origins:submerged_in",
