@@ -1,6 +1,4 @@
 {
-	"name": "power.origins_minus.flap.name",
-	"description": "power.origins_minus.flap.description",
 	"type": "origins:active_self",
 	"condition": {
 		"type": "origins:and",

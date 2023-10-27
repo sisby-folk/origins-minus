@@ -1,0 +1,83 @@
+{
+  "type": "origins:prevent_death",
+  "badges": [
+    {
+      "sprite": "origins_minus:textures/gui/badge/full_shank.png",
+      "text": "tooltip.origins_minus.hunger_prevent_death.minimum"
+    },
+    {
+      "sprite": "origins_minus:textures/gui/badge/full_shank.png",
+      "text": "tooltip.origins_minus.hunger_prevent_death.minimum"
+    },
+    {
+      "sprite": "origins_minus:textures/gui/badge/full_shank.png",
+      "text": "tooltip.origins_minus.hunger_prevent_death.minimum"
+    },
+    {
+      "sprite": "origins_minus:textures/gui/badge/full_shank.png",
+      "text": "tooltip.origins_minus.hunger_prevent_death.minimum"
+    },
+    {
+      "sprite": "origins_minus:textures/gui/badge/full_shank.png",
+      "text": "tooltip.origins_minus.hunger_prevent_death.minimum"
+    }
+  ],
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:clear_effect"
+      },
+      {
+        "type": "origins:exhaust",
+        "amount": 600.0
+      },
+      {
+        "type": "origins:apply_effect",
+        "effects": [
+          {
+            "effect": "minecraft:regeneration",
+            "duration":9,
+            "amplifier": 6,
+            "is_ambient": false,
+            "show_particles": false,
+            "show_icon": true
+          }
+        ]
+      },
+      {
+        "type": "origins:spawn_particles",
+        "particle": {
+          "type": "minecraft:block",
+          "params": "minecraft:cake"
+        },
+        "count": 32,
+        "speed": 0.5,
+        "force": true,
+        "spread": {
+          "x": 0.5,
+          "y": 0,
+          "z": 0.5
+        },
+        "offset_y": 0.9
+      },
+      {
+        "type": "origins:play_sound",
+        "sound": "minecraft:entity.generic.eat",
+        "volume": 1,
+        "pitch": 0.9
+      },
+      {
+        "type": "origins:play_sound",
+        "sound": "minecraft:entity.player.burp",
+        "volume": 1,
+        "pitch": 1.9
+      }
+    ]
+  },
+  "condition": {
+    "type": "origins:food_level",
+    "comparison": ">=",
+    "compare_to": 10
+  }
+}

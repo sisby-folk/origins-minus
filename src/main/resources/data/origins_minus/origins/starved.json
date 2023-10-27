@@ -1,0 +1,10 @@
+{
+	"powers": [
+		"origins_minus:hunger_prevent_death",
+		"origins_minus:fast_eating"
+	],
+	"icon": {
+		"item": "minecraft:cake"
+	},
+	"impact": 1
+}

@@ -1,6 +1,4 @@
 {
-	"name": "origin.origins_minus.steadfast.name",
-	"description": "origin.origins_minus.steadfast.description",
 	"powers": [
 		"origins_minus:brace",
 		"origins_minus:rescue"

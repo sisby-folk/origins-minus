@@ -1,6 +1,4 @@
 {
-	"name": "power.origins_minus.wraparound.name",
-	"description": "power.origins_minus.wraparound.description",
 	"type": "origins:action_when_damage_taken",
 	"entity_action": {
 		"type": "origins:and",

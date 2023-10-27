@@ -1,6 +1,4 @@
 {
-	"name": "power.origins_minus.blink.name",
-	"description": "power.origins_minus.blink.description",
 	"type": "origins:active_self",
 	"entity_action": {
 		"type": "origins:and",

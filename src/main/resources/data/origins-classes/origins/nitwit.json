@@ -1,11 +1,9 @@
 {
-	"name": "origin.origins_minus.unspecialized.name",
 	"powers": [
 	],
 	"icon": {
 		"item": "minecraft:stone"
 	},
-	"description": "origin.origins_minus.unspecialized.description",
 	"order": 0,
 	"impact": 0,
 	"loading_priority": 100,

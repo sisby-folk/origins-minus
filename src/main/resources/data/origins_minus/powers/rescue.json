@@ -1,6 +1,4 @@
 {
-	"name": "power.origins_minus.rescue.name",
-	"description": "power.origins_minus.rescue.description",
 	"type": "origins:multiple",
 	"pull": {
 		"type": "origins:active_self",

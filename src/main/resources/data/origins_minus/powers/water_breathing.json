@@ -1,6 +1,4 @@
 {
-	"name": "power.origins_minus.water_breathing.name",
-	"description": "power.origins_minus.water_breathing.description",
 	"type": "origins:multiple",
 	"water_breathing": {
 		"type": "origins:action_over_time",

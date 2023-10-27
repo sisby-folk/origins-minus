@@ -1,11 +1,9 @@
 {
-	"name": "origin.origins_minus.stranger.name",
 	"powers": [
 	],
 	"icon": {
 		"item": "minecraft:glass"
 	},
-	"description": "origin.origins_minus.stranger.description",
 	"order": 1,
 	"impact": 0,
 	"loading_priority": 100,
