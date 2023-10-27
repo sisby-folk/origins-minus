@@ -14,6 +14,9 @@
   "origin.origins_minus.hellspawn.name": "Hellspawn",
   "origin.origins_minus.hellspawn.description": "No strangers to heat.",
 
+  "origin.origins_minus.starved.name": "Starved",
+  "origin.origins_minus.starved.description": "Masters of attrition.",
+
   "origin.origins_minus.mer.name": "Mer",
   "origin.origins_minus.mer.description": "Ocean familiars.",
 
@@ -31,7 +34,6 @@
 
   "origin.origins_minus.wildling.name": "Wildling",
   "origin.origins_minus.wildling.description": "Instinctual explorers.",
-
 
   "power.origins_minus.bioluminescence.name": "Bioluminescence",
   "power.origins_minus.bioluminescence.description": "Fire glow lichen at blocks.",
@@ -67,6 +69,9 @@
   "power.origins_minus.fall_immunity.description": "High falls are harmless.",
   "tooltip.origins_minus.fall_immunity.bounce": "You bounce slightly to absorb falls.",
 
+  "power.origins_minus.fast_eating.name": "Ravenous",
+  "power.origins_minus.fast_eating.description": "Eat small foods faster.",
+
   "power.origins_minus.fire_immunity.name": "Flamehardy",
   "power.origins_minus.fire_immunity.description": "Immune to fire and lava.",
 
@@ -87,6 +92,10 @@
   "power.origins_minus.glide.description": "Slow your descent to glide or prevent falls.",
   "tooltip.origins_minus.glide.safe_fall": "Sneak to fall safely at speed.",
   "tooltip.origins_minus.glide.air_speed": "Air manoeuvrability is increased.",
+
+  "power.origins_minus.hunger_prevent_death.name": "Satiation",
+  "power.origins_minus.hunger_prevent_death.description": "Mortal injury cuts into hunger instead.",
+  "tooltip.origins_minus.hunger_prevent_death.minimum": "Requires half hunger to activate.",
 
   "power.origins_minus.lava_swimming.name": "Molten Cruise",
   "power.origins_minus.lava_swimming.description": "Swim and see in lava.",

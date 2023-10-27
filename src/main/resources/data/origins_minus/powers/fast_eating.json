@@ -1,0 +1,150 @@
+{
+  "type": "origins:multiple",
+  "res": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 10,
+    "start_value": 0,
+    "hud_render": {
+      "should_render": false
+    },
+    "max_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:play_sound",
+          "sound": "minecraft:entity.player.burp"
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_res",
+          "change": 0,
+          "operation": "set"
+        },
+        {
+          "type": "origins:if_else",
+          "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+              "type": "origins:food"
+            }
+          },
+          "if_action": {
+            "type": "origins:equipped_item_action",
+            "equipment_slot": "mainhand",
+            "action": {
+              "type": "origins:consume",
+              "amount": 1
+            }
+          },
+          "else_action": {
+            "type": "origins:equipped_item_action",
+            "equipment_slot": "offhand",
+            "action": {
+              "type": "origins:consume",
+              "amount": 1
+            }
+          }
+        },
+        {
+          "type": "origins:if_else_list",
+          "actions": [
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_1"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 1,
+                "saturation": 0.8
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_1"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 2,
+                "saturation": 1.2
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "discharge": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_res",
+      "change": 0,
+      "operation": "set"
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:using_item",
+      "item_condition": {
+        "type": "origins:or",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "origins_minus:fast_eating_1"
+            }
+          },
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "origins_minus:fast_eating_2"
+            }
+          }
+        ]
+      },
+      "inverted": true
+    }
+  },
+  "charge_while_eating": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_res",
+      "change": 2
+    },
+    "interval": 2,
+    "condition": {
+      "type": "origins:using_item",
+      "item_condition": {
+        "type": "origins:or",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "origins_minus:fast_eating_1"
+            }
+          },
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "origins_minus:fast_eating_2"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
