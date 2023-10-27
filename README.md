@@ -71,6 +71,8 @@ We tweak and rebalance origins when they fully disengage an unintended part of t
 
 ![Voidthing Preview](https://user-images.githubusercontent.com/55819817/230751163-9880b672-7610-4f36-bff1-8fe9bb9c8390.png)
 
+![Starved Preview](https://cdn-raw.modrinth.com/data/gbOL9is1/images/b1d88c993001c971a332ddc092670b44f123555a.png)
+
 ![Steadfast Preview](https://user-images.githubusercontent.com/55819817/230751171-3e93f675-5b98-4a86-b4c3-825a2d28f3e7.png)
 
 ![Sanguine Preview](https://user-images.githubusercontent.com/55819817/230751174-9eef1c47-6173-4dcd-a462-e3d526e4fc5f.png)
