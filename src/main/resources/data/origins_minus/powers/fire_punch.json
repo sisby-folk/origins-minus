@@ -1,6 +1,4 @@
 {
-	"name": "Temper Temper",
-	"description": "Unarmed attacks burn.",
 	"type": "origins:action_on_hit",
 	"bientity_action": {
 		"type": "origins:and",
@@ -9,8 +7,7 @@
 				"type": "origins:damage",
 				"amount": 1,
 				"source": {
-					"name": "inFire.player",
-					"fire": true
+									"fire": true
 				}
 			},
 			{

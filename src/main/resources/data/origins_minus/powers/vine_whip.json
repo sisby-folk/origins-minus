@@ -1,27 +1,22 @@
 {
-	"name": "Vine Whip",
-	"description": "Slingshot towards plants.",
 	"type": "origins:active_self",
 	"badges": [
 		{
 			"type": "origins:keybind",
 			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "Active ability, use with %s."
+			"text": "origins.gui.badge.active"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "You can pass through leaves."
+			"text": "tooltip.origins_minus.vine_whip.phasing"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Falls onto plants are less harmful."
+			"text": "tooltip.origins_minus.vine_whip.plant_fall"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "origins_minus:textures/gui/badge/half_heart.png",
-			"text": "This ability costs health."
+			"text": "tooltip.origins_minus.generic.health_cost"
 		}
 	],
 	"entity_action": {

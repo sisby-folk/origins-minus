@@ -1,12 +1,10 @@
 {
-	"name": "Bound",
-	"description": "Charge a high jump.",
 	"type": "origins:multiple",
 	"badges": [
 		{
 			"type": "origins:keybind",
 			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "Active ability, use by holding %s."
+			"text": "tooltip.origins_minus.generic.held_active"
 		}
 	],
 	"key": {

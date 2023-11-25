@@ -1,6 +1,4 @@
 {
-	"name": "Rescue",
-	"description": "Pull your friends close (and enemies closer).",
 	"type": "origins:multiple",
 	"pull": {
 		"type": "origins:active_self",

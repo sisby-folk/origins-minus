@@ -1,7 +1,32 @@
 {
-	"name": "Bioluminescence",
-	"description": "Fire glow lichen at blocks.",
 	"type": "origins:multiple",
+	"badges": [
+		{
+			"type": "origins:keybind",
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "origins.gui.badge.active"
+		},
+		{
+			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
+			"text": "tooltip.origins_minus.generic.health_cost"
+		},
+		{
+			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
+			"text": "tooltip.origins_minus.generic.health_cost"
+		},
+		{
+			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
+			"text": "tooltip.origins_minus.generic.health_cost"
+		},
+		{
+			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
+			"text": "tooltip.origins_minus.generic.health_cost"
+		},
+		{
+			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
+			"text": "tooltip.origins_minus.generic.health_cost"
+		}
+	],
 	"fire": {
 		"type": "origins:active_self",
 		"entity_action": {
@@ -75,37 +100,5 @@
 			]
 		},
 		"cooldown": 100
-	},
-	"badges": [
-		{
-			"type": "origins:keybind",
-			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "Active ability, use with %s."
-		},
-		{
-			"type": "origins:tooltip",
-			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
-			"text": "This ability costs health."
-		},
-		{
-			"type": "origins:tooltip",
-			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
-			"text": "This ability costs health."
-		},
-		{
-			"type": "origins:tooltip",
-			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
-			"text": "This ability costs health."
-		},
-		{
-			"type": "origins:tooltip",
-			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
-			"text": "This ability costs health."
-		},
-		{
-			"type": "origins:tooltip",
-			"sprite": "origins_minus:textures/gui/badge/full_heart.png",
-			"text": "This ability costs health."
-		}
-	]
+	}
 }

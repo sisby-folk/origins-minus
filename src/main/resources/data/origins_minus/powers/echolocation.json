@@ -1,6 +1,4 @@
 {
-	"name": "Echolocation",
-	"description": "You can see in the dark, and enemies behind walls.",
 	"type": "origins:multiple",
 	"night_vision": {
 		"type": "origins:night_vision",

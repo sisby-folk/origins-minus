@@ -1,6 +1,4 @@
 {
-	"name": "Flap",
-	"description": "Gain height in the air.",
 	"type": "origins:active_self",
 	"condition": {
 		"type": "origins:and",

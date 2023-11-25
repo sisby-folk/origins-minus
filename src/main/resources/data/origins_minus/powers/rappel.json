@@ -1,12 +1,10 @@
 {
-	"name": "Rappel",
-	"description": "Latch to the ceiling, allowing vertical climbing.",
 	"type": "origins:multiple",
 	"badges": [
 		{
 			"type": "origins:keybind",
 			"sprite": "origins:textures/gui/badge/toggle.png",
-			"text": "Toggled with 2x%s."
+			"text": "tooltip.origins_minus.rappel.toggle"
 		}
 	],
 	"key": {

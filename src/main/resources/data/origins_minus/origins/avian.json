@@ -1,6 +1,4 @@
 {
-	"name": "Avian",
-	"description": "Freedom in the sky.",
 	"powers": [
 		"origins_minus:flap",
 		"origins_minus:glide",

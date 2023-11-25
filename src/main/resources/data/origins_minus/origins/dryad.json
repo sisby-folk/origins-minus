@@ -1,6 +1,4 @@
 {
-	"name": "Dryad",
-	"description": "One with the trees.",
 	"powers": [
 		"origins_minus:sunlight",
 		"origins_minus:no_hunger",

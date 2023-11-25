@@ -1,6 +1,4 @@
 {
-	"name": "Wraparound",
-	"description": "Let void become sky.",
 	"type": "origins:action_when_damage_taken",
 	"entity_action": {
 		"type": "origins:and",

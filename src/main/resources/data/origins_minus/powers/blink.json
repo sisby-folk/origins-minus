@@ -1,6 +1,4 @@
 {
-	"name": "Submerged Blink",
-	"description": "Arrive where you look.",
 	"type": "origins:active_self",
 	"entity_action": {
 		"type": "origins:and",

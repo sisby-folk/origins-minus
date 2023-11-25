@@ -1,6 +1,4 @@
 {
-	"name": "Countercurrent",
-	"description": "Water is breathable.",
 	"type": "origins:multiple",
 	"water_breathing": {
 		"type": "origins:action_over_time",

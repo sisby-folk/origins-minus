@@ -1,11 +1,9 @@
 {
-	"name": "Osmoregulation",
-	"description": "You can eat seagrass.",
 	"type": "origins:multiple",
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "You can collect seagrass without shears."
+			"text": "tooltip.origins_minus.edible_seagrass.shears"
 		}
 	],
 	"res": {

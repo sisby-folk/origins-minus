@@ -1,0 +1,138 @@
+{
+  "origin.origins_minus.stranger.name": "Stranger",
+  "origin.origins_minus.stranger.description": "The standard minecraft experience.\n\n§oLet's not quarrel with who or what you are - It's time to get started.§r",
+
+  "origin.origins_minus.unspecialized.name": "Unspecialized",
+  "origin.origins_minus.unspecialized.description": "No specific advantages.\n\n§oJack of all trades, master of none.§r",
+
+  "origin.origins_minus.avian.name": "Avian",
+  "origin.origins_minus.avian.description": "Freedom in the sky.",
+
+  "origin.origins_minus.dryad.name": "Dryad",
+  "origin.origins_minus.dryad.description": "One with the trees.",
+
+  "origin.origins_minus.hellspawn.name": "Hellspawn",
+  "origin.origins_minus.hellspawn.description": "No strangers to heat.",
+
+  "origin.origins_minus.starved.name": "Starved",
+  "origin.origins_minus.starved.description": "Masters of attrition.",
+
+  "origin.origins_minus.mer.name": "Mer",
+  "origin.origins_minus.mer.description": "Ocean familiars.",
+
+  "origin.origins_minus.sanguine.name": "Sanguine",
+  "origin.origins_minus.sanguine.description": "Bloodthirsty rampage conductors.",
+
+  "origin.origins_minus.steadfast.name": "Steadfast",
+  "origin.origins_minus.steadfast.description": "§oShow me an unstoppable force, then.§r",
+
+  "origin.origins_minus.voidthing.name": "Voidthing",
+  "origin.origins_minus.voidthing.description": "Elusive and illogical.",
+
+  "origin.origins_minus.weaver.name": "Weaver",
+  "origin.origins_minus.weaver.description": "Unafraid of the dark.",
+
+  "origin.origins_minus.wildling.name": "Wildling",
+  "origin.origins_minus.wildling.description": "Instinctual explorers.",
+
+  "power.origins_minus.bioluminescence.name": "Bioluminescence",
+  "power.origins_minus.bioluminescence.description": "Fire glow lichen at blocks.",
+
+  "power.origins_minus.blink.name": "Submerged Blink",
+  "power.origins_minus.blink.description": "Arrive where you look.",
+
+  "power.origins_minus.blood.name": "Blood",
+  "power.origins_minus.blood.description": "Replaces hunger.",
+  "tooltip.origins_minus.blood.starve": "Without blood, you burn in the sun.",
+  "tooltip.origins_minus.blood.snacking": "Food is edible, but won't replenish blood.",
+
+  "power.origins_minus.bound.name": "Bound",
+  "power.origins_minus.bound.description": "Charge a high jump.",
+
+  "power.origins_minus.brace.name": "Brace",
+  "power.origins_minus.brace.description": "Slow down and parry attacks.",
+  "tooltip.origins_minus.brace.exhaustion": "Resisting damage incurs exhaustion.",
+  "tooltip.origins_minus.brace.falls": "Bracing into falls is faster, but safer.",
+
+  "power.origins_minus.echolocation.name": "Echolocation",
+  "power.origins_minus.echolocation.description": "You can see in the dark, and enemies behind walls.",
+
+  "power.origins_minus.edible_seagrass.name": "Osmoregulation",
+  "power.origins_minus.edible_seagrass.description": "You can eat seagrass.",
+  "tooltip.origins_minus.edible_seagrass.shears": "You can collect seagrass without shears.",
+
+  "power.origins_minus.energetic.name": "Energetic",
+  "power.origins_minus.energetic.description": "You move faster on land.",
+  "tooltip.origins_minus.energetic.air_speed": "Your speed carries in the air.",
+
+  "power.origins_minus.fall_immunity.name": "Carefree",
+  "power.origins_minus.fall_immunity.description": "High falls are harmless.",
+  "tooltip.origins_minus.fall_immunity.bounce": "You bounce slightly to absorb falls.",
+
+  "power.origins_minus.fast_eating.name": "Ravenous",
+  "power.origins_minus.fast_eating.description": "Eat small foods faster.",
+
+  "power.origins_minus.fire_immunity.name": "Flamehardy",
+  "power.origins_minus.fire_immunity.description": "Immune to fire and lava.",
+
+  "power.origins_minus.fire_punch.name": "Temper Temper",
+  "power.origins_minus.fire_punch.description": "Unarmed attacks burn.",
+
+  "power.origins_minus.flap.name": "Flap",
+  "power.origins_minus.flap.description": "Gain height in the air.",
+
+  "power.origins_minus.frenzy.name": "Frenzy",
+  "power.origins_minus.frenzy.description": "Become empowered by feeding from a target.",
+  "tooltip.origins_minus.frenzy.active": "Active ability, use with %s while sneaking and empty-handed.",
+  "tooltip.origins_minus.frenzy.targets": "Works on players and blooded monsters.",
+  "tooltip.origins_minus.frenzy.cancel": "Interrupted by getting hurt or sneaking again.",
+  "tooltip.origins_minus.frenzy.extend": "Enemies killed during frenzy extend it, restoring blood.",
+
+  "power.origins_minus.glide.name": "Air Control",
+  "power.origins_minus.glide.description": "Slow your descent to glide or prevent falls.",
+  "tooltip.origins_minus.glide.safe_fall": "Sneak to fall safely at speed.",
+  "tooltip.origins_minus.glide.air_speed": "Air manoeuvrability is increased.",
+
+  "power.origins_minus.hunger_prevent_death.name": "Satiation",
+  "power.origins_minus.hunger_prevent_death.description": "Mortal injury cuts into hunger instead.",
+  "tooltip.origins_minus.hunger_prevent_death.minimum": "Requires half hunger to activate.",
+
+  "power.origins_minus.lava_swimming.name": "Molten Cruise",
+  "power.origins_minus.lava_swimming.description": "Swim and see in lava.",
+
+  "power.origins_minus.nightstalker.name": "Nightstalker",
+  "power.origins_minus.nightstalker.description": "You can see in the dark.",
+
+  "power.origins_minus.rappel.name": "Rappel",
+  "power.origins_minus.rappel.description": "Latch to the ceiling, allowing vertical climbing.",
+  "tooltip.origins_minus.rappel.toggle": "Toggled with 2x%s.",
+
+  "power.origins_minus.reach.name": "Here Enough",
+  "power.origins_minus.reach.description": "Reach farther.",
+
+  "power.origins_minus.rescue.name": "Rescue",
+  "power.origins_minus.rescue.description": "Pull your friends close (and enemies closer).",
+
+  "power.origins_minus.sunlight.name": "Sunlight",
+  "power.origins_minus.sunlight.description": "Replaces hunger.\nRefills in the sun.",
+  "tooltip.origins_minus.sunlight.food": "Honey and apples replenish sunlight.",
+  "tooltip.origins_minus.sunlight.healing": "Burns more sunlight to heal faster when full.",
+
+  "power.origins_minus.swim_speed.name": "Ocean Free",
+  "power.origins_minus.swim_speed.description": "You move, see, and mine with ease underwater.",
+
+  "power.origins_minus.vine_whip.name": "Vine Whip",
+  "power.origins_minus.vine_whip.description": "Slingshot towards plants.",
+  "tooltip.origins_minus.vine_whip.phasing": "You can pass through leaves.",
+  "tooltip.origins_minus.vine_whip.plant_fall": "Falls onto plants are less harmful.",
+
+  "power.origins_minus.water_breathing.name": "Countercurrent",
+  "power.origins_minus.water_breathing.description": "Water is breathable.",
+
+  "power.origins_minus.wraparound.name": "Wraparound",
+  "power.origins_minus.wraparound.description": "Let void become sky.",
+
+
+  "tooltip.origins_minus.generic.health_cost": "This ability costs health.",
+  "tooltip.origins_minus.generic.held_active": "Active ability, use by holding %s."
+}

@@ -1,20 +1,18 @@
 {
-	"name": "Brace",
-	"description": "Slow down and parry attacks.",
 	"type": "origins:multiple",
 	"badges": [
 		{
 			"type": "origins:keybind",
 			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "Active ability, use by holding %s."
+			"text": "tooltip.origins_minus.generic.held_active"
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Resisting damage incurs exhaustion."
+			"text": "tooltip.origins_minus.brace.exhaustion"
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Bracing into falls is faster, but safer."
+			"text": "tooltip.origins_minus.brace.falls"
 		}
 	],
 	"sound": {

@@ -1,6 +1,4 @@
 {
-	"name": "Here Enough",
-	"description": "Reach farther.",
 	"type": "origins:attribute",
 	"modifiers": [
 		{

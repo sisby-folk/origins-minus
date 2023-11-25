@@ -1,11 +1,9 @@
 {
-	"name": "Carefree",
-	"description": "High falls are harmless.",
 	"type": "origins:invulnerability",
 	"badges": [
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "You bounce slightly to absorb falls."
+			"text": "tooltip.origins_minus.fall_immunity.bounce"
 		}
 	],
 	"damage_condition": {

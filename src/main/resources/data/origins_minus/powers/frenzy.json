@@ -1,24 +1,22 @@
 {
-	"name": "Frenzy",
-	"description": "Become empowered by feeding from a target.",
 	"type": "origins:multiple",
 	"badges": [
 		{
 			"type": "origins:keybind",
 			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "Active ability, use with %s while sneaking and empty-handed."
+			"text": "tooltip.origins_minus.frenzy.active"
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Works on players and blooded monsters."
+			"text": "tooltip.origins_minus.frenzy.targets"
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Interrupted by getting hurt or sneaking again."
+			"text": "tooltip.origins_minus.frenzy.cancel"
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "Enemies killed during frenzy extend it, restoring blood."
+			"text": "tooltip.origins_minus.frenzy.extend"
 		}
 	],
 	"key": {

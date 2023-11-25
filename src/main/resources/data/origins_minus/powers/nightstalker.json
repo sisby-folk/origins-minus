@@ -1,6 +1,4 @@
 {
-	"name": "Nightstalker",
-	"description": "You can see in the dark.",
 	"type": "origins:night_vision",
 	"strength": 0.1
 }

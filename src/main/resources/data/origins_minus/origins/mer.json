@@ -1,6 +1,4 @@
 {
-	"name": "Mer",
-	"description": "Ocean familiars.",
 	"powers": [
 		"origins_minus:water_breathing",
 		"origins_minus:swim_speed",
