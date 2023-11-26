@@ -114,6 +114,9 @@
   "power.origins_minus.rescue.name": "Rescue",
   "power.origins_minus.rescue.description": "Pull your friends close (and enemies closer).",
 
+  "power.origins_minus.snacking_saturation.name": "Buffet Strategy",
+  "power.origins_minus.snacking_saturation.description": "You can eat until fully saturated.",
+
   "power.origins_minus.sunlight.name": "Sunlight",
   "power.origins_minus.sunlight.description": "Replaces hunger.\nRefills in the sun.",
   "tooltip.origins_minus.sunlight.food": "Honey and apples replenish sunlight.",
