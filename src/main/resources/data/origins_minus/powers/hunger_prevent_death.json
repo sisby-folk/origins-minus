@@ -2,6 +2,10 @@
   "type": "origins:prevent_death",
   "badges": [
     {
+      "sprite": "origins:textures/gui/badge/info.png",
+      "text": "tooltip.origins_minus.hunger_prevent_death.scaling"
+    },
+    {
       "sprite": "origins_minus:textures/gui/badge/full_shank.png",
       "text": "tooltip.origins_minus.hunger_prevent_death.minimum"
     },
@@ -27,23 +31,6 @@
     "actions": [
       {
         "type": "origins:clear_effect"
-      },
-      {
-        "type": "origins:exhaust",
-        "amount": 600.0
-      },
-      {
-        "type": "origins:apply_effect",
-        "effects": [
-          {
-            "effect": "minecraft:regeneration",
-            "duration":9,
-            "amplifier": 6,
-            "is_ambient": false,
-            "show_particles": false,
-            "show_icon": true
-          }
-        ]
       },
       {
         "type": "origins:spawn_particles",
@@ -72,6 +59,190 @@
         "sound": "minecraft:entity.player.burp",
         "volume": 1,
         "pitch": 1.9
+      },
+      {
+        "type": "origins:if_else_list",
+        "actions": [
+          {
+            "condition": {
+              "type": "origins:or",
+              "conditions": [
+                {
+                  "type": "origins:and",
+                  "conditions":  [
+                    {
+                      "type": "origins:saturation_level",
+                      "comparison": ">=",
+                      "compare_to": 14
+                    },
+                    {
+                      "type": "origins:food_level",
+                      "comparison": ">=",
+                      "compare_to": 14
+                    }
+                  ]
+                },
+                {
+                  "type": "origins:and",
+                  "conditions":  [
+                    {
+                      "type": "origins:saturation_level",
+                      "comparison": ">=",
+                      "compare_to": 8
+                    },
+                    {
+                      "type": "origins:food_level",
+                      "comparison": ">=",
+                      "compare_to": 20
+                    }
+                  ]
+                }
+              ]
+            },
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:exhaust",
+                  "amount": 600.0
+                },
+                {
+                  "type": "origins:delay",
+                  "ticks": 10,
+                  "action": {
+                    "type": "origins:exhaust",
+                    "amount": 600.0
+                  }
+                },
+                {
+                  "type": "origins:delay",
+                  "ticks": 20,
+                  "action": {
+                    "type": "origins:exhaust",
+                    "amount": 480.0
+                  }
+                },
+                {
+                  "type": "origins:apply_effect",
+                  "effects": [
+                    {
+                      "effect": "minecraft:absorption",
+                      "duration": 100,
+                      "amplifier": 1,
+                      "is_ambient": false,
+                      "show_particles": false,
+                      "show_icon": true
+                    }
+                  ]
+                },
+                {
+                  "type": "origins:apply_effect",
+                  "effects": [
+                    {
+                      "effect": "minecraft:regeneration",
+                      "duration": 19,
+                      "amplifier": 6,
+                      "is_ambient": false,
+                      "show_particles": false,
+                      "show_icon": true
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "condition": {
+              "type": "origins:or",
+              "conditions": [
+                {
+                  "type": "origins:food_level",
+                  "comparison": ">=",
+                  "compare_to": 20
+                },
+                {
+                  "type": "origins:saturation_level",
+                  "comparison": ">=",
+                  "compare_to": 10
+                },
+                {
+                  "type": "origins:and",
+                  "conditions":  [
+                    {
+                      "type": "origins:saturation_level",
+                      "comparison": ">=",
+                      "compare_to": 5
+                    },
+                    {
+                      "type": "origins:food_level",
+                      "comparison": ">=",
+                      "compare_to": 15
+                    }
+                  ]
+                }
+              ]
+            },
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:exhaust",
+                  "amount": 600.0
+                },
+                {
+                  "type": "origins:delay",
+                  "ticks": 10,
+                  "action": {
+                    "type": "origins:exhaust",
+                    "amount": 600.0
+                  }
+                },
+                {
+                  "type": "origins:apply_effect",
+                  "effects": [
+                    {
+                      "effect": "minecraft:regeneration",
+                      "duration": 19,
+                      "amplifier": 6,
+                      "is_ambient": false,
+                      "show_particles": false,
+                      "show_icon": true
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "condition": {
+              "type": "origins:food_level",
+              "comparison": ">=",
+              "compare_to": 10
+            },
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:exhaust",
+                  "amount": 600.0
+                },
+                {
+                  "type": "origins:apply_effect",
+                  "effects": [
+                    {
+                      "effect": "minecraft:regeneration",
+                      "duration": 9,
+                      "amplifier": 6,
+                      "is_ambient": false,
+                      "show_particles": false,
+                      "show_icon": true
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
       }
     ]
   },

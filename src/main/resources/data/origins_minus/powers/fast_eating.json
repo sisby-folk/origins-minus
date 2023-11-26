@@ -56,14 +56,14 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "origins_minus:fast_eating_1"
+                    "tag": "origins_minus:fast_eating_1_6"
                   }
                 }
               },
               "action": {
                 "type": "origins:feed",
                 "food": 1,
-                "saturation": 0.8
+                "saturation": 0.6
               }
             },
             {
@@ -72,13 +72,93 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "origins_minus:fast_eating_1"
+                    "tag": "origins_minus:fast_eating_1_12"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 1,
+                "saturation": 1.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_2_2"
                   }
                 }
               },
               "action": {
                 "type": "origins:feed",
                 "food": 2,
+                "saturation": 0.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_2_6"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 2,
+                "saturation": 0.6
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_3_12"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 3,
+                "saturation": 1.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_4_6"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 4,
+                "saturation": 0.6
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_5_12"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 5,
                 "saturation": 1.2
               }
             }
@@ -99,21 +179,10 @@
     "condition": {
       "type": "origins:using_item",
       "item_condition": {
-        "type": "origins:or",
-        "conditions": [
-          {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "tag": "origins_minus:fast_eating_1"
-            }
-          },
-          {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "tag": "origins_minus:fast_eating_2"
-            }
-          }
-        ]
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "origins_minus:fast_eating"
+        }
       },
       "inverted": true
     }
@@ -129,21 +198,10 @@
     "condition": {
       "type": "origins:using_item",
       "item_condition": {
-        "type": "origins:or",
-        "conditions": [
-          {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "tag": "origins_minus:fast_eating_1"
-            }
-          },
-          {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "tag": "origins_minus:fast_eating_2"
-            }
-          }
-        ]
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "origins_minus:fast_eating"
+        }
       }
     }
   }
