@@ -1,5 +1,43 @@
 {
   "type": "origins:multiple",
+  "badges": [
+    {
+      "sprite": "minecraft:textures/item/potato.png",
+      "text": "item.minecraft.potato"
+    },
+    {
+      "sprite": "minecraft:textures/item/beetroot.png",
+      "text": "item.minecraft.beetroot"
+    },
+    {
+      "sprite": "minecraft:textures/item/cookie.png",
+      "text": "item.minecraft.cookie"
+    },
+    {
+      "sprite": "minecraft:textures/item/glow_berries.png",
+      "text": "item.minecraft.glow_berries"
+    },
+    {
+      "sprite": "minecraft:textures/item/sweet_berries.png",
+      "text": "item.minecraft.sweet_berries"
+    },
+    {
+      "sprite": "minecraft:textures/item/melon_slice.png",
+      "text": "item.minecraft.melon_slice"
+    },
+    {
+      "sprite": "minecraft:textures/item/carrot.png",
+      "text": "item.minecraft.carrot"
+    },
+    {
+      "sprite": "minecraft:textures/item/apple.png",
+      "text": "item.minecraft.apple"
+    },
+    {
+      "sprite": "minecraft:textures/item/baked_potato.png",
+      "text": "item.minecraft.baked_potato"
+    }
+  ],
   "res": {
     "type": "origins:resource",
     "min": 0,

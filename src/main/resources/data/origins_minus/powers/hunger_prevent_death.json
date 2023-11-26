@@ -65,6 +65,69 @@
         "actions": [
           {
             "condition": {
+              "type": "origins:and",
+              "conditions":  [
+                {
+                  "type": "origins:saturation_level",
+                  "comparison": ">=",
+                  "compare_to": 18
+                },
+                {
+                  "type": "origins:food_level",
+                  "comparison": ">=",
+                  "compare_to": 20
+                }
+              ]
+            },
+            "action": {
+              "type": "origins:and",
+              "actions": [
+                {
+                  "type": "origins:exhaust",
+                  "amount": 600.0
+                },
+                {
+                  "type": "origins:delay",
+                  "ticks": 10,
+                  "action": {
+                    "type": "origins:exhaust",
+                    "amount": 600.0
+                  }
+                },
+                {
+                  "type": "origins:delay",
+                  "ticks": 20,
+                  "action": {
+                    "type": "origins:exhaust",
+                    "amount": 600.0
+                  }
+                },
+                {
+                  "type": "origins:delay",
+                  "ticks": 30,
+                  "action": {
+                    "type": "origins:exhaust",
+                    "amount": 480.0
+                  }
+                },
+                {
+                  "type": "origins:apply_effect",
+                  "effects": [
+                    {
+                      "effect": "minecraft:regeneration",
+                      "duration": 19,
+                      "amplifier": 6,
+                      "is_ambient": false,
+                      "show_particles": false,
+                      "show_icon": true
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "condition": {
               "type": "origins:or",
               "conditions": [
                 {
@@ -73,12 +136,12 @@
                     {
                       "type": "origins:saturation_level",
                       "comparison": ">=",
-                      "compare_to": 14
+                      "compare_to": 15
                     },
                     {
                       "type": "origins:food_level",
                       "comparison": ">=",
-                      "compare_to": 14
+                      "compare_to": 15
                     }
                   ]
                 },
@@ -88,7 +151,7 @@
                     {
                       "type": "origins:saturation_level",
                       "comparison": ">=",
-                      "compare_to": 8
+                      "compare_to": 10
                     },
                     {
                       "type": "origins:food_level",
@@ -119,28 +182,15 @@
                   "ticks": 20,
                   "action": {
                     "type": "origins:exhaust",
-                    "amount": 480.0
+                    "amount": 600.0
                   }
                 },
                 {
                   "type": "origins:apply_effect",
                   "effects": [
                     {
-                      "effect": "minecraft:absorption",
-                      "duration": 100,
-                      "amplifier": 1,
-                      "is_ambient": false,
-                      "show_particles": false,
-                      "show_icon": true
-                    }
-                  ]
-                },
-                {
-                  "type": "origins:apply_effect",
-                  "effects": [
-                    {
                       "effect": "minecraft:regeneration",
-                      "duration": 19,
+                      "duration": 14,
                       "amplifier": 6,
                       "is_ambient": false,
                       "show_particles": false,
@@ -202,7 +252,7 @@
                   "effects": [
                     {
                       "effect": "minecraft:regeneration",
-                      "duration": 19,
+                      "duration": 9,
                       "amplifier": 6,
                       "is_ambient": false,
                       "show_particles": false,
@@ -231,7 +281,7 @@
                   "effects": [
                     {
                       "effect": "minecraft:regeneration",
-                      "duration": 9,
+                      "duration": 4,
                       "amplifier": 6,
                       "is_ambient": false,
                       "show_particles": false,
