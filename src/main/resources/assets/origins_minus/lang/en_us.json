@@ -95,6 +95,7 @@
 
   "power.origins_minus.hunger_prevent_death.name": "Satiation",
   "power.origins_minus.hunger_prevent_death.description": "Mortal injury cuts into hunger instead.",
+  "tooltip.origins_minus.hunger_prevent_death.scaling": "More effective at full hunger.",
   "tooltip.origins_minus.hunger_prevent_death.minimum": "Requires half hunger to activate.",
 
   "power.origins_minus.lava_swimming.name": "Molten Cruise",
@@ -112,6 +113,9 @@
 
   "power.origins_minus.rescue.name": "Rescue",
   "power.origins_minus.rescue.description": "Pull your friends close (and enemies closer).",
+
+  "power.origins_minus.snacking_saturation.name": "Buffet Strategy",
+  "power.origins_minus.snacking_saturation.description": "You can eat until fully saturated.",
 
   "power.origins_minus.sunlight.name": "Sunlight",
   "power.origins_minus.sunlight.description": "Replaces hunger.\nRefills in the sun.",

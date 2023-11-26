@@ -1,5 +1,43 @@
 {
   "type": "origins:multiple",
+  "badges": [
+    {
+      "sprite": "minecraft:textures/item/potato.png",
+      "text": "item.minecraft.potato"
+    },
+    {
+      "sprite": "minecraft:textures/item/beetroot.png",
+      "text": "item.minecraft.beetroot"
+    },
+    {
+      "sprite": "minecraft:textures/item/cookie.png",
+      "text": "item.minecraft.cookie"
+    },
+    {
+      "sprite": "minecraft:textures/item/glow_berries.png",
+      "text": "item.minecraft.glow_berries"
+    },
+    {
+      "sprite": "minecraft:textures/item/sweet_berries.png",
+      "text": "item.minecraft.sweet_berries"
+    },
+    {
+      "sprite": "minecraft:textures/item/melon_slice.png",
+      "text": "item.minecraft.melon_slice"
+    },
+    {
+      "sprite": "minecraft:textures/item/carrot.png",
+      "text": "item.minecraft.carrot"
+    },
+    {
+      "sprite": "minecraft:textures/item/apple.png",
+      "text": "item.minecraft.apple"
+    },
+    {
+      "sprite": "minecraft:textures/item/baked_potato.png",
+      "text": "item.minecraft.baked_potato"
+    }
+  ],
   "res": {
     "type": "origins:resource",
     "min": 0,
@@ -56,14 +94,14 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "origins_minus:fast_eating_1"
+                    "tag": "origins_minus:fast_eating_1_6"
                   }
                 }
               },
               "action": {
                 "type": "origins:feed",
                 "food": 1,
-                "saturation": 0.8
+                "saturation": 0.6
               }
             },
             {
@@ -72,13 +110,93 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "origins_minus:fast_eating_1"
+                    "tag": "origins_minus:fast_eating_1_12"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 1,
+                "saturation": 1.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_2_2"
                   }
                 }
               },
               "action": {
                 "type": "origins:feed",
                 "food": 2,
+                "saturation": 0.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_2_6"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 2,
+                "saturation": 0.6
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_3_12"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 3,
+                "saturation": 1.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_4_6"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 4,
+                "saturation": 0.6
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:using_item",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "origins_minus:fast_eating_5_12"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 5,
                 "saturation": 1.2
               }
             }
@@ -99,21 +217,10 @@
     "condition": {
       "type": "origins:using_item",
       "item_condition": {
-        "type": "origins:or",
-        "conditions": [
-          {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "tag": "origins_minus:fast_eating_1"
-            }
-          },
-          {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "tag": "origins_minus:fast_eating_2"
-            }
-          }
-        ]
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "origins_minus:fast_eating"
+        }
       },
       "inverted": true
     }
@@ -129,21 +236,10 @@
     "condition": {
       "type": "origins:using_item",
       "item_condition": {
-        "type": "origins:or",
-        "conditions": [
-          {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "tag": "origins_minus:fast_eating_1"
-            }
-          },
-          {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "tag": "origins_minus:fast_eating_2"
-            }
-          }
-        ]
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "origins_minus:fast_eating"
+        }
       }
     }
   }

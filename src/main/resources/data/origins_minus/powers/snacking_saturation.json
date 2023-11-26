@@ -1,0 +1,9 @@
+{
+  "type": "origins:modify_food",
+  "condition": {
+    "type": "origins:saturation_level",
+    "comparison": "<",
+    "compare_to": 20
+  },
+  "always_edible": true
+}

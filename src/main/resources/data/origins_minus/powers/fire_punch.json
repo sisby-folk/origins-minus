@@ -5,9 +5,10 @@
 		"actions": [
 			{
 				"type": "origins:damage",
-				"amount": 1,
+				"amount": 3,
 				"source": {
-									"fire": true
+					"name": "inFire.player",
+					"fire": true
 				}
 			},
 			{
@@ -16,8 +17,31 @@
 					"type": "origins:set_on_fire",
 					"duration": 2
 				}
+			},
+			{
+				"type": "origins:target_action",
+				"action": {
+					"type": "origins:spawn_particles",
+					"particle": {
+						"type": "soul_fire_flame"
+					},
+					"count": 16,
+					"speed": 0.0,
+					"force": true,
+					"spread": {
+						"x": 0.3,
+						"y": 0.3,
+						"z": 0.3
+					},
+					"offset_y": 0.0
+				}
 			}
 		]
+	},
+	"damage_condition": {
+		"type": "origins:name",
+		"name": "inFire.player",
+		"inverted": true
 	},
 	"condition": {
 		"type": "origins:equipped_item",
