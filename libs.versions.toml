@@ -3,9 +3,9 @@ loom = "1.2.+"
 githubRelease = "2.4.1"
 minotaur = "2.6.0"
 
-mc = "1.19.3"
+mc = "1.19.4"
 ql = "0.19.0"
-qm = "1.19.3+build.28"
+qm = "1.19.4+build.10"
 
 [plugins]
 loom = { id = "org.quiltmc.loom", version.ref = "loom" }

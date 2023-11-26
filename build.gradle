@@ -78,7 +78,7 @@ if (System.getenv("MODRINTH_TOKEN")) {
 		versionName = baseVersion
 		versionType = 'release'
 		uploadFile = remapJar
-		gameVersions = [libs.versions.mc.get(), "1.19.4", "1.20", "1.20.1"]
+		gameVersions = [libs.versions.mc.get(), "1.20", "1.20.1"]
 		loaders = ['quilt', 'fabric', 'forge']
 		detectLoaders = false
 		dependencies {
