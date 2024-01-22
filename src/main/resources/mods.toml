@@ -9,7 +9,7 @@ modId = 'origins_minus'
 version = '${version}'
 displayName = 'Origins Minus'
 description = 'Simple origins with less to remember.'
-logoFile = 'assets/origins_minus/icon.png'
+logoFile = 'pack.png'
 authors = 'Sisby folk'
 displayURL = 'https://modrinth.com/mod/origins-minus'
 
