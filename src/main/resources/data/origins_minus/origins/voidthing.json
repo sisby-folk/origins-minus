@@ -3,7 +3,7 @@
 		"origins_minus:blink",
 		"origins_minus:reach",
 		"origins_minus:wraparound",
-		"origins:ender_particles"
+		"origins_minus:void_dust"
 	],
 	"icon": {
 		"item": "minecraft:music_disc_11"

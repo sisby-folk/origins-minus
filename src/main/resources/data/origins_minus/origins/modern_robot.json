@@ -1,0 +1,15 @@
+{
+  "name": "Modern Robot",
+  "description": "All-Electric and new, it's even waterproof!",
+  "powers": [
+    "origins_minus:energy_sparks",
+    "origins_minus:fall_immunity",
+    "origins_minus:no_hunger",
+    "origins_minus:fire_immunity",
+    "origins_minus:nightstalker"
+  ],
+  "icon": {
+    "item": "minecraft:hopper"
+  },
+  "impact": 1
+}

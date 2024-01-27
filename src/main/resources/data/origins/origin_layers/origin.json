@@ -4,11 +4,13 @@
 		"origins_minus:avian",
 		"origins_minus:wildling",
 		"origins_minus:weaver",
+		"origins_minus:modern_robot",
 		"origins_minus:mer",
 		"origins_minus:hellspawn",
 		"origins_minus:voidthing",
 		"origins_minus:starved",
 		"origins_minus:steadfast",
+		"origins_minus:kitten", //I love the kitten -ItsDrCat
 		"origins_minus:sanguine",
 		"origins_minus:dryad"
 	],

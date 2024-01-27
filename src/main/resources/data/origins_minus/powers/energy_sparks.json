@@ -1,0 +1,7 @@
+{
+    "name": "Sparking",
+    "description": "You are full of energy and have sparks of electricity coming off of you.",
+    "type": "origins:particle",
+    "particle": "minecraft:electric_spark",
+    "frequency": 4
+}

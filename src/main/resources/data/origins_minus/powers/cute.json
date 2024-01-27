@@ -1,0 +1,7 @@
+{
+    "name": "Super Cute!",
+    "description": "You give off love everywhere you go.",
+    "type": "origins:particle",
+    "particle": "minecraft:heart",
+    "frequency": 4
+}
