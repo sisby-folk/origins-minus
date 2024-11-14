@@ -10,6 +10,7 @@ Also try <a href="https://modrinth.com/datapack/tinkerers-statures">Statures</a>
 ---
 
 Origins Minus is a collection of simple origins designed to replace the built-in set. Each origin is designed to:
+
 - Be easy to understand and easy to remember
 - Add something unique to the game feel
 - Make the game slightly easier in its own way

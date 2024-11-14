@@ -18,18 +18,18 @@ dependencies {
 
 processResources {
 	final Map<String, String> meta = [
-			version       : version,
-			modId         : modId,
-			modName       : modName,
-			modDescription: modDescription,
-			homepage      : "https://modrinth.com/mod/${slug}",
-			issues        : "https://github.com/${user}/${slug}/issues",
-			sources       : "https://github.com/${user}/${slug}",
-			license       : license,
-			authors       : authors.split(", ").join("\",\n    \""),
-			members       : "${authors}",
-			mc            : compatibleVersions.split(", ")[0],
-			fl            : libs.versions.fl.get()
+		version       : version,
+		modId         : modId,
+		modName       : modName,
+		modDescription: modDescription,
+		homepage      : "https://modrinth.com/mod/${slug}",
+		issues        : "https://github.com/${user}/${slug}/issues",
+		sources       : "https://github.com/${user}/${slug}",
+		license       : license,
+		authors       : authors.split(", ").join("\",\n    \""),
+		members       : "${authors}",
+		mc            : compatibleVersions.split(", ")[0],
+		fl            : libs.versions.fl.get()
 	]
 	inputs.properties(meta)
 	filesMatching("*.mod.json") { expand(meta) }
