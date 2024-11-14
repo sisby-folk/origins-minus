@@ -1,0 +1,35 @@
+modLoader = 'lowcodefml'
+loaderVersion = "[4,)"
+license = "${license}"
+issueTrackerURL = "${issues}"
+showAsResourcePack = false
+
+[[mods]]
+modId = "${modId}"
+version = "${version}"
+displayName = "${modName}"
+description = '''${modDescription}'''
+authors = "${members}"
+displayURL = "${homepage}"
+logoFile = "assets/${modId}/icon.png"
+
+[[dependencies.${ modId }]]
+modId = "forge"
+mandatory = true
+versionRange = "*"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${ modId }]]
+modId = "minecraft"
+mandatory = true
+versionRange = "*"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${ modId }]]
+modId = "origins"
+mandatory = true
+versionRange = "*"
+ordering = "NONE"
+side = "BOTH"

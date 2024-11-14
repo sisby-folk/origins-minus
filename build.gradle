@@ -1,47 +1,39 @@
 //file:noinspection GroovyAssignabilityCheck
 //file:noinspection GroovyAccessibility
-buildscript {
-	dependencies {
-		classpath "com.modrinth.minotaur:Minotaur:${libs.versions.minotaur.get()}"
-		classpath "com.github.breadmoirai:github-release:${libs.versions.githubRelease.get()}"
-	}
-}
-
-
 plugins {
-	id 'maven-publish'
+	id "maven-publish"
 	alias libs.plugins.loom
+	alias libs.plugins.githubRelease
+	alias libs.plugins.minotaur
 }
 
-version = "$project.baseVersion+$project.branch"
-archivesBaseName = project.name
-group = 'folk.sisby'
-
-repositories {
-	mavenLocal()
-}
+version = "$baseVersion+$branch"
+archivesBaseName = project.slug
 
 dependencies {
 	minecraft libs.mc
-	mappings variantOf(libs.qm) { classifier "intermediary-v2" }
-	modImplementation libs.ql
+	mappings variantOf(libs.yarn) { classifier "v2" }
+	modImplementation libs.fl
 }
 
-
 processResources {
-	final Map<String, String> map = [
-			"version"      : version.toString(),
-			"mc"           : libs.versions.mc.get(),
-			"ql"           : libs.versions.ql.get(),
+	final Map<String, String> meta = [
+			version       : version,
+			modId         : modId,
+			modName       : modName,
+			modDescription: modDescription,
+			homepage      : "https://modrinth.com/mod/${slug}",
+			issues        : "https://github.com/${user}/${slug}/issues",
+			sources       : "https://github.com/${user}/${slug}",
+			license       : license,
+			authors       : authors.split(", ").join("\",\n    \""),
+			members       : "${authors}",
+			mc            : compatibleVersions.split(", ")[0],
+			fl            : libs.versions.fl.get()
 	]
-
-	inputs.properties(map)
-	filesMatching('*.mod.json') { expand(map) }
-	filesMatching('mods.toml') { expand(map) }
-
-	from("src/main/resources/mods.toml") {
-		rename { "META-INF/mods.toml" }
-	}
+	inputs.properties(meta)
+	filesMatching("*.mod.json") { expand(meta) }
+	filesMatching("META-INF/*mods.toml") { expand(meta) }
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -51,67 +43,45 @@ tasks.withType(JavaCompile).configureEach {
 
 java {
 	withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {
-	from("LICENSE.txt") {
+	from("LICENSE") {
 		rename { "${it}_${archivesBaseName}" }
 	}
 }
 
-publishing {
-	publications {
-		mavenJava(MavenPublication) {
-			from components.java
-		}
-	}
-	repositories {
+githubRelease {
+	token = "$System.env.GITHUB_TOKEN"
+	owner = project.user
+	repo = slug
+	tagName = "v${baseVersion}+${tagBranch}"
+	targetCommitish = tagBranch
+	releaseAssets = remapJar
+	releaseName = "v${baseVersion}"
+	allowUploadToExisting = true
+	generateReleaseNotes = true
+	body = !file("CHANGELOG.md").exists() ? "" : rootProject.file("CHANGELOG.md").text
+}
+
+modrinth {
+	token = "$System.env.MODRINTH_TOKEN"
+	projectId = slug
+	versionNumber = project.version
+	uploadFile = remapJar
+	gameVersions = compatibleVersions.split(", ").toList()
+	loaders = compatibleLoaders.split(", ").toList()
+	changelog = !file("CHANGELOG.md").exists() ? "" : rootProject.file("CHANGELOG.md").text + "\n\nChangelog: https://github.com/${user}/${slug}/releases/tag/v${baseVersion}+${tagBranch}"
+	syncBodyFrom = rootProject.file("README.md").text
+	dependencies {
+		required.project "origins"
 	}
 }
 
-if (System.getenv("MODRINTH_TOKEN")) {
-	apply plugin: "com.modrinth.minotaur"
-	modrinth {
-		token = System.getenv("MODRINTH_TOKEN")
-		projectId = 'origins-minus'
-		versionNumber = project.version
-		versionName = baseVersion
-		versionType = 'release'
-		uploadFile = remapJar
-		gameVersions = ['1.19', '1.19.1', libs.versions.mc.get()]
-		loaders = ['quilt', 'fabric', 'forge']
-		detectLoaders = false
-		dependencies {
-			required.project "origins"
-			required.project "pehkui"
-		}
-		changelog = "[Latest ${branch} Datapack Download](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/${branch}/src/main/resources) - [v${baseVersion} on Github](https://github.com/sisby-folk/origins-minus/releases/tag/v${baseVersion})"
-		syncBodyFrom = rootProject.file("README.md").text
-	}
-}
-
-if (System.getenv("GITHUB_TOKEN")) {
-	apply plugin: "com.github.breadmoirai.github-release"
-	githubRelease {
-		token System.getenv("GITHUB_TOKEN")
-		owner "sisby-folk"
-		repo "origins-minus"
-		tagName 'v' + baseVersion
-		releaseName baseVersion
-		targetCommitish defaultBranch
-		draft false
-		prerelease false
-		releaseAssets remapJar.archiveFile
-		allowUploadToExisting true
-		generateReleaseNotes true
-	}
-	tasks.githubRelease.dependsOn remapJar
-}
-
-if (System.getenv("MODRINTH_TOKEN") && System.getenv("GITHUB_TOKEN")) {
-	tasks.register("fullRelease") {
-		group "publishing"
-		dependsOn "githubRelease"
-		dependsOn "modrinth"
-	}
+tasks.register("fullRelease") {
+	group "publishing"
+	dependsOn "githubRelease"
+	dependsOn "modrinth"
 }
