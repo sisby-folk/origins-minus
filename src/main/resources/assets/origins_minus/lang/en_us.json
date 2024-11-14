@@ -2,8 +2,8 @@
   "origin.origins_minus.stranger.name": "Stranger",
   "origin.origins_minus.stranger.description": "The standard minecraft experience.\n\n§oLet's not quarrel with who or what you are - It's time to get started.§r",
 
-  "origin.origins-classes.nitwit.name": "Unspecialized",
-  "origin.origins-classes.nitwit.description": "No specific advantages.\n\n§oJack of all trades, master of none.§r",
+  "origin.origins_minus.unspecialized.name": "Unspecialized",
+  "origin.origins_minus.unspecialized.description": "No specific advantages.\n\n§oJack of all trades, master of none.§r",
 
   "origin.origins_minus.avian.name": "Avian",
   "origin.origins_minus.avian.description": "Freedom in the sky.",
