@@ -1,28 +1,22 @@
 {
 	"schemaVersion": 1,
-	"id": "origins-minus",
+	"id": "${modId}",
 	"version": "${version}",
-	"name": "Origins Minus",
-	"description": "Simple origins with less to remember.",
+	"name": "${modName}",
+	"description": "${modDescription}",
 	"authors": [
-		"Sisby folk",
-		"Garden System",
-		"DansOtherClone"
+		"${authors}"
 	],
 	"contact": {
-		"homepage": "https://modrinth.com/mod/origins-minus",
-		"issues": "https://github.com/sisby-folk/origins-minus/issues",
-		"sources": "https://github.com/sisby-folk/origins-minus"
+		"homepage": "${homepage}",
+		"issues": "${issues}",
+		"sources": "${sources}"
 	},
-	"license": "LGPL-3.0-only",
-	"icon": "assets/origins_minus/icon.png",
-	"environment": "*",
+	"license": "${license}",
+	"icon": "assets/${modId}/icon.png",
 	"depends": {
 		"fabricloader": "*",
-		"minecraft": ">=${mc}",
-		"origins": "*",
-		"pehkui": "*"
-	},
-	"suggests": {
+		"minecraft": "*",
+		"origins": "*"
 	}
 }
