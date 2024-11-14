@@ -8,3 +8,5 @@ execute at @e[type=arrow,tag=wild_growth,nbt={inGround:1b}] unless block ~ ~1 ~ 
 execute at @e[type=arrow,tag=wild_growth,nbt={inGround:1b}] run playsound minecraft:item.crop.plant block @p[distance=0..32] ~ ~ ~ 2
 execute as @e[type=arrow,tag=wild_growth,nbt={inGround:1b}] run kill @s
 execute at @e[type=arrow,tag=wild_growth] run particle minecraft:block minecraft:glow_lichen
+
+execute as @e[type=arrow,tag=wild_growth,nbt={PortalCooldown:0}] run kill @s

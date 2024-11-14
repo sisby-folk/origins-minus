@@ -251,15 +251,21 @@
 	"restrict": {
 		"condition": {
 			"type": "origins:and",
-			"conditions": [{
+			"conditions": [
+				{
 				"type": "origins:food_level",
 				"comparison": "==",
 				"compare_to": 20
-			},
+				},
 				{
 					"inverted": true,
 					"type": "origins:gamemode",
 					"gamemode": "creative"
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "spectator",
+					"inverted": true
 				}
 			]
 		},

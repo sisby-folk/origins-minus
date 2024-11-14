@@ -5,3 +5,4 @@ execute at @e[type=snowball,tag=rappel] run particle minecraft:block minecraft:c
 execute at @e[type=snowball,tag=rappel] run particle minecraft:block minecraft:cobweb ~ ~-0.6 ~
 execute at @e[type=snowball,tag=rappel] run particle minecraft:block minecraft:cobweb ~ ~-0.8 ~
 execute at @e[type=snowball,tag=rappel] run particle minecraft:block minecraft:cobweb ~ ~1 ~
+execute as @e[type=snowball,tag=rappel,nbt={PortalCooldown:0}] run kill @s
