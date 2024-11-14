@@ -1,56 +1,24 @@
+<!--suppress HtmlDeprecatedTag, XmlDeprecatedElement -->
 <center><img alt="origins minus banner" src="https://cdn.modrinth.com/data/gbOL9is1/images/64871db04be5fb75bc513a6db9a10b71e58927a1.png" /></center>
 
 <center>
-Simple origins with less to remember.<br/>
+Origins focused on simplicity, not balance.<br/>
 Requires <a href="https://modrinth.com/mod/origins/versions">Origins</a> and <a href="https://modrinth.com/mod/pehkui">Pehkui</a>. Replaces all base origins.<br/>
-Also try the <a href="https://modrinth.com/mod/toomanyorigins">TooManyOrigins</a> 1.0 rework! 
+Also try <a href="https://modrinth.com/datapack/tinkerers-statures">Statures</a> and <a href="https://modrinth.com/mod/toomanyorigins">TooManyOrigins</a>(<a href="https://modrinth.com/mod/toomanyoriginsminus">Minus</a>)! 
 </center>
 
 ---
 
-Origins Minus is a collection of origins designed to replace the built-in set.
+Origins Minus is a collection of simple origins designed to replace the built-in set. Each origin is designed to:
+- Be easy to understand and easy to remember
+- Add something unique to the game feel
+- Make the game slightly easier in its own way
+- Invoke no drawbacks (1 dot) or have a small implicit drawback (2 dots)
+- Be opt-in fun, without punishing details you can forget
+- Invite different builds via traversal mechanics
+- Be ambiguously themed so you can add your own personality!
 
-Included origins are short and sweet, with no scrolling.           
-Low-impact origins have no drawbacks, while mid-impact origins have some limitations.
-
-There's less to fret over while picking an origin, and less to remember when loading a save - or switching with [Switchy](https://modrinth.com/mod/switchy)!
-
-## Design
-
-<details>
-<summary>Click to show Design Notes</summary>
-
-### Optionality
-
-Origin powers are all designed to be opt-in. Whenever you remember what origin you're playing, you get to press a few buttons and do a few cool things. 
-
-If you forget for hours on end - it's no big deal! If you can forget something and be screwed over by it - we call that a bug.
-
-### Ambiguity
-
-All origins are intended to be ambiguous as to what creature, species, profession, or character they might be referring to. We want you to fill in the gaps yourself - with what you want to be playing!
-
-Keep this in mind when picking an origin - just because the Avian's icon is a feather, doesn't mean it's not a mech suit!
-
-[Tinkerer's Statures](https://modrinth.com/mod/tinkerers-statures) can expand this further by adding size variation!
-
-We've provided a list of examples for themes for each origin to help players choose.
-
-### Building and Multiplayer
-
-Minus is built with multiplayer in mind - origins move through and interact with the world in visually distinct ways, and (if you like) build visually distinct homes and functional structures to match!
-
-Blink points, water/lava lifts, gliding and vine whip pads, rappel points, rescue moats, and blood farms are all encouraged emergent gameplay. 
-
-Have fun making your builds origin (and [Stature](https://modrinth.com/mod/tinkerers-statures)) accessible!
-
-### Balance
-
-These origins aren't designed to be balanced compared to the vanilla game, nor to the built-in origins, and not even compared to eachother. They're only designed to be balanced to themselves - as being fun to play.
-
-We tweak and rebalance origins when they fully disengage an unintended part of the game - like being unable to die in combat on normal difficulty - not for power comparisons.
-
-</details>
+With this in mind, the new origins aren't at all balanced against vanilla (or eachother!) - they're just for fun.
 
 ## Origins
 
@@ -74,24 +42,17 @@ We tweak and rebalance origins when they fully disengage an unintended part of t
 
 ![Dryad Preview](https://user-images.githubusercontent.com/55819817/230751176-d086a14c-0f91-47b9-b778-e57861a17e62.png)
 
-## Further Info
+## Versions
 
-### Versions
+Datapack versions can be directly downloaded from each branch: [1.19](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/1.19/src/main/resources) - [1.20](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/1.20/src/main/resources) - [1.21](https://download-directory.github.io/?url=https://github.com/sisby-folk/origins-minus/tree/1.21/src/main/resources)
 
-2.0 on origins forge (and minecraft versions before 1.19.2) may be unstable and contain powers that don't function correctly.
+Note that using this pack with Origins Forge or unmarked versions may result in non-functional powers.
 
-The datapack version is available in the changelog of each version, or you can manually download it from source.
-
-As of `v1.7.1` origins works out of the box with Quilt.           
-On 1.18.2, you'll have to add a [quilt version of calio](https://github.com/sisby-folk/tinkerers-quilt/raw/quilt_1.18.2/mods/Calio-1.18.2-1.6.0.jar) as a workaround.
-
-### Credits
-
-Many origins are adapted with permission from Origins Plus by [Dan's Other Clone](https://www.youtube.com/c/DansOtherClone/videos) - Hence the name!
-
-### Afterword
+## Afterword
 
 All mods are built on the work of many others.
+
+Several origins are adapted with permission from Origins Plus by [Dan's Other Clone](https://www.youtube.com/c/DansOtherClone/videos) - Hence the name!
 
 This mod is included in [Tinkerer's Quilt](https://modrinth.com/modpack/tinkerers-quilt) - our modpack about ease of play and self-expression.
 
