@@ -21,6 +21,12 @@
 				{
 					"type": "origins:exposed_to_sky",
 					"inverted": true
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "minecraft:water",
+					"comparison": "<",
+					"compare_to": 1.1
 				}
 			]
 		},
@@ -34,6 +40,11 @@
 				{
 					"type": "origins:gamemode",
 					"gamemode": "creative",
+					"inverted": true
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "spectator",
 					"inverted": true
 				},
 				{
@@ -58,6 +69,11 @@
 				{
 					"type": "origins:gamemode",
 					"gamemode": "creative",
+					"inverted": true
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "spectator",
 					"inverted": true
 				},
 				{
@@ -86,7 +102,7 @@
 			"actions": [
 				{
 					"type": "origins:execute_command",
-					"command": "summon minecraft:snowball ~ ~1 ~ {Item: {id: 'minecraft:string', Count: 1b}, NoGravity:1b, Tags:['rappel'], Motion:[0d,3d,0d]}"
+					"command": "summon minecraft:snowball ~ ~1 ~ {Item: {id: 'minecraft:string', Count: 1b}, NoGravity:1b, Tags:['rappel'], Motion:[0d,3d,0d], PortalCooldown:100}"
 				},
 				{
 					"type": "origins:play_sound",
@@ -117,6 +133,11 @@
 					"inverted": true
 				},
 				{
+					"type": "origins:gamemode",
+					"gamemode": "spectator",
+					"inverted": true
+				},
+				{
 					"type": "origins:creative_flying"
 				}
 			]
@@ -129,6 +150,11 @@
 				{
 					"type": "origins:gamemode",
 					"gamemode": "creative",
+					"inverted": true
+				},
+				{
+					"type": "origins:gamemode",
+					"gamemode": "spectator",
 					"inverted": true
 				},
 				{
@@ -157,6 +183,11 @@
 					{
 						"type": "origins:gamemode",
 						"gamemode": "creative",
+						"inverted": true
+					},
+					{
+						"type": "origins:gamemode",
+						"gamemode": "spectator",
 						"inverted": true
 					},
 					{
