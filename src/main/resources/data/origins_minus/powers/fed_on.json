@@ -36,9 +36,7 @@
 				{
 					"type": "origins:damage",
 					"amount": 1,
-					"source": {
-						"name": "magic.player"
-					}
+					"damage_type": "magic"
 				}
 			]
 		},

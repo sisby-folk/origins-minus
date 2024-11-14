@@ -1,15 +1,12 @@
 {
-	"type": "origins:action_on_hit",
+	"type": "origins:modify_damage_dealt",
 	"bientity_action": {
 		"type": "origins:and",
 		"actions": [
 			{
 				"type": "origins:damage",
 				"amount": 3,
-				"source": {
-					"name": "inFire.player",
-					"fire": true
-				}
+				"damage_type": "in_fire"
 			},
 			{
 				"type": "origins:target_action",
@@ -46,11 +43,6 @@
 				}
 			}
 		]
-	},
-	"damage_condition": {
-		"type": "origins:name",
-		"name": "inFire.player",
-		"inverted": true
 	},
 	"condition": {
 		"type": "origins:equipped_item",

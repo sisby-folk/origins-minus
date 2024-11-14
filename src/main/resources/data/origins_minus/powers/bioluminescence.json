@@ -35,9 +35,7 @@
 				{
 					"type": "origins:damage",
 					"amount": 10,
-					"source": {
-						"name": "thorns"
-					}
+					"damage_type": "thorns"
 				},
 				{
 					"type": "origins:play_sound",
