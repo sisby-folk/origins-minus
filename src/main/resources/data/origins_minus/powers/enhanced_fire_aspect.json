@@ -1,0 +1,8 @@
+{
+	"type": "origins:modify_enchantment_level",
+	"enchantment": "minecraft:fire_aspect",
+	"modifier": {
+		"operation": "add_base_early",
+		"value": 1
+	}
+}

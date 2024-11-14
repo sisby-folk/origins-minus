@@ -54,6 +54,7 @@
 	"power.origins_minus.fire_immunity.description": "Immune to fire and lava.",
 	"power.origins_minus.fire_punch.name": "Temper Temper",
 	"power.origins_minus.fire_punch.description": "Unarmed attacks burn.",
+	"tooltip.origins_minus.fire_punch.aspect": "Fire aspect weapons are enhanced.",
 	"power.origins_minus.flap.name": "Flap",
 	"power.origins_minus.flap.description": "Gain height in the air.",
 	"power.origins_minus.frenzy.name": "Frenzy",

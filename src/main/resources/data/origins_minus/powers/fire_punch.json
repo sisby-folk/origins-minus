@@ -1,5 +1,11 @@
 {
 	"type": "origins:modify_damage_dealt",
+	"badges": [
+		{
+			"sprite": "origins:textures/gui/badge/info.png",
+			"text": "tooltip.origins_minus.fire_punch.aspect"
+		}
+	],
 	"bientity_action": {
 		"type": "origins:and",
 		"actions": [
