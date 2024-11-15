@@ -48,7 +48,18 @@
 		"type": "origins:equipped_item",
 		"equipment_slot": "mainhand",
 		"item_condition": {
-			"type": "origins:empty"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:empty"
+				},
+				{
+					"type": "origins:enchantment",
+					"enchantment": "minecraft:fire_aspect",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
 		}
 	}
 }
