@@ -6,7 +6,7 @@
 		"origins_minus:nightstalker"
 	],
 	"icon": {
-		"id": "potion",
+		"id": "minecraft:potion",
 		"components": {
 			"potion_contents": {
 				"custom_color": 4522754

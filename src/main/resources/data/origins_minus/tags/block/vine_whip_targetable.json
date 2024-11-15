@@ -1,18 +1,18 @@
 {
 	"values": [
-		"#mineable/hoe",
-		"#leaves",
-		"#flowers",
+		"#minecraft:mineable/hoe",
+		"#minecraft:leaves",
+		"#minecraft:flowers",
 		{
-			"id": "#replaceable_plants",
+			"id": "#minecraft:replaceable_plants",
 			"required": false
 		},
 		{
-			"id": "#replaceable_by_trees",
+			"id": "#minecraft:replaceable_by_trees",
 			"required": false
 		},
-		"#saplings",
-		"#bee_growables",
+		"#minecraft:saplings",
+		"#minecraft:bee_growables",
 		"minecraft:sugar_cane",
 		"minecraft:cactus",
 		"minecraft:chorus_plant",
