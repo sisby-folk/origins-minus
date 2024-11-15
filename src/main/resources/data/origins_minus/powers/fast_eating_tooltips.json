@@ -1,0 +1,14 @@
+{
+	"hidden": true,
+	"type": "origins:tooltip",
+	"item_condition": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"tag": "origins_minus:fast_eating"
+		}
+	},
+	"text": {
+		"text": "Affected by Ravenous",
+		"color": "gray"
+	}
+}
