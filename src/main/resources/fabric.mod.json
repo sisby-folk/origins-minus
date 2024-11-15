@@ -17,6 +17,7 @@
 	"depends": {
 		"fabricloader": "*",
 		"minecraft": "*",
-		"origins": "*"
+		"origins": "*",
+		"pehkui": "*"
 	}
 }

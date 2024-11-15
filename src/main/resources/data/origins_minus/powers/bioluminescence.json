@@ -64,9 +64,9 @@
 					"compare_to": 10
 				},
 				{
+					"inverted": true,
 					"type": "origins:gamemode",
-					"gamemode": "adventure",
-					"inverted": true
+					"gamemode": "spectator"
 				}
 			]
 		},
@@ -88,9 +88,9 @@
 					"compare_to": 10
 				},
 				{
+					"inverted": true,
 					"type": "origins:gamemode",
-					"gamemode": "adventure",
-					"inverted": true
+					"gamemode": "spectator"
 				}
 			]
 		},

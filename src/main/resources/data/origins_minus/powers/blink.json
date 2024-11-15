@@ -16,7 +16,45 @@
 				"fluid_handling": "none",
 				"command_at_hit": "tp @s ~ ~ ~",
 				"command_along_ray": "particle minecraft:portal",
-				"command_along_ray_only_on_hit": true
+				"command_along_ray_only_on_hit": true,
+				"hit_action": [
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.enderman.teleport",
+						"volume": 6.0,
+						"pitch": 1.4
+					},
+					{
+						"type": "origins:set_fall_distance",
+						"fall_distance": 0
+					}
+				],
+				"miss_action": [
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:block.fire.extinguish",
+						"volume": 0.35,
+						"pitch": 2.0
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 4,
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:*",
+							"change": 10
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 8,
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:*",
+							"change": -500
+						}
+					}
+				]
 			},
 			"else_action": {
 				"type": "origins:raycast",
@@ -27,18 +65,46 @@
 				"fluid_handling": "any",
 				"command_at_hit": "tp @s ~ ~ ~",
 				"command_along_ray": "particle minecraft:portal",
-				"command_along_ray_only_on_hit": true
+				"command_along_ray_only_on_hit": true,
+				"hit_action": [
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.enderman.teleport",
+						"volume": 6.0,
+						"pitch": 1.4
+					},
+					{
+						"type": "origins:set_fall_distance",
+						"fall_distance": 0
+					}
+				],
+				"miss_action": [
+					{
+						"type": "origins:play_sound",
+						"sound": "minecraft:block.fire.extinguish",
+						"volume": 0.35,
+						"pitch": 2.0
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 4,
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:*",
+							"change": 10
+						}
+					},
+					{
+						"type": "origins:delay",
+						"ticks": 8,
+						"action": {
+							"type": "origins:change_resource",
+							"resource": "*:*",
+							"change": -500
+						}
+					}
+				]
 			}
-		},
-		{
-			"type": "origins:play_sound",
-			"sound": "entity.enderman.teleport",
-			"volume": 6.0,
-			"pitch": 1.4
-		},
-		{
-			"type": "origins:set_fall_distance",
-			"fall_distance": 0
 		}
 	],
 	"cooldown": 450,
@@ -47,45 +113,5 @@
 		"inverted": true,
 		"sprite_location": "origins:textures/gui/resource_bar.png",
 		"bar_index": 6
-	},
-	"condition": {
-		"type": "origins:any_of",
-		"conditions": [
-			{
-				"type": "origins:all_of",
-				"conditions": [
-					{
-						"type": "origins:submerged_in",
-						"fluid": "minecraft:water"
-					},
-					{
-						"type": "origins:raycast",
-						"distance": 32,
-						"block": true,
-						"entity": true,
-						"shape_type": "outline",
-						"fluid_handling": "none"
-					}
-				]
-			},
-			{
-				"type": "origins:all_of",
-				"conditions": [
-					{
-						"type": "origins:submerged_in",
-						"fluid": "minecraft:water",
-						"inverted": true
-					},
-					{
-						"type": "origins:raycast",
-						"distance": 32,
-						"block": true,
-						"entity": true,
-						"shape_type": "outline",
-						"fluid_handling": "any"
-					}
-				]
-			}
-		]
 	}
 }
