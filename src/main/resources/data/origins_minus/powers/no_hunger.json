@@ -25,28 +25,16 @@
 	},
 	"no_saturation_on_spawn": {
 		"type": "origins:action_on_callback",
-		"entity_action_gained": [
-			{
-				"type": "origins:exhaust",
-				"amount": 100.0
-			},
-			{
-				"type": "origins:feed",
-				"nutrition": 20,
-				"saturation": 0
-			}
-		],
-		"entity_action_respawned": [
-			{
-				"type": "origins:exhaust",
-				"amount": 100.0
-			},
-			{
-				"type": "origins:feed",
-				"nutrition": 20,
-				"saturation": 0
-			}
-		]
+		"entity_action_gained": {
+			"type": "origins:feed",
+			"nutrition": 20,
+			"saturation": -20
+		},
+		"entity_action_respawned": {
+			"type": "origins:feed",
+			"nutrition": 20,
+			"saturation": -20
+		}
 	},
 	"snacking": {
 		"type": "origins:modify_food",
