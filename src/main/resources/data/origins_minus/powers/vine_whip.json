@@ -19,62 +19,59 @@
 			"text": "tooltip.origins_minus.generic.health_cost"
 		}
 	],
-	"entity_action": {
-		"type": "origins:and",
-		"actions": [
-			{
-				"type": "origins:raycast",
-				"distance": 16,
-				"block": true,
-				"entity": false,
-				"shape_type": "outline",
-				"fluid_handling": "none",
-				"command_along_ray": "particle block minecraft:vine",
-				"command_along_ray_only_on_hit": false
-			},
-			{
-				"type": "origins:play_sound",
-				"sound": "block.bamboo_sapling.place",
-				"volume": 2.0,
-				"pitch": 0.5
-			},
-			{
-				"type": "origins:play_sound",
-				"sound": "block.slime_block.place",
-				"volume": 1.0,
-				"pitch": 2
-			},
-			{
-				"type": "origins:set_fall_distance",
-				"fall_distance": 0
-			},
-			{
-				"type": "origins:add_velocity",
-				"y": 0.1,
-				"space": "world",
-				"client": true,
-				"server": false
-			},
-			{
-				"type": "origins:add_velocity",
-				"z": 3,
-				"space": "local",
-				"client": true,
-				"server": false
-			},
-			{
-				"type": "origins:add_velocity",
-				"z": 0.1,
-				"space": "local",
-				"client": true,
-				"server": false
-			},
-			{
-				"type": "origins:heal",
-				"amount": -1
-			}
-		]
-	},
+	"entity_action": [
+		{
+			"type": "origins:raycast",
+			"distance": 16,
+			"block": true,
+			"entity": false,
+			"shape_type": "outline",
+			"fluid_handling": "none",
+			"command_along_ray": "particle block minecraft:vine",
+			"command_along_ray_only_on_hit": false
+		},
+		{
+			"type": "origins:play_sound",
+			"sound": "block.bamboo_sapling.place",
+			"volume": 2.0,
+			"pitch": 0.5
+		},
+		{
+			"type": "origins:play_sound",
+			"sound": "block.slime_block.place",
+			"volume": 1.0,
+			"pitch": 2
+		},
+		{
+			"type": "origins:set_fall_distance",
+			"fall_distance": 0
+		},
+		{
+			"type": "origins:add_velocity",
+			"y": 0.1,
+			"space": "world",
+			"client": true,
+			"server": false
+		},
+		{
+			"type": "origins:add_velocity",
+			"z": 3,
+			"space": "local",
+			"client": true,
+			"server": false
+		},
+		{
+			"type": "origins:add_velocity",
+			"z": 0.1,
+			"space": "local",
+			"client": true,
+			"server": false
+		},
+		{
+			"type": "origins:heal",
+			"amount": -1
+		}
+	],
 	"cooldown": 40,
 	"hud_render": {
 		"should_render": true,
@@ -83,7 +80,7 @@
 		"bar_index": 22
 	},
 	"condition": {
-		"type": "origins:and",
+		"type": "origins:all_of",
 		"conditions": [
 			{
 				"type": "origins:health",

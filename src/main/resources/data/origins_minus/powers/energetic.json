@@ -9,9 +9,10 @@
 	"speed": {
 		"type": "origins:attribute",
 		"modifier": {
+			"id": "origins_minus:energetic_movement_speed_bonus",
 			"attribute": "minecraft:generic.movement_speed",
-			"operation": "multiply_base",
-			"value": 0.1
+			"operation": "add_multiplied_base",
+			"amount": 0.1
 		},
 		"update_health": false
 	},

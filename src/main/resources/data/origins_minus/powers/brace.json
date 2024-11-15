@@ -32,9 +32,10 @@
 		"type": "origins:conditioned_attribute",
 		"modifiers": [
 			{
+				"id": "origins_minus:brace_knockback_resistance",
 				"attribute": "minecraft:generic.knockback_resistance",
-				"operation": "addition",
-				"value": 0.5
+				"operation": "add_value",
+				"amount": 0.5
 			}
 		],
 		"tick_rate": 1,
@@ -46,8 +47,9 @@
 		},
 		"type": "origins:modify_velocity",
 		"modifier": {
-			"operation": "multiply_total",
-			"value": -0.5
+			"id": "origins_minus:brace_velocity_halved",
+			"operation": "multiply_total_multiplicative",
+			"amount": -0.5
 		},
 		"axes": [
 			"x",
@@ -65,7 +67,7 @@
 	"bury": {
 		"type": "origins:phasing",
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:sneaking"
@@ -78,7 +80,7 @@
 			]
 		},
 		"block_condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:offset",
@@ -131,44 +133,44 @@
 			"type": "origins:sneaking"
 		},
 		"type": "origins:modify_damage_taken",
-		"self_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:play_sound",
-					"sound": "block.lantern.break",
-					"volume": 1.1,
-					"pitch": 0.3
-				},
-				{
-					"type": "origins:play_sound",
-					"sound": "block.soul_soil.break",
-					"volume": 0.8,
-					"pitch": 1.2
-				},
-				{
-					"type": "origins:play_sound",
-					"sound": "block.wool.place",
-					"volume": 2,
-					"pitch": 0.9
-				}
-			]
-		},
+		"self_action": [
+			{
+				"type": "origins:play_sound",
+				"sound": "block.lantern.break",
+				"volume": 1.1,
+				"pitch": 0.3
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "block.soul_soil.break",
+				"volume": 0.8,
+				"pitch": 1.2
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "block.wool.place",
+				"volume": 2,
+				"pitch": 0.9
+			}
+		],
 		"damage_condition": {
 			"type": "origins:from_falling"
 		},
 		"modifiers": [
 			{
+				"id": "origins_minus:brace_fall_subtract_base",
 				"operation": "add_base_early",
-				"value": -1
+				"amount": -1
 			},
 			{
+				"id": "origins_minus:brace_fall_multiply_total",
 				"operation": "multiply_total_multiplicative",
-				"value": -0.75
+				"amount": -0.75
 			},
 			{
+				"id": "origins_minus:brace_fall_max_total",
 				"operation": "max_total",
-				"value": 8
+				"amount": 8
 			}
 		]
 	},
@@ -190,8 +192,9 @@
 			"type": "origins:attacker"
 		},
 		"modifier": {
-			"operation": "multiply_total",
-			"value": -0.5
+			"id": "origins_minus:brace_damage_taken_halved",
+			"operation": "multiply_total_multiplicative",
+			"amount": -0.5
 		}
 	},
 	"thorns": {
@@ -199,43 +202,37 @@
 			"type": "origins:sneaking"
 		},
 		"type": "origins:action_when_hit",
-		"bientity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:invert",
-					"action": {
-						"type": "origins:add_velocity",
-						"z": 1
-					}
-				},
-				{
-					"type": "origins:actor_action",
-					"action": {
-						"type": "origins:add_velocity",
-						"y": 0.1
-					}
-				},
-				{
-					"type": "origins:target_action",
-					"action": {
-						"type": "origins:and",
-						"actions": [
-							{
-								"type": "origins:exhaust",
-								"amount": 0.4
-							},
-							{
-								"type": "origins:play_sound",
-								"sound": "entity.shulker.hurt_closed",
-								"volume": 0.5,
-								"pitch": 0.8
-							}
-						]
-					}
+		"bientity_action": [
+			{
+				"type": "origins:invert",
+				"action": {
+					"type": "origins:add_velocity",
+					"z": 1
 				}
-			]
-		},
+			},
+			{
+				"type": "origins:actor_action",
+				"action": {
+					"type": "origins:add_velocity",
+					"y": 0.1
+				}
+			},
+			{
+				"type": "origins:target_action",
+				"action": [
+					{
+						"type": "origins:exhaust",
+						"amount": 0.4
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.shulker.hurt_closed",
+						"volume": 0.5,
+						"pitch": 0.8
+					}
+				]
+			}
+		],
 		"damage_condition": {
 			"type": "origins:attacker"
 		},

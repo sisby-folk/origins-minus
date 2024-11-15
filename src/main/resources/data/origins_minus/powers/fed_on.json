@@ -25,21 +25,18 @@
 	},
 	"fed_on": {
 		"type": "origins:action_over_time",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": -1
-				},
-				{
-					"type": "origins:damage",
-					"amount": 1,
-					"damage_type": "magic"
-				}
-			]
-		},
+		"entity_action": [
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_res",
+				"change": -1
+			},
+			{
+				"type": "origins:damage",
+				"amount": 1,
+				"damage_type": "magic"
+			}
+		],
 		"falling_action": {
 			"type": "origins:revoke_power",
 			"power": "*:fed_on",
@@ -56,8 +53,9 @@
 	"stop": {
 		"type": "origins:modify_velocity",
 		"modifier": {
-			"operation": "multiply_total",
-			"value": -1
+			"id": "origins_minus:fed_on_velocity_nullifier",
+			"operation": "multiply_total_multiplicative",
+			"amount": -1
 		},
 		"axes": [
 			"x",
@@ -67,16 +65,18 @@
 	"no_follow": {
 		"type": "origins:attribute",
 		"modifier": {
+			"id": "origins_minus:fed_on_follow_range_nullifier",
 			"attribute": "minecraft:generic.follow_range",
-			"operation": "multiply_total",
-			"value": -1
+			"operation": "add_multiplied_total",
+			"amount": -1
 		}
 	},
 	"no_jumping": {
 		"type": "origins:modify_jump",
 		"modifier": {
+			"id": "origins_minus:fed_on_jump_nullifier",
 			"operation": "multiply_total_multiplicative",
-			"value": -1
+			"amount": -1
 		}
 	},
 	"no_selection": {
@@ -87,7 +87,7 @@
 		"entity_action_gained": {
 			"type": "origins:apply_effect",
 			"effect": {
-				"effect": "minecraft:levitation",
+				"id": "minecraft:levitation",
 				"duration": 25,
 				"amplifier": 0
 			}
@@ -100,25 +100,25 @@
 		"duration_per_stack": 5,
 		"effects": [
 			{
-				"effect": "minecraft:weakness",
+				"id": "minecraft:weakness",
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": false
 			},
 			{
-				"effect": "minecraft:blindness",
+				"id": "minecraft:blindness",
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": false
 			},
 			{
-				"effect": "minecraft:nausea",
+				"id": "minecraft:nausea",
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": false
 			},
 			{
-				"effect": "minecraft:slow_falling",
+				"id": "minecraft:slow_falling",
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": false
@@ -130,48 +130,39 @@
 		"entity_action": {
 			"type": "origins:area_of_effect",
 			"radius": 8,
-			"bientity_action": {
-				"type": "origins:and",
-				"actions": [
-					{
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:and",
-							"actions": [
-								{
-									"type": "origins:change_resource",
-									"resource": "*:frenzy_feeding",
-									"change": 0,
-									"operation": "set"
-								}
-							]
+			"bientity_action": [
+				{
+					"type": "origins:target_action",
+					"action": [
+						{
+							"type": "origins:change_resource",
+							"resource": "*:frenzy_feeding",
+							"change": 0,
+							"operation": "set"
 						}
-					},
-					{
-						"type": "origins:actor_action",
-						"action": {
-							"type": "origins:and",
-							"actions": [
-								{
-									"type": "origins:play_sound",
-									"sound": "entity.player.attack.sweep",
-									"volume": 0.75,
-									"pitch": 0.65
-								},
-								{
-									"type": "origins:revoke_power",
-									"power": "*:fed_on",
-									"source": "*:frenzy"
-								}
-							]
+					]
+				},
+				{
+					"type": "origins:actor_action",
+					"action": [
+						{
+							"type": "origins:play_sound",
+							"sound": "entity.player.attack.sweep",
+							"volume": 0.75,
+							"pitch": 0.65
+						},
+						{
+							"type": "origins:revoke_power",
+							"power": "*:fed_on",
+							"source": "*:frenzy"
 						}
-					}
-				]
-			},
+					]
+				}
+			],
 			"bientity_condition": {
 				"type": "origins:target_condition",
 				"condition": {
-					"type": "origins:and",
+					"type": "origins:all_of",
 					"conditions": [
 						{
 							"type": "origins:living"

@@ -8,8 +8,8 @@
 		"origins_minus:lava_fall_immunity",
 		"origins:flame_particles"
 	],
-	"icon": {
-		"item": "minecraft:blaze_powder"
+	 "icon": {
+		"id": "minecraft:blaze_powder"
 	},
 	"impact": 1
 }

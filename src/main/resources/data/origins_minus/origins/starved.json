@@ -4,8 +4,8 @@
 		"origins_minus:fast_eating",
 		"origins_minus:snacking_saturation"
 	],
-	"icon": {
-		"item": "minecraft:cake"
+	 "icon": {
+		"id": "minecraft:cake"
 	},
 	"impact": 1
 }

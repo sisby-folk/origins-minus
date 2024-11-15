@@ -5,5 +5,5 @@
 		"comparison": "<",
 		"compare_to": 20
 	},
-	"always_edible": true
+	"can_always_eat": true
 }

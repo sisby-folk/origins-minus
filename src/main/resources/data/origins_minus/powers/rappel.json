@@ -16,7 +16,7 @@
 	},
 	"ascend": {
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:exposed_to_sky",
@@ -35,7 +35,7 @@
 	"stop": {
 		"type": "origins:modify_velocity",
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:gamemode",
@@ -53,8 +53,9 @@
 			]
 		},
 		"modifier": {
-			"value": -1,
-			"operation": "multiply_total"
+			"id": "origins_minus:rappel_velocity_lateral_nullifier",
+			"amount": -1,
+			"operation": "multiply_total_multiplicative"
 		},
 		"axes": [
 			"x",
@@ -64,7 +65,7 @@
 	"slow": {
 		"type": "origins:modify_velocity",
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:gamemode",
@@ -83,11 +84,13 @@
 		},
 		"modifiers": [
 			{
-				"value": 0.2,
+				"id": "origins_minus:rappel_max_raise_speed",
+				"amount": 0.2,
 				"operation": "max_total"
 			},
 			{
-				"value": -0.2,
+				"id": "origins_minus:rappel_max_lower_speed",
+				"amount": -0.2,
 				"operation": "min_total"
 			}
 		],
@@ -97,35 +100,29 @@
 	},
 	"animate": {
 		"type": "origins:action_over_time",
-		"rising_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "summon minecraft:snowball ~ ~1 ~ {Item: {id: 'minecraft:string', Count: 1b}, NoGravity:1b, Tags:['rappel'], Motion:[0d,3d,0d], PortalCooldown:100}"
-				},
-				{
-					"type": "origins:play_sound",
-					"sound": "item.crossbow.shoot",
-					"volume": 0.75,
-					"pitch": 0.75
-				}
-			]
-		},
-		"falling_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:play_sound",
-					"sound": "minecraft:entity.item.break",
-					"volume": 0.75,
-					"pitch": 1.22
-				}
-			]
-		},
+		"rising_action": [
+			{
+				"type": "origins:execute_command",
+				"command": "summon minecraft:snowball ~ ~1 ~ {Item: {id: 'minecraft:string', Count: 1b}, NoGravity:1b, Tags:['rappel'], Motion:[0d,3d,0d], PortalCooldown:100}"
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "item.crossbow.shoot",
+				"volume": 0.75,
+				"pitch": 0.75
+			}
+		],
+		"falling_action": [
+			{
+				"type": "origins:play_sound",
+				"sound": "minecraft:entity.item.break",
+				"volume": 0.75,
+				"pitch": 1.22
+			}
+		],
 		"interval": 1,
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:gamemode",
@@ -145,7 +142,7 @@
 	},
 	"affinity": {
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:gamemode",
@@ -164,8 +161,9 @@
 		},
 		"type": "origins:modify_break_speed",
 		"modifier": {
-			"operation": "multiply_base",
-			"value": 4
+			"id": "origins_minus:rappel_break_speed_penalty_nullifier",
+			"operation": "multiply_base_multiplicative",
+			"amount": 4
 		}
 	},
 	"res": {
@@ -178,7 +176,7 @@
 			"sprite_location": "origins:textures/gui/resource_bar.png",
 			"bar_index": 5,
 			"condition": {
-				"type": "origins:and",
+				"type": "origins:all_of",
 				"conditions": [
 					{
 						"type": "origins:gamemode",

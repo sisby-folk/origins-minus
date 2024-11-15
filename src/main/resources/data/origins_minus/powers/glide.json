@@ -20,7 +20,7 @@
 		"entity_action": {
 			"type": "origins:apply_effect",
 			"effect": {
-				"effect": "minecraft:slow_falling",
+				"id": "minecraft:slow_falling",
 				"duration": 2,
 				"amplifier": 0,
 				"is_ambient": false,
@@ -51,8 +51,9 @@
 			"name": "fall"
 		},
 		"modifier": {
-			"operation": "multiply_total",
-			"value": -1
+			"id": "origins_minus:glide_sneak_fall_nullifier",
+			"operation": "multiply_total_multiplicative",
+			"amount": -1
 		}
 	}
 }

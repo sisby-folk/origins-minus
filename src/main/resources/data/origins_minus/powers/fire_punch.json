@@ -6,50 +6,47 @@
 			"text": "tooltip.origins_minus.fire_punch.aspect"
 		}
 	],
-	"bientity_action": {
-		"type": "origins:and",
-		"actions": [
-			{
-				"type": "origins:damage",
-				"amount": 3,
-				"damage_type": "in_fire"
-			},
-			{
-				"type": "origins:target_action",
-				"action": {
-					"type": "origins:set_on_fire",
-					"duration": 2
-				}
-			},
-			{
-				"type": "origins:target_action",
-				"action": {
-					"type": "origins:spawn_particles",
-					"particle": {
-						"type": "soul_fire_flame"
-					},
-					"count": 8,
-					"speed": 0.05,
-					"force": true,
-					"spread": {
-						"x": 0.3,
-						"y": 0.3,
-						"z": 0.3
-					},
-					"offset_y": 0.3
-				}
-			},
-			{
-				"type": "origins:target_action",
-				"action": {
-					"type": "origins:play_sound",
-					"sound": "minecraft:block.fire.extinguish",
-					"volume": 0.35,
-					"pitch": 2.0
-				}
+	"bientity_action": [
+		{
+			"type": "origins:damage",
+			"amount": 3,
+			"damage_type": "in_fire"
+		},
+		{
+			"type": "origins:target_action",
+			"action": {
+				"type": "origins:set_on_fire",
+				"duration": 2
 			}
-		]
-	},
+		},
+		{
+			"type": "origins:target_action",
+			"action": {
+				"type": "origins:spawn_particles",
+				"particle": {
+					"type": "soul_fire_flame"
+				},
+				"count": 8,
+				"speed": 0.05,
+				"force": true,
+				"spread": {
+					"x": 0.3,
+					"y": 0.3,
+					"z": 0.3
+				},
+				"offset_y": 0.3
+			}
+		},
+		{
+			"type": "origins:target_action",
+			"action": {
+				"type": "origins:play_sound",
+				"sound": "minecraft:block.fire.extinguish",
+				"volume": 0.35,
+				"pitch": 2.0
+			}
+		}
+	],
 	"condition": {
 		"type": "origins:equipped_item",
 		"equipment_slot": "mainhand",

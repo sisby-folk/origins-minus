@@ -26,276 +26,263 @@
 			"text": "tooltip.origins_minus.hunger_prevent_death.minimum"
 		}
 	],
-	"entity_action": {
-		"type": "origins:and",
-		"actions": [
-			{
-				"type": "origins:clear_effect"
+	"entity_action": [
+		{
+			"type": "origins:clear_effect"
+		},
+		{
+			"type": "origins:spawn_particles",
+			"particle": {
+				"type": "minecraft:block",
+				"params": {
+					"block_state": "minecraft:cake"
+				}
 			},
-			{
-				"type": "origins:spawn_particles",
-				"particle": {
-					"type": "minecraft:block",
-					"params": "minecraft:cake"
+			"count": 32,
+			"speed": 0.5,
+			"force": true,
+			"spread": {
+				"x": 0.5,
+				"y": 0,
+				"z": 0.5
+			},
+			"offset_y": 0.9
+		},
+		{
+			"type": "origins:play_sound",
+			"sound": "minecraft:entity.generic.eat",
+			"volume": 1,
+			"pitch": 0.9
+		},
+		{
+			"type": "origins:play_sound",
+			"sound": "minecraft:entity.player.burp",
+			"volume": 1,
+			"pitch": 1.9
+		},
+		{
+			"type": "origins:if_else_list",
+			"actions": [
+				{
+					"condition": {
+						"type": "origins:all_of",
+						"conditions": [
+							{
+								"type": "origins:saturation_level",
+								"comparison": ">=",
+								"compare_to": 18
+							},
+							{
+								"type": "origins:food_level",
+								"comparison": ">=",
+								"compare_to": 20
+							}
+						]
+					},
+					"action": [
+						{
+							"type": "origins:exhaust",
+							"amount": 600.0
+						},
+						{
+							"type": "origins:delay",
+							"ticks": 10,
+							"action": {
+								"type": "origins:exhaust",
+								"amount": 600.0
+							}
+						},
+						{
+							"type": "origins:delay",
+							"ticks": 20,
+							"action": {
+								"type": "origins:exhaust",
+								"amount": 600.0
+							}
+						},
+						{
+							"type": "origins:delay",
+							"ticks": 30,
+							"action": {
+								"type": "origins:exhaust",
+								"amount": 480.0
+							}
+						},
+						{
+							"type": "origins:apply_effect",
+							"effects": [
+								{
+									"id": "minecraft:regeneration",
+									"duration": 19,
+									"amplifier": 6,
+									"is_ambient": false,
+									"show_particles": false,
+									"show_icon": true
+								}
+							]
+						}
+					]
 				},
-				"count": 32,
-				"speed": 0.5,
-				"force": true,
-				"spread": {
-					"x": 0.5,
-					"y": 0,
-					"z": 0.5
+				{
+					"condition": {
+						"type": "origins:any_of",
+						"conditions": [
+							{
+								"type": "origins:all_of",
+								"conditions": [
+									{
+										"type": "origins:saturation_level",
+										"comparison": ">=",
+										"compare_to": 15
+									},
+									{
+										"type": "origins:food_level",
+										"comparison": ">=",
+										"compare_to": 15
+									}
+								]
+							},
+							{
+								"type": "origins:all_of",
+								"conditions": [
+									{
+										"type": "origins:saturation_level",
+										"comparison": ">=",
+										"compare_to": 10
+									},
+									{
+										"type": "origins:food_level",
+										"comparison": ">=",
+										"compare_to": 20
+									}
+								]
+							}
+						]
+					},
+					"action": [
+						{
+							"type": "origins:exhaust",
+							"amount": 600.0
+						},
+						{
+							"type": "origins:delay",
+							"ticks": 10,
+							"action": {
+								"type": "origins:exhaust",
+								"amount": 600.0
+							}
+						},
+						{
+							"type": "origins:delay",
+							"ticks": 20,
+							"action": {
+								"type": "origins:exhaust",
+								"amount": 600.0
+							}
+						},
+						{
+							"type": "origins:apply_effect",
+							"effects": [
+								{
+									"id": "minecraft:regeneration",
+									"duration": 14,
+									"amplifier": 6,
+									"is_ambient": false,
+									"show_particles": false,
+									"show_icon": true
+								}
+							]
+						}
+					]
 				},
-				"offset_y": 0.9
-			},
-			{
-				"type": "origins:play_sound",
-				"sound": "minecraft:entity.generic.eat",
-				"volume": 1,
-				"pitch": 0.9
-			},
-			{
-				"type": "origins:play_sound",
-				"sound": "minecraft:entity.player.burp",
-				"volume": 1,
-				"pitch": 1.9
-			},
-			{
-				"type": "origins:if_else_list",
-				"actions": [
-					{
-						"condition": {
-							"type": "origins:and",
-							"conditions": [
-								{
-									"type": "origins:saturation_level",
-									"comparison": ">=",
-									"compare_to": 18
-								},
-								{
-									"type": "origins:food_level",
-									"comparison": ">=",
-									"compare_to": 20
-								}
-							]
-						},
-						"action": {
-							"type": "origins:and",
-							"actions": [
-								{
-									"type": "origins:exhaust",
-									"amount": 600.0
-								},
-								{
-									"type": "origins:delay",
-									"ticks": 10,
-									"action": {
-										"type": "origins:exhaust",
-										"amount": 600.0
+				{
+					"condition": {
+						"type": "origins:any_of",
+						"conditions": [
+							{
+								"type": "origins:food_level",
+								"comparison": ">=",
+								"compare_to": 20
+							},
+							{
+								"type": "origins:saturation_level",
+								"comparison": ">=",
+								"compare_to": 10
+							},
+							{
+								"type": "origins:all_of",
+								"conditions": [
+									{
+										"type": "origins:saturation_level",
+										"comparison": ">=",
+										"compare_to": 5
+									},
+									{
+										"type": "origins:food_level",
+										"comparison": ">=",
+										"compare_to": 15
 									}
-								},
-								{
-									"type": "origins:delay",
-									"ticks": 20,
-									"action": {
-										"type": "origins:exhaust",
-										"amount": 600.0
-									}
-								},
-								{
-									"type": "origins:delay",
-									"ticks": 30,
-									"action": {
-										"type": "origins:exhaust",
-										"amount": 480.0
-									}
-								},
-								{
-									"type": "origins:apply_effect",
-									"effects": [
-										{
-											"effect": "minecraft:regeneration",
-											"duration": 19,
-											"amplifier": 6,
-											"is_ambient": false,
-											"show_particles": false,
-											"show_icon": true
-										}
-									]
-								}
-							]
-						}
+								]
+							}
+						]
 					},
-					{
-						"condition": {
-							"type": "origins:or",
-							"conditions": [
-								{
-									"type": "origins:and",
-									"conditions": [
-										{
-											"type": "origins:saturation_level",
-											"comparison": ">=",
-											"compare_to": 15
-										},
-										{
-											"type": "origins:food_level",
-											"comparison": ">=",
-											"compare_to": 15
-										}
-									]
-								},
-								{
-									"type": "origins:and",
-									"conditions": [
-										{
-											"type": "origins:saturation_level",
-											"comparison": ">=",
-											"compare_to": 10
-										},
-										{
-											"type": "origins:food_level",
-											"comparison": ">=",
-											"compare_to": 20
-										}
-									]
-								}
-							]
+					"action": [
+						{
+							"type": "origins:exhaust",
+							"amount": 600.0
 						},
-						"action": {
-							"type": "origins:and",
-							"actions": [
+						{
+							"type": "origins:delay",
+							"ticks": 10,
+							"action": {
+								"type": "origins:exhaust",
+								"amount": 600.0
+							}
+						},
+						{
+							"type": "origins:apply_effect",
+							"effects": [
 								{
-									"type": "origins:exhaust",
-									"amount": 600.0
-								},
-								{
-									"type": "origins:delay",
-									"ticks": 10,
-									"action": {
-										"type": "origins:exhaust",
-										"amount": 600.0
-									}
-								},
-								{
-									"type": "origins:delay",
-									"ticks": 20,
-									"action": {
-										"type": "origins:exhaust",
-										"amount": 600.0
-									}
-								},
-								{
-									"type": "origins:apply_effect",
-									"effects": [
-										{
-											"effect": "minecraft:regeneration",
-											"duration": 14,
-											"amplifier": 6,
-											"is_ambient": false,
-											"show_particles": false,
-											"show_icon": true
-										}
-									]
+									"id": "minecraft:regeneration",
+									"duration": 9,
+									"amplifier": 6,
+									"is_ambient": false,
+									"show_particles": false,
+									"show_icon": true
 								}
 							]
 						}
+					]
+				},
+				{
+					"condition": {
+						"type": "origins:food_level",
+						"comparison": ">=",
+						"compare_to": 10
 					},
-					{
-						"condition": {
-							"type": "origins:or",
-							"conditions": [
-								{
-									"type": "origins:food_level",
-									"comparison": ">=",
-									"compare_to": 20
-								},
-								{
-									"type": "origins:saturation_level",
-									"comparison": ">=",
-									"compare_to": 10
-								},
-								{
-									"type": "origins:and",
-									"conditions": [
-										{
-											"type": "origins:saturation_level",
-											"comparison": ">=",
-											"compare_to": 5
-										},
-										{
-											"type": "origins:food_level",
-											"comparison": ">=",
-											"compare_to": 15
-										}
-									]
-								}
-							]
+					"action": [
+						{
+							"type": "origins:exhaust",
+							"amount": 600.0
 						},
-						"action": {
-							"type": "origins:and",
-							"actions": [
+						{
+							"type": "origins:apply_effect",
+							"effects": [
 								{
-									"type": "origins:exhaust",
-									"amount": 600.0
-								},
-								{
-									"type": "origins:delay",
-									"ticks": 10,
-									"action": {
-										"type": "origins:exhaust",
-										"amount": 600.0
-									}
-								},
-								{
-									"type": "origins:apply_effect",
-									"effects": [
-										{
-											"effect": "minecraft:regeneration",
-											"duration": 9,
-											"amplifier": 6,
-											"is_ambient": false,
-											"show_particles": false,
-											"show_icon": true
-										}
-									]
+									"id": "minecraft:regeneration",
+									"duration": 4,
+									"amplifier": 6,
+									"is_ambient": false,
+									"show_particles": false,
+									"show_icon": true
 								}
 							]
 						}
-					},
-					{
-						"condition": {
-							"type": "origins:food_level",
-							"comparison": ">=",
-							"compare_to": 10
-						},
-						"action": {
-							"type": "origins:and",
-							"actions": [
-								{
-									"type": "origins:exhaust",
-									"amount": 600.0
-								},
-								{
-									"type": "origins:apply_effect",
-									"effects": [
-										{
-											"effect": "minecraft:regeneration",
-											"duration": 4,
-											"amplifier": 6,
-											"is_ambient": false,
-											"show_particles": false,
-											"show_icon": true
-										}
-									]
-								}
-							]
-						}
-					}
-				]
-			}
-		]
-	},
+					]
+				}
+			]
+		}
+	],
 	"condition": {
 		"type": "origins:food_level",
 		"comparison": ">=",

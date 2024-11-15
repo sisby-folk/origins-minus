@@ -4,8 +4,9 @@
 	"no_exhaustion": {
 		"type": "origins:modify_exhaustion",
 		"modifier": {
-			"operation": "multiply_base",
-			"value": -1
+			"id": "origins_minus:no_hunger_exhaustion_nullifier",
+			"operation": "multiply_base_multiplicative",
+			"amount": -1
 		}
 	},
 	"no_starving": {
@@ -24,34 +25,28 @@
 	},
 	"no_saturation_on_spawn": {
 		"type": "origins:action_on_callback",
-		"entity_action_gained": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:exhaust",
-					"amount": 100.0
-				},
-				{
-					"type": "origins:feed",
-					"food": 20,
-					"saturation": 0
-				}
-			]
-		},
-		"entity_action_respawned": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:exhaust",
-					"amount": 100.0
-				},
-				{
-					"type": "origins:feed",
-					"food": 20,
-					"saturation": 0
-				}
-			]
-		}
+		"entity_action_gained": [
+			{
+				"type": "origins:exhaust",
+				"amount": 100.0
+			},
+			{
+				"type": "origins:feed",
+				"nutrition": 20,
+				"saturation": 0
+			}
+		],
+		"entity_action_respawned": [
+			{
+				"type": "origins:exhaust",
+				"amount": 100.0
+			},
+			{
+				"type": "origins:feed",
+				"nutrition": 20,
+				"saturation": 0
+			}
+		]
 	},
 	"snacking": {
 		"type": "origins:modify_food",
@@ -59,10 +54,10 @@
 			"type": "origins:food"
 		},
 		"saturation_modifier": {
-			"operation": "multiply_total",
-			"value": -1
+			"operation": "multiply_total_multiplicative",
+			"amount": -1
 		},
-		"always_edible": true
+		"can_always_eat": true
 	},
 	"no_bar": {
 		"type": "origins:status_bar_texture",

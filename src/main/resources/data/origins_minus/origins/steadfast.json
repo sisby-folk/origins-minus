@@ -3,8 +3,8 @@
 		"origins_minus:brace",
 		"origins_minus:rescue"
 	],
-	"icon": {
-		"item": "minecraft:shield"
+	 "icon": {
+		"id": "minecraft:shield"
 	},
 	"impact": 2
 }

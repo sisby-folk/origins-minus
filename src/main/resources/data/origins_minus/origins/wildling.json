@@ -5,8 +5,8 @@
 		"origins_minus:fall_immunity",
 		"origins_minus:bounce"
 	],
-	"icon": {
-		"item": "minecraft:tall_grass"
+	 "icon": {
+		"id": "minecraft:tall_grass"
 	},
 	"impact": 1
 }

@@ -20,14 +20,15 @@
 			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
 			"bar_index": 5,
 			"condition": {
-				"type": "origins:or",
-				"inverted": true,
+				"type": "origins:all_of",
 				"conditions": [
 					{
+						"inverted": true,
 						"type": "origins:gamemode",
 						"gamemode": "creative"
 					},
 					{
+						"inverted": true,
 						"type": "origins:gamemode",
 						"gamemode": "spectator"
 					}
@@ -37,16 +38,13 @@
 	},
 	"fill_on_spawn": {
 		"type": "origins:action_on_callback",
-		"entity_action_respawned": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": 140
-				}
-			]
-		}
+		"entity_action_respawned": [
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_res",
+				"change": 140
+			}
+		]
 	},
 	"sprint_lower_resource": {
 		"type": "origins:action_over_time",
@@ -57,7 +55,7 @@
 			"change": -1
 		},
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:sprinting"
@@ -69,18 +67,14 @@
 					"compare_to": 40
 				},
 				{
-					"type": "origins:or",
 					"inverted": true,
-					"conditions": [
-						{
-							"type": "origins:gamemode",
-							"gamemode": "creative"
-						},
-						{
-							"type": "origins:gamemode",
-							"gamemode": "spectator"
-						}
-					]
+					"type": "origins:gamemode",
+					"gamemode": "creative"
+				},
+				{
+					"inverted": true,
+					"type": "origins:gamemode",
+					"gamemode": "spectator"
 				}
 			]
 		}
@@ -90,7 +84,7 @@
 		"entity_action": {
 			"type": "origins:chance",
 			"chance": 0.01,
-			"action": {
+			"success_action": {
 				"type": "origins:change_resource",
 				"resource": "*:*_res",
 				"change": -1
@@ -101,7 +95,7 @@
 			"key": "key.jump"
 		},
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:sprinting"
@@ -113,18 +107,14 @@
 					"compare_to": 40
 				},
 				{
-					"type": "origins:or",
 					"inverted": true,
-					"conditions": [
-						{
-							"type": "origins:gamemode",
-							"gamemode": "creative"
-						},
-						{
-							"type": "origins:gamemode",
-							"gamemode": "spectator"
-						}
-					]
+					"type": "origins:gamemode",
+					"gamemode": "creative"
+				},
+				{
+					"inverted": true,
+					"type": "origins:gamemode",
+					"gamemode": "spectator"
 				}
 			]
 		}
@@ -132,22 +122,19 @@
 	"heal_from_resource": {
 		"type": "origins:action_over_time",
 		"interval": 15,
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:heal",
-					"amount": 1
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": -1
-				}
-			]
-		},
+		"entity_action": [
+			{
+				"type": "origins:heal",
+				"amount": 1
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_res",
+				"change": -1
+			}
+		],
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -166,7 +153,7 @@
 	"no_sprinting": {
 		"type": "origins:prevent_sprinting",
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -175,18 +162,14 @@
 					"compare_to": 40
 				},
 				{
-					"type": "origins:or",
 					"inverted": true,
-					"conditions": [
-						{
-							"type": "origins:gamemode",
-							"gamemode": "creative"
-						},
-						{
-							"type": "origins:gamemode",
-							"gamemode": "spectator"
-						}
-					]
+					"type": "origins:gamemode",
+					"gamemode": "creative"
+				},
+				{
+					"inverted": true,
+					"type": "origins:gamemode",
+					"gamemode": "spectator"
 				}
 			]
 		}
@@ -196,7 +179,7 @@
 		"interval": 80,
 		"burn_duration": 20,
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:exposed_to_sun"
@@ -208,10 +191,10 @@
 					"compare_to": 0
 				},
 				{
-					"type": "origins:or",
+					"type": "origins:any_of",
 					"conditions": [
 						{
-							"type": "origins:and",
+							"type": "origins:all_of",
 							"conditions": [
 								{
 									"type": "origins:command",
@@ -222,7 +205,7 @@
 							]
 						},
 						{
-							"type": "origins:and",
+							"type": "origins:all_of",
 							"conditions": [
 								{
 									"type": "origins:health",
@@ -238,7 +221,7 @@
 							]
 						},
 						{
-							"type": "origins:and",
+							"type": "origins:all_of",
 							"conditions": [
 								{
 									"type": "origins:health",

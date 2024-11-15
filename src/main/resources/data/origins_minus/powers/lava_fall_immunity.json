@@ -13,7 +13,8 @@
 		"name": "fall"
 	},
 	"modifier": {
-		"operation": "multiply_base",
-		"value": -1
+		"id": "origins_minus:lava_fall_immunity",
+		"operation": "multiply_base_multiplicative",
+		"amount": -1
 	}
 }

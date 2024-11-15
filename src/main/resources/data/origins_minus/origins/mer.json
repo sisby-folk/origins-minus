@@ -8,8 +8,8 @@
 		"origins_minus:edible_seagrass",
 		"origins:like_water"
 	],
-	"icon": {
-		"item": "minecraft:tube_coral"
+	 "icon": {
+		"id": "minecraft:tube_coral"
 	},
 	"impact": 1
 }

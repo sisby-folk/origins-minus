@@ -5,8 +5,8 @@
 		"origins_minus:wraparound",
 		"origins:ender_particles"
 	],
-	"icon": {
-		"item": "minecraft:music_disc_11"
+	 "icon": {
+		"id": "minecraft:music_disc_11"
 	},
 	"impact": 1
 }

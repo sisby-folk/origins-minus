@@ -5,8 +5,8 @@
 		"origins_minus:frenzy",
 		"origins_minus:nightstalker"
 	],
-	"icon": {
-		"item": "potion",
+	 "icon": {
+		"id": "potion",
 		"tag": "{CustomPotionColor:4522754}"
 	},
 	"impact": 2

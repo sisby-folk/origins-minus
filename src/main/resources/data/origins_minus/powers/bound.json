@@ -18,7 +18,7 @@
 		"type": "origins:modify_jump",
 		"condition": {
 			"inverted": false,
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:sneaking"
@@ -26,8 +26,9 @@
 			]
 		},
 		"modifier": {
-			"operation": "multiply_base",
-			"value": 1.1
+			"id": "origins_minus:bound_high_jump",
+			"operation": "multiply_base_multiplicative",
+			"amount": 1.1
 		}
 	}
 }

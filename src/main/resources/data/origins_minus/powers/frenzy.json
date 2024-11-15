@@ -54,23 +54,20 @@
 	},
 	"empty_on_spawn": {
 		"type": "origins:action_on_callback",
-		"entity_action_respawned": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_feeding",
-					"change": 0,
-					"operation": "set"
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": 0,
-					"operation": "set"
-				}
-			]
-		}
+		"entity_action_respawned": [
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_feeding",
+				"change": 0,
+				"operation": "set"
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_res",
+				"change": 0,
+				"operation": "set"
+			}
+		]
 	},
 	"size_callbacks": {
 		"type": "origins:action_on_callback",
@@ -82,76 +79,64 @@
 			"type": "origins:execute_command",
 			"command": "scale delay set pehkui:base 80 @s"
 		},
-		"entity_action_lost": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "scale reset pehkui:base @s"
-				},
-				{
-					"type": "origins:execute_command",
-					"command": "scale delay set pehkui:base 20 @s"
-				}
-			]
-		}
+		"entity_action_lost": [
+			{
+				"type": "origins:execute_command",
+				"command": "scale reset pehkui:base @s"
+			},
+			{
+				"type": "origins:execute_command",
+				"command": "scale delay set pehkui:base 20 @s"
+			}
+		]
 	},
 	"start_feed": {
 		"type": "origins:action_on_entity_use",
-		"bientity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:target_action",
-					"action": {
-						"type": "origins:and",
-						"actions": [
-							{
-								"type": "origins:grant_power",
-								"power": "*:fed_on",
-								"source": "*:*"
-							},
-							{
-								"type": "origins:play_sound",
-								"sound": "entity.player.attack.crit",
-								"volume": 0.75,
-								"pitch": 0.7
-							},
-							{
-								"type": "origins:play_sound",
-								"sound": "entity.magma_cube.squish",
-								"volume": 0.5,
-								"pitch": 0.8
-							},
-							{
-								"type": "origins:play_sound",
-								"sound": "entity.bee.sting",
-								"volume": 1,
-								"pitch": 0.65
-							}
-						]
+		"bientity_action": [
+			{
+				"type": "origins:target_action",
+				"action": [
+					{
+						"type": "origins:grant_power",
+						"power": "*:fed_on",
+						"source": "*:*"
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.player.attack.crit",
+						"volume": 0.75,
+						"pitch": 0.7
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.magma_cube.squish",
+						"volume": 0.5,
+						"pitch": 0.8
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "entity.bee.sting",
+						"volume": 1,
+						"pitch": 0.65
 					}
-				},
-				{
-					"type": "origins:actor_action",
-					"action": {
-						"type": "origins:and",
-						"actions": [
-							{
-								"type": "origins:change_resource",
-								"resource": "*:*_feeding",
-								"change": 1,
-								"operation": "set"
-							}
-						]
+				]
+			},
+			{
+				"type": "origins:actor_action",
+				"action": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:*_feeding",
+						"change": 1,
+						"operation": "set"
 					}
-				}
-			]
-		},
+				]
+			}
+		],
 		"bientity_condition": {
 			"type": "origins:target_condition",
 			"condition": {
-				"type": "origins:and",
+				"type": "origins:all_of",
 				"conditions": [
 					{
 						"type": "origins:living"
@@ -174,7 +159,7 @@
 			}
 		},
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -208,88 +193,74 @@
 	},
 	"feed": {
 		"type": "origins:action_over_time",
-		"falling_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:and",
-					"actions": [
+		"falling_action": [
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_feeding",
+				"change": 0,
+				"operation": "set"
+			},
+			{
+				"type": "origins:clear_effect",
+				"effect": "minecraft:blindness"
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "entity.player.attack.sweep",
+				"volume": 0.4,
+				"pitch": 0.50
+			}
+		],
+		"entity_action": [
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_res",
+				"change": 3
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "*:blood_res",
+				"change": 4
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "block.beehive.drip",
+				"volume": 0.5,
+				"pitch": 0.6
+			},
+			{
+				"type": "origins:area_of_effect",
+				"radius": 8,
+				"bientity_action": {
+					"type": "origins:target_action",
+					"action": [
 						{
 							"type": "origins:change_resource",
-							"resource": "*:*_feeding",
-							"change": 0,
-							"operation": "set"
-						},
-						{
-							"type": "origins:clear_effect",
-							"effect": "minecraft:blindness"
-						},
-						{
-							"type": "origins:play_sound",
-							"sound": "entity.player.attack.sweep",
-							"volume": 0.4,
-							"pitch": 0.50
+							"resource": "*:fed_on_res",
+							"change": 1
 						}
 					]
-				}
-			]
-		},
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": 3
 				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:blood_res",
-					"change": 4
-				},
-				{
-					"type": "origins:play_sound",
-					"sound": "block.beehive.drip",
-					"volume": 0.5,
-					"pitch": 0.6
-				},
-				{
-					"type": "origins:area_of_effect",
-					"radius": 8,
-					"bientity_action": {
-						"type": "origins:target_action",
-						"action": {
-							"type": "origins:and",
-							"actions": [
-								{
-									"type": "origins:change_resource",
-									"resource": "*:fed_on_res",
-									"change": 1
-								}
-							]
-						}
-					},
-					"bientity_condition": {
-						"type": "origins:target_condition",
-						"condition": {
-							"type": "origins:and",
-							"conditions": [
-								{
-									"type": "origins:living"
-								},
-								{
-									"type": "apoli:power",
-									"power": "*:fed_on"
-								}
-							]
-						}
+				"bientity_condition": {
+					"type": "origins:target_condition",
+					"condition": {
+						"type": "origins:all_of",
+						"conditions": [
+							{
+								"type": "origins:living"
+							},
+							{
+								"type": "apoli:power",
+								"power": "*:fed_on"
+							}
+						]
 					}
 				}
-			]
-		},
+			}
+		],
 		"interval": 10,
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -316,14 +287,16 @@
 		"type": "origins:conditioned_attribute",
 		"modifiers": [
 			{
+				"id": "origins_minus:frenzy_attack_damage_nullify",
 				"attribute": "minecraft:generic.attack_damage",
-				"operation": "multiply_total",
-				"value": -1
+				"operation": "add_multiplied_total",
+				"amount": -1
 			},
 			{
+				"id": "origins_minus:frenzy_knockback_resistance_full",
 				"attribute": "minecraft:generic.knockback_resistance",
-				"operation": "addition",
-				"value": 1
+				"operation": "add_value",
+				"amount": 1
 			}
 		],
 		"tick_rate": 1,
@@ -343,13 +316,13 @@
 		"tick_rate": 5,
 		"effects": [
 			{
-				"effect": "minecraft:blindness",
+				"id": "minecraft:blindness",
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": false
 			},
 			{
-				"effect": "minecraft:regeneration",
+				"id": "minecraft:regeneration",
 				"is_ambient": true,
 				"show_particles": false,
 				"show_icon": false
@@ -365,8 +338,9 @@
 	"feed_stop": {
 		"type": "origins:modify_velocity",
 		"modifier": {
-			"operation": "multiply_total",
-			"value": -1
+			"id": "origins_minus:frenzy_velocity_nullifier",
+			"operation": "multiply_total_multiplicative",
+			"amount": -1
 		},
 		"axes": [
 			"x",
@@ -427,8 +401,9 @@
 	"feed_no_jumping": {
 		"type": "origins:modify_jump",
 		"modifier": {
+			"id": "origins_minus:frenzy_jump_nullifier",
 			"operation": "multiply_total_multiplicative",
-			"value": -1
+			"amount": -1
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -440,34 +415,19 @@
 	"buff_size": {
 		"type": "origins:action_over_time",
 		"falling_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "scale reset pehkui:base @s"
-				}
-			]
+			"type": "origins:execute_command",
+			"command": "scale reset pehkui:base @s"
 		},
 		"rising_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:execute_command",
-					"command": "scale set pehkui:base 1.2 @s"
-				}
-			]
+			"type": "origins:execute_command",
+			"command": "scale set pehkui:base 1.2 @s"
 		},
 		"interval": 20,
 		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_res",
-					"comparison": ">",
-					"compare_to": 0
-				}
-			]
+			"type": "origins:resource",
+			"resource": "*:*_res",
+			"comparison": ">",
+			"compare_to": 0
 		}
 	},
 	"buff_drain": {
@@ -479,7 +439,7 @@
 		},
 		"interval": 5,
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -498,49 +458,47 @@
 	},
 	"buff_on_hit": {
 		"type": "origins:modify_damage_dealt",
-		"bientity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:target_action",
-					"action": {
-						"type": "origins:and",
-						"actions": [
-							{
-								"type": "origins:change_resource",
-								"resource": "*:*_res",
-								"change": 2
-							},
-							{
-								"type": "origins:change_resource",
-								"resource": "*:blood_res",
-								"change": 1
-							},
-							{
-								"type": "origins:spawn_particles",
-								"particle": {
-									"type": "minecraft:dust",
-									"params": "0.8 0.25 0.25 2"
-								},
-								"count": 2,
-								"speed": 1.0,
-								"spread": {
-									"x": 1.0,
-									"y": 1.0,
-									"z": 1.0
-								}
+		"bientity_action": [
+			{
+				"type": "origins:target_action",
+				"action": [
+					{
+						"type": "origins:change_resource",
+						"resource": "*:*_res",
+						"change": 2
+					},
+					{
+						"type": "origins:change_resource",
+						"resource": "*:blood_res",
+						"change": 1
+					},
+					{
+						"type": "origins:spawn_particles",
+						"particle": {
+							"type": "minecraft:dust",
+							"params": {
+								"color": [0.8, 0.25, 0.25],
+								"scale": 2
 							}
-						]
+						},
+						"count": 2,
+						"speed": 1.0,
+						"spread": {
+							"x": 1.0,
+							"y": 1.0,
+							"z": 1.0
+						}
 					}
-				}
-			]
-		},
+				]
+			}
+		],
 		"modifier": {
+			"id": "origins_minus:frenzy_damage_buff",
 			"operation": "add_base_late",
-			"value": 2
+			"amount": 2
 		},
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -564,7 +522,7 @@
 		"green": 0.0,
 		"blue": 0.0,
 		"bientity_condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:distance",
@@ -581,7 +539,7 @@
 			]
 		},
 		"condition": {
-			"type": "origins:or",
+			"type": "origins:any_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -590,7 +548,7 @@
 					"compare_to": 0
 				},
 				{
-					"type": "origins:and",
+					"type": "origins:all_of",
 					"conditions": [
 						{
 							"type": "origins:resource",
@@ -599,7 +557,7 @@
 							"compare_to": 100
 						},
 						{
-							"type": "origins:or",
+							"type": "origins:any_of",
 							"conditions": [
 								{
 									"type": "origins:time_of_day",
@@ -620,43 +578,43 @@
 	},
 	"buff_on_kill": {
 		"type": "origins:self_action_on_kill",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": 30
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:blood_res",
-					"change": 5
-				},
-				{
-					"type": "origins:spawn_particles",
-					"particle": {
-						"type": "minecraft:dust",
-						"params": "0.8 0.25 0.25 2"
-					},
-					"count": 10,
-					"speed": 1.0,
-					"spread": {
-						"x": 1.5,
-						"y": 1.5,
-						"z": 1.5
+		"entity_action": [
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_res",
+				"change": 30
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "*:blood_res",
+				"change": 5
+			},
+			{
+				"type": "origins:spawn_particles",
+				"particle": {
+					"type": "minecraft:dust",
+					"params": {
+						"color": [0.8, 0.25, 0.25],
+						"scale": 2
 					}
 				},
-				{
-					"type": "origins:play_sound",
-					"sound": "block.slime_block.place",
-					"volume": 0.5,
-					"pitch": 0.8
+				"count": 10,
+				"speed": 1.0,
+				"spread": {
+					"x": 1.5,
+					"y": 1.5,
+					"z": 1.5
 				}
-			]
-		},
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "block.slime_block.place",
+				"volume": 0.5,
+				"pitch": 0.8
+			}
+		],
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",

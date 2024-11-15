@@ -8,11 +8,9 @@
 			"equipment_slot": "mainhand",
 			"item_condition": {
 				"type": "origins:ingredient",
-				"ingredient": [
-					{
-						"item": "minecraft:shears"
-					}
-				],
+				"ingredient": {
+					"item": "minecraft:shears"
+				},
 				"inverted": true
 			}
 		},
@@ -33,11 +31,9 @@
 			"equipment_slot": "mainhand",
 			"item_condition": {
 				"type": "origins:ingredient",
-				"ingredient": [
-					{
-						"item": "minecraft:shears"
-					}
-				],
+				"ingredient": {
+					"item": "minecraft:shears"
+				},
 				"inverted": true
 			}
 		},

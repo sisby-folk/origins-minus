@@ -4,8 +4,8 @@
 		"origins_minus:glide",
 		"origins_minus:like_air"
 	],
-	"icon": {
-		"item": "minecraft:feather"
+	 "icon": {
+		"id": "minecraft:feather"
 	},
 	"impact": 1
 }

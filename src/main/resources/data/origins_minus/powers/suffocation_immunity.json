@@ -6,7 +6,8 @@
 		"name": "inWall"
 	},
 	"modifier": {
-		"operation": "multiply_total",
-		"value": -1
+		"id": "origins_minus:suffocation_immunity",
+		"operation": "multiply_total_multiplicative",
+		"amount": -1
 	}
 }

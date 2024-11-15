@@ -6,9 +6,8 @@
 		"origins_minus:web_affinity",
 		"origins:master_of_webs_no_slowdown"
 	],
-	"icon": {
-		"item": "minecraft:glow_lichen"
+	 "icon": {
+		"id": "minecraft:glow_lichen"
 	},
-	"order": 1,
 	"impact": 1
 }
