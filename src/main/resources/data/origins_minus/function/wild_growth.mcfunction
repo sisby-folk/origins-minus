@@ -6,7 +6,8 @@ execute at @e[type=arrow,tag=wild_growth,nbt={inGround:1b}] unless block ~ ~-1 ~
 execute at @e[type=arrow,tag=wild_growth,nbt={inGround:1b}] unless block ~ ~1 ~ minecraft:air run setblock ~ ~ ~ minecraft:glow_lichen[up=true] keep
 
 execute at @e[type=arrow,tag=wild_growth,nbt={inGround:1b}] run playsound minecraft:item.crop.plant block @p[distance=0..32] ~ ~ ~ 2
+execute at @e[type=arrow,tag=wild_growth,nbt={inGround:1b}] run particle block{block_state:{Name:'minecraft:glow_lichen'}} ~ ~ ~ 0.5 0.5 0.5 0 32
 execute as @e[type=arrow,tag=wild_growth,nbt={inGround:1b}] run kill @s
-execute at @e[type=arrow,tag=wild_growth] run particle minecraft:block minecraft:glow_lichen
 
+execute at @e[type=arrow,tag=wild_growth] run particle block{block_state:{Name:'minecraft:glow_lichen'}} ~ ~ ~ 0.1 0.1 0.1 0 8
 execute as @e[type=arrow,tag=wild_growth,nbt={PortalCooldown:0}] run kill @s
