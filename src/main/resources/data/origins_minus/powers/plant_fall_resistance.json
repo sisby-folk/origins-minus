@@ -15,7 +15,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "leaves"
+							"tag": "minecraft:leaves"
 						},
 						"y": -1,
 						"x": -1,
@@ -25,7 +25,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "leaves"
+							"tag": "minecraft:leaves"
 						},
 						"y": -1,
 						"x": -1,
@@ -35,7 +35,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "leaves"
+							"tag": "minecraft:leaves"
 						},
 						"y": -1,
 						"x": -1,
@@ -45,7 +45,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "leaves"
+							"tag": "minecraft:leaves"
 						},
 						"y": -1,
 						"x": 0,
@@ -55,7 +55,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "leaves"
+							"tag": "minecraft:leaves"
 						},
 						"y": -1,
 						"x": 0,
@@ -65,7 +65,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "leaves"
+							"tag": "minecraft:leaves"
 						},
 						"y": -1,
 						"x": 0,
@@ -75,7 +75,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "leaves"
+							"tag": "minecraft:leaves"
 						},
 						"y": -1,
 						"x": 1,
@@ -85,7 +85,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "leaves"
+							"tag": "minecraft:leaves"
 						},
 						"y": -1,
 						"x": 1,
@@ -95,7 +95,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "leaves"
+							"tag": "minecraft:leaves"
 						},
 						"y": -1,
 						"x": 1,
