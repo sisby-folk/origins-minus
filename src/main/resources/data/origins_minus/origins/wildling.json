@@ -2,8 +2,7 @@
 	"powers": [
 		"origins_minus:energetic",
 		"origins_minus:bound",
-		"origins_minus:fall_immunity",
-		"origins_minus:bounce"
+		"origins_minus:carefree"
 	],
 	 "icon": {
 		"id": "minecraft:tall_grass"
