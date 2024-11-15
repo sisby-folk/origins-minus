@@ -2,6 +2,7 @@
 	"powers": [
 		"origins_minus:hunger_prevent_death",
 		"origins_minus:fast_eating",
+		"origins_minus:fast_eating_tooltips",
 		"origins_minus:snacking_saturation"
 	],
 	"icon": {
