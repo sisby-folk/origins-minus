@@ -1,0 +1,116 @@
+{
+	"type": "origins:multiple",
+	"bounce": {
+		"type": "origins:action_on_land",
+		"entity_action": {
+			"type": "origins:if_else",
+			"condition": {
+				"type": "origins:fall_distance",
+				"comparison": ">=",
+				"compare_to": 8
+			},
+			"if_action": {
+				"type": "origins:and",
+				"actions": [
+					{
+						"type": "origins:play_sound",
+						"sound": "item.armor.equip_elytra",
+						"volume": 1,
+						"pitch": 1
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "item.trident.riptide_1",
+						"volume": 0.33,
+						"pitch": 2
+					},
+					{
+						"type": "origins:if_else_list",
+						"actions": [
+							{
+								"condition": {
+									"type": "origins:fall_distance",
+									"comparison": ">=",
+									"compare_to": 16
+								},
+								"action": {
+									"type": "origins:add_velocity",
+									"y": 1.0,
+									"space": "world",
+									"client": false,
+									"server": true
+								}
+							},
+							{
+								"condition": {
+									"type": "origins:fall_distance",
+									"comparison": ">=",
+									"compare_to": 12
+								},
+								"action": {
+									"type": "origins:add_velocity",
+									"y": 0.7,
+									"space": "world",
+									"client": false,
+									"server": true
+								}
+							},
+							{
+								"condition": {
+									"type": "origins:constant",
+									"value": true
+								},
+								"action": {
+									"type": "origins:add_velocity",
+									"y": 0.4,
+									"space": "world",
+									"client": false,
+									"server": true
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	},
+	"modify_damage_and_bounce": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "fall"
+		},
+		"modifiers": [
+			{
+				"operation": "max_total",
+				"value": 2
+			},
+			{
+				"operation": "multiply_base_multiplicative",
+				"value": -0.8
+			},
+			{
+				"operation": "min_total",
+				"value": 1
+			}
+		]
+	},
+	"minimum": {
+		"type": "origins:invulnerability",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "fall"
+		},
+		"condition": {
+			"type": "origins:fall_distance",
+			"comparison": "<",
+			"compare_to": 8
+		}
+	},
+	"protection": {
+		"type": "origins:prevent_death",
+		"damage_condition": {
+			"type": "origins:from_falling"
+		}
+	}
+}

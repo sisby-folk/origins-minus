@@ -63,13 +63,6 @@
 				"server": false
 			},
 			{
-				"type": "origins:add_velocity",
-				"z": 0.1,
-				"space": "local",
-				"client": true,
-				"server": false
-			},
-			{
 				"type": "origins:heal",
 				"amount": -1
 			}
