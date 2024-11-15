@@ -13,7 +13,7 @@ Origins Minus is a collection of simple origins designed to replace the built-in
 
 - Be easy to understand and easy to remember
 - Add something unique to the game feel
-- Make the game slightly easier in its own way
+- Reduce the friction and difficulty of a specific aspect of the game
 - Invoke no drawbacks (1 dot) or have a small implicit drawback (2 dots)
 - Be opt-in fun, without punishing details you can forget
 - Invite different builds via traversal mechanics
