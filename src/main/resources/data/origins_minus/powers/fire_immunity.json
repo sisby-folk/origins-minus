@@ -1,6 +1,3 @@
 {
-	"type": "origins:invulnerability",
-	"damage_condition": {
-		"type": "origins:fire"
-	}
+	"type": "origins:fire_immunity"
 }
