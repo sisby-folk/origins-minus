@@ -80,7 +80,7 @@
 		"type": "origins:fire_projectile",
 		"speed": 2,
 		"entity_type": "minecraft:arrow",
-		"tag": "{Tags:['wild_growth'],PortalCooldown:100,damage:0,pickup:0b,ShotFromCrossbow:1b,SoundEvent:'block.cave_vines.fall',PierceLevel:50,Silent:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}",
+		"tag": "{Tags:['bioluminescence'],PortalCooldown:100,damage:0,pickup:0b,ShotFromCrossbow:1b,SoundEvent:'block.cave_vines.fall',PierceLevel:50,Silent:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}",
 		"key": "key.origins.secondary_active",
 		"condition": {
 			"type": "origins:and",
