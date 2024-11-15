@@ -87,20 +87,11 @@
 					},
 					{
 						"type": "origins:delay",
-						"ticks": 4,
-						"action": {
-							"type": "origins:change_resource",
-							"resource": "*:*",
-							"change": 10
-						}
-					},
-					{
-						"type": "origins:delay",
 						"ticks": 8,
 						"action": {
 							"type": "origins:change_resource",
 							"resource": "*:*",
-							"change": -500
+							"change": 450
 						}
 					}
 				]
