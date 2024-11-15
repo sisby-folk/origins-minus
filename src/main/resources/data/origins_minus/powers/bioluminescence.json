@@ -33,7 +33,7 @@
 			{
 				"type": "origins:damage",
 				"amount": 10,
-				"damage_type": "thorns"
+				"damage_type": "cactus"
 			},
 			{
 				"type": "origins:play_sound",
