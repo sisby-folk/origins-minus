@@ -106,7 +106,7 @@
 				},
 				{
 					"type": "origins:execute_command",
-					"command": "execute at @e[type=snowball,tag=rappel] power grant @s origins_minus:rappel_projectile origins_minus:rappel"
+					"command": "power grant @e[type=snowball,tag=rappel] origins_minus:rappel_projectile origins_minus:rappel"
 				},
 				{
 					"type": "origins:play_sound",
