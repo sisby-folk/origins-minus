@@ -50,6 +50,14 @@
 					"sound": "item.crossbow.shoot",
 					"volume": 0.75,
 					"pitch": 0.75
+				},
+				{
+					"type": "origins:delay",
+					"ticks": 1,
+					"action": {
+						"type": "origins:execute_command",
+						"command": "execute at @e[type=arrow,tag=bioluminescence] power grant @s origins_minus:bioluminescence_projectile origins_minus:bioluminescence"
+					}
 				}
 			]
 		},
