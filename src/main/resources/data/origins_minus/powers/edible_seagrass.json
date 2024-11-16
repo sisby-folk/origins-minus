@@ -14,7 +14,6 @@
 	},
 	"food_component": {
 		"nutrition": 2,
-		"saturation": 0.8,
-		"meat": false
+		"saturation": 0.8
 	}
 }
