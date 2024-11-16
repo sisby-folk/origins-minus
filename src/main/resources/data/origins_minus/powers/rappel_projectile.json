@@ -4,23 +4,31 @@
 		"type": "origins:action_over_time",
 		"interval": 1,
 		"entity_action": {
-			"type": "origins:target_action",
-			"action": {
-				"type": "origins:spawn_particles",
-				"particle": {
-					"type": "minecraft:block",
-					"params": "minecraft:cobweb"
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:entity.arrow.shoot",
+					"volume": 0.4,
+					"pitch": 1.6
 				},
-				"count": 8,
-				"speed": 0,
-				"force": true,
-				"spread": {
-					"x": 0.1,
-					"y": 0.1,
-					"z": 0.1
-				},
-				"offset_y": 0
-			}
+				{
+					"type": "origins:spawn_particles",
+					"particle": {
+						"type": "minecraft:block",
+						"params": "minecraft:cobweb"
+					},
+					"count": 8,
+					"speed": 0,
+					"force": true,
+					"spread": {
+						"x": 0.1,
+						"y": 0.1,
+						"z": 0.1
+					},
+					"offset_y": 0
+				}
+			]
 		}
 	},
 	"despawn": {
