@@ -1,21 +1,8 @@
 {
 	"hidden": true,
-	"type": "origins:multiple",
-	"resistance": {
-		"type": "origins:modify_damage_taken",
-		"damage_condition": {
-			"type": "origins:from_falling"
-		},
-		"modifier": {
-			"operation": "multiply_total_multiplicative",
-			"value": -0.8
-		}
-	},
-	"protection": {
-		"type": "origins:prevent_death",
-		"damage_condition": {
-			"type": "origins:from_falling"
-		}
+	"type": "origins:invulnerability",
+	"damage_condition": {
+		"type": "origins:from_falling"
 	},
 	"condition": {
 		"type": "origins:in_block",
@@ -26,7 +13,7 @@
 					"type": "origins:offset",
 					"condition": {
 						"type": "origins:in_tag",
-						"tag": "origins_minus:plant_fall"
+						"tag": "minecraft:leaves"
 					},
 					"y": -1,
 					"x": -1,
@@ -36,7 +23,7 @@
 					"type": "origins:offset",
 					"condition": {
 						"type": "origins:in_tag",
-						"tag": "origins_minus:plant_fall"
+						"tag": "minecraft:leaves"
 					},
 					"y": -1,
 					"x": -1,
@@ -46,7 +33,7 @@
 					"type": "origins:offset",
 					"condition": {
 						"type": "origins:in_tag",
-						"tag": "origins_minus:plant_fall"
+						"tag": "minecraft:leaves"
 					},
 					"y": -1,
 					"x": -1,
@@ -56,7 +43,7 @@
 					"type": "origins:offset",
 					"condition": {
 						"type": "origins:in_tag",
-						"tag": "origins_minus:plant_fall"
+						"tag": "minecraft:leaves"
 					},
 					"y": -1,
 					"x": 0,
@@ -66,7 +53,7 @@
 					"type": "origins:offset",
 					"condition": {
 						"type": "origins:in_tag",
-						"tag": "origins_minus:plant_fall"
+						"tag": "minecraft:leaves"
 					},
 					"y": -1,
 					"x": 0,
@@ -76,7 +63,7 @@
 					"type": "origins:offset",
 					"condition": {
 						"type": "origins:in_tag",
-						"tag": "origins_minus:plant_fall"
+						"tag": "minecraft:leaves"
 					},
 					"y": -1,
 					"x": 0,
@@ -86,7 +73,7 @@
 					"type": "origins:offset",
 					"condition": {
 						"type": "origins:in_tag",
-						"tag": "origins_minus:plant_fall"
+						"tag": "minecraft:leaves"
 					},
 					"y": -1,
 					"x": 1,
@@ -96,7 +83,7 @@
 					"type": "origins:offset",
 					"condition": {
 						"type": "origins:in_tag",
-						"tag": "origins_minus:plant_fall"
+						"tag": "minecraft:leaves"
 					},
 					"y": -1,
 					"x": 1,
@@ -106,7 +93,7 @@
 					"type": "origins:offset",
 					"condition": {
 						"type": "origins:in_tag",
-						"tag": "origins_minus:plant_fall"
+						"tag": "minecraft:leaves"
 					},
 					"y": -1,
 					"x": 1,
