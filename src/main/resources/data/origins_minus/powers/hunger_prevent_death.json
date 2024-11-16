@@ -115,7 +115,7 @@
 									"id": "minecraft:regeneration",
 									"duration": 19,
 									"amplifier": 6,
-									"is_ambient": false,
+									"ambient": false,
 									"show_particles": false,
 									"show_icon": true
 								}
@@ -187,7 +187,7 @@
 									"id": "minecraft:regeneration",
 									"duration": 14,
 									"amplifier": 6,
-									"is_ambient": false,
+									"ambient": false,
 									"show_particles": false,
 									"show_icon": true
 								}
@@ -246,7 +246,7 @@
 									"id": "minecraft:regeneration",
 									"duration": 9,
 									"amplifier": 6,
-									"is_ambient": false,
+									"ambient": false,
 									"show_particles": false,
 									"show_icon": true
 								}
@@ -272,7 +272,7 @@
 									"id": "minecraft:regeneration",
 									"duration": 4,
 									"amplifier": 6,
-									"is_ambient": false,
+									"ambient": false,
 									"show_particles": false,
 									"show_icon": true
 								}

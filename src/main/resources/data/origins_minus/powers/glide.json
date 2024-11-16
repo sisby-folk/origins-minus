@@ -23,7 +23,7 @@
 				"id": "minecraft:slow_falling",
 				"duration": 2,
 				"amplifier": 0,
-				"is_ambient": false,
+				"ambient": false,
 				"show_particles": false,
 				"show_icon": false
 			}

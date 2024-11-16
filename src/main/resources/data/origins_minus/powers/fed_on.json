@@ -101,25 +101,25 @@
 		"effects": [
 			{
 				"id": "minecraft:weakness",
-				"is_ambient": true,
+				"ambient": true,
 				"show_particles": false,
 				"show_icon": false
 			},
 			{
 				"id": "minecraft:blindness",
-				"is_ambient": true,
+				"ambient": true,
 				"show_particles": false,
 				"show_icon": false
 			},
 			{
 				"id": "minecraft:nausea",
-				"is_ambient": true,
+				"ambient": true,
 				"show_particles": false,
 				"show_icon": false
 			},
 			{
 				"id": "minecraft:slow_falling",
-				"is_ambient": true,
+				"ambient": true,
 				"show_particles": false,
 				"show_icon": false
 			}
