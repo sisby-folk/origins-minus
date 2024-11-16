@@ -105,10 +105,6 @@
 					"command": "summon minecraft:snowball ~ ~1 ~ {Item: {id: 'minecraft:string', Count: 1b}, NoGravity:1b, Tags:['rappel'], Motion:[0d,3d,0d], PortalCooldown:100}"
 				},
 				{
-					"type": "origins:execute_command",
-					"command": "power grant @e[type=snowball,tag=rappel] origins_minus:rappel_projectile origins_minus:rappel"
-				},
-				{
 					"type": "origins:play_sound",
 					"sound": "item.crossbow.shoot",
 					"volume": 0.75,
