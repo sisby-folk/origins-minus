@@ -4,7 +4,7 @@
 	"underwater": {
 		"type": "origins:modify_break_speed",
 		"modifier": {
-			"id": "origins_minus:aqua_affinity_reverse_water_penalty",
+			"id": "*:*",
 			"operation": "multiply_total_multiplicative",
 			"amount": 4
 		},
@@ -27,7 +27,7 @@
 	"ungrounded": {
 		"type": "origins:modify_break_speed",
 		"modifier": {
-			"id": "origins_minus:aqua_affinity_reverse_water_penalty",
+			"id": "*:*",
 			"operation": "multiply_total_multiplicative",
 			"amount": 4
 		},

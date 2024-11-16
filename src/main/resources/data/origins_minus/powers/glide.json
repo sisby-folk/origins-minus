@@ -51,7 +51,7 @@
 			"name": "fall"
 		},
 		"modifier": {
-			"id": "origins_minus:glide_sneak_fall_nullifier",
+			"id": "*:*",
 			"operation": "multiply_total_multiplicative",
 			"amount": -1
 		}

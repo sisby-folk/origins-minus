@@ -9,7 +9,7 @@
 	"speed": {
 		"type": "origins:attribute",
 		"modifier": {
-			"id": "origins_minus:energetic_movement_speed_bonus",
+			"id": "*:*",
 			"attribute": "minecraft:generic.movement_speed",
 			"operation": "add_multiplied_base",
 			"amount": 0.1

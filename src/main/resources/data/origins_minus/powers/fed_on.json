@@ -53,7 +53,7 @@
 	"stop": {
 		"type": "origins:modify_velocity",
 		"modifier": {
-			"id": "origins_minus:fed_on_velocity_nullifier",
+			"id": "*:*",
 			"operation": "multiply_total_multiplicative",
 			"amount": -1
 		},
@@ -65,7 +65,7 @@
 	"no_follow": {
 		"type": "origins:attribute",
 		"modifier": {
-			"id": "origins_minus:fed_on_follow_range_nullifier",
+			"id": "*:*",
 			"attribute": "minecraft:generic.follow_range",
 			"operation": "add_multiplied_total",
 			"amount": -1
@@ -74,7 +74,7 @@
 	"no_jumping": {
 		"type": "origins:modify_jump",
 		"modifier": {
-			"id": "origins_minus:fed_on_jump_nullifier",
+			"id": "*:*",
 			"operation": "multiply_total_multiplicative",
 			"amount": -1
 		}

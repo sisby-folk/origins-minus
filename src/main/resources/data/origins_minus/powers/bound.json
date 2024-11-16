@@ -26,7 +26,7 @@
 			]
 		},
 		"modifier": {
-			"id": "origins_minus:bound_high_jump",
+			"id": "*:*",
 			"operation": "multiply_base_multiplicative",
 			"amount": 1.1
 		}

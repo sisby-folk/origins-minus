@@ -33,7 +33,7 @@
 			"offset_z": 0
 		},
 		"modifier": {
-			"id": "origins_minus:plant_fall_resistance",
+			"id": "*:*",
 			"operation": "multiply_total_multiplicative",
 			"amount": -0.8
 		}

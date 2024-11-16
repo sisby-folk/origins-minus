@@ -3,7 +3,7 @@
 	"type": "origins:modify_enchantment_level",
 	"enchantment": "minecraft:fire_aspect",
 	"modifier": {
-		"id": "origins_minus:enhanced_fire_aspect",
+		"id": "*:*",
 		"operation": "add_base_early",
 		"amount": 1
 	}

@@ -32,7 +32,7 @@
 		"type": "origins:conditioned_attribute",
 		"modifiers": [
 			{
-				"id": "origins_minus:brace_knockback_resistance",
+				"id": "*:*",
 				"attribute": "minecraft:generic.knockback_resistance",
 				"operation": "add_value",
 				"amount": 0.5
@@ -47,7 +47,7 @@
 		},
 		"type": "origins:modify_velocity",
 		"modifier": {
-			"id": "origins_minus:brace_velocity_halved",
+			"id": "*:*",
 			"operation": "multiply_total_multiplicative",
 			"amount": -0.5
 		},
@@ -158,17 +158,17 @@
 		},
 		"modifiers": [
 			{
-				"id": "origins_minus:brace_fall_subtract_base",
+				"id": "*:*_reduction",
 				"operation": "add_base_early",
 				"amount": -1
 			},
 			{
-				"id": "origins_minus:brace_fall_multiply_total",
+				"id": "*:*_quarter",
 				"operation": "multiply_total_multiplicative",
 				"amount": -0.75
 			},
 			{
-				"id": "origins_minus:brace_fall_max_total",
+				"id": "*:*_max",
 				"operation": "max_total",
 				"amount": 8
 			}
@@ -192,7 +192,7 @@
 			"type": "origins:attacker"
 		},
 		"modifier": {
-			"id": "origins_minus:brace_damage_taken_halved",
+			"id": "*:*",
 			"operation": "multiply_total_multiplicative",
 			"amount": -0.5
 		}

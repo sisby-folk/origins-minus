@@ -287,13 +287,13 @@
 		"type": "origins:conditioned_attribute",
 		"modifiers": [
 			{
-				"id": "origins_minus:frenzy_attack_damage_nullify",
+				"id": "*:*",
 				"attribute": "minecraft:generic.attack_damage",
 				"operation": "add_multiplied_total",
 				"amount": -1
 			},
 			{
-				"id": "origins_minus:frenzy_knockback_resistance_full",
+				"id": "*:*",
 				"attribute": "minecraft:generic.knockback_resistance",
 				"operation": "add_value",
 				"amount": 1
@@ -338,7 +338,7 @@
 	"feed_stop": {
 		"type": "origins:modify_velocity",
 		"modifier": {
-			"id": "origins_minus:frenzy_velocity_nullifier",
+			"id": "*:*",
 			"operation": "multiply_total_multiplicative",
 			"amount": -1
 		},
@@ -401,7 +401,7 @@
 	"feed_no_jumping": {
 		"type": "origins:modify_jump",
 		"modifier": {
-			"id": "origins_minus:frenzy_jump_nullifier",
+			"id": "*:*",
 			"operation": "multiply_total_multiplicative",
 			"amount": -1
 		},
@@ -493,7 +493,7 @@
 			}
 		],
 		"modifier": {
-			"id": "origins_minus:frenzy_damage_buff",
+			"id": "*:*",
 			"operation": "add_base_late",
 			"amount": 2
 		},

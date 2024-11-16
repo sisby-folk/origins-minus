@@ -4,7 +4,7 @@
 	"no_exhaustion": {
 		"type": "origins:modify_exhaustion",
 		"modifier": {
-			"id": "origins_minus:no_hunger_exhaustion_nullifier",
+			"id": "*:*",
 			"operation": "multiply_base_multiplicative",
 			"amount": -1
 		}

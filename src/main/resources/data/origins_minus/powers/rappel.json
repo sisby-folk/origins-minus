@@ -53,7 +53,7 @@
 			]
 		},
 		"modifier": {
-			"id": "origins_minus:rappel_velocity_lateral_nullifier",
+			"id": "*:*",
 			"amount": -1,
 			"operation": "multiply_total_multiplicative"
 		},
@@ -84,12 +84,12 @@
 		},
 		"modifiers": [
 			{
-				"id": "origins_minus:rappel_max_raise_speed",
+				"id": "*:*_max",
 				"amount": 0.2,
 				"operation": "max_total"
 			},
 			{
-				"id": "origins_minus:rappel_max_lower_speed",
+				"id": "*:*_min",
 				"amount": -0.2,
 				"operation": "min_total"
 			}
@@ -161,7 +161,7 @@
 		},
 		"type": "origins:modify_break_speed",
 		"modifier": {
-			"id": "origins_minus:rappel_break_speed_penalty_nullifier",
+			"id": "*:*",
 			"operation": "multiply_base_multiplicative",
 			"amount": 4
 		}
