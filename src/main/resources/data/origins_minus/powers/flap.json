@@ -18,11 +18,13 @@
 	},
 	"entity_action": [
 		{
-			"type": "origins:add_velocity",
-			"y": 0.5,
-			"space": "world",
-			"client": true,
-			"server": false
+			"type": "origins:side",
+			"side": "client",
+			"action": {
+				"type": "origins:add_velocity",
+				"y": 0.5,
+				"space": "world"
+			}
 		},
 		{
 			"type": "origins:play_sound",

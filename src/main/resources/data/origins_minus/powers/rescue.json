@@ -127,8 +127,6 @@
 						"y": 0,
 						"z": 0,
 						"space": "world",
-						"client": true,
-						"server": true,
 						"set": true
 					},
 					{

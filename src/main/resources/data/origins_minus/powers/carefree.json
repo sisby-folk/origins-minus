@@ -42,9 +42,7 @@
 								"action": {
 									"type": "origins:add_velocity",
 									"y": 1.0,
-									"space": "world",
-									"client": false,
-									"server": true
+									"space": "world"
 								}
 							},
 							{
@@ -56,9 +54,7 @@
 								"action": {
 									"type": "origins:add_velocity",
 									"y": 0.7,
-									"space": "world",
-									"client": false,
-									"server": true
+									"space": "world"
 								}
 							},
 							{
@@ -69,9 +65,7 @@
 								"action": {
 									"type": "origins:add_velocity",
 									"y": 0.4,
-									"space": "world",
-									"client": false,
-									"server": true
+									"space": "world"
 								}
 							}
 						]

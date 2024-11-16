@@ -47,18 +47,22 @@
 			"fall_distance": 0
 		},
 		{
-			"type": "origins:add_velocity",
-			"y": 0.1,
-			"space": "world",
-			"client": true,
-			"server": false
+			"type": "origins:side",
+			"side": "client",
+			"action": {
+				"type": "origins:add_velocity",
+				"y": 0.1,
+				"space": "world"
+			}
 		},
 		{
-			"type": "origins:add_velocity",
-			"z": 3,
-			"space": "local",
-			"client": true,
-			"server": false
+			"type": "origins:side",
+			"side": "client",
+			"action": {
+				"type": "origins:add_velocity",
+				"z": 3,
+				"space": "local"
+			}
 		},
 		{
 			"type": "origins:heal",
