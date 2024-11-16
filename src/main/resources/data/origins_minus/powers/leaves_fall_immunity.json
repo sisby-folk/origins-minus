@@ -1,22 +1,8 @@
 {
 	"hidden": true,
-	"type": "origins:multiple",
-	"resistance": {
-		"type": "origins:modify_damage_taken",
-		"damage_condition": {
-			"type": "origins:from_falling"
-		},
-		"modifier": {
-			"id": "*:*",
-			"operation": "multiply_total_multiplicative",
-			"amount": -0.8
-		}
-	},
-	"protection": {
-		"type": "origins:prevent_death",
-		"damage_condition": {
-			"type": "origins:from_falling"
-		}
+	"type": "origins:invulnerability",
+	"damage_condition": {
+		"type": "origins:from_falling"
 	},
 	"condition": {
 		"type": "origins:or",
@@ -25,7 +11,7 @@
 				"type": "origins:block_collision",
 				"block_condition": {
 					"type": "origins:in_tag",
-					"tag": "origins_minus:plant_fall"
+					"tag": "minecraft:leaves"
 				},
 				"offset_x": -0.3,
 				"offset_y": -0.7,
@@ -35,7 +21,7 @@
 				"type": "origins:block_collision",
 				"block_condition": {
 					"type": "origins:in_tag",
-					"tag": "origins_minus:plant_fall"
+					"tag": "minecraft:leaves"
 				},
 				"offset_x": -0.3,
 				"offset_y": -0.7,
@@ -45,7 +31,7 @@
 				"type": "origins:block_collision",
 				"block_condition": {
 					"type": "origins:in_tag",
-					"tag": "origins_minus:plant_fall"
+					"tag": "minecraft:leaves"
 				},
 				"offset_x": -0.3,
 				"offset_y": -0.7,
@@ -55,7 +41,7 @@
 				"type": "origins:block_collision",
 				"block_condition": {
 					"type": "origins:in_tag",
-					"tag": "origins_minus:plant_fall"
+					"tag": "minecraft:leaves"
 				},
 				"offset_x": 0,
 				"offset_y": -0.7,
@@ -65,7 +51,7 @@
 				"type": "origins:block_collision",
 				"block_condition": {
 					"type": "origins:in_tag",
-					"tag": "origins_minus:plant_fall"
+					"tag": "minecraft:leaves"
 				},
 				"offset_x": 0,
 				"offset_y": -0.7,
@@ -75,7 +61,7 @@
 				"type": "origins:block_collision",
 				"block_condition": {
 					"type": "origins:in_tag",
-					"tag": "origins_minus:plant_fall"
+					"tag": "minecraft:leaves"
 				},
 				"offset_x": 0,
 				"offset_y": -0.7,
@@ -85,7 +71,7 @@
 				"type": "origins:block_collision",
 				"block_condition": {
 					"type": "origins:in_tag",
-					"tag": "origins_minus:plant_fall"
+					"tag": "minecraft:leaves"
 				},
 				"offset_x": 0.3,
 				"offset_y": -0.7,
@@ -95,7 +81,7 @@
 				"type": "origins:block_collision",
 				"block_condition": {
 					"type": "origins:in_tag",
-					"tag": "origins_minus:plant_fall"
+					"tag": "minecraft:leaves"
 				},
 				"offset_x": 0.3,
 				"offset_y": -0.7,
@@ -105,7 +91,7 @@
 				"type": "origins:block_collision",
 				"block_condition": {
 					"type": "origins:in_tag",
-					"tag": "origins_minus:plant_fall"
+					"tag": "minecraft:leaves"
 				},
 				"offset_x": 0.3,
 				"offset_y": -0.7,

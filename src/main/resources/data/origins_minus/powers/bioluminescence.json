@@ -72,6 +72,11 @@
 				"inverted": true,
 				"type": "origins:gamemode",
 				"gamemode": "spectator"
+			},
+			{
+				"inverted": true,
+				"type": "origins:gamemode",
+				"gamemode": "adventure"
 			}
 		]
 	}
