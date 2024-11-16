@@ -1,192 +1,20 @@
 {
-	"type": "origins:active_self",
+	"type": "origins:edible_item",
 	"badges": [
-		{
-			"type": "origins:keybind",
-			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "tooltip.origins_minus.generic.held_active"
-		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
 			"text": "tooltip.origins_minus.edible_seagrass.shears"
 		}
 	],
-	"condition": {
-		"type": "origins:all_of",
-		"conditions": [
-			{
-				"inverted": true,
-				"type": "origins:gamemode",
-				"gamemode": "creative"
-			},
-			{
-				"type": "origins:gamemode",
-				"gamemode": "spectator",
-				"inverted": true
-			},
-			{
-				"type": "origins:food_level",
-				"comparison": "<",
-				"compare_to": 20
-			},
-			{
-				"type": "origins:equipped_item",
-				"equipment_slot": "mainhand",
-				"item_condition": {
-					"type": "origins:all_of",
-					"conditions": [
-						{
-							"type": "origins:ingredient",
-							"ingredient": {
-								"item": "minecraft:seagrass"
-							}
-						}
-					]
-				}
-			}
-		]
-	},
-	"entity_action": [
-		{
-			"type": "origins:equipped_item_action",
-			"equipment_slot": "mainhand",
-			"action": {
-				"type": "origins:consume",
-				"amount": 1
-			}
-		},
-		{
-			"type": "origins:play_sound",
-			"sound": "minecraft:entity.generic.eat"
-		},
-		{
-			"type": "origins:spawn_particles",
-			"particle": {
-				"type": "minecraft:item",
-				"params": {
-					"item": {
-						"id": "minecraft:seagrass"
-					}
-				}
-			},
-			"offset_y": 0.2,
-			"count": 4,
-			"speed": 0.055,
-			"spread": {
-				"x": 0.1,
-				"y": 0.1,
-				"z": 0.1
-			}
-		},
-		{
-			"type": "origins:delay",
-			"ticks": 4,
-			"action": [
-				{
-					"type": "origins:play_sound",
-					"sound": "minecraft:entity.generic.eat"
-				},
-				{
-					"type": "origins:spawn_particles",
-					"particle": {
-						"type": "minecraft:item",
-						"params": {
-							"item": {
-								"id": "minecraft:seagrass"
-							}
-						}
-					},
-					"offset_y": 0.2,
-					"count": 4,
-					"speed": 0.055,
-					"spread": {
-						"x": 0.1,
-						"y": 0.1,
-						"z": 0.1
-					}
-				}
-			]
-		},
-		{
-			"type": "origins:delay",
-			"ticks": 8,
-			"action": [
-				{
-					"type": "origins:play_sound",
-					"sound": "minecraft:entity.generic.eat"
-				},
-				{
-					"type": "origins:spawn_particles",
-					"particle": {
-						"type": "minecraft:item",
-						"params": {
-							"item": {
-								"id": "minecraft:seagrass"
-							}
-						}
-					},
-					"offset_y": 0.2,
-					"count": 4,
-					"speed": 0.055,
-					"spread": {
-						"x": 0.1,
-						"y": 0.1,
-						"z": 0.1
-					}
-				}
-			]
-		},
-		{
-			"type": "origins:delay",
-			"ticks": 12,
-			"action": [
-				{
-					"type": "origins:play_sound",
-					"sound": "minecraft:entity.generic.eat"
-				},
-				{
-					"type": "origins:spawn_particles",
-					"particle": {
-						"type": "minecraft:item",
-						"params": {
-							"item": {
-								"id": "minecraft:seagrass"
-							}
-						}
-					},
-					"offset_y": 0.2,
-					"count": 4,
-					"speed": 0.055,
-					"spread": {
-						"x": 0.1,
-						"y": 0.1,
-						"z": 0.1
-					}
-				}
-			]
-		},
-		{
-			"type": "origins:delay",
-			"ticks": 16,
-			"action": [
-				{
-					"type": "origins:feed",
-					"nutrition": 2,
-					"saturation": 0.8
-				},
-				{
-					"type": "origins:play_sound",
-					"sound": "minecraft:entity.player.burp"
-				}
-			]
+	"item_condition": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"item": "minecraft:seagrass"
 		}
-	],
-	"cooldown": 24,
-	"hud_render": {
-		"should_render": false
 	},
-	"key": {
-		"key": "key.use",
-		"continuous": true
+	"food_component": {
+		"nutrition": 2,
+		"saturation": 0.8,
+		"meat": false
 	}
 }
