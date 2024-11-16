@@ -20,6 +20,12 @@
 					},
 					{
 						"type": "origins:play_sound",
+						"sound": "entity.breeze.jump",
+						"volume": 0.25,
+						"pitch": 0.8
+					},
+					{
+						"type": "origins:play_sound",
 						"sound": "item.trident.riptide_1",
 						"volume": 0.33,
 						"pitch": 2
