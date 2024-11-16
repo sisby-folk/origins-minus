@@ -89,15 +89,15 @@
 		"modifiers": [
 			{
 				"operation": "max_total",
-				"value": 2
+				"amount": 2
 			},
 			{
 				"operation": "multiply_base_multiplicative",
-				"value": -0.8
+				"amount": -0.8
 			},
 			{
 				"operation": "min_total",
-				"value": 1
+				"amount": 1
 			}
 		]
 	},
