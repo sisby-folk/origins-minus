@@ -5,7 +5,7 @@
 		"type": "origins:from_falling"
 	},
 	"condition": {
-		"type": "origins:or",
+		"type": "origins:any_of",
 		"conditions": [
 			{
 				"type": "origins:block_collision",
