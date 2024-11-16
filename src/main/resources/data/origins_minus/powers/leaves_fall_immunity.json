@@ -5,11 +5,101 @@
 		"type": "origins:from_falling"
 	},
 	"condition": {
-		"type": "origins:block_in_radius",
-		"radius": 1,
+		"type": "origins:in_block",
 		"block_condition": {
-			"type": "origins:in_tag",
-			"tag": "minecraft:leaves"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
+					},
+					"y": -1,
+					"x": -1,
+					"z": -1
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
+					},
+					"y": -1,
+					"x": -1,
+					"z": 0
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
+					},
+					"y": -1,
+					"x": -1,
+					"z": 1
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
+					},
+					"y": -1,
+					"x": 0,
+					"z": -1
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
+					},
+					"y": -1,
+					"x": 0,
+					"z": 0
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
+					},
+					"y": -1,
+					"x": 0,
+					"z": 1
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
+					},
+					"y": -1,
+					"x": 1,
+					"z": -1
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
+					},
+					"y": -1,
+					"x": 1,
+					"z": 0
+				},
+				{
+					"type": "origins:offset",
+					"condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
+					},
+					"y": -1,
+					"x": 1,
+					"z": 1
+				}
+			]
 		}
 	}
 }
