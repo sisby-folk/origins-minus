@@ -25,7 +25,7 @@ With this in mind, the new origins aren't at all balanced against vanilla (or ea
 
 ![Avian Preview](https://user-images.githubusercontent.com/55819817/230751155-d54af385-9c51-451c-a716-11ef4f344306.png)
 
-![Wildling Preview](hhttps://cdn.modrinth.com/data/gbOL9is1/images/7d4d2554c822095254a4084ce2b41315185a4874.png)
+![Wildling Preview](https://cdn.modrinth.com/data/gbOL9is1/images/7d4d2554c822095254a4084ce2b41315185a4874.png)
 
 ![Weaver Preview](https://user-images.githubusercontent.com/55819817/230751159-7f1d0112-f7ed-4bfc-b43a-9eeb4a0e1875.png)
 
