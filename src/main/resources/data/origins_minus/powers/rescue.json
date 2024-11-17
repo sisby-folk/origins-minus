@@ -6,7 +6,7 @@
 		"block": false,
 		"entity": true,
 		"fluid_handling": "none",
-		"command_along_ray": "particle block minecraft:iron_bars",
+		"command_along_ray": "particle minecraft:block{block_state:{Name:'minecraft:iron_bars'}} ~ ~ ~ 0 0 0 0 1",
 		"before_action": {
 			"type": "origins:swing_hand",
 			"hand": "MAIN_HAND"

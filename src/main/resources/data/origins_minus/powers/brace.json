@@ -253,12 +253,6 @@
 					"actions": [
 						{
 							"type": "origins:add_velocity",
-							"x": 0,
-							"y": 0,
-							"z": 0,
-							"space": "world",
-							"client": true,
-							"server": true,
 							"set": true
 						},
 						{
