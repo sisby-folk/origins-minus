@@ -42,7 +42,7 @@
 						"action": {
 							"type": "origins:change_resource",
 							"resource": "*:*",
-							"change": -500
+							"change": 450
 						}
 					}
 				]

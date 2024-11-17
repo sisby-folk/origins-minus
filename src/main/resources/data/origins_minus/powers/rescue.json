@@ -50,7 +50,7 @@
 				"action": {
 					"type": "origins:change_resource",
 					"resource": "*:*",
-					"change": -40
+					"change": 40
 				}
 			}
 		],
