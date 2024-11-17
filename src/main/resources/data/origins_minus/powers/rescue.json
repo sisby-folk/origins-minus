@@ -1,76 +1,20 @@
 {
-	"type": "origins:multiple",
-	"pull": {
-		"type": "origins:active_self",
-		"entity_action": {
+	"type": "origins:active_self",
+	"entity_action": {
+		"type": "origins:raycast",
+		"distance": 20,
+		"block": false,
+		"entity": true,
+		"fluid_handling": "none",
+		"command_along_ray": "particle block minecraft:iron_bars",
+		"hit_action": {
 			"type": "origins:and",
 			"actions": [
 				{
-					"type": "origins:raycast",
-					"distance": 20,
-					"block": false,
-					"entity": true,
-					"fluid_handling": "none",
-					"command_along_ray": "particle block minecraft:iron_bars",
-					"bientity_action": {
-						"type": "origins:and",
-						"actions": [
-							{
-								"type": "origins:add_velocity",
-								"z": -2
-							},
-							{
-								"type": "origins:actor_action",
-								"action": {
-									"type": "origins:and",
-									"actions": [
-										{
-											"type": "origins:swing_hand",
-											"hand": "MAIN_HAND"
-										}
-									]
-								}
-							},
-							{
-								"type": "origins:target_action",
-								"action": {
-									"type": "origins:and",
-									"actions": [
-										{
-											"type": "origins:add_velocity",
-											"y": 0.4
-										},
-										{
-											"type": "origins:set_fall_distance",
-											"fall_distance": 0
-										},
-										{
-											"type": "origins:apply_effect",
-											"effect": {
-												"effect": "minecraft:slowness",
-												"duration": 30,
-												"amplifier": 0,
-												"is_ambient": true,
-												"show_particles": true,
-												"show_icon": false
-											}
-										}
-									]
-								}
-							}
-						]
-					},
-					"match_bientity_condition": {
-						"type": "origins:target_condition",
-						"condition": {
-							"type": "origins:and",
-							"conditions": [
-								{
-									"type": "origins:living"
-								}
-							]
-						}
-					}
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.chain.break",
+					"volume": 0.4,
+					"pitch": 0.9
 				},
 				{
 					"type": "origins:play_sound",
@@ -86,94 +30,96 @@
 				}
 			]
 		},
-		"cooldown": 40,
-		"hud_render": {
-			"should_render": true,
-			"inverted": true,
-			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
-			"bar_index": 1
-		},
-		"condition": {
+		"miss_action": {
 			"type": "origins:and",
-			"conditions": [
+			"actions": [
 				{
-					"type": "origins:health",
-					"comparison": ">",
-					"compare_to": 1
+					"type": "origins:swing_hand",
+					"hand": "MAIN_HAND"
 				},
 				{
-					"type": "origins:raycast",
-					"distance": 20,
-					"block": false,
-					"entity": true,
-					"fluid_handling": "none",
-					"match_bientity_condition": {
-						"type": "origins:target_condition",
-						"condition": {
-							"type": "origins:and",
-							"conditions": [
-								{
-									"type": "origins:living"
-								}
-							]
-						}
-					},
-					"hit_bientity_condition": {
-						"type": "origins:distance",
-						"comparison": ">=",
-						"compare_to": 2
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.chain.break",
+					"volume": 0.3,
+					"pitch": 0.7
+				},
+				{
+					"type": "origins:play_sound",
+					"sound": "minecraft:block.fire.extinguish",
+					"volume": 0.15,
+					"pitch": 2.0
+				},
+				{
+					"type": "origins:delay",
+					"ticks": 4,
+					"action": {
+						"type": "origins:change_resource",
+						"resource": "*:*",
+						"change": -40
 					}
 				}
 			]
+		},
+		"bientity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:add_velocity",
+					"z": -2
+				},
+				{
+					"type": "origins:actor_action",
+					"action": {
+						"type": "origins:swing_hand",
+						"hand": "MAIN_HAND"
+					}
+				},
+				{
+					"type": "origins:target_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:add_velocity",
+								"y": 0.4
+							},
+							{
+								"type": "origins:set_fall_distance",
+								"fall_distance": 0
+							},
+							{
+								"type": "origins:apply_effect",
+								"effect": {
+									"effect": "minecraft:slowness",
+									"duration": 30,
+									"amplifier": 0,
+									"is_ambient": true,
+									"show_particles": true,
+									"show_icon": false
+								}
+							}
+						]
+					}
+				}
+			]
+		},
+		"match_bientity_condition": {
+			"type": "origins:target_condition",
+			"condition": {
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "origins:living"
+					}
+				]
+			}
 		}
 	},
-	"stop": {
-		"type": "origins:action_over_time",
-		"entity_action": {
-			"type": "origins:area_of_effect",
-			"radius": 2,
-			"bientity_action": {
-				"type": "origins:target_action",
-				"action": {
-					"type": "origins:and",
-					"actions": [
-						{
-							"type": "origins:add_velocity",
-							"x": 0,
-							"y": 0,
-							"z": 0,
-							"space": "world",
-							"client": true,
-							"server": true,
-							"set": true
-						},
-						{
-							"type": "origins:play_sound",
-							"sound": "block.anvil.place",
-							"volume": 0.1,
-							"pitch": 1.1
-						},
-						{
-							"type": "origins:clear_effect",
-							"effect": "minecraft:slowness"
-						}
-					]
-				}
-			},
-			"bientity_condition": {
-				"type": "origins:target_condition",
-				"condition": {
-					"type": "origins:status_effect",
-					"effect": "minecraft:slowness"
-				}
-			}
-		},
-		"interval": 1,
-		"condition": {
-			"type": "origins:resource",
-			"resource": "*:*_pull",
-			"comparison": ">",
-			"compare_to": 0
-		}
+	"cooldown": 40,
+	"hud_render": {
+		"should_render": true,
+		"inverted": true,
+		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+		"bar_index": 1
 	}
 }
