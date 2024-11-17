@@ -25,13 +25,13 @@ With this in mind, the new origins aren't at all balanced against vanilla (or ea
 
 ![Avian Preview](https://user-images.githubusercontent.com/55819817/230751155-d54af385-9c51-451c-a716-11ef4f344306.png)
 
-![Wildling Preview](https://user-images.githubusercontent.com/55819817/230751158-e29cf313-d20c-4a78-8ebc-98e90032f816.png)
+![Wildling Preview](https://cdn.modrinth.com/data/gbOL9is1/images/e20e95616d0e2407bc5bcf0771ec4b23bc5690da.png)
 
 ![Weaver Preview](https://user-images.githubusercontent.com/55819817/230751159-7f1d0112-f7ed-4bfc-b43a-9eeb4a0e1875.png)
 
 ![Mer Preview](https://user-images.githubusercontent.com/55819817/230751161-d962465c-7b04-4a76-98fd-7b314087f630.png)
 
-![Hellspawn Preview](https://user-images.githubusercontent.com/55819817/230751162-0d9ba93c-ff7e-41ea-8a79-b680bd97934f.png)
+![Hellspawn Preview](https://cdn.modrinth.com/data/gbOL9is1/images/cf934da40935e02e643d909617f01582619d9f22.png)
 
 ![Voidthing Preview](https://user-images.githubusercontent.com/55819817/230751163-9880b672-7610-4f36-bff1-8fe9bb9c8390.png)
 
