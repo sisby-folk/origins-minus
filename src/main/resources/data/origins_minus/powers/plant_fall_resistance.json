@@ -4,17 +4,37 @@
 	"resistance": {
 		"type": "origins:modify_damage_taken",
 		"damage_condition": {
-			"type": "origins:from_falling"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
 		},
 		"modifier": {
-			"operation": "multiply_total_multiplicative",
+			"operation": "multiply_total",
 			"value": -0.8
 		}
 	},
 	"protection": {
 		"type": "origins:prevent_death",
 		"damage_condition": {
-			"type": "origins:from_falling"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
 		}
 	},
 	"condition": {

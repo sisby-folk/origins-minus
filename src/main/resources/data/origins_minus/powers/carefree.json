@@ -82,16 +82,8 @@
 		},
 		"modifiers": [
 			{
-				"operation": "max_total",
-				"value": 2
-			},
-			{
-				"operation": "multiply_base_multiplicative",
+				"operation": "multiply_base",
 				"value": -0.8
-			},
-			{
-				"operation": "min_total",
-				"value": 1
 			}
 		]
 	},
@@ -110,7 +102,17 @@
 	"protection": {
 		"type": "origins:prevent_death",
 		"damage_condition": {
-			"type": "origins:from_falling"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
 		}
 	}
 }

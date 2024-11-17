@@ -14,7 +14,57 @@
 		},
 		"key": "key.jump"
 	},
-	"ascend": {
+	"size_callbacks": {
+		"type": "origins:action_on_callback",
+		"entity_action_gained": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale persist set pehkui:flight true"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale delay set pehkui:flight 0"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:flight 0"
+				}
+			]
+		},
+		"entity_action_respawned": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale delay set pehkui:flight 0"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale set pehkui:flight 0"
+				}
+			]
+		},
+		"entity_action_lost": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:execute_command",
+					"command": "scale reset pehkui:flight @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale delay reset pehkui:flight @s"
+				},
+				{
+					"type": "origins:execute_command",
+					"command": "scale persist set pehkui:flight false"
+				}
+			]
+		}
+	},
+	"flight": {
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -32,8 +82,17 @@
 		},
 		"type": "origins:creative_flight"
 	},
-	"stop": {
-		"type": "origins:modify_velocity",
+	"raise": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:add_velocity",
+			"y": 0.2,
+			"set": true
+		},
+		"key": {
+			"key": "key.jump",
+			"continuous": true
+		},
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -51,18 +110,19 @@
 					"type": "origins:creative_flying"
 				}
 			]
-		},
-		"modifier": {
-			"value": -1,
-			"operation": "multiply_total"
-		},
-		"axes": [
-			"x",
-			"z"
-		]
+		}
 	},
-	"slow": {
-		"type": "origins:modify_velocity",
+	"lower": {
+		"type": "origins:active_self",
+		"entity_action": {
+			"type": "origins:add_velocity",
+			"y": -0.2,
+			"set": true
+		},
+		"key": {
+			"key": "key.sneak",
+			"continuous": true
+		},
 		"condition": {
 			"type": "origins:and",
 			"conditions": [
@@ -80,22 +140,9 @@
 					"type": "origins:creative_flying"
 				}
 			]
-		},
-		"modifiers": [
-			{
-				"value": 0.2,
-				"operation": "max_total"
-			},
-			{
-				"value": -0.2,
-				"operation": "min_total"
-			}
-		],
-		"axes": [
-			"y"
-		]
+		}
 	},
-	"animate": {
+	"on_flight": {
 		"type": "origins:action_over_time",
 		"rising_action": {
 			"type": "origins:and",

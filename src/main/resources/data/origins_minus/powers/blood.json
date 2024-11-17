@@ -163,34 +163,6 @@
 			]
 		}
 	},
-	"no_sprinting": {
-		"type": "origins:prevent_sprinting",
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_res",
-					"comparison": "<=",
-					"compare_to": 40
-				},
-				{
-					"type": "origins:or",
-					"inverted": true,
-					"conditions": [
-						{
-							"type": "origins:gamemode",
-							"gamemode": "creative"
-						},
-						{
-							"type": "origins:gamemode",
-							"gamemode": "spectator"
-						}
-					]
-				}
-			]
-		}
-	},
 	"starve_burn": {
 		"type": "origins:burn",
 		"interval": 80,

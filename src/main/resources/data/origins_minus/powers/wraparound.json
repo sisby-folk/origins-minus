@@ -50,7 +50,17 @@
 		]
 	},
 	"damage_condition": {
-		"type": "origins:out_of_world"
+		"type": "origins:or",
+		"conditions": [
+			{
+				"type": "origins:name",
+				"name": "outOfWorld"
+			},
+			{
+				"type": "origins:name",
+				"name": "outOfWorld.player"
+			}
+		]
 	},
 	"cooldown": 1
 }

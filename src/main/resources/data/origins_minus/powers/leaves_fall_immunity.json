@@ -2,7 +2,17 @@
 	"hidden": true,
 	"type": "origins:invulnerability",
 	"damage_condition": {
-		"type": "origins:from_falling"
+		"type": "origins:or",
+		"conditions": [
+			{
+				"type": "origins:name",
+				"name": "fall"
+			},
+			{
+				"type": "origins:name",
+				"name": "fall.player"
+			}
+		]
 	},
 	"condition": {
 		"type": "origins:in_block",

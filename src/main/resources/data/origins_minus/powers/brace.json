@@ -41,18 +41,16 @@
 		"update_health": false
 	},
 	"slow": {
-		"condition": {
-			"type": "origins:sneaking"
-		},
-		"type": "origins:modify_velocity",
+		"type": "origins:conditioned_attribute",
 		"modifier": {
+			"attribute": "minecraft:generic.movement_speed",
 			"operation": "multiply_total",
 			"value": -0.5
 		},
-		"axes": [
-			"x",
-			"z"
-		]
+		"tick_rate": 1,
+		"condition": {
+			"type": "origins:sneaking"
+		}
 	},
 	"drop": {
 		"type": "origins:modify_falling",
@@ -155,27 +153,43 @@
 			]
 		},
 		"damage_condition": {
-			"type": "origins:from_falling"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
 		},
 		"modifiers": [
 			{
-				"operation": "add_base_early",
+				"operation": "addition",
 				"value": -1
 			},
 			{
-				"operation": "multiply_total_multiplicative",
+				"operation": "multiply_total",
 				"value": -0.75
-			},
-			{
-				"operation": "max_total",
-				"value": 8
 			}
 		]
 	},
 	"fall_safety": {
 		"type": "origins:prevent_death",
 		"damage_condition": {
-			"type": "origins:from_falling"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
 		},
 		"condition": {
 			"type": "origins:sneaking"
