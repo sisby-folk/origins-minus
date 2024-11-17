@@ -74,10 +74,10 @@
 					{
 						"type": "origins:apply_effect",
 						"effect": {
-							"effect": "minecraft:slowness",
+							"id": "minecraft:slowness",
 							"duration": 30,
 							"amplifier": 0,
-							"is_ambient": true,
+							"ambient": true,
 							"show_particles": true,
 							"show_icon": false
 						}
