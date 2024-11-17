@@ -288,7 +288,7 @@
 		"interval": 1,
 		"condition": {
 			"type": "origins:resource",
-			"resource": "*:*_pull",
+			"resource": "*:rescue",
 			"comparison": ">",
 			"compare_to": 0
 		}
