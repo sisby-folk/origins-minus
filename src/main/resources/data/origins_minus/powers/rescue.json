@@ -7,6 +7,10 @@
 		"entity": true,
 		"fluid_handling": "none",
 		"command_along_ray": "particle block minecraft:iron_bars",
+		"before_action": {
+			"type": "origins:swing_hand",
+			"hand": "MAIN_HAND"
+		},
 		"hit_action": [
 			{
 				"type": "origins:play_sound",
@@ -28,10 +32,6 @@
 			}
 		],
 		"miss_action": [
-			{
-				"type": "origins:swing_hand",
-				"hand": "MAIN_HAND"
-			},
 			{
 				"type": "origins:play_sound",
 				"sound": "minecraft:block.chain.break",
@@ -58,13 +58,7 @@
 			{
 				"type": "origins:add_velocity",
 				"z": -2
-			},
-			{
-				"type": "origins:actor_action",
-				"action": {
-					"type": "origins:swing_hand",
-					"hand": "MAIN_HAND"
-				}
+
 			},
 			{
 				"type": "origins:target_action",
