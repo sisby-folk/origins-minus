@@ -1,5 +1,5 @@
 {
-	"type": "origins:modify_damage_dealt",
+	"type": "origins:action_on_hit",
 	"bientity_action": [
 		{
 			"type": "origins:damage",
