@@ -8,10 +8,6 @@
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.glide.safe_fall"
-		},
-		{
-			"sprite": "origins:textures/gui/badge/info.png",
 			"text": "tooltip.origins_minus.glide.air_speed"
 		}
 	],
