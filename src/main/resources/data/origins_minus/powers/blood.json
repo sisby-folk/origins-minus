@@ -55,8 +55,18 @@
 	"fill_potion": {
 		"type": "origins:action_on_item_use",
 		"item_condition": {
-			"type": "origins:nbt",
-			"nbt": "{Potion:\"minecraft:healing\"}"
+			"type": "origins:ingredient",
+			"ingredient": {
+				"fabric:type": "fabric:components",
+				"base": {
+					"item": "minecraft:potion"
+				},
+				"components": {
+					"minecraft:potion_contents": {
+						"potion": "minecraft:healing"
+					}
+				}
+			}
 		},
 		"entity_action": {
 			"type": "origins:change_resource",
@@ -67,8 +77,18 @@
 	"fill_potion_2": {
 		"type": "origins:action_on_item_use",
 		"item_condition": {
-			"type": "origins:nbt",
-			"nbt": "{Potion:\"minecraft:strong_healing\"}"
+			"type": "origins:ingredient",
+			"ingredient": {
+				"fabric:type": "fabric:components",
+				"base": {
+					"item": "minecraft:potion"
+				},
+				"components": {
+					"minecraft:potion_contents": {
+						"potion": "minecraft:strong_healing"
+					}
+				}
+			}
 		},
 		"entity_action": {
 			"type": "origins:change_resource",
@@ -118,7 +138,7 @@
 		"entity_action": {
 			"type": "origins:chance",
 			"chance": 0.01,
-			"action": {
+			"success_action": {
 				"type": "origins:change_resource",
 				"resource": "*:*_res",
 				"change": -1

@@ -26,8 +26,8 @@
 	"speed": {
 		"type": "origins:modify_velocity",
 		"modifier": {
-			"value": 0.5,
-			"operation": "multiply_total"
+			"operation": "multiply_total_multiplicative",
+			"amount": 0.5
 		},
 		"axes": [
 			"x",
@@ -81,6 +81,11 @@
 			"resource": "*:*_res",
 			"comparison": ">",
 			"compare_to": 0
+		},
+		"modifier": {
+			"id": "*:*",
+			"operation": "multiply_total_multiplicative",
+			"amount": 0
 		}
 	},
 	"extend_hit": {
@@ -95,6 +100,11 @@
 			"resource": "*:*_res",
 			"comparison": ">",
 			"compare_to": 0
+		},
+		"modifier": {
+			"id": "*:*",
+			"operation": "multiply_total_multiplicative",
+			"amount": 0
 		}
 	},
 	"extend_kill": {
@@ -155,8 +165,18 @@
 	"trigger_potion": {
 		"type": "origins:action_on_item_use",
 		"item_condition": {
-			"type": "origins:nbt",
-			"nbt": "{Potion:\"minecraft:healing\"}"
+			"type": "origins:ingredient",
+			"ingredient": {
+				"fabric:type": "fabric:components",
+				"base": {
+					"item": "minecraft:potion"
+				},
+				"components": {
+					"minecraft:potion_contents": {
+						"potion": "minecraft:healing"
+					}
+				}
+			}
 		},
 		"entity_action": {
 			"type": "origins:and",
@@ -196,8 +216,18 @@
 	"trigger_potion_2": {
 		"type": "origins:action_on_item_use",
 		"item_condition": {
-			"type": "origins:nbt",
-			"nbt": "{Potion:\"minecraft:strong_healing\"}"
+			"type": "origins:ingredient",
+			"ingredient": {
+				"fabric:type": "fabric:components",
+				"base": {
+					"item": "minecraft:potion"
+				},
+				"components": {
+					"minecraft:potion_contents": {
+						"potion": "minecraft:strong_healing"
+					}
+				}
+			}
 		},
 		"entity_action": {
 			"type": "origins:and",

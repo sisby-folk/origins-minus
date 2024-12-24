@@ -19,7 +19,6 @@
 		"target_action": {
 			"type": "origins:and",
 			"actions": [
-
 				{
 					"type": "origins:play_sound",
 					"sound": "block.slime_block.place",
@@ -36,7 +35,14 @@
 					"type": "origins:spawn_particles",
 					"particle": {
 						"type": "minecraft:dust",
-						"params": "0.8 0.25 0.25 2"
+						"params": {
+							"color": [
+								0.8,
+								0.25,
+								0.25
+							],
+							"scale": 2
+						}
 					},
 					"count": 8,
 					"speed": 1.0,
@@ -49,8 +55,8 @@
 			]
 		},
 		"modifier": {
-			"operation": "addition",
-			"value": 5
+			"operation": "add_base_early",
+			"amount": 5
 		},
 		"target_condition": {
 			"type": "origins:in_tag",
@@ -75,7 +81,14 @@
 					"type": "origins:spawn_particles",
 					"particle": {
 						"type": "minecraft:dust",
-						"params": "0.8 0.25 0.25 2"
+						"params": {
+							"color": [
+								0.8,
+								0.25,
+								0.25
+							],
+							"scale": 2
+						}
 					},
 					"count": 24,
 					"speed": 1.0,
@@ -124,7 +137,6 @@
 		"target_action": {
 			"type": "origins:and",
 			"actions": [
-
 				{
 					"type": "origins:play_sound",
 					"sound": "block.slime_block.place",
@@ -141,7 +153,14 @@
 					"type": "origins:spawn_particles",
 					"particle": {
 						"type": "minecraft:dust",
-						"params": "0.8 0.25 0.25 2"
+						"params": {
+							"color": [
+								0.8,
+								0.25,
+								0.25
+							],
+							"scale": 2
+						}
 					},
 					"count": 8,
 					"speed": 1.0,
@@ -154,8 +173,8 @@
 			]
 		},
 		"modifier": {
-			"operation": "addition",
-			"value": 5
+			"operation": "add_base_early",
+			"amount": 5
 		},
 		"target_condition": {
 			"inverted": true,
@@ -187,7 +206,14 @@
 					"type": "origins:spawn_particles",
 					"particle": {
 						"type": "minecraft:dust",
-						"params": "0.8 0.25 0.25 2"
+						"params": {
+							"color": [
+								0.8,
+								0.25,
+								0.25
+							],
+							"scale": 2
+						}
 					},
 					"count": 24,
 					"speed": 1.0,
