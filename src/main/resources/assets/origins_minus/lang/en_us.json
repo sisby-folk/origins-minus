@@ -93,7 +93,7 @@
 	"power.origins_minus.vine_whip.name": "Vine Whip",
 	"power.origins_minus.vine_whip.description": "Slingshot towards plants.",
 	"tooltip.origins_minus.vine_whip.phasing": "You can pass through leaves.",
-	"tooltip.origins_minus.vine_whip.plant_fall": "Falls onto plants are less harmful.",
+	"tooltip.origins_minus.vine_whip.plant_fall": "Plants soften your falls.",
 	"power.origins_minus.water_breathing.name": "Countercurrent",
 	"power.origins_minus.water_breathing.description": "Water is breathable.",
 	"power.origins_minus.wraparound.name": "Wraparound",
