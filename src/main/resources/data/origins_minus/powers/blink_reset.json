@@ -10,7 +10,7 @@
 	"entity_action": {
 		"type": "origins:change_resource",
 		"resource": "*:blink",
-		"change": -1400
+		"change": 1400
 	},
 	"prevent_effects": true
 }

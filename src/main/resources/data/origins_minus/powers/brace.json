@@ -248,25 +248,22 @@
 			"radius": 2,
 			"bientity_action": {
 				"type": "origins:target_action",
-				"action": {
-					"type": "origins:and",
-					"actions": [
-						{
-							"type": "origins:add_velocity",
-							"set": true
-						},
-						{
-							"type": "origins:play_sound",
-							"sound": "block.anvil.place",
-							"volume": 0.1,
-							"pitch": 1.1
-						},
-						{
-							"type": "origins:clear_effect",
-							"effect": "minecraft:slowness"
-						}
-					]
-				}
+				"action": [
+					{
+						"type": "origins:add_velocity",
+						"set": true
+					},
+					{
+						"type": "origins:play_sound",
+						"sound": "block.anvil.place",
+						"volume": 0.1,
+						"pitch": 1.1
+					},
+					{
+						"type": "origins:clear_effect",
+						"effect": "minecraft:slowness"
+					}
+				]
 			},
 			"bientity_condition": {
 				"type": "origins:target_condition",

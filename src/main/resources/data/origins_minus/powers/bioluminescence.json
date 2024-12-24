@@ -31,28 +31,25 @@
 	"entity_type": "minecraft:arrow",
 	"tag": "{Tags:['bioluminescence'],PortalCooldown:100,damage:0,pickup:0b,ShotFromCrossbow:1b,SoundEvent:'block.cave_vines.fall',PierceLevel:50,Silent:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}]}",
 	"key": "key.origins.secondary_active",
-	"shooter_action": {
-		"type": "origins:and",
-		"actions": [
-			{
-				"type": "origins:damage",
-				"amount": 10,
-				"damage_type": "cactus"
-			},
-			{
-				"type": "origins:play_sound",
-				"sound": "entity.player.hurt_sweet_berry_bush",
-				"volume": 0.75,
-				"pitch": 1
-			},
-			{
-				"type": "origins:play_sound",
-				"sound": "item.crossbow.shoot",
-				"volume": 0.75,
-				"pitch": 0.75
-			}
-		]
-	},
+	"shooter_action": [
+		{
+			"type": "origins:damage",
+			"amount": 10,
+			"damage_type": "cactus"
+		},
+		{
+			"type": "origins:play_sound",
+			"sound": "entity.player.hurt_sweet_berry_bush",
+			"volume": 0.75,
+			"pitch": 1
+		},
+		{
+			"type": "origins:play_sound",
+			"sound": "item.crossbow.shoot",
+			"volume": 0.75,
+			"pitch": 0.75
+		}
+	],
 	"cooldown": 100,
 	"hud_render": {
 		"should_render": true,

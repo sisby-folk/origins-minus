@@ -24,7 +24,7 @@
 			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
 			"bar_index": 5,
 			"condition": {
-				"type": "origins:or",
+				"type": "origins:any_of",
 				"inverted": true,
 				"conditions": [
 					{
@@ -41,16 +41,13 @@
 	},
 	"fill_on_spawn": {
 		"type": "origins:action_on_callback",
-		"entity_action_respawned": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": 140
-				}
-			]
-		}
+		"entity_action_respawned": [
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_res",
+				"change": 140
+			}
+		]
 	},
 	"fill_potion": {
 		"type": "origins:action_on_item_use",
@@ -105,7 +102,7 @@
 			"change": -1
 		},
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:sprinting"
@@ -117,7 +114,7 @@
 					"compare_to": 40
 				},
 				{
-					"type": "origins:or",
+					"type": "origins:any_of",
 					"inverted": true,
 					"conditions": [
 						{
@@ -149,7 +146,7 @@
 			"key": "key.jump"
 		},
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:sprinting"
@@ -161,7 +158,7 @@
 					"compare_to": 40
 				},
 				{
-					"type": "origins:or",
+					"type": "origins:any_of",
 					"inverted": true,
 					"conditions": [
 						{
@@ -181,16 +178,11 @@
 		"type": "origins:action_over_time",
 		"interval": 160,
 		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:heal",
-					"amount": 1
-				}
-			]
+			"type": "origins:heal",
+			"amount": 1
 		},
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -209,7 +201,7 @@
 	"no_sprinting": {
 		"type": "origins:prevent_sprinting",
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -218,7 +210,7 @@
 					"compare_to": 40
 				},
 				{
-					"type": "origins:or",
+					"type": "origins:any_of",
 					"inverted": true,
 					"conditions": [
 						{
@@ -239,7 +231,7 @@
 		"interval": 80,
 		"burn_duration": 20,
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:exposed_to_sun"
@@ -251,10 +243,10 @@
 					"compare_to": 0
 				},
 				{
-					"type": "origins:or",
+					"type": "origins:any_of",
 					"conditions": [
 						{
-							"type": "origins:and",
+							"type": "origins:all_of",
 							"conditions": [
 								{
 									"type": "origins:command",
@@ -265,7 +257,7 @@
 							]
 						},
 						{
-							"type": "origins:and",
+							"type": "origins:all_of",
 							"conditions": [
 								{
 									"type": "origins:health",
@@ -281,7 +273,7 @@
 							]
 						},
 						{
-							"type": "origins:and",
+							"type": "origins:all_of",
 							"conditions": [
 								{
 									"type": "origins:health",

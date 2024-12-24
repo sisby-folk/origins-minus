@@ -7,7 +7,7 @@
 		"green": 0.0,
 		"blue": 0.0,
 		"bientity_condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:distance",
@@ -21,7 +21,7 @@
 					}
 				},
 				{
-					"type": "origins:or",
+					"type": "origins:any_of",
 					"conditions": [
 						{
 							"type": "origins:actor_condition",
@@ -45,13 +45,13 @@
 		}
 	},
 	"condition": {
-		"type": "origins:or",
+		"type": "origins:any_of",
 		"conditions": [
 			{
-				"type": "origins:and",
+				"type": "origins:all_of",
 				"conditions": [
 					{
-						"type": "origins:or",
+						"type": "origins:any_of",
 						"conditions": [
 							{
 								"type": "origins:resource",

@@ -43,15 +43,10 @@
 	"empty_on_spawn": {
 		"type": "origins:action_on_callback",
 		"entity_action_respawned": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": 0,
-					"operation": "set"
-				}
-			]
+			"type": "origins:change_resource",
+			"resource": "*:*_res",
+			"change": 0,
+			"operation": "set"
 		}
 	},
 	"drain": {
@@ -123,29 +118,26 @@
 	},
 	"trigger_kill": {
 		"type": "origins:self_action_on_kill",
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:play_sound",
-					"sound": "entity.ender_dragon.growl",
-					"volume": 0.2,
-					"pitch": 2.0
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": 20,
-					"operation": "set"
-				}
-			]
-		},
+		"entity_action": [
+			{
+				"type": "origins:play_sound",
+				"sound": "entity.ender_dragon.growl",
+				"volume": 0.2,
+				"pitch": 2.0
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_res",
+				"change": 20,
+				"operation": "set"
+			}
+		],
 		"target_condition": {
 			"type": "origins:in_tag",
 			"tag": "origins_minus:feed_targetable"
 		},
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -178,25 +170,22 @@
 				}
 			}
 		},
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:play_sound",
-					"sound": "entity.ender_dragon.growl",
-					"volume": 0.2,
-					"pitch": 2.0
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": 40,
-					"operation": "set"
-				}
-			]
-		},
+		"entity_action": [
+			{
+				"type": "origins:play_sound",
+				"sound": "entity.ender_dragon.growl",
+				"volume": 0.2,
+				"pitch": 2.0
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_res",
+				"change": 40,
+				"operation": "set"
+			}
+		],
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -229,25 +218,22 @@
 				}
 			}
 		},
-		"entity_action": {
-			"type": "origins:and",
-			"actions": [
-				{
-					"type": "origins:play_sound",
-					"sound": "entity.ender_dragon.growl",
-					"volume": 0.2,
-					"pitch": 2.0
-				},
-				{
-					"type": "origins:change_resource",
-					"resource": "*:*_res",
-					"change": 40,
-					"operation": "set"
-				}
-			]
-		},
+		"entity_action": [
+			{
+				"type": "origins:play_sound",
+				"sound": "entity.ender_dragon.growl",
+				"volume": 0.2,
+				"pitch": 2.0
+			},
+			{
+				"type": "origins:change_resource",
+				"resource": "*:*_res",
+				"change": 40,
+				"operation": "set"
+			}
+		],
 		"condition": {
-			"type": "origins:and",
+			"type": "origins:all_of",
 			"conditions": [
 				{
 					"type": "origins:resource",
