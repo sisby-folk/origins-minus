@@ -24,15 +24,13 @@
 		}
 	},
 	"speed": {
-		"type": "origins:modify_velocity",
+		"type": "origins:conditioned_attribute",
 		"modifier": {
-			"value": 0.5,
-			"operation": "multiply_total"
+			"attribute": "minecraft:generic.movement_speed",
+			"operation": "multiply_total",
+			"value": 0.5
 		},
-		"axes": [
-			"x",
-			"z"
-		],
+		"tick_rate": 1,
 		"condition": {
 			"type": "origins:resource",
 			"resource": "*:*_res",
@@ -109,7 +107,8 @@
 			"resource": "*:*_res",
 			"comparison": ">",
 			"compare_to": 0
-		}
+		},
+		"cooldown": 0
 	},
 	"trigger_kill": {
 		"type": "origins:self_action_on_kill",
@@ -150,7 +149,8 @@
 					"compare_to": 135
 				}
 			]
-		}
+		},
+		"cooldown": 0
 	},
 	"trigger_potion": {
 		"type": "origins:action_on_item_use",
