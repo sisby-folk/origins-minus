@@ -2,8 +2,9 @@
 	"powers": [
 		"origins_minus:blood",
 		"origins_minus:no_hunger",
-		"origins_minus:frenzy",
-		"origins_minus:nightstalker"
+		"origins_minus:spill",
+		"origins_minus:nightstalker",
+		"origins_minus:frenzy"
 	],
 	"icon": {
 		"id": "minecraft:potion",

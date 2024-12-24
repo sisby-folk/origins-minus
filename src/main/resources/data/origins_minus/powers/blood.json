@@ -6,8 +6,12 @@
 			"text": "tooltip.origins_minus.blood.starve"
 		},
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.blood.snacking"
+			"sprite": "origins_minus:textures/gui/badge/heal_heart.png",
+			"text": "tooltip.origins_minus.blood.healing"
+		},
+		{
+			"sprite": "origins_minus:textures/gui/badge/health_potion.png",
+			"text": "tooltip.origins_minus.blood.potions"
 		}
 	],
 	"res": {
@@ -20,15 +24,14 @@
 			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
 			"bar_index": 5,
 			"condition": {
-				"type": "origins:all_of",
+				"type": "origins:or",
+				"inverted": true,
 				"conditions": [
 					{
-						"inverted": true,
 						"type": "origins:gamemode",
 						"gamemode": "creative"
 					},
 					{
-						"inverted": true,
 						"type": "origins:gamemode",
 						"gamemode": "spectator"
 					}
@@ -38,13 +41,40 @@
 	},
 	"fill_on_spawn": {
 		"type": "origins:action_on_callback",
-		"entity_action_respawned": [
-			{
-				"type": "origins:change_resource",
-				"resource": "*:*_res",
-				"change": 140
-			}
-		]
+		"entity_action_respawned": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:change_resource",
+					"resource": "*:*_res",
+					"change": 140
+				}
+			]
+		}
+	},
+	"fill_potion": {
+		"type": "origins:action_on_item_use",
+		"item_condition": {
+			"type": "origins:nbt",
+			"nbt": "{Potion:\"minecraft:healing\"}"
+		},
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_res",
+			"change": 70
+		}
+	},
+	"fill_potion_2": {
+		"type": "origins:action_on_item_use",
+		"item_condition": {
+			"type": "origins:nbt",
+			"nbt": "{Potion:\"minecraft:strong_healing\"}"
+		},
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "*:*_res",
+			"change": 140
+		}
 	},
 	"sprint_lower_resource": {
 		"type": "origins:action_over_time",
@@ -55,7 +85,7 @@
 			"change": -1
 		},
 		"condition": {
-			"type": "origins:all_of",
+			"type": "origins:and",
 			"conditions": [
 				{
 					"type": "origins:sprinting"
@@ -67,14 +97,18 @@
 					"compare_to": 40
 				},
 				{
+					"type": "origins:or",
 					"inverted": true,
-					"type": "origins:gamemode",
-					"gamemode": "creative"
-				},
-				{
-					"inverted": true,
-					"type": "origins:gamemode",
-					"gamemode": "spectator"
+					"conditions": [
+						{
+							"type": "origins:gamemode",
+							"gamemode": "creative"
+						},
+						{
+							"type": "origins:gamemode",
+							"gamemode": "spectator"
+						}
+					]
 				}
 			]
 		}
@@ -84,7 +118,7 @@
 		"entity_action": {
 			"type": "origins:chance",
 			"chance": 0.01,
-			"success_action": {
+			"action": {
 				"type": "origins:change_resource",
 				"resource": "*:*_res",
 				"change": -1
@@ -95,7 +129,7 @@
 			"key": "key.jump"
 		},
 		"condition": {
-			"type": "origins:all_of",
+			"type": "origins:and",
 			"conditions": [
 				{
 					"type": "origins:sprinting"
@@ -107,40 +141,42 @@
 					"compare_to": 40
 				},
 				{
+					"type": "origins:or",
 					"inverted": true,
-					"type": "origins:gamemode",
-					"gamemode": "creative"
-				},
-				{
-					"inverted": true,
-					"type": "origins:gamemode",
-					"gamemode": "spectator"
+					"conditions": [
+						{
+							"type": "origins:gamemode",
+							"gamemode": "creative"
+						},
+						{
+							"type": "origins:gamemode",
+							"gamemode": "spectator"
+						}
+					]
 				}
 			]
 		}
 	},
 	"heal_from_resource": {
 		"type": "origins:action_over_time",
-		"interval": 15,
-		"entity_action": [
-			{
-				"type": "origins:heal",
-				"amount": 1
-			},
-			{
-				"type": "origins:change_resource",
-				"resource": "*:*_res",
-				"change": -1
-			}
-		],
+		"interval": 160,
+		"entity_action": {
+			"type": "origins:and",
+			"actions": [
+				{
+					"type": "origins:heal",
+					"amount": 1
+				}
+			]
+		},
 		"condition": {
-			"type": "origins:all_of",
+			"type": "origins:and",
 			"conditions": [
 				{
 					"type": "origins:resource",
 					"resource": "*:*_res",
 					"comparison": ">",
-					"compare_to": 20
+					"compare_to": 0
 				},
 				{
 					"type": "origins:relative_health",
@@ -153,7 +189,7 @@
 	"no_sprinting": {
 		"type": "origins:prevent_sprinting",
 		"condition": {
-			"type": "origins:all_of",
+			"type": "origins:and",
 			"conditions": [
 				{
 					"type": "origins:resource",
@@ -162,14 +198,18 @@
 					"compare_to": 40
 				},
 				{
+					"type": "origins:or",
 					"inverted": true,
-					"type": "origins:gamemode",
-					"gamemode": "creative"
-				},
-				{
-					"inverted": true,
-					"type": "origins:gamemode",
-					"gamemode": "spectator"
+					"conditions": [
+						{
+							"type": "origins:gamemode",
+							"gamemode": "creative"
+						},
+						{
+							"type": "origins:gamemode",
+							"gamemode": "spectator"
+						}
+					]
 				}
 			]
 		}
@@ -179,7 +219,7 @@
 		"interval": 80,
 		"burn_duration": 20,
 		"condition": {
-			"type": "origins:all_of",
+			"type": "origins:and",
 			"conditions": [
 				{
 					"type": "origins:exposed_to_sun"
@@ -191,10 +231,10 @@
 					"compare_to": 0
 				},
 				{
-					"type": "origins:any_of",
+					"type": "origins:or",
 					"conditions": [
 						{
-							"type": "origins:all_of",
+							"type": "origins:and",
 							"conditions": [
 								{
 									"type": "origins:command",
@@ -205,7 +245,7 @@
 							]
 						},
 						{
-							"type": "origins:all_of",
+							"type": "origins:and",
 							"conditions": [
 								{
 									"type": "origins:health",
@@ -221,7 +261,7 @@
 							]
 						},
 						{
-							"type": "origins:all_of",
+							"type": "origins:and",
 							"conditions": [
 								{
 									"type": "origins:health",

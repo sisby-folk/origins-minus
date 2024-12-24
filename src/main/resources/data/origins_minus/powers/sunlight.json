@@ -2,12 +2,16 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.sunlight.food"
+			"sprite": "origins_minus:textures/gui/badge/heal_heart.png",
+			"text": "tooltip.origins_minus.sunlight.healing"
 		},
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.sunlight.healing"
+			"sprite": "minecraft:textures/item/apple.png",
+			"text": "tooltip.origins_minus.sunlight.apples"
+		},
+		{
+			"sprite": "minecraft:textures/item/honey_bottle.png",
+			"text": "tooltip.origins_minus.sunlight.honey"
 		}
 	],
 	"res": {
