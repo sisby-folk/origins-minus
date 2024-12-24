@@ -7,6 +7,9 @@
 	"authors": [
 		"${authors}"
 	],
+	"contributors": [
+		"${contributors}"
+	],
 	"contact": {
 		"homepage": "${homepage}",
 		"issues": "${issues}",
