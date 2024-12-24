@@ -170,7 +170,7 @@
 				{
 					"type": "origins:change_resource",
 					"resource": "*:*_res",
-					"change": 20,
+					"change": 40,
 					"operation": "set"
 				}
 			]
@@ -211,7 +211,7 @@
 				{
 					"type": "origins:change_resource",
 					"resource": "*:*_res",
-					"change": 20,
+					"change": 40,
 					"operation": "set"
 				}
 			]
