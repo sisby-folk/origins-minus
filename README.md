@@ -9,6 +9,8 @@ Also try <a href="https://modrinth.com/datapack/tinkerers-statures">Statures</a>
 
 ---
 
+> Temporary Notice: **Origins Minus 1.21** is only compatible with **Origins 1.13.0-alpha.9** due to issues in subsequent versions.
+
 Origins Minus is a collection of simple origins designed to replace the built-in set. Each origin is designed to:
 
 - Be easy to understand and easy to remember
