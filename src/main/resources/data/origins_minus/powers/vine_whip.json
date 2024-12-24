@@ -8,11 +8,7 @@
 		},
 		{
 			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.vine_whip.phasing"
-		},
-		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.vine_whip.plant_fall"
+			"text": "tooltip.origins_minus.vine_whip.plants"
 		},
 		{
 			"sprite": "origins_minus:textures/gui/badge/half_heart.png",
