@@ -33,10 +33,3 @@ mandatory = true
 versionRange = "*"
 ordering = "NONE"
 side = "BOTH"
-
-[[dependencies.${ modId }]]
-modId = "pehkui"
-mandatory = true
-versionRange = "*"
-ordering = "NONE"
-side = "BOTH"

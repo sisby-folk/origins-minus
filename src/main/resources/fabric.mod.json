@@ -7,6 +7,9 @@
 	"authors": [
 		"${authors}"
 	],
+	"contributors": [
+		"${contributors}"
+	],
 	"contact": {
 		"homepage": "${homepage}",
 		"issues": "${issues}",
@@ -17,7 +20,6 @@
 	"depends": {
 		"fabricloader": "*",
 		"minecraft": "*",
-		"origins": "*",
-		"pehkui": "*"
+		"origins": "*"
 	}
 }
