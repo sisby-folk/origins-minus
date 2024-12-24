@@ -3,7 +3,7 @@
 
 <center>
 Origins focused on simplicity, not balance.<br/>
-Requires <a href="https://modrinth.com/mod/origins/versions">Origins</a> and <a href="https://modrinth.com/mod/pehkui">Pehkui</a>. Replaces all base origins.<br/>
+Requires <a href="https://modrinth.com/mod/origins">Origins</a>. Replaces all base origins.<br/>
 Also try <a href="https://modrinth.com/datapack/tinkerers-statures">Statures</a> and <a href="https://modrinth.com/mod/toomanyorigins">TooManyOrigins</a>(<a href="https://modrinth.com/mod/toomanyoriginsminus">Minus</a>)! 
 </center>
 
@@ -23,24 +23,15 @@ With this in mind, the new origins aren't at all balanced against vanilla (or ea
 
 ## Origins
 
-![Avian Preview](https://user-images.githubusercontent.com/55819817/230751155-d54af385-9c51-451c-a716-11ef4f344306.png)
-
-![Wildling Preview](https://cdn.modrinth.com/data/gbOL9is1/images/e20e95616d0e2407bc5bcf0771ec4b23bc5690da.png)
-
-![Weaver Preview](https://user-images.githubusercontent.com/55819817/230751159-7f1d0112-f7ed-4bfc-b43a-9eeb4a0e1875.png)
-
-![Mer Preview](https://user-images.githubusercontent.com/55819817/230751161-d962465c-7b04-4a76-98fd-7b314087f630.png)
-
-![Hellspawn Preview](https://cdn.modrinth.com/data/gbOL9is1/images/cf934da40935e02e643d909617f01582619d9f22.png)
-
-![Voidthing Preview](https://user-images.githubusercontent.com/55819817/230751163-9880b672-7610-4f36-bff1-8fe9bb9c8390.png)
-
-![Starved Preview](https://cdn-raw.modrinth.com/data/gbOL9is1/images/9026747976af060463bf3b97aafe19a4702f912b.png)
-
-![Steadfast Preview](https://user-images.githubusercontent.com/55819817/230751171-3e93f675-5b98-4a86-b4c3-825a2d28f3e7.png)
-
-![Sanguine Preview](https://user-images.githubusercontent.com/55819817/230751174-9eef1c47-6173-4dcd-a462-e3d526e4fc5f.png)
-
+![Avian Preview](https://cdn.modrinth.com/data/gbOL9is1/images/0f684d2d1494ed9c4ca25340dfc9410224e9ade1.png)<br/>
+![Wildling Preview](https://cdn.modrinth.com/data/gbOL9is1/images/7a149fa0111c5e7cfba6a333030f446e683f9c25.png)<br/>
+![Weaver Preview](https://user-images.githubusercontent.com/55819817/230751159-7f1d0112-f7ed-4bfc-b43a-9eeb4a0e1875.png)<br/>
+![Mer Preview](https://user-images.githubusercontent.com/55819817/230751161-d962465c-7b04-4a76-98fd-7b314087f630.png)<br/>
+![Hellspawn Preview](https://cdn.modrinth.com/data/gbOL9is1/images/cf934da40935e02e643d909617f01582619d9f22.png)<br/>
+![Voidthing Preview](https://user-images.githubusercontent.com/55819817/230751163-9880b672-7610-4f36-bff1-8fe9bb9c8390.png)<br/>
+![Starved Preview](https://cdn-raw.modrinth.com/data/gbOL9is1/images/9026747976af060463bf3b97aafe19a4702f912b.png)<br/>
+![Steadfast Preview](https://user-images.githubusercontent.com/55819817/230751171-3e93f675-5b98-4a86-b4c3-825a2d28f3e7.png)<br/>
+![Sanguine Preview](https://user-images.githubusercontent.com/55819817/230751174-9eef1c47-6173-4dcd-a462-e3d526e4fc5f.png)<br/>
 ![Dryad Preview](https://user-images.githubusercontent.com/55819817/230751176-d086a14c-0f91-47b9-b778-e57861a17e62.png)
 
 ## Versions
@@ -57,7 +48,7 @@ Several origins are adapted with permission from Origins Plus by [Dan's Other Cl
 
 This mod is included in [Tinkerer's Quilt](https://modrinth.com/modpack/tinkerers-quilt) - our modpack about ease of play and self-expression.
 
-We're open to suggestions for how to implement stuff better - if you see something wonky and have an idea - let us know.
+We're open to better ways to implement our mods. If you see something odd and have an idea, let us know!
 
 ---
 

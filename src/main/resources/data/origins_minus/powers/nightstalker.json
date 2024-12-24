@@ -1,15 +1,5 @@
 {
 	"type": "origins:multiple",
-	"badges": [
-		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.nightstalker.sense"
-		}
-	],
-	"night_vision": {
-		"type": "origins:night_vision",
-		"strength": 0.1
-	},
 	"blood_sense": {
 		"type": "origins:entity_glow",
 		"use_teams": false,
@@ -27,36 +17,62 @@
 				{
 					"type": "origins:target_condition",
 					"condition": {
-						"type": "origins:in_tag",
-						"tag": "origins_minus:feed_targetable"
+						"type": "origins:living"
 					}
-				}
-			]
-		},
-		"condition": {
-			"type": "origins:or",
-			"conditions": [
+				},
 				{
-					"type": "origins:and",
+					"type": "origins:or",
 					"conditions": [
 						{
-							"type": "origins:or",
-							"conditions": [
-								{
-									"type": "origins:time_of_day",
-									"comparison": ">=",
-									"compare_to": 12000
-								},
-								{
-									"type": "origins:brightness",
-									"comparison": "<=",
-									"compare_to": 0.1
-								}
-							]
+							"type": "origins:actor_condition",
+							"condition": {
+								"type": "origins:resource",
+								"resource": "*:frenzy_res",
+								"comparison": ">",
+								"compare_to": 0
+							}
+						},
+						{
+							"type": "origins:target_condition",
+							"condition": {
+								"type": "origins:in_tag",
+								"tag": "origins_minus:feed_targetable"
+							}
 						}
 					]
 				}
 			]
 		}
+	},
+	"condition": {
+		"type": "origins:or",
+		"conditions": [
+			{
+				"type": "origins:and",
+				"conditions": [
+					{
+						"type": "origins:or",
+						"conditions": [
+							{
+								"type": "origins:resource",
+								"resource": "*:frenzy_res",
+								"comparison": ">",
+								"compare_to": 0
+							},
+							{
+								"type": "origins:time_of_day",
+								"comparison": ">=",
+								"compare_to": 12000
+							},
+							{
+								"type": "origins:brightness",
+								"comparison": "<=",
+								"compare_to": 0.1
+							}
+						]
+					}
+				]
+			}
+		]
 	}
 }

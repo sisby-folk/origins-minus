@@ -27,7 +27,8 @@ processResources {
 		sources       : "https://github.com/${user}/${slug}",
 		license       : license,
 		authors       : authors.split(", ").join("\",\n    \""),
-		members       : "${authors}",
+		contributors  : contributors.split(", ").join("\",\n    \""),
+		members       : "${authors}. Contributions by ${contributors}",
 		mc            : compatibleVersions.split(", ")[0],
 		fl            : libs.versions.fl.get()
 	]
@@ -77,7 +78,6 @@ modrinth {
 	syncBodyFrom = rootProject.file("README.md").text
 	dependencies {
 		required.project "origins"
-		required.project "pehkui"
 	}
 }
 
