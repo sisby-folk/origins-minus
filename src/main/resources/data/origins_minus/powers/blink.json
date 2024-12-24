@@ -40,7 +40,8 @@
 						"action": {
 							"type": "origins:change_resource",
 							"resource": "*:*",
-							"change": 1200
+							"change": 1200,
+							"operation": "set"
 						}
 					}
 				],
@@ -71,7 +72,8 @@
 							"action": {
 								"type": "origins:change_resource",
 								"resource": "*:*",
-								"change": 1000
+								"change": 1000,
+								"operation": "set"
 							}
 						}
 					],
@@ -102,7 +104,8 @@
 								"action": {
 									"type": "origins:change_resource",
 									"resource": "*:*",
-									"change": 800
+									"change": 800,
+									"operation": "set"
 								}
 							}
 						],
@@ -133,7 +136,8 @@
 									"action": {
 										"type": "origins:change_resource",
 										"resource": "*:*",
-										"change": 600
+										"change": 600,
+										"operation": "set"
 									}
 								}
 							],
@@ -164,7 +168,8 @@
 										"action": {
 											"type": "origins:change_resource",
 											"resource": "*:*",
-											"change": 400
+											"change": 400,
+											"operation": "set"
 										}
 									}
 								],
@@ -195,7 +200,8 @@
 											"action": {
 												"type": "origins:change_resource",
 												"resource": "*:*",
-												"change": 200
+												"change": 200,
+												"operation": "set"
 											}
 										}
 									],
@@ -243,7 +249,8 @@
 												"action": {
 													"type": "origins:change_resource",
 													"resource": "*:*",
-													"change": 1410
+													"change": 1400,
+													"operation": "set"
 												}
 											}
 										]
@@ -281,7 +288,8 @@
 							"action": {
 								"type": "origins:change_resource",
 								"resource": "*:*",
-								"change": 1200
+								"change": 1200,
+								"operation": "set"
 							}
 						}
 					],
@@ -312,7 +320,8 @@
 								"action": {
 									"type": "origins:change_resource",
 									"resource": "*:*",
-									"change": 1000
+									"change": 1000,
+									"operation": "set"
 								}
 							}
 						],
@@ -343,7 +352,8 @@
 									"action": {
 										"type": "origins:change_resource",
 										"resource": "*:*",
-										"change": 800
+										"change": 800,
+										"operation": "set"
 									}
 								}
 							],
@@ -374,7 +384,8 @@
 										"action": {
 											"type": "origins:change_resource",
 											"resource": "*:*",
-											"change": 600
+											"change": 600,
+											"operation": "set"
 										}
 									}
 								],
@@ -405,7 +416,8 @@
 											"action": {
 												"type": "origins:change_resource",
 												"resource": "*:*",
-												"change": 400
+												"change": 400,
+												"operation": "set"
 											}
 										}
 									],
@@ -436,7 +448,8 @@
 												"action": {
 													"type": "origins:change_resource",
 													"resource": "*:*",
-													"change": 200
+													"change": 200,
+													"operation": "set"
 												}
 											}
 										],
@@ -484,7 +497,8 @@
 													"action": {
 														"type": "origins:change_resource",
 														"resource": "*:*",
-														"change": 1410
+														"change": 1400,
+														"operation": "set"
 													}
 												}
 											]
