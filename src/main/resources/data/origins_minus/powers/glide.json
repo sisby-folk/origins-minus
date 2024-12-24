@@ -1,5 +1,5 @@
 {
-	"type": "origins:multiple",
+	"type": "origins:active_self",
 	"badges": [
 		{
 			"type": "origins:keybind",
@@ -11,44 +11,25 @@
 			"text": "tooltip.origins_minus.glide.air_speed"
 		}
 	],
-	"jump": {
-		"type": "origins:active_self",
-		"entity_action": {
-			"type": "origins:apply_effect",
-			"effect": {
-				"effect": "minecraft:slow_falling",
-				"duration": 2,
-				"amplifier": 0,
-				"is_ambient": false,
-				"show_particles": false,
-				"show_icon": false
-			}
-		},
-		"cooldown": 1,
-		"hud_render": {
-			"should_render": false,
-			"sprite_location": "origins:textures/gui/resource_bar.png",
-			"bar_index": 0
-		},
-		"key": {
-			"key": "key.jump",
-			"continuous": true
+	"entity_action": {
+		"type": "origins:apply_effect",
+		"effect": {
+			"effect": "minecraft:slow_falling",
+			"duration": 2,
+			"amplifier": 0,
+			"is_ambient": false,
+			"show_particles": false,
+			"show_icon": false
 		}
 	},
-	"sneak": {
-		"condition": {
-			"inverted": false,
-			"type": "origins:sneaking"
-		},
-		"type": "origins:modify_damage_taken",
-		"damage_condition": {
-			"inverted": false,
-			"type": "origins:name",
-			"name": "fall"
-		},
-		"modifier": {
-			"operation": "multiply_total",
-			"value": -1
-		}
+	"cooldown": 1,
+	"hud_render": {
+		"should_render": false,
+		"sprite_location": "origins:textures/gui/resource_bar.png",
+		"bar_index": 0
+	},
+	"key": {
+		"key": "key.jump",
+		"continuous": true
 	}
 }

@@ -1,0 +1,16 @@
+{
+	"hidden": true,
+	"type": "origins:modify_food",
+	"item_condition": {
+		"type": "origins:ingredient",
+		"ingredient": {
+			"item": "minecraft:chorus_fruit"
+		}
+	},
+	"entity_action": {
+		"type": "origins:change_resource",
+		"resource": "*:blink",
+		"change": -1400
+	},
+	"prevent_effects": true
+}
