@@ -2,8 +2,8 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.blood.starve"
+			"sprite": "origins_minus:textures/gui/badge/empty_shank.png",
+			"text": "tooltip.origins_minus.generic.hunger"
 		},
 		{
 			"sprite": "origins_minus:textures/gui/badge/heal_heart.png",

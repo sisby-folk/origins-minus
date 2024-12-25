@@ -1,11 +1,5 @@
 {
 	"type": "origins:multiple",
-	"badges": [
-		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.energetic.air_speed"
-		}
-	],
 	"speed": {
 		"type": "origins:attribute",
 		"modifier": {
