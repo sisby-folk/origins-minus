@@ -2,8 +2,8 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.frenzy.targets"
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "tooltip.origins_minus.frenzy.active"
 		}
 	],
 	"res": {

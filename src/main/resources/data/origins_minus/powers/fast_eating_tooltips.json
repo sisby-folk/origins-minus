@@ -8,7 +8,7 @@
 		}
 	},
 	"text": {
-		"text": "Affected by Ravenous",
-		"color": "gray"
+		"type": "translatable",
+		"translate": "tooltip.origins_minus.fast_eating.food"
 	}
 }

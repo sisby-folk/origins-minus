@@ -10,11 +10,11 @@
 			"text": "tooltip.origins_minus.sunlight.healing"
 		},
 		{
-			"sprite": "minecraft:textures/item/apple.png",
+			"sprite": "origins_minus:textures/gui/badge/apple.png",
 			"text": "tooltip.origins_minus.sunlight.apples"
 		},
 		{
-			"sprite": "minecraft:textures/item/honey_bottle.png",
+			"sprite": "origins_minus:textures/gui/badge/honey_bottle.png",
 			"text": "tooltip.origins_minus.sunlight.honey"
 		}
 	],
