@@ -32,6 +32,15 @@
 		"tick_rate": 1,
 		"update_health": false
 	},
+	"darken": {
+		"type": "origins:model_color",
+		"red": 0.8,
+		"green": 0.8,
+		"blue": 0.8,
+		"condition": {
+			"type": "origins:sneaking"
+		}
+	},
 	"slow": {
 		"condition": {
 			"type": "origins:sneaking"

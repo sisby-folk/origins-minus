@@ -1,0 +1,64 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"particle": {
+		"type": "origins:particle",
+		"particle": "minecraft:flame",
+		"frequency": 8,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:moving"
+				},
+				{
+					"inverted": true,
+					"type": "origins:in_rain"
+				},
+				{
+					"type": "origins:fluid_height",
+					"fluid": "minecraft:water",
+					"comparison": "==",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:biome",
+					"condition": {
+						"type": "origins:temperature",
+						"comparison": "<",
+						"compare_to": 2
+					}
+				}
+			]
+		}
+	},
+	"rain_particle": {
+		"type": "origins:particle",
+		"particle": "minecraft:smoke",
+		"frequency": 4,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:submerged_in",
+					"fluid": "minecraft:water"
+				},
+				{
+					"type": "origins:or",
+					"conditions": [
+						{
+							"type": "origins:in_rain"
+						},
+						{
+							"type": "origins:fluid_height",
+							"fluid": "minecraft:water",
+							"comparison": ">",
+							"compare_to": 0
+						}
+					]
+				}
+			]
+		}
+	}
+}

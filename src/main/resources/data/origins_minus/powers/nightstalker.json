@@ -1,48 +1,45 @@
 {
-	"type": "origins:multiple",
-	"blood_sense": {
-		"type": "origins:entity_glow",
-		"use_teams": false,
-		"red": 0.6,
-		"green": 0.0,
-		"blue": 0.0,
-		"bientity_condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:distance",
-					"comparison": "<=",
-					"compare_to": 48
-				},
-				{
-					"type": "origins:target_condition",
-					"condition": {
-						"type": "origins:living"
-					}
-				},
-				{
-					"type": "origins:or",
-					"conditions": [
-						{
-							"type": "origins:actor_condition",
-							"condition": {
-								"type": "origins:resource",
-								"resource": "*:frenzy_res",
-								"comparison": ">",
-								"compare_to": 0
-							}
-						},
-						{
-							"type": "origins:target_condition",
-							"condition": {
-								"type": "origins:in_tag",
-								"tag": "origins_minus:feed_targetable"
-							}
-						}
-					]
+	"type": "origins:entity_glow",
+	"use_teams": false,
+	"red": 0.6,
+	"green": 0.0,
+	"blue": 0.0,
+	"bientity_condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:distance",
+				"comparison": "<=",
+				"compare_to": 48
+			},
+			{
+				"type": "origins:target_condition",
+				"condition": {
+					"type": "origins:living"
 				}
-			]
-		}
+			},
+			{
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:actor_condition",
+						"condition": {
+							"type": "origins:resource",
+							"resource": "*:frenzy_res",
+							"comparison": ">",
+							"compare_to": 0
+						}
+					},
+					{
+						"type": "origins:target_condition",
+						"condition": {
+							"type": "origins:in_tag",
+							"tag": "*:has_blood"
+						}
+					}
+				]
+			}
+		]
 	},
 	"condition": {
 		"type": "origins:or",

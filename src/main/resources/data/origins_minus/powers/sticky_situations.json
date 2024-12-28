@@ -1,0 +1,59 @@
+{
+	"type": "origins:multiple",
+	"suffocation_immunity": {
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "inWall"
+		},
+		"modifier": {
+			"operation": "multiply_total",
+			"value": -1
+		}
+	},
+	"swing_through_cobwebs": {
+		"condition": {
+			"inverted": true,
+			"type": "origins:sneaking"
+		},
+		"type": "origins:prevent_block_selection",
+		"block_condition": {
+			"type": "origins:in_tag",
+			"tag": "origins:cobwebs"
+		}
+	},
+	"particle": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:block",
+			"params": "minecraft:cobweb"
+		},
+		"frequency": 5,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:moving"
+				},
+				{
+					"type": "origins:in_block",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "origins:cobwebs"
+					}
+				}
+			]
+		}
+	},
+	"climb_cobwebs": {
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:in_tag",
+				"tag": "origins:cobwebs"
+			}
+		},
+		"type": "origins:climbing",
+		"allow_holding": true
+	}
+}

@@ -1,15 +1,5 @@
 {
 	"type": "origins:multiple",
-	"badges": [
-		{
-			"sprite": "origins_minus:textures/gui/badge/apple.png",
-			"text": "tooltip.origins_minus.fast_eating.apple"
-		},
-		{
-			"sprite": "origins_minus:textures/gui/badge/baked_potato.png",
-			"text": "tooltip.origins_minus.fast_eating.baked_potato"
-		}
-	],
 	"res": {
 		"type": "origins:resource",
 		"min": 0,
@@ -66,7 +56,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_1_6"
+										"tag": "*:ravenous_1_6"
 									}
 								}
 							},
@@ -82,7 +72,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_1_12"
+										"tag": "*:ravenous_1_12"
 									}
 								}
 							},
@@ -98,7 +88,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_2_2"
+										"tag": "*:ravenous_2_2"
 									}
 								}
 							},
@@ -114,7 +104,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_2_6"
+										"tag": "*:ravenous_2_6"
 									}
 								}
 							},
@@ -130,7 +120,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_3_12"
+										"tag": "*:ravenous_3_12"
 									}
 								}
 							},
@@ -146,7 +136,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_4_6"
+										"tag": "*:ravenous_4_6"
 									}
 								}
 							},
@@ -162,7 +152,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_5_12"
+										"tag": "*:ravenous_5_12"
 									}
 								}
 							},
@@ -191,7 +181,7 @@
 			"item_condition": {
 				"type": "origins:ingredient",
 				"ingredient": {
-					"tag": "origins_minus:fast_eating"
+					"tag": "*:ravenous"
 				}
 			},
 			"inverted": true
@@ -210,9 +200,22 @@
 			"item_condition": {
 				"type": "origins:ingredient",
 				"ingredient": {
-					"tag": "origins_minus:fast_eating"
+					"tag": "*:ravenous"
 				}
 			}
+		}
+	},
+	"tooltips": {
+		"type": "origins:tooltip",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "*:ravenous"
+			}
+		},
+		"text": {
+			"type": "translatable",
+			"translate": "tooltip.origins_minus.ravenous.food"
 		}
 	}
 }
