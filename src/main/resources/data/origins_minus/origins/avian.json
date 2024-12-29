@@ -2,8 +2,7 @@
 	"powers": [
 		"origins_minus:flap",
 		"origins_minus:wingspan",
-		"origins_minus:aerodynamic",
-		"origins_minus:avian_particles"
+		"origins_minus:aerodynamic"
 	],
 	"icon": {
 		"item": "minecraft:feather"
