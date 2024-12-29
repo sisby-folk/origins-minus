@@ -2,8 +2,19 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
+			"type": "origins:tooltip",
 			"sprite": "*:textures/gui/badge/chorus_fruit.png",
-			"text": "tooltip.origins_minus.blink.chorus_fruit"
+			"text": {
+				"translate": "tooltip.origins_minus.generic.tooltip_preview",
+				"with": [
+					{
+						"translate": "item.minecraft.chorus_fruit"
+					},
+					{
+						"translate": "tooltip.origins_minus.blink.food"
+					}
+				]
+			}
 		}
 	],
 	"active": {

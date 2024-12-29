@@ -10,8 +10,19 @@
 			"text": "tooltip.origins_minus.sunlight.healing"
 		},
 		{
+			"type": "origins:tooltip",
 			"sprite": "*:textures/gui/badge/honey_bottle.png",
-			"text": "tooltip.origins_minus.sunlight.honey"
+			"text": {
+				"translate": "tooltip.origins_minus.generic.tooltip_preview",
+				"with": [
+					{
+						"translate": "item.minecraft.honey_bottle"
+					},
+					{
+						"translate": "tooltip.origins_minus.sunlight.food"
+					}
+				]
+			}
 		}
 	],
 	"res": {

@@ -10,8 +10,19 @@
 			"text": "tooltip.origins_minus.blood.healing"
 		},
 		{
-			"sprite": "*:textures/gui/badge/health_potion.png",
-			"text": "tooltip.origins_minus.blood.potions"
+			"type": "origins:tooltip",
+			"sprite": "*:textures/gui/badge/potion_instant_health.png",
+			"text": {
+				"translate": "tooltip.origins_minus.generic.tooltip_preview",
+				"with": [
+					{
+						"translate": "effect.minecraft.instant_health"
+					},
+					{
+						"translate": "tooltip.origins_minus.blood.food"
+					}
+				]
+			}
 		}
 	],
 	"res": {

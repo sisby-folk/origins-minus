@@ -30,12 +30,10 @@
 	"tooltip.origins_minus.bioluminescence.cost": "Health Cost §710 HP.",
 	"power.origins_minus.blink.name": "Submerged Blink",
 	"power.origins_minus.blink.description": "Arrive where you look.",
-	"tooltip.origins_minus.blink.chorus_fruit": "Chorus Fruit §7Resets blink cooldown.",
 	"tooltip.origins_minus.blink.food": "§7Resets blink cooldown.",
 	"power.origins_minus.blood.name": "Blood",
 	"power.origins_minus.blood.description": "Protects from the sun.",
 	"tooltip.origins_minus.blood.healing": "Healing is slow, consistent, and free.",
-	"tooltip.origins_minus.blood.potions": "Instant Health §7Replenishes blood.",
 	"tooltip.origins_minus.blood.food": "§7Replenishes blood.",
 	"power.origins_minus.bound.name": "Bound",
 	"power.origins_minus.bound.description": "Charge a high jump.",
@@ -84,7 +82,6 @@
 	"power.origins_minus.buffet_strategy.description": "You can eat until fully saturated.",
 	"power.origins_minus.sunlight.name": "Sunlight",
 	"power.origins_minus.sunlight.description": "Refills in the sun.",
-	"tooltip.origins_minus.sunlight.honey": "Honey §7Replenishes sunlight.",
 	"tooltip.origins_minus.sunlight.healing": "Healing is fast when almost full, and efficient when almost empty.",
 	"tooltip.origins_minus.sunlight.food": "§7Replenishes sunlight.",
 	"power.origins_minus.spill.name": "Spill",
@@ -101,5 +98,6 @@
 	"power.origins_minus.wraparound.name": "Wraparound",
 	"power.origins_minus.wraparound.description": "Let void become sky.",
 	"tooltip.origins_minus.generic.no_hunger": "Replaces hunger.",
-	"tooltip.origins_minus.generic.held_active": "Active ability, use by holding %s."
+	"tooltip.origins_minus.generic.held_active": "Active ability, use by holding %s.",
+	"tooltip.origins_minus.generic.tooltip_preview": "%s %s"
 }
