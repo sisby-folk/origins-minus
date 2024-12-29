@@ -11,6 +11,12 @@
 		"min": 0,
 		"max": 70,
 		"start_value": 0,
+		"min_action": {
+			"type": "origins:play_sound",
+			"sound": "minecraft:block.fire.extinguish",
+			"volume": 0.35,
+			"pitch": 2.0
+		},
 		"hud_render": {
 			"should_render": true,
 			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
@@ -152,7 +158,7 @@
 			]
 		}
 	},
-	"trigger_potion": {
+	"fill_potion": {
 		"type": "origins:action_on_item_use",
 		"item_condition": {
 			"type": "origins:nbt",
@@ -162,38 +168,35 @@
 			"type": "origins:and",
 			"actions": [
 				{
-					"type": "origins:play_sound",
-					"sound": "entity.ender_dragon.growl",
-					"volume": 0.2,
-					"pitch": 2.0
+					"type": "origins:if_else",
+					"if_action": {
+						"type": "origins:play_sound",
+						"sound": "entity.ender_dragon.growl",
+						"volume": 0.2,
+						"pitch": 2.0
+					},
+					"condition": {
+						"type": "origins:resource",
+						"resource": "*:*_res",
+						"comparison": "==",
+						"compare_to": 0
+					}
 				},
 				{
 					"type": "origins:change_resource",
 					"resource": "*:*_res",
-					"change": 40,
-					"operation": "set"
+					"change": 40
 				}
 			]
 		},
 		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_res",
-					"comparison": "<=",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:blood_res",
-					"comparison": ">=",
-					"compare_to": 70
-				}
-			]
+			"type": "origins:resource",
+			"resource": "*:blood_res",
+			"comparison": ">=",
+			"compare_to": 70
 		}
 	},
-	"trigger_potion_2": {
+	"fill_potion_2": {
 		"type": "origins:action_on_item_use",
 		"item_condition": {
 			"type": "origins:nbt",
@@ -203,33 +206,24 @@
 			"type": "origins:and",
 			"actions": [
 				{
-					"type": "origins:play_sound",
-					"sound": "entity.ender_dragon.growl",
-					"volume": 0.2,
-					"pitch": 2.0
+					"type": "origins:if_else",
+					"if_action": {
+						"type": "origins:play_sound",
+						"sound": "entity.ender_dragon.growl",
+						"volume": 0.2,
+						"pitch": 2.0
+					},
+					"condition": {
+						"type": "origins:resource",
+						"resource": "*:*_res",
+						"comparison": "==",
+						"compare_to": 0
+					}
 				},
 				{
 					"type": "origins:change_resource",
 					"resource": "*:*_res",
-					"change": 40,
-					"operation": "set"
-				}
-			]
-		},
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_res",
-					"comparison": "<=",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:blood_res",
-					"comparison": ">=",
-					"compare_to": 0
+					"change": 70
 				}
 			]
 		}

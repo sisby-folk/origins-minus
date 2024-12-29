@@ -1,38 +1,12 @@
 {
 	"hidden": true,
-	"type": "origins:multiple",
+	"type": "origins:particle",
 	"particle": {
-		"type": "origins:particle",
-		"particle": {
-			"type": "minecraft:block",
-			"params": "minecraft:oak_leaves"
-		},
-		"frequency": 20,
-		"condition": {
-			"type": "origins:moving"
-		}
+		"type": "minecraft:block",
+		"params": "minecraft:oak_leaves"
 	},
-	"vine_whip_particle": {
-		"type": "origins:particle",
-		"particle": {
-			"type": "minecraft:block",
-			"params": "minecraft:vine"
-		},
-		"frequency": 1,
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"inverted": true,
-					"type": "origins:on_block"
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:vine_whip",
-					"comparison": ">",
-					"compare_to": 0
-				}
-			]
-		}
+	"frequency": 20,
+	"condition": {
+		"type": "origins:moving"
 	}
 }
