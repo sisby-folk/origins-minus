@@ -240,7 +240,7 @@
 			{
 				"type": "origins:change_resource",
 				"resource": "*:*_res",
-				"change": 40,
+				"change": 70,
 				"operation": "set"
 			}
 		]
