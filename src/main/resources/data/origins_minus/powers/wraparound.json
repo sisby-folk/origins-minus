@@ -20,7 +20,7 @@
 						{
 							"type": "origins:spawn_particles",
 							"particle": {
-								"type": "minecraft:portal"
+								"type": "minecraft:reverse_portal"
 							},
 							"count": 100,
 							"speed": 1.0,

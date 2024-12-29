@@ -1,0 +1,30 @@
+{
+	"hidden": true,
+	"type": "origins:multiple",
+	"air_particle": {
+		"type": "origins:particle",
+		"particle": "minecraft:falling_water",
+		"frequency": 8,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:moving"
+				},
+				{
+					"inverted": true,
+					"type": "origins:submerged_in",
+					"fluid": "minecraft:water"
+				}
+			]
+		}
+	},
+	"water_particle": {
+		"type": "origins:particle",
+		"particle": "minecraft:dolphin",
+		"frequency": 1,
+		"condition": {
+			"type": "origins:swimming"
+		}
+	}
+}

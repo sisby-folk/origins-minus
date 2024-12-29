@@ -1,8 +1,9 @@
 {
 	"powers": [
 		"origins_minus:flap",
-		"origins_minus:glide",
-		"origins_minus:like_air"
+		"origins_minus:wingspan",
+		"origins_minus:aerodynamic",
+		"origins_minus:avian_particles"
 	],
 	"icon": {
 		"item": "minecraft:feather"

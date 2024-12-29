@@ -2,16 +2,27 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.blood.starve"
+			"sprite": "*:textures/gui/badge/empty_shank.png",
+			"text": "tooltip.origins_minus.generic.no_hunger"
 		},
 		{
-			"sprite": "origins_minus:textures/gui/badge/heal_heart.png",
+			"sprite": "*:textures/gui/badge/heal_heart.png",
 			"text": "tooltip.origins_minus.blood.healing"
 		},
 		{
-			"sprite": "origins_minus:textures/gui/badge/health_potion.png",
-			"text": "tooltip.origins_minus.blood.potions"
+			"type": "origins:tooltip",
+			"sprite": "*:textures/gui/badge/potion_instant_health.png",
+			"text": {
+				"translate": "tooltip.origins_minus.generic.tooltip_preview",
+				"with": [
+					{
+						"translate": "effect.minecraft.instant_health"
+					},
+					{
+						"translate": "tooltip.origins_minus.blood.food"
+					}
+				]
+			}
 		}
 	],
 	"res": {
@@ -76,7 +87,7 @@
 			"change": 140
 		}
 	},
-	"sprint_lower_resource": {
+	"drain_sprint": {
 		"type": "origins:action_over_time",
 		"interval": 140,
 		"entity_action": {
@@ -113,7 +124,7 @@
 			]
 		}
 	},
-	"sprint_jump_lower_resource": {
+	"drain_sprint_jump": {
 		"type": "origins:active_self",
 		"entity_action": {
 			"type": "origins:chance",
@@ -157,7 +168,7 @@
 			]
 		}
 	},
-	"heal_from_resource": {
+	"regeneration": {
 		"type": "origins:action_over_time",
 		"interval": 160,
 		"entity_action": {
@@ -182,6 +193,34 @@
 					"type": "origins:relative_health",
 					"comparison": "<",
 					"compare_to": 1
+				}
+			]
+		}
+	},
+	"prevent_sprinting": {
+		"type": "origins:prevent_sprinting",
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": "<=",
+					"compare_to": 40
+				},
+				{
+					"type": "origins:or",
+					"inverted": true,
+					"conditions": [
+						{
+							"type": "origins:gamemode",
+							"gamemode": "creative"
+						},
+						{
+							"type": "origins:gamemode",
+							"gamemode": "spectator"
+						}
+					]
 				}
 			]
 		}
@@ -249,6 +288,109 @@
 							]
 						}
 					]
+				}
+			]
+		}
+	},
+	"tooltip_potion": {
+		"type": "origins:tooltip",
+		"item_condition": {
+			"type": "origins:nbt",
+			"nbt": "{Potion:\"minecraft:healing\"}"
+		},
+		"text": {
+			"type": "translatable",
+			"translate": "tooltip.origins_minus.blood.food"
+		}
+	},
+	"tooltip_potion_2": {
+		"type": "origins:tooltip",
+		"item_condition": {
+			"type": "origins:nbt",
+			"nbt": "{Potion:\"minecraft:strong_healing\"}"
+		},
+		"text": {
+			"type": "translatable",
+			"translate": "tooltip.origins_minus.blood.food"
+		}
+	},
+	"low_particle": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:crimson_spore"
+		},
+		"frequency": 40,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:moving"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": ">",
+					"compare_to": 0
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": "<=",
+					"compare_to": 40
+				}
+			]
+		}
+	},
+	"mid_particle": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:crimson_spore"
+		},
+		"frequency": 20,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:moving"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": ">",
+					"compare_to": 40
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": "<=",
+					"compare_to": 100
+				}
+			]
+		}
+	},
+	"high_particle": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:crimson_spore"
+		},
+		"frequency": 10,
+		"condition": {
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:moving"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": ">",
+					"compare_to": 100
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:frenzy_res",
+					"comparison": "==",
+					"compare_to": 0
 				}
 			]
 		}

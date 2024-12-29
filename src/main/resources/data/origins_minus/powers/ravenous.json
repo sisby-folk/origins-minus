@@ -2,39 +2,39 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
-			"sprite": "minecraft:textures/item/potato.png",
+			"sprite": "*:textures/gui/badge/potato.png",
 			"text": "item.minecraft.potato"
 		},
 		{
-			"sprite": "minecraft:textures/item/beetroot.png",
+			"sprite": "*:textures/gui/badge/beetroot.png",
 			"text": "item.minecraft.beetroot"
 		},
 		{
-			"sprite": "minecraft:textures/item/cookie.png",
+			"sprite": "*:textures/gui/badge/cookie.png",
 			"text": "item.minecraft.cookie"
 		},
 		{
-			"sprite": "minecraft:textures/item/glow_berries.png",
+			"sprite": "*:textures/gui/badge/glow_berries.png",
 			"text": "item.minecraft.glow_berries"
 		},
 		{
-			"sprite": "minecraft:textures/item/sweet_berries.png",
+			"sprite": "*:textures/gui/badge/sweet_berries.png",
 			"text": "item.minecraft.sweet_berries"
 		},
 		{
-			"sprite": "minecraft:textures/item/melon_slice.png",
+			"sprite": "*:textures/gui/badge/melon_slice.png",
 			"text": "item.minecraft.melon_slice"
 		},
 		{
-			"sprite": "minecraft:textures/item/carrot.png",
+			"sprite": "*:textures/gui/badge/carrot.png",
 			"text": "item.minecraft.carrot"
 		},
 		{
-			"sprite": "minecraft:textures/item/apple.png",
+			"sprite": "*:textures/gui/badge/apple.png",
 			"text": "item.minecraft.apple"
 		},
 		{
-			"sprite": "minecraft:textures/item/baked_potato.png",
+			"sprite": "*:textures/gui/badge/baked_potato.png",
 			"text": "item.minecraft.baked_potato"
 		}
 	],
@@ -94,7 +94,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_1_6"
+										"tag": "*:ravenous_1_6"
 									}
 								}
 							},
@@ -110,7 +110,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_1_12"
+										"tag": "*:ravenous_1_12"
 									}
 								}
 							},
@@ -126,7 +126,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_2_2"
+										"tag": "*:ravenous_2_2"
 									}
 								}
 							},
@@ -142,7 +142,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_2_6"
+										"tag": "*:ravenous_2_6"
 									}
 								}
 							},
@@ -158,7 +158,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_3_12"
+										"tag": "*:ravenous_3_12"
 									}
 								}
 							},
@@ -174,7 +174,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_4_6"
+										"tag": "*:ravenous_4_6"
 									}
 								}
 							},
@@ -190,7 +190,7 @@
 								"item_condition": {
 									"type": "origins:ingredient",
 									"ingredient": {
-										"tag": "origins_minus:fast_eating_5_12"
+										"tag": "*:ravenous_5_12"
 									}
 								}
 							},
@@ -219,7 +219,7 @@
 			"item_condition": {
 				"type": "origins:ingredient",
 				"ingredient": {
-					"tag": "origins_minus:fast_eating"
+					"tag": "*:ravenous"
 				}
 			},
 			"inverted": true
@@ -238,9 +238,22 @@
 			"item_condition": {
 				"type": "origins:ingredient",
 				"ingredient": {
-					"tag": "origins_minus:fast_eating"
+					"tag": "*:ravenous"
 				}
 			}
+		}
+	},
+	"tooltips": {
+		"type": "origins:tooltip",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "*:ravenous"
+			}
+		},
+		"text": {
+			"type": "translatable",
+			"translate": "tooltip.origins_minus.ravenous.food"
 		}
 	}
 }

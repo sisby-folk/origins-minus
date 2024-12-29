@@ -5,10 +5,6 @@
 			"type": "origins:keybind",
 			"sprite": "origins:textures/gui/badge/active.png",
 			"text": "tooltip.origins_minus.generic.held_active"
-		},
-		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.glide.air_speed"
 		}
 	],
 	"entity_action": {

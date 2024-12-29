@@ -31,6 +31,20 @@
 				"sound": "entity.phantom.flap",
 				"volume": 0.5,
 				"pitch": 1.4
+			},
+			{
+				"type": "origins:spawn_particles",
+				"particle": {
+					"type": "minecraft:cloud"
+				},
+				"count": 8,
+				"speed": 0.1,
+				"spread": {
+					"x": 0.4,
+					"y": 0.2,
+					"z": 0.4
+				},
+				"offset_y": 0.6
 			}
 		]
 	},

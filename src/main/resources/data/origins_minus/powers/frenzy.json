@@ -2,8 +2,8 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.frenzy.targets"
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "tooltip.origins_minus.frenzy.active"
 		}
 	],
 	"res": {
@@ -131,7 +131,7 @@
 		},
 		"target_condition": {
 			"type": "origins:in_tag",
-			"tag": "origins_minus:feed_targetable"
+			"tag": "*:has_blood"
 		},
 		"condition": {
 			"type": "origins:and",
@@ -232,6 +232,20 @@
 					"compare_to": 0
 				}
 			]
+		}
+	},
+	"particle": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:crimson_spore"
+		},
+		"frequency": 1,
+		"visible_in_first_person": true,
+		"condition": {
+			"type": "origins:resource",
+			"resource": "*:frenzy_res",
+			"comparison": ">",
+			"compare_to": 0
 		}
 	}
 }
