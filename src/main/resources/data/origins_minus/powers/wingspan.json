@@ -34,8 +34,8 @@
 	"particle": {
 		"type": "origins:particle",
 		"particle": {
-			"type": "minecraft:item",
-			"params": "minecraft:feather"
+			"type": "minecraft:block",
+			"params": "minecraft:white_wool"
 		},
 		"count": 1,
 		"speed": 0.05,
