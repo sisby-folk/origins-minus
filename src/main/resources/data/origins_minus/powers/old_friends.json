@@ -15,7 +15,17 @@
 	"leaves_fall_immunity": {
 		"type": "origins:invulnerability",
 		"damage_condition": {
-			"type": "origins:from_falling"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
 		},
 		"condition": {
 			"type": "origins:in_block",
@@ -119,10 +129,20 @@
 	"plants_fall_resistance": {
 		"type": "origins:modify_damage_taken",
 		"damage_condition": {
-			"type": "origins:from_falling"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
 		},
 		"modifier": {
-			"operation": "multiply_total_multiplicative",
+			"operation": "multiply_total",
 			"value": -0.8
 		},
 		"condition": {
@@ -227,7 +247,17 @@
 	"plants_fall_protection": {
 		"type": "origins:prevent_death",
 		"damage_condition": {
-			"type": "origins:from_falling"
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:name",
+					"name": "fall"
+				},
+				{
+					"type": "origins:name",
+					"name": "fall.player"
+				}
+			]
 		},
 		"condition": {
 			"type": "origins:in_block",

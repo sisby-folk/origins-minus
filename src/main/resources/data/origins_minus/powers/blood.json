@@ -10,19 +10,8 @@
 			"text": "tooltip.origins_minus.blood.healing"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "*:textures/gui/badge/potion_instant_health.png",
-			"text": {
-				"translate": "tooltip.origins_minus.generic.tooltip_preview",
-				"with": [
-					{
-						"translate": "effect.minecraft.instant_health"
-					},
-					{
-						"translate": "tooltip.origins_minus.blood.food"
-					}
-				]
-			}
+			"text": "tooltip.origins_minus.blood.food_badge"
 		}
 	],
 	"res": {
@@ -193,34 +182,6 @@
 					"type": "origins:relative_health",
 					"comparison": "<",
 					"compare_to": 1
-				}
-			]
-		}
-	},
-	"prevent_sprinting": {
-		"type": "origins:prevent_sprinting",
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_res",
-					"comparison": "<=",
-					"compare_to": 40
-				},
-				{
-					"type": "origins:or",
-					"inverted": true,
-					"conditions": [
-						{
-							"type": "origins:gamemode",
-							"gamemode": "creative"
-						},
-						{
-							"type": "origins:gamemode",
-							"gamemode": "spectator"
-						}
-					]
 				}
 			]
 		}

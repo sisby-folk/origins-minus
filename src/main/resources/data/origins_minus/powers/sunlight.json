@@ -10,19 +10,8 @@
 			"text": "tooltip.origins_minus.sunlight.healing"
 		},
 		{
-			"type": "origins:tooltip",
 			"sprite": "*:textures/gui/badge/honey_bottle.png",
-			"text": {
-				"translate": "tooltip.origins_minus.generic.tooltip_preview",
-				"with": [
-					{
-						"translate": "item.minecraft.honey_bottle"
-					},
-					{
-						"translate": "tooltip.origins_minus.sunlight.food"
-					}
-				]
-			}
+			"text": "tooltip.origins_minus.sunlight.food_badge"
 		}
 	],
 	"res": {
@@ -254,34 +243,6 @@
 					"type": "origins:relative_health",
 					"comparison": "<",
 					"compare_to": 1
-				}
-			]
-		}
-	},
-	"prevent_sprinting": {
-		"type": "origins:prevent_sprinting",
-		"condition": {
-			"type": "origins:and",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_res",
-					"comparison": "<=",
-					"compare_to": 80
-				},
-				{
-					"type": "origins:or",
-					"inverted": true,
-					"conditions": [
-						{
-							"type": "origins:gamemode",
-							"gamemode": "creative"
-						},
-						{
-							"type": "origins:gamemode",
-							"gamemode": "spectator"
-						}
-					]
 				}
 			]
 		}

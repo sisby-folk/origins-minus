@@ -162,8 +162,8 @@
 		"entity_action": {
 			"type": "origins:spawn_particles",
 			"particle": {
-				"type": "minecraft:item",
-				"params": "minecraft:string"
+				"type": "minecraft:block",
+				"params": "minecraft:cobweb"
 			},
 			"count": 1,
 			"speed": 0.02,

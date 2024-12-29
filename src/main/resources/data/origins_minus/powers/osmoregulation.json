@@ -56,7 +56,7 @@
 				{
 					"type": "origins:spawn_particles",
 					"particle": {
-						"type": "minecraft:item",
+						"type": "minecraft:block",
 						"params": "minecraft:seagrass"
 					},
 					"offset_y": 0.2,
@@ -81,7 +81,7 @@
 							{
 								"type": "origins:spawn_particles",
 								"particle": {
-									"type": "minecraft:item",
+									"type": "minecraft:block",
 									"params": "minecraft:seagrass"
 								},
 								"offset_y": 0.2,
@@ -109,7 +109,7 @@
 							{
 								"type": "origins:spawn_particles",
 								"particle": {
-									"type": "minecraft:item",
+									"type": "minecraft:block",
 									"params": "minecraft:seagrass"
 								},
 								"offset_y": 0.2,
@@ -137,7 +137,7 @@
 							{
 								"type": "origins:spawn_particles",
 								"particle": {
-									"type": "minecraft:item",
+									"type": "minecraft:block",
 									"params": "minecraft:seagrass"
 								},
 								"offset_y": 0.2,
@@ -182,15 +182,53 @@
 		}
 	},
 	"harvest_seagrass": {
-		"type": "origins:replace_loot_table",
-		"replace": {
-			"minecraft:blocks/seagrass": "origins_minus:blocks/osmoregulation_seagrass"
-		}
+		"type": "origins:action_on_block_break",
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": [
+					{
+						"item": "minecraft:shears"
+					}
+				],
+				"inverted": true
+			}
+		},
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon minecraft:item ~ ~0.2 ~ {Item:{id:\"minecraft:seagrass\",Count:1}}"
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:seagrass"
+		},
+		"only_when_harvested": false
 	},
 	"harvest_tall_seagrass": {
-		"type": "origins:replace_loot_table",
-		"replace": {
-			"minecraft:blocks/tall_seagrass": "origins_minus:blocks/osmoregulation_tall_seagrass"
-		}
+		"type": "origins:action_on_block_break",
+		"condition": {
+			"type": "origins:equipped_item",
+			"equipment_slot": "mainhand",
+			"item_condition": {
+				"type": "origins:ingredient",
+				"ingredient": [
+					{
+						"item": "minecraft:shears"
+					}
+				],
+				"inverted": true
+			}
+		},
+		"block_action": {
+			"type": "origins:execute_command",
+			"command": "summon minecraft:item ~ ~0.2 ~ {Item:{id:\"minecraft:seagrass\",Count:2}}"
+		},
+		"block_condition": {
+			"type": "origins:block",
+			"block": "minecraft:tall_seagrass"
+		},
+		"only_when_harvested": false
 	}
 }
