@@ -269,7 +269,7 @@
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {
-				"tag": "*:*"
+				"tag": "*:*_fill_food"
 			}
 		}
 	},
@@ -278,7 +278,7 @@
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {
-				"tag": "*:fills_sunlight"
+				"tag": "*:*_fill_food"
 			}
 		},
 		"text": {

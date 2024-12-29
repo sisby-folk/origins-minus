@@ -2,6 +2,7 @@
 	"type": "origins:multiple",
 	"badges": [],
 	"eat_seagrass": {
+		"hidden": true,
 		"type": "origins:active_self",
 		"condition": {
 			"type": "origins:and",
