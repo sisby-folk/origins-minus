@@ -4,7 +4,7 @@
 		"type": "origins:phasing",
 		"block_condition": {
 			"type": "origins:in_tag",
-			"tag": "minecraft:leaves"
+			"tag": "*:*_leaves"
 		},
 		"render_type": "none",
 		"phase_down_condition": {
@@ -24,7 +24,7 @@
 					"type": "origins:block_collision",
 					"block_condition": {
 						"type": "origins:in_tag",
-						"tag": "minecraft:leaves"
+						"tag": "*:*_leaves"
 					},
 					"offset_x": -0.3,
 					"offset_y": -0.7,
@@ -34,7 +34,7 @@
 					"type": "origins:block_collision",
 					"block_condition": {
 						"type": "origins:in_tag",
-						"tag": "minecraft:leaves"
+						"tag": "*:*_leaves"
 					},
 					"offset_x": -0.3,
 					"offset_y": -0.7,
@@ -44,7 +44,7 @@
 					"type": "origins:block_collision",
 					"block_condition": {
 						"type": "origins:in_tag",
-						"tag": "minecraft:leaves"
+						"tag": "*:*_leaves"
 					},
 					"offset_x": -0.3,
 					"offset_y": -0.7,
@@ -54,7 +54,7 @@
 					"type": "origins:block_collision",
 					"block_condition": {
 						"type": "origins:in_tag",
-						"tag": "minecraft:leaves"
+						"tag": "*:*_leaves"
 					},
 					"offset_x": 0,
 					"offset_y": -0.7,
@@ -64,7 +64,7 @@
 					"type": "origins:block_collision",
 					"block_condition": {
 						"type": "origins:in_tag",
-						"tag": "minecraft:leaves"
+						"tag": "*:*_leaves"
 					},
 					"offset_x": 0,
 					"offset_y": -0.7,
@@ -74,7 +74,7 @@
 					"type": "origins:block_collision",
 					"block_condition": {
 						"type": "origins:in_tag",
-						"tag": "minecraft:leaves"
+						"tag": "*:*_leaves"
 					},
 					"offset_x": 0,
 					"offset_y": -0.7,
@@ -84,7 +84,7 @@
 					"type": "origins:block_collision",
 					"block_condition": {
 						"type": "origins:in_tag",
-						"tag": "minecraft:leaves"
+						"tag": "*:*_leaves"
 					},
 					"offset_x": 0.3,
 					"offset_y": -0.7,
@@ -94,7 +94,7 @@
 					"type": "origins:block_collision",
 					"block_condition": {
 						"type": "origins:in_tag",
-						"tag": "minecraft:leaves"
+						"tag": "*:*_leaves"
 					},
 					"offset_x": 0.3,
 					"offset_y": -0.7,
@@ -104,7 +104,7 @@
 					"type": "origins:block_collision",
 					"block_condition": {
 						"type": "origins:in_tag",
-						"tag": "minecraft:leaves"
+						"tag": "*:*_leaves"
 					},
 					"offset_x": 0.3,
 					"offset_y": -0.7,
