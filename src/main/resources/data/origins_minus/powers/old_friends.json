@@ -18,102 +18,99 @@
 			"type": "origins:from_falling"
 		},
 		"condition": {
-			"type": "origins:in_block",
-			"block_condition": {
-				"type": "origins:or",
-				"conditions": [
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
-						},
-						"y": -1,
-						"x": -1,
-						"z": -1
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
-						},
-						"y": -1,
-						"x": -1,
-						"z": 0
+					"offset_x": -0.3,
+					"offset_y": -0.7,
+					"offset_z": -0.3
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
-						},
-						"y": -1,
-						"x": -1,
-						"z": 1
+					"offset_x": -0.3,
+					"offset_y": -0.7,
+					"offset_z": 0
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
-						},
-						"y": -1,
-						"x": 0,
-						"z": -1
+					"offset_x": -0.3,
+					"offset_y": -0.7,
+					"offset_z": 0.3
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
-						},
-						"y": -1,
-						"x": 0,
-						"z": 0
+					"offset_x": 0,
+					"offset_y": -0.7,
+					"offset_z": -0.3
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
-						},
-						"y": -1,
-						"x": 0,
-						"z": 1
+					"offset_x": 0,
+					"offset_y": -0.7,
+					"offset_z": 0
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
-						},
-						"y": -1,
-						"x": 1,
-						"z": -1
+					"offset_x": 0,
+					"offset_y": -0.7,
+					"offset_z": 0.3
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
-						},
-						"y": -1,
-						"x": 1,
-						"z": 0
+					"offset_x": 0.3,
+					"offset_y": -0.7,
+					"offset_z": -0.3
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
-						},
-						"y": -1,
-						"x": 1,
-						"z": 1
-					}
-				]
-			}
+					"offset_x": 0.3,
+					"offset_y": -0.7,
+					"offset_z": 0
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "minecraft:leaves"
+					},
+					"offset_x": 0.3,
+					"offset_y": -0.7,
+					"offset_z": 0.3
+				}
+			]
 		}
 	},
 	"plants_fall_resistance": {
@@ -126,102 +123,99 @@
 			"value": -0.8
 		},
 		"condition": {
-			"type": "origins:in_block",
-			"block_condition": {
-				"type": "origins:or",
-				"conditions": [
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
-						},
-						"y": -1,
-						"x": -1,
-						"z": -1
+			"type": "origins:or",
+			"conditions": [
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "*:*_plants"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
-						},
-						"y": -1,
-						"x": -1,
-						"z": 0
+					"offset_x": -0.3,
+					"offset_y": -0.7,
+					"offset_z": -0.3
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "*:*_plants"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
-						},
-						"y": -1,
-						"x": -1,
-						"z": 1
+					"offset_x": -0.3,
+					"offset_y": -0.7,
+					"offset_z": 0
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "*:*_plants"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
-						},
-						"y": -1,
-						"x": 0,
-						"z": -1
+					"offset_x": -0.3,
+					"offset_y": -0.7,
+					"offset_z": 0.3
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "*:*_plants"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
-						},
-						"y": -1,
-						"x": 0,
-						"z": 0
+					"offset_x": 0,
+					"offset_y": -0.7,
+					"offset_z": -0.3
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "*:*_plants"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
-						},
-						"y": -1,
-						"x": 0,
-						"z": 1
+					"offset_x": 0,
+					"offset_y": -0.7,
+					"offset_z": 0
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "*:*_plants"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
-						},
-						"y": -1,
-						"x": 1,
-						"z": -1
+					"offset_x": 0,
+					"offset_y": -0.7,
+					"offset_z": 0.3
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "*:*_plants"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
-						},
-						"y": -1,
-						"x": 1,
-						"z": 0
+					"offset_x": 0.3,
+					"offset_y": -0.7,
+					"offset_z": -0.3
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "*:*_plants"
 					},
-					{
-						"type": "origins:offset",
-						"condition": {
-							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
-						},
-						"y": -1,
-						"x": 1,
-						"z": 1
-					}
-				]
-			}
+					"offset_x": 0.3,
+					"offset_y": -0.7,
+					"offset_z": 0
+				},
+				{
+					"type": "origins:block_collision",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "*:*_plants"
+					},
+					"offset_x": 0.3,
+					"offset_y": -0.7,
+					"offset_z": 0.3
+				}
+			]
 		}
 	},
 	"plants_fall_protection": {
@@ -238,7 +232,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": -1,
@@ -248,7 +242,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": -1,
@@ -258,7 +252,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": -1,
@@ -268,7 +262,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 0,
@@ -278,7 +272,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 0,
@@ -288,7 +282,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 0,
@@ -298,7 +292,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 1,
@@ -308,7 +302,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 1,
@@ -318,7 +312,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 1,
