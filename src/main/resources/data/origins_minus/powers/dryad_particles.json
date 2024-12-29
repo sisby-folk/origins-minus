@@ -1,0 +1,12 @@
+{
+	"hidden": true,
+	"type": "origins:particle",
+	"particle": {
+		"type": "minecraft:block",
+		"params": "minecraft:oak_leaves"
+	},
+	"frequency": 20,
+	"condition": {
+		"type": "origins:moving"
+	}
+}

@@ -1,7 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"origins_minus:bioluminescence",
-		"origins_minus:rappel"
+		"origins_minus:bioluminescence_tick",
+		"origins_minus:rappel_tick"
 	]
 }

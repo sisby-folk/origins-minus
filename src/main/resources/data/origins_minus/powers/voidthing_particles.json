@@ -1,0 +1,20 @@
+{
+	"hidden": true,
+	"type": "origins:particle",
+	"particle": "minecraft:portal",
+	"frequency": 8,
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:moving"
+			},
+			{
+				"type": "origins:resource",
+				"resource": "*:blink_active",
+				"comparison": "==",
+				"compare_to": 0
+			}
+		]
+	}
+}

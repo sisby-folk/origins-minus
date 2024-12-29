@@ -17,19 +17,19 @@
 				{
 					"type": "origins:play_sound",
 					"sound": "minecraft:block.chain.break",
-					"volume": 0.4,
+					"volume": 0.8,
 					"pitch": 0.9
 				},
 				{
 					"type": "origins:play_sound",
 					"sound": "minecraft:block.iron_door.close",
-					"volume": 0.4,
+					"volume": 0.8,
 					"pitch": 2.0
 				},
 				{
 					"type": "origins:play_sound",
 					"sound": "minecraft:entity.fishing_bobber.retrieve",
-					"volume": 1.0,
+					"volume": 2.0,
 					"pitch": 0.6
 				}
 			]
@@ -40,13 +40,13 @@
 				{
 					"type": "origins:play_sound",
 					"sound": "minecraft:block.chain.break",
-					"volume": 0.3,
+					"volume": 0.5,
 					"pitch": 0.7
 				},
 				{
 					"type": "origins:play_sound",
 					"sound": "minecraft:block.fire.extinguish",
-					"volume": 0.15,
+					"volume": 0.25,
 					"pitch": 2.0
 				},
 				{
