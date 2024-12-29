@@ -2,6 +2,11 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
+			"type": "origins:keybind",
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "origins.gui.badge.active"
+		},
+		{
 			"type": "origins:tooltip",
 			"sprite": "*:textures/gui/badge/chorus_fruit.png",
 			"text": {
