@@ -1,18 +1,18 @@
 {
 	"type": "origins:multiple",
+	"badges": [
+		{
+			"type": "origins:keybind",
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "origins.gui.badge.active"
+		},
+		{
+			"sprite": "*:textures/gui/badge/half_heart.png",
+			"text": "tooltip.origins_minus.vine_whip.cost"
+		}
+	],
 	"active": {
 		"type": "origins:active_self",
-		"badges": [
-			{
-				"type": "origins:keybind",
-				"sprite": "origins:textures/gui/badge/active.png",
-				"text": "origins.gui.badge.active"
-			},
-			{
-				"sprite": "*:textures/gui/badge/half_heart.png",
-				"text": "tooltip.origins_minus.vine_whip.cost"
-			}
-		],
 		"entity_action": {
 			"type": "origins:and",
 			"actions": [
