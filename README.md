@@ -1,5 +1,5 @@
 <!--suppress HtmlDeprecatedTag, XmlDeprecatedElement -->
-<center><img alt="origins minus banner" src="https://cdn.modrinth.com/data/gbOL9is1/images/64871db04be5fb75bc513a6db9a10b71e58927a1.png" /></center>
+<center><img alt="origins minus banner" src="https://cdn.modrinth.com/data/gbOL9is1/images/3a51d69715dbbb96cc8bfb7711a27a6f33946840.png" /></center>
 
 <center>
 Origins focused on simplicity, not balance.<br/>
@@ -25,16 +25,16 @@ With this in mind, the new origins aren't at all balanced against vanilla (or ea
 
 ## Origins
 
-![Avian Preview](https://cdn.modrinth.com/data/gbOL9is1/images/0f684d2d1494ed9c4ca25340dfc9410224e9ade1.png)<br/>
-![Wildling Preview](https://cdn.modrinth.com/data/gbOL9is1/images/7a149fa0111c5e7cfba6a333030f446e683f9c25.png)<br/>
-![Weaver Preview](https://user-images.githubusercontent.com/55819817/230751159-7f1d0112-f7ed-4bfc-b43a-9eeb4a0e1875.png)<br/>
-![Mer Preview](https://user-images.githubusercontent.com/55819817/230751161-d962465c-7b04-4a76-98fd-7b314087f630.png)<br/>
-![Hellspawn Preview](https://cdn.modrinth.com/data/gbOL9is1/images/cf934da40935e02e643d909617f01582619d9f22.png)<br/>
-![Voidthing Preview](https://user-images.githubusercontent.com/55819817/230751163-9880b672-7610-4f36-bff1-8fe9bb9c8390.png)<br/>
-![Starved Preview](https://cdn-raw.modrinth.com/data/gbOL9is1/images/9026747976af060463bf3b97aafe19a4702f912b.png)<br/>
-![Steadfast Preview](https://user-images.githubusercontent.com/55819817/230751171-3e93f675-5b98-4a86-b4c3-825a2d28f3e7.png)<br/>
-![Sanguine Preview](https://cdn.modrinth.com/data/gbOL9is1/images/9c30518b584119b5d4e69c32160d9045f9dd3012.png)<br/>
-![Dryad Preview](https://user-images.githubusercontent.com/55819817/230751176-d086a14c-0f91-47b9-b778-e57861a17e62.png)
+![Avian Preview](https://cdn.modrinth.com/data/gbOL9is1/images/a60d4cbd97d8180a616b173059066a2cd87b26f6.png)<br/>
+![Wildling Preview](https://cdn.modrinth.com/data/gbOL9is1/images/87163fee0cafd31b7ee71cbda6c3afee2acacddb.png)<br/>
+![Weaver Preview](https://cdn.modrinth.com/data/gbOL9is1/images/64a3c86ac74d54a00d7dad1ed35729ae40d54a44.png)<br/>
+![Mer Preview](https://cdn.modrinth.com/data/gbOL9is1/images/bd9271df32ef0abde998f1925cb97e04e5bb238d.png)<br/>
+![Hellspawn Preview](https://cdn.modrinth.com/data/gbOL9is1/images/f526786478048568bfe30b3eb778392ba8b46903.png)<br/>
+![Voidthing Preview](https://cdn.modrinth.com/data/gbOL9is1/images/6966180d56fed08636911bbd7181e7e30ed1aadc.png)<br/>
+![Starved Preview](https://cdn.modrinth.com/data/gbOL9is1/images/f84fde95208e333c37ac3636ba40277efa10f832.png)<br/>
+![Steadfast Preview](https://cdn.modrinth.com/data/gbOL9is1/images/5eba441d4b37ce1c12b8351498de7a695e6d6a81.png)<br/>
+![Sanguine Preview](https://cdn.modrinth.com/data/gbOL9is1/images/1fb6d4145737ca67a8fc741fb5f731d059a79d05.png)<br/>
+![Dryad Preview](https://cdn.modrinth.com/data/gbOL9is1/images/fcf220e18d31398c2cb6e1e023ea34b26a52b31b.png)
 
 ## Versions
 
