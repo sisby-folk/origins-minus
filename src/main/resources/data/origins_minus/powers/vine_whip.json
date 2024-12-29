@@ -1,89 +1,19 @@
 {
-	"type": "origins:active_self",
-	"badges": [
-		{
-			"type": "origins:keybind",
-			"sprite": "origins:textures/gui/badge/active.png",
-			"text": "origins.gui.badge.active"
-		},
-		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.vine_whip.phasing"
-		},
-		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.vine_whip.plant_fall"
-		},
-		{
-			"sprite": "origins_minus:textures/gui/badge/half_heart.png",
-			"text": "tooltip.origins_minus.generic.health_cost"
-		}
-	],
-	"entity_action": [
-		{
-			"type": "origins:raycast",
-			"distance": 16,
-			"block": true,
-			"entity": false,
-			"shape_type": "outline",
-			"fluid_handling": "none",
-			"command_along_ray": "particle minecraft:block{block_state:{Name:'minecraft:vine'}} ~ ~ ~ 0 0 0 0 1",
-			"command_along_ray_only_on_hit": false
-		},
-		{
-			"type": "origins:play_sound",
-			"sound": "block.bamboo_sapling.place",
-			"volume": 2.0,
-			"pitch": 0.5
-		},
-		{
-			"type": "origins:play_sound",
-			"sound": "block.slime_block.place",
-			"volume": 1.0,
-			"pitch": 2
-		},
-		{
-			"type": "origins:set_fall_distance",
-			"fall_distance": 0
-		},
-		{
-			"type": "origins:side",
-			"side": "client",
-			"action": {
-				"type": "origins:add_velocity",
-				"y": 0.1,
-				"space": "world"
-			}
-		},
-		{
-			"type": "origins:side",
-			"side": "client",
-			"action": {
-				"type": "origins:add_velocity",
-				"z": 3,
-				"space": "local"
-			}
-		},
-		{
-			"type": "origins:heal",
-			"amount": -1
-		}
-	],
-	"cooldown": 40,
-	"hud_render": {
-		"should_render": true,
-		"inverted": true,
-		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
-		"bar_index": 22
-	},
-	"condition": {
-		"type": "origins:all_of",
-		"conditions": [
+	"type": "origins:multiple",
+	"active": {
+		"type": "origins:active_self",
+		"badges": [
 			{
-				"type": "origins:health",
-				"comparison": ">",
-				"compare_to": 1
+				"type": "origins:keybind",
+				"sprite": "origins:textures/gui/badge/active.png",
+				"text": "origins.gui.badge.active"
 			},
+			{
+				"sprite": "*:textures/gui/badge/half_heart.png",
+				"text": "tooltip.origins_minus.vine_whip.cost"
+			}
+		],
+		"entity_action": [
 			{
 				"type": "origins:raycast",
 				"distance": 16,
@@ -91,11 +21,117 @@
 				"entity": false,
 				"shape_type": "outline",
 				"fluid_handling": "none",
-				"block_condition": {
-					"type": "origins:in_tag",
-					"tag": "origins_minus:vine_whip_targetable"
+				"command_along_ray": "particle minecraft:block{block_state:{Name:'minecraft:vine'}} ~ ~ ~ 0 0 0 0 1",
+				"command_along_ray_only_on_hit": false
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "block.bamboo_sapling.place",
+				"volume": 2.0,
+				"pitch": 0.5
+			},
+			{
+				"type": "origins:play_sound",
+				"sound": "block.slime_block.place",
+				"volume": 1.0,
+				"pitch": 2
+			},
+			{
+				"type": "origins:spawn_particles",
+				"particle": {
+					"type": "minecraft:block",
+					"params": {
+						"block_state": "minecraft:vine"
+					}
+				},
+				"count": 16,
+				"speed": 3.0,
+				"spread": {
+					"x": 0.5,
+					"y": 0.2,
+					"z": 0.5
 				}
+			},
+			{
+				"type": "origins:set_fall_distance",
+				"fall_distance": 0
+			},
+			{
+				"type": "origins:side",
+				"side": "client",
+				"action": {
+					"type": "origins:add_velocity",
+					"y": 0.1,
+					"space": "world"
+				}
+			},
+			{
+				"type": "origins:side",
+				"side": "client",
+				"action": {
+					"type": "origins:add_velocity",
+					"z": 3,
+					"space": "local"
+				}
+			},
+			{
+				"type": "origins:heal",
+				"amount": -1
 			}
-		]
+		],
+		"cooldown": 40,
+		"hud_render": {
+			"should_render": true,
+			"inverted": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 22
+		},
+		"condition": {
+			"type": "origins:all_of",
+			"conditions": [
+				{
+					"type": "origins:health",
+					"comparison": ">",
+					"compare_to": 1
+				},
+				{
+					"type": "origins:raycast",
+					"distance": 16,
+					"block": true,
+					"entity": false,
+					"shape_type": "outline",
+					"fluid_handling": "none",
+					"block_condition": {
+						"type": "origins:in_tag",
+						"tag": "*:*_plants"
+					}
+				}
+			]
+		}
+	},
+	"particle": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:block",
+			"params": {
+				"block_state": "minecraft:vine"
+			}
+		},
+		"frequency": 1,
+		"condition": {
+			"type": "origins:all_of",
+			"conditions": [
+				{
+					"inverted": true,
+					"type": "origins:on_block"
+				},
+				{
+					"type": "origins:resource",
+					"resource": "*:*_active",
+					"comparison": ">",
+					"compare_to": 0
+				}
+			]
+		}
 	}
 }

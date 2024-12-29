@@ -33,7 +33,7 @@ With this in mind, the new origins aren't at all balanced against vanilla (or ea
 ![Voidthing Preview](https://user-images.githubusercontent.com/55819817/230751163-9880b672-7610-4f36-bff1-8fe9bb9c8390.png)<br/>
 ![Starved Preview](https://cdn-raw.modrinth.com/data/gbOL9is1/images/9026747976af060463bf3b97aafe19a4702f912b.png)<br/>
 ![Steadfast Preview](https://user-images.githubusercontent.com/55819817/230751171-3e93f675-5b98-4a86-b4c3-825a2d28f3e7.png)<br/>
-![Sanguine Preview](https://user-images.githubusercontent.com/55819817/230751174-9eef1c47-6173-4dcd-a462-e3d526e4fc5f.png)<br/>
+![Sanguine Preview](https://cdn.modrinth.com/data/gbOL9is1/images/9c30518b584119b5d4e69c32160d9045f9dd3012.png)<br/>
 ![Dryad Preview](https://user-images.githubusercontent.com/55819817/230751176-d086a14c-0f91-47b9-b778-e57861a17e62.png)
 
 ## Versions

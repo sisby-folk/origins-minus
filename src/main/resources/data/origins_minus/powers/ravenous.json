@@ -1,0 +1,67 @@
+{
+	"type": "origins:multiple",
+	"badges": [
+		{
+			"sprite": "*:textures/gui/badge/potato.png",
+			"text": "item.minecraft.potato"
+		},
+		{
+			"sprite": "*:textures/gui/badge/beetroot.png",
+			"text": "item.minecraft.beetroot"
+		},
+		{
+			"sprite": "*:textures/gui/badge/cookie.png",
+			"text": "item.minecraft.cookie"
+		},
+		{
+			"sprite": "*:textures/gui/badge/glow_berries.png",
+			"text": "item.minecraft.glow_berries"
+		},
+		{
+			"sprite": "*:textures/gui/badge/sweet_berries.png",
+			"text": "item.minecraft.sweet_berries"
+		},
+		{
+			"sprite": "*:textures/gui/badge/melon_slice.png",
+			"text": "item.minecraft.melon_slice"
+		},
+		{
+			"sprite": "*:textures/gui/badge/carrot.png",
+			"text": "item.minecraft.carrot"
+		},
+		{
+			"sprite": "*:textures/gui/badge/apple.png",
+			"text": "item.minecraft.apple"
+		},
+		{
+			"sprite": "*:textures/gui/badge/baked_potato.png",
+			"text": "item.minecraft.baked_potato"
+		}
+	],
+	"modify_food": {
+		"type": "origins:modify_food",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "*:*"
+			}
+		},
+		"eat_ticks_modifier": {
+			"operation": "multiply_total_multiplicative",
+			"amount": -0.5
+		}
+	},
+	"tooltips": {
+		"type": "origins:tooltip",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "*:*"
+			}
+		},
+		"text": {
+			"type": "translatable",
+			"translate": "tooltip.origins_minus.ravenous.food"
+		}
+	}
+}

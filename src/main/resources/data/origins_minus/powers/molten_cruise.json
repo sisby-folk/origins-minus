@@ -1,0 +1,33 @@
+{
+	"type": "origins:multiple",
+	"lava_swimming": {
+		"type": "origins:swimming",
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "minecraft:lava"
+		}
+	},
+	"lava_vision": {
+		"type": "origins:lava_vision",
+		"s": 0,
+		"v": 15
+	},
+	"lava_fall_immunity": {
+		"condition": {
+			"type": "origins:fluid_height",
+			"fluid": "minecraft:lava",
+			"comparison": ">",
+			"compare_to": 0
+		},
+		"type": "origins:modify_damage_taken",
+		"damage_condition": {
+			"type": "origins:name",
+			"name": "fall"
+		},
+		"modifier": {
+			"id": "*:*",
+			"operation": "multiply_base_multiplicative",
+			"amount": -1
+		}
+	}
+}

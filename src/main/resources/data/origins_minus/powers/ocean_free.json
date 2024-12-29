@@ -1,7 +1,22 @@
 {
-	"hidden": true,
 	"type": "origins:multiple",
-	"underwater": {
+	"swim_speed": {
+		"type": "origins:modify_swim_speed",
+		"modifier": {
+			"id": "*:*",
+			"operation": "add_multiplied_base",
+			"amount": 1.5
+		}
+	},
+	"water_vision": {
+		"condition": {
+			"type": "origins:submerged_in",
+			"fluid": "minecraft:water"
+		},
+		"type": "origins:night_vision",
+		"strength": 0.5
+	},
+	"affinity_underwater": {
 		"type": "origins:modify_break_speed",
 		"modifier": {
 			"id": "*:*",
@@ -24,7 +39,7 @@
 			]
 		}
 	},
-	"ungrounded": {
+	"affinity_ungrounded": {
 		"type": "origins:modify_break_speed",
 		"modifier": {
 			"id": "*:*",

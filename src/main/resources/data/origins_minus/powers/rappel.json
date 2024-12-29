@@ -112,6 +112,26 @@
 				"pitch": 0.75
 			}
 		],
+		"entity_action": {
+			"type": "origins:spawn_particles",
+			"particle": {
+				"type": "minecraft:item",
+				"params": {
+					"item": "minecraft:string"
+				}
+			},
+			"count": 1,
+			"speed": 0.02,
+			"spread": {
+				"x": 0.05,
+				"y": 0.5,
+				"z": 0.05
+			},
+			"offset_y": 2.5,
+			"condition": {
+				"type": "origins:creative_flying"
+			}
+		},
 		"falling_action": [
 			{
 				"type": "origins:play_sound",
@@ -120,7 +140,7 @@
 				"pitch": 1.22
 			}
 		],
-		"interval": 1,
+		"interval": 3,
 		"condition": {
 			"type": "origins:all_of",
 			"conditions": [

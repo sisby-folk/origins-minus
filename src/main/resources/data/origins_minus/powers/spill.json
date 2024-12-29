@@ -54,7 +54,7 @@
 		},
 		"target_condition": {
 			"type": "origins:in_tag",
-			"tag": "origins_minus:feed_targetable"
+			"tag": "*:has_blood"
 		}
 	},
 	"blooded_on_kill": {
@@ -105,7 +105,7 @@
 		],
 		"target_condition": {
 			"type": "origins:in_tag",
-			"tag": "origins_minus:feed_targetable"
+			"tag": "*:has_blood"
 		},
 		"cooldown": 0
 	},
@@ -164,7 +164,7 @@
 		"target_condition": {
 			"inverted": true,
 			"type": "origins:in_tag",
-			"tag": "origins_minus:feed_targetable"
+			"tag": "*:has_blood"
 		},
 		"condition": {
 			"type": "origins:resource",
@@ -222,7 +222,7 @@
 		"target_condition": {
 			"inverted": true,
 			"type": "origins:in_tag",
-			"tag": "origins_minus:feed_targetable"
+			"tag": "*:has_blood"
 		},
 		"condition": {
 			"type": "origins:resource",

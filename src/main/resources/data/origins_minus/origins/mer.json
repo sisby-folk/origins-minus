@@ -1,12 +1,10 @@
 {
 	"powers": [
-		"origins_minus:water_breathing",
-		"origins_minus:swim_speed",
-		"origins_minus:water_vision",
-		"origins_minus:aqua_affinity",
-		"origins_minus:harvest_seagrass",
-		"origins_minus:edible_seagrass",
-		"origins:like_water"
+		"origins_minus:countercurrent",
+		"origins_minus:ocean_free",
+		"origins:like_water",
+		"origins_minus:osmoregulation",
+		"origins_minus:mer_particles"
 	],
 	 "icon": {
 		"id": "minecraft:tube_coral"

@@ -2,16 +2,27 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
-			"sprite": "origins_minus:textures/gui/badge/heal_heart.png",
+			"sprite": "*:textures/gui/badge/empty_shank.png",
+			"text": "tooltip.origins_minus.generic.no_hunger"
+		},
+		{
+			"sprite": "*:textures/gui/badge/heal_heart.png",
 			"text": "tooltip.origins_minus.sunlight.healing"
 		},
 		{
-			"sprite": "minecraft:textures/item/apple.png",
-			"text": "tooltip.origins_minus.sunlight.apples"
-		},
-		{
-			"sprite": "minecraft:textures/item/honey_bottle.png",
-			"text": "tooltip.origins_minus.sunlight.honey"
+			"type": "origins:tooltip",
+			"sprite": "*:textures/gui/badge/honey_bottle.png",
+			"text": {
+				"translate": "tooltip.origins_minus.generic.tooltip_preview",
+				"with": [
+					{
+						"translate": "item.minecraft.honey_bottle"
+					},
+					{
+						"translate": "tooltip.origins_minus.sunlight.food"
+					}
+				]
+			}
 		}
 	],
 	"res": {
@@ -48,7 +59,7 @@
 			"change": 280
 		}
 	},
-	"sprint_lower_resource": {
+	"drain_sprint": {
 		"type": "origins:action_over_time",
 		"interval": 140,
 		"entity_action": {
@@ -81,7 +92,7 @@
 			]
 		}
 	},
-	"sprint_jump_lower_resource": {
+	"drain_sprint_jump": {
 		"type": "origins:active_self",
 		"entity_action": {
 			"type": "origins:chance",
@@ -121,9 +132,9 @@
 			]
 		}
 	},
-	"heal_from_resource_high": {
+	"regeneration_high": {
 		"type": "origins:action_over_time",
-		"interval": 15,
+		"interval": 10,
 		"entity_action": [
 			{
 				"type": "origins:heal",
@@ -152,9 +163,9 @@
 			]
 		}
 	},
-	"heal_from_resource": {
+	"regeneration_mid": {
 		"type": "origins:action_over_time",
-		"interval": 30,
+		"interval": 80,
 		"entity_action": [
 			{
 				"type": "origins:heal",
@@ -189,9 +200,9 @@
 			]
 		}
 	},
-	"heal_from_resource_low": {
+	"regeneration_low": {
 		"type": "origins:action_over_time",
-		"interval": 60,
+		"interval": 160,
 		"entity_action": [
 			{
 				"type": "origins:heal",
@@ -226,7 +237,35 @@
 			]
 		}
 	},
-	"photosynthesise": {
+	"prevent_sprinting": {
+		"type": "origins:prevent_sprinting",
+		"condition": {
+			"type": "origins:all_of",
+			"conditions": [
+				{
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": "<=",
+					"compare_to": 80
+				},
+				{
+					"type": "origins:any_of",
+					"inverted": true,
+					"conditions": [
+						{
+							"type": "origins:gamemode",
+							"gamemode": "creative"
+						},
+						{
+							"type": "origins:gamemode",
+							"gamemode": "spectator"
+						}
+					]
+				}
+			]
+		}
+	},
+	"fill_sun": {
 		"type": "origins:action_over_time",
 		"interval": 40,
 		"entity_action": {
@@ -238,18 +277,31 @@
 			"type": "origins:exposed_to_sun"
 		}
 	},
-	"eat_nitrogen": {
+	"fill_food": {
 		"type": "origins:action_on_item_use",
 		"entity_action": {
 			"type": "origins:change_resource",
 			"resource": "*:*_res",
-			"change": 40
+			"change": 120
 		},
 		"item_condition": {
 			"type": "origins:ingredient",
 			"ingredient": {
-				"tag": "origins_minus:restores_sunlight"
+				"tag": "*:*_fill_food"
 			}
+		}
+	},
+	"tooltips": {
+		"type": "origins:tooltip",
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"tag": "*:*_fill_food"
+			}
+		},
+		"text": {
+			"type": "translatable",
+			"translate": "tooltip.origins_minus.sunlight.food"
 		}
 	}
 }

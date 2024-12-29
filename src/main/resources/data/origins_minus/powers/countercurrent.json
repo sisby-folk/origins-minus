@@ -28,6 +28,6 @@
 	},
 	"no_bar": {
 		"type": "origins:status_bar_texture",
-		"texture": "origins_minus:textures/gui/no_air.png"
+		"texture": "*:textures/gui/no_air.png"
 	}
 }

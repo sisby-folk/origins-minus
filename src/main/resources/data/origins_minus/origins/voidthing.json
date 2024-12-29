@@ -1,10 +1,9 @@
 {
 	"powers": [
 		"origins_minus:blink",
-		"origins_minus:blink_reset",
 		"origins_minus:reach",
 		"origins_minus:wraparound",
-		"origins:ender_particles"
+		"origins_minus:voidthing_particles"
 	],
 	 "icon": {
 		"id": "minecraft:music_disc_11"

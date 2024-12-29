@@ -1,0 +1,34 @@
+{
+	"type": "origins:multiple",
+	"eat_seagrass": {
+		"type": "origins:edible_item",
+		"badges": [
+			{
+				"sprite": "origins:textures/gui/badge/info.png",
+				"text": "tooltip.origins_minus.edible_seagrass.shears"
+			}
+		],
+		"item_condition": {
+			"type": "origins:ingredient",
+			"ingredient": {
+				"item": "minecraft:seagrass"
+			}
+		},
+		"food_component": {
+			"nutrition": 2,
+			"saturation": 0.8
+		}
+	},
+	"harvest_seagrass": {
+		"type": "origins:replace_loot_table",
+		"replace": {
+			"minecraft:blocks/seagrass": "origins_minus:blocks/osmoregulation_seagrass"
+		}
+	},
+	"harvest_tall_seagrass": {
+		"type": "origins:replace_loot_table",
+		"replace": {
+			"minecraft:blocks/tall_seagrass": "origins_minus:blocks/osmoregulation_tall_seagrass"
+		}
+	}
+}

@@ -2,8 +2,8 @@
 	"type": "origins:multiple",
 	"badges": [
 		{
-			"sprite": "origins:textures/gui/badge/info.png",
-			"text": "tooltip.origins_minus.frenzy.targets"
+			"sprite": "origins:textures/gui/badge/active.png",
+			"text": "tooltip.origins_minus.frenzy.active"
 		}
 	],
 	"res": {
@@ -11,6 +11,12 @@
 		"min": 0,
 		"max": 70,
 		"start_value": 0,
+		"min_action": {
+			"type": "origins:play_sound",
+			"sound": "minecraft:block.fire.extinguish",
+			"volume": 0.35,
+			"pitch": 2.0
+		},
 		"hud_render": {
 			"should_render": true,
 			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
@@ -134,7 +140,7 @@
 		],
 		"target_condition": {
 			"type": "origins:in_tag",
-			"tag": "origins_minus:feed_targetable"
+			"tag": "*:has_blood"
 		},
 		"condition": {
 			"type": "origins:all_of",
@@ -154,7 +160,7 @@
 			]
 		}
 	},
-	"trigger_potion": {
+	"fill_potion": {
 		"type": "origins:action_on_item_use",
 		"item_condition": {
 			"type": "origins:ingredient",
@@ -172,37 +178,34 @@
 		},
 		"entity_action": [
 			{
-				"type": "origins:play_sound",
-				"sound": "entity.ender_dragon.growl",
-				"volume": 0.2,
-				"pitch": 2.0
+				"type": "origins:if_else",
+				"if_action": {
+					"type": "origins:play_sound",
+					"sound": "entity.ender_dragon.growl",
+					"volume": 0.2,
+					"pitch": 2.0
+				},
+				"condition": {
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": "==",
+					"compare_to": 0
+				}
 			},
 			{
 				"type": "origins:change_resource",
 				"resource": "*:*_res",
-				"change": 40,
-				"operation": "set"
+				"change": 40
 			}
 		],
 		"condition": {
-			"type": "origins:all_of",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_res",
-					"comparison": "<=",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:blood_res",
-					"comparison": ">=",
-					"compare_to": 70
-				}
-			]
+			"type": "origins:resource",
+			"resource": "*:blood_res",
+			"comparison": ">=",
+			"compare_to": 70
 		}
 	},
-	"trigger_potion_2": {
+	"fill_potion_2": {
 		"type": "origins:action_on_item_use",
 		"item_condition": {
 			"type": "origins:ingredient",
@@ -220,10 +223,19 @@
 		},
 		"entity_action": [
 			{
-				"type": "origins:play_sound",
-				"sound": "entity.ender_dragon.growl",
-				"volume": 0.2,
-				"pitch": 2.0
+				"type": "origins:if_else",
+				"if_action": {
+					"type": "origins:play_sound",
+					"sound": "entity.ender_dragon.growl",
+					"volume": 0.2,
+					"pitch": 2.0
+				},
+				"condition": {
+					"type": "origins:resource",
+					"resource": "*:*_res",
+					"comparison": "==",
+					"compare_to": 0
+				}
 			},
 			{
 				"type": "origins:change_resource",
@@ -231,23 +243,20 @@
 				"change": 40,
 				"operation": "set"
 			}
-		],
+		]
+	},
+	"particle": {
+		"type": "origins:particle",
+		"particle": {
+			"type": "minecraft:crimson_spore"
+		},
+		"frequency": 1,
+		"visible_in_first_person": true,
 		"condition": {
-			"type": "origins:all_of",
-			"conditions": [
-				{
-					"type": "origins:resource",
-					"resource": "*:*_res",
-					"comparison": "<=",
-					"compare_to": 0
-				},
-				{
-					"type": "origins:resource",
-					"resource": "*:blood_res",
-					"comparison": ">=",
-					"compare_to": 0
-				}
-			]
+			"type": "origins:resource",
+			"resource": "*:*_res",
+			"comparison": ">",
+			"compare_to": 0
 		}
 	}
 }

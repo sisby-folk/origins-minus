@@ -1,9 +1,8 @@
 {
 	"powers": [
-		"origins_minus:hunger_prevent_death",
-		"origins_minus:fast_eating",
-		"origins_minus:fast_eating_tooltips",
-		"origins_minus:snacking_saturation"
+		"origins_minus:satiation",
+		"origins_minus:ravenous",
+		"origins_minus:buffet_strategy"
 	],
 	 "icon": {
 		"id": "minecraft:cake"

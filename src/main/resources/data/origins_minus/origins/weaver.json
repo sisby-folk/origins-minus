@@ -2,9 +2,8 @@
 	"powers": [
 		"origins_minus:echolocation",
 		"origins_minus:rappel",
-		"origins_minus:suffocation_immunity",
-		"origins_minus:web_affinity",
-		"origins:master_of_webs_no_slowdown"
+		"origins_minus:sticky_situations",
+		"origins:no_cobweb_slowdown"
 	],
 	 "icon": {
 		"id": "minecraft:glow_lichen"
