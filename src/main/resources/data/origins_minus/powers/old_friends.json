@@ -4,7 +4,7 @@
 		"type": "origins:phasing",
 		"block_condition": {
 			"type": "origins:in_tag",
-			"tag": "minecraft:leaves"
+			"tag": "*:*_leaves"
 		},
 		"render_type": "none",
 		"phase_down_condition": {
@@ -36,7 +36,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
+							"tag": "*:*_leaves"
 						},
 						"y": -1,
 						"x": -1,
@@ -46,7 +46,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
+							"tag": "*:*_leaves"
 						},
 						"y": -1,
 						"x": -1,
@@ -56,7 +56,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
+							"tag": "*:*_leaves"
 						},
 						"y": -1,
 						"x": -1,
@@ -66,7 +66,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
+							"tag": "*:*_leaves"
 						},
 						"y": -1,
 						"x": 0,
@@ -76,7 +76,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
+							"tag": "*:*_leaves"
 						},
 						"y": -1,
 						"x": 0,
@@ -86,7 +86,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
+							"tag": "*:*_leaves"
 						},
 						"y": -1,
 						"x": 0,
@@ -96,7 +96,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
+							"tag": "*:*_leaves"
 						},
 						"y": -1,
 						"x": 1,
@@ -106,7 +106,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
+							"tag": "*:*_leaves"
 						},
 						"y": -1,
 						"x": 1,
@@ -116,7 +116,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "minecraft:leaves"
+							"tag": "*:*_leaves"
 						},
 						"y": -1,
 						"x": 1,
@@ -154,7 +154,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": -1,
@@ -164,7 +164,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": -1,
@@ -174,7 +174,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": -1,
@@ -184,7 +184,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 0,
@@ -194,7 +194,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 0,
@@ -204,7 +204,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 0,
@@ -214,7 +214,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 1,
@@ -224,7 +224,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 1,
@@ -234,7 +234,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 1,
@@ -268,7 +268,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": -1,
@@ -278,7 +278,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": -1,
@@ -288,7 +288,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": -1,
@@ -298,7 +298,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 0,
@@ -308,7 +308,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 0,
@@ -318,7 +318,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 0,
@@ -328,7 +328,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 1,
@@ -338,7 +338,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 1,
@@ -348,7 +348,7 @@
 						"type": "origins:offset",
 						"condition": {
 							"type": "origins:in_tag",
-							"tag": "*:old_friends_plants"
+							"tag": "*:*_plants"
 						},
 						"y": -1,
 						"x": 1,

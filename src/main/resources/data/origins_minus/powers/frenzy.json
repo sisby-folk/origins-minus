@@ -237,7 +237,7 @@
 		"visible_in_first_person": true,
 		"condition": {
 			"type": "origins:resource",
-			"resource": "*:frenzy_res",
+			"resource": "*:*_res",
 			"comparison": ">",
 			"compare_to": 0
 		}

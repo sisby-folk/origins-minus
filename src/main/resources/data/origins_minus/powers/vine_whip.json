@@ -100,7 +100,7 @@
 					"fluid_handling": "none",
 					"block_condition": {
 						"type": "origins:in_tag",
-						"tag": "*:vine_whip_plants"
+						"tag": "*:*_plants"
 					}
 				}
 			]
